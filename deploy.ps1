@@ -84,21 +84,25 @@ if ($createResult.ReturnValue -ne 0) {
     exit 1
 }
 Write-Host "[ask-deploy] Spawned wrapper PID $($createResult.ProcessId); waiting for startup..."
-Start-Sleep -Seconds 5
 
-# ---- 6. Verify it is listening and answering -------------------------------
-$listening = (netstat -ano | Select-String (":" + $Port + "\s.*LISTENING"))
-if (-not $listening) {
-    Write-Host "[ask-deploy] WARNING: nothing listening on $Port after 5s. Logs:"
-    if (Test-Path $errPath) { Get-Content $errPath -Tail 40 }
-    exit 1
+# ---- 6. Verify it answers (poll; a cold first start - new venv + imports +
+#         corpus load - can take well over 5s, so retry up to ~30s) ----------
+$ok = $false
+for ($i = 1; $i -le 12; $i++) {
+    Start-Sleep -Seconds 2.5
+    try {
+        $resp = Invoke-WebRequest -Uri ("http://127.0.0.1:" + $Port + "/build-info") -UseBasicParsing -TimeoutSec 5
+        if ($resp.StatusCode -eq 200) {
+            Write-Host "[ask-deploy] Local probe OK (attempt $i): $($resp.Content)"
+            $ok = $true
+            break
+        }
+    } catch {
+        Write-Host "[ask-deploy] not answering yet (attempt $i of 12)..."
+    }
 }
-Write-Host "[ask-deploy] Port $Port listening. Probing /build-info..."
-try {
-    $resp = Invoke-WebRequest -Uri ("http://127.0.0.1:" + $Port + "/build-info") -UseBasicParsing -TimeoutSec 10
-    Write-Host "[ask-deploy] Local probe: $($resp.StatusCode) $($resp.Content)"
-} catch {
-    Write-Host "[ask-deploy] Local probe FAILED: $_"
+if (-not $ok) {
+    Write-Host "[ask-deploy] ERROR: server did not answer on port $Port after ~30s. Logs:"
     if (Test-Path $errPath) { Get-Content $errPath -Tail 40 }
     exit 1
 }
