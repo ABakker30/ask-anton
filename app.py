@@ -1,0 +1,272 @@
+"""Ask Anton - public Q&A backend.
+
+Reads ONLY from ./public (the curated, publishable layer). The private authoring wiki
+is never shipped to this repo or loaded here, so private facts cannot leak by construction.
+
+Hardening for public hosting (vs. the local prototype):
+  - CORS locked to configured origins (env ASK_ALLOWED_ORIGINS), not "*".
+  - Per-IP token-bucket rate limiting + a global daily request cap (protects the API budget).
+  - Input caps on question/history length (limits prompt-stuffing cost abuse).
+  - Optional Cloudflare Turnstile verification (enabled when TURNSTILE_SECRET is set).
+  - /build-info exposes the deployed commit SHA for CI verification (mirrors the engine).
+
+Config via environment variables (all optional except the API key):
+  ANTHROPIC_API_KEY      - required; read by the anthropic client. Never commit it.
+  ASK_ALLOWED_ORIGINS    - comma-separated allowed origins for CORS.
+                           Default: http://localhost:8000,http://127.0.0.1:8000
+                           (Same-origin hosting needs no CORS; set this if the page is
+                           served from a different host, e.g. GitHub Pages.)
+  ASK_RATE_BURST         - per-IP burst capacity (default 5).
+  ASK_RATE_REFILL_SECONDS- seconds to refill one token (default 15).
+  ASK_DAILY_CAP          - global max /ask calls per UTC day (default 2000; 0 = unlimited).
+  ASK_MAX_QUESTION_CHARS - max characters in a single question (default 2000).
+  ASK_MAX_HISTORY_MSGS   - max prior messages accepted (default 20).
+  TURNSTILE_SECRET       - if set, /ask requires a valid Cloudflare Turnstile token.
+  TURNSTILE_SITEKEY      - public sitekey, surfaced to the frontend via /config.
+"""
+
+import os
+import json
+import time
+import threading
+import urllib.request
+import urllib.parse
+import datetime
+import pathlib
+
+import anthropic
+from fastapi import FastAPI, Request, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
+from pydantic import BaseModel
+
+MODEL = "claude-opus-4-7"
+APP_DIR = pathlib.Path(__file__).parent
+PUBLIC_DIR = APP_DIR / "public"
+STATIC_DIR = APP_DIR / "static"
+BUILD_SHA_FILE = APP_DIR / "BUILD_SHA"
+
+# ── Config ───────────────────────────────────────────────────────────────────
+def _env(name: str, default: str) -> str:
+    v = os.environ.get(name)
+    return v if v is not None and v != "" else default
+
+ALLOWED_ORIGINS = [
+    o.strip()
+    for o in _env("ASK_ALLOWED_ORIGINS", "http://localhost:8000,http://127.0.0.1:8000").split(",")
+    if o.strip()
+]
+RATE_BURST = int(_env("ASK_RATE_BURST", "5"))
+RATE_REFILL_SECONDS = float(_env("ASK_RATE_REFILL_SECONDS", "15"))
+DAILY_CAP = int(_env("ASK_DAILY_CAP", "2000"))
+MAX_QUESTION_CHARS = int(_env("ASK_MAX_QUESTION_CHARS", "2000"))
+MAX_HISTORY_MSGS = int(_env("ASK_MAX_HISTORY_MSGS", "20"))
+MAX_MSG_CHARS = 8000
+TURNSTILE_SECRET = os.environ.get("TURNSTILE_SECRET", "")
+TURNSTILE_SITEKEY = os.environ.get("TURNSTILE_SITEKEY", "")
+
+
+def load_public_corpus() -> str:
+    """Concatenate every public markdown file, in sorted (deterministic) order.
+
+    Sorted order keeps the system prompt byte-identical across requests so the prompt
+    cache prefix stays valid.
+    """
+    parts = []
+    for path in sorted(PUBLIC_DIR.glob("*.md")):
+        parts.append(path.read_text(encoding="utf-8").strip())
+    return "\n\n---\n\n".join(parts)
+
+
+CORPUS = load_public_corpus()
+
+SYSTEM_PROMPT = f"""You are the voice of "Ask Anton," a Q&A guide on the website of the
+mathematical artist Anton Bakker. Visitors ask about Anton and his sculpture; you answer
+warmly and clearly.
+
+VOICE - hybrid narrator:
+- Speak as a knowledgeable narrator describing Anton in the third person ("Anton believes...",
+  "His work...").
+- Weave in Anton's own short phrasings as quotes where they fit naturally - for example
+  "music for the eyes," "symmetry is the architecture of beauty," "open ends are messy,"
+  "they'll see an Anton piece." Use them to add his texture, not as filler.
+- Warm, reflective, a little philosophical. Plain language. No hype, no sales pitch.
+- Keep answers tight - usually one to three short paragraphs. Do not pad.
+
+GROUNDING:
+- Answer ONLY from the material below. It is the complete, approved public knowledge about Anton.
+- If the material does not cover something, say so plainly and briefly - for example, "That's
+  not something I can speak to here" - and, if natural, offer what you do know nearby. Never
+  invent facts, dates, names, prices, or biography.
+- Do not cite sources, file names, or say "according to the material." Just answer
+  conversationally.
+
+OFF-LIMITS - if asked, deflect gracefully without disclosing:
+- Money, sales, prices, what pieces cost, or Anton's finances/business history.
+- Private details about Anton's family, partner, or other named individuals beyond his mentor.
+- The names of his software collaborators or engineers.
+- Speculative art-history claims. Stick to what is stated below.
+A good deflection is brief and kind, then steers back to the art - e.g., "I'll leave the
+business side aside, but I'm happy to talk about how the pieces are made."
+
+Here is the approved public material about Anton:
+
+{CORPUS}
+"""
+
+client = anthropic.Anthropic()
+app = FastAPI(title="Ask Anton")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=ALLOWED_ORIGINS,
+    allow_methods=["POST", "GET"],
+    allow_headers=["*"],
+)
+
+
+# ── Rate limiting (in-memory; single-process) ────────────────────────────────
+_lock = threading.Lock()
+_buckets: dict[str, list[float]] = {}   # ip -> [tokens, last_ts]
+_daily = {"day": "", "count": 0}
+
+
+def _client_ip(request: Request) -> str:
+    # Behind the Cloudflare tunnel the real visitor IP is in CF-Connecting-IP.
+    cf = request.headers.get("cf-connecting-ip")
+    if cf:
+        return cf.strip()
+    xff = request.headers.get("x-forwarded-for")
+    if xff:
+        return xff.split(",")[0].strip()
+    return request.client.host if request.client else "unknown"
+
+
+def _check_rate(ip: str) -> None:
+    now = time.monotonic()
+    with _lock:
+        # Global daily cap (UTC day).
+        today = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")
+        if _daily["day"] != today:
+            _daily["day"] = today
+            _daily["count"] = 0
+        if DAILY_CAP and _daily["count"] >= DAILY_CAP:
+            raise HTTPException(status_code=429, detail="Daily limit reached. Please try again tomorrow.")
+
+        # Per-IP token bucket.
+        tokens, last = _buckets.get(ip, [float(RATE_BURST), now])
+        tokens = min(RATE_BURST, tokens + (now - last) / RATE_REFILL_SECONDS)
+        if tokens < 1.0:
+            _buckets[ip] = [tokens, now]
+            raise HTTPException(status_code=429, detail="You're sending questions a little fast. Give it a moment.")
+        _buckets[ip] = [tokens - 1.0, now]
+        _daily["count"] += 1
+
+        # Opportunistic cleanup so the dict can't grow unbounded.
+        if len(_buckets) > 10000:
+            cutoff = now - 3600
+            for k in [k for k, v in _buckets.items() if v[1] < cutoff]:
+                _buckets.pop(k, None)
+
+
+def _verify_turnstile(token: str, ip: str) -> bool:
+    if not TURNSTILE_SECRET:
+        return True
+    if not token:
+        return False
+    data = urllib.parse.urlencode(
+        {"secret": TURNSTILE_SECRET, "response": token, "remoteip": ip}
+    ).encode()
+    try:
+        req = urllib.request.Request(
+            "https://challenges.cloudflare.com/turnstile/v0/siteverify", data=data
+        )
+        with urllib.request.urlopen(req, timeout=8) as resp:
+            return bool(json.loads(resp.read().decode()).get("success"))
+    except Exception:
+        return False
+
+
+class AskRequest(BaseModel):
+    question: str
+    history: list[dict] = []
+    turnstile_token: str | None = None
+
+
+class AskResponse(BaseModel):
+    answer: str
+    cached_tokens: int
+
+
+@app.post("/ask", response_model=AskResponse)
+def ask(req: AskRequest, request: Request) -> AskResponse:
+    ip = _client_ip(request)
+    _check_rate(ip)
+
+    if not _verify_turnstile(req.turnstile_token or "", ip):
+        raise HTTPException(status_code=403, detail="Verification failed. Please reload the page.")
+
+    question = (req.question or "").strip()
+    if not question:
+        raise HTTPException(status_code=400, detail="Please enter a question.")
+    if len(question) > MAX_QUESTION_CHARS:
+        raise HTTPException(status_code=400, detail="That question is too long.")
+
+    # Sanitize and clamp history (defensive against prompt-stuffing cost abuse).
+    history = []
+    for m in (req.history or [])[-MAX_HISTORY_MSGS:]:
+        role = m.get("role")
+        content = m.get("content")
+        if role in ("user", "assistant") and isinstance(content, str):
+            history.append({"role": role, "content": content[:MAX_MSG_CHARS]})
+
+    messages = history + [{"role": "user", "content": question}]
+    response = client.messages.create(
+        model=MODEL,
+        max_tokens=1500,
+        system=[
+            {
+                "type": "text",
+                "text": SYSTEM_PROMPT,
+                "cache_control": {"type": "ephemeral"},
+            }
+        ],
+        messages=messages,
+    )
+    answer = "".join(block.text for block in response.content if block.type == "text")
+    return AskResponse(
+        answer=answer.strip(),
+        cached_tokens=response.usage.cache_read_input_tokens or 0,
+    )
+
+
+@app.get("/config")
+def config() -> dict:
+    """Frontend config: whether Turnstile is on, and the public sitekey."""
+    return {
+        "turnstile": bool(TURNSTILE_SECRET),
+        "turnstile_sitekey": TURNSTILE_SITEKEY or None,
+    }
+
+
+@app.get("/build-info")
+def build_info() -> dict:
+    """Deployed commit SHA, for CI to verify the public URL is serving new code."""
+    sha = ""
+    if BUILD_SHA_FILE.exists():
+        sha = BUILD_SHA_FILE.read_text(encoding="ascii").strip()
+    return {"commit_sha": sha}
+
+
+@app.get("/healthz")
+def healthz() -> dict:
+    return {"status": "ok"}
+
+
+@app.get("/")
+def index() -> FileResponse:
+    return FileResponse(STATIC_DIR / "index.html")
+
+
+app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")

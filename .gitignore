@@ -1,0 +1,24 @@
+# Secrets / environment
+.env
+.env.*
+*.key
+*.pem
+# (ANTHROPIC_API_KEY / TURNSTILE_SECRET come from the host environment, never the repo)
+
+# Python / venv
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Runtime artifacts on the server
+BUILD_SHA
+server.log
+server.err.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

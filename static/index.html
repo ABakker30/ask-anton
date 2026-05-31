@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ask Anton</title>
+<style>
+  :root {
+    --bg: #0e0f12;
+    --panel: #16181d;
+    --line: #262a31;
+    --ink: #e8e9ec;
+    --muted: #9aa0aa;
+    --accent: #c8a96a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.6 "Georgia", "Times New Roman", serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  header {
+    padding: 28px 20px 18px;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+  }
+  header h1 { margin: 0; font-size: 26px; letter-spacing: 0.5px; }
+  header p { margin: 6px 0 0; color: var(--muted); font-size: 14px; font-style: italic; }
+  #chat {
+    flex: 1;
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px 20px 120px;
+  }
+  .msg { margin: 0 0 22px; }
+  .msg .who {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .msg.user .bubble { color: var(--accent); }
+  .bubble { white-space: pre-wrap; }
+  .bubble.thinking { color: var(--muted); font-style: italic; }
+  .suggestions { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 28px; }
+  .suggestions button {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    color: var(--muted);
+    padding: 8px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    font: inherit;
+    font-size: 13px;
+  }
+  .suggestions button:hover { color: var(--ink); border-color: var(--accent); }
+  form {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, var(--bg) 28%);
+    padding: 24px 20px;
+  }
+  .inrow {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 6px 6px 6px 16px;
+  }
+  input {
+    flex: 1;
+    background: transparent;
+    border: 0;
+    color: var(--ink);
+    font: inherit;
+    outline: none;
+  }
+  button.send {
+    background: var(--accent);
+    color: #1a1408;
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 18px;
+    cursor: pointer;
+    font: inherit;
+  }
+  button.send:disabled { opacity: 0.5; cursor: default; }
+  #turnstile-holder { max-width: 760px; margin: 10px auto 0; display: flex; justify-content: center; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Ask Anton</h1>
+    <p>Questions about Anton Bakker and his lattice-path sculpture</p>
+  </header>
+
+  <div id="chat">
+    <div class="suggestions" id="suggestions">
+      <button>What is your work about?</button>
+      <button>Why closed paths?</button>
+      <button>What does "music for the eyes" mean?</button>
+      <button>Who was your mentor?</button>
+    </div>
+  </div>
+
+  <form id="form">
+    <div class="inrow">
+      <input id="q" placeholder="Ask a question..." autocomplete="off" />
+      <button class="send" id="send" type="submit">Ask</button>
+    </div>
+    <div id="turnstile-holder"></div>
+  </form>
+
+<script>
+  const chat = document.getElementById("chat");
+  const form = document.getElementById("form");
+  const input = document.getElementById("q");
+  const sendBtn = document.getElementById("send");
+  const suggestions = document.getElementById("suggestions");
+  const history = [];
+
+  // Served from the box (same origin) in production; falls back to the local
+  // uvicorn when the file is opened from a preview pane or file://.
+  const API_BASE =
+    location.origin && location.origin.startsWith("http")
+      ? location.origin
+      : "http://localhost:8000";
+
+  // ── Optional Cloudflare Turnstile ──────────────────────────────────────────
+  let turnstileEnabled = false;
+  let turnstileToken = null;
+  let turnstileWidgetId = null;
+
+  async function initConfig() {
+    try {
+      const cfg = await (await fetch(API_BASE + "/config")).json();
+      if (cfg.turnstile && cfg.turnstile_sitekey) {
+        turnstileEnabled = true;
+        window.__onTurnstile = (t) => { turnstileToken = t; };
+        window.__renderTurnstile = () => {
+          turnstileWidgetId = window.turnstile.render("#turnstile-holder", {
+            sitekey: cfg.turnstile_sitekey,
+            callback: window.__onTurnstile,
+            theme: "dark",
+          });
+        };
+        const s = document.createElement("script");
+        s.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?onload=__renderTurnstile";
+        s.async = true; s.defer = true;
+        document.head.appendChild(s);
+      }
+    } catch (e) { /* config is best-effort; default to no turnstile */ }
+  }
+
+  function addMsg(who, label, text, cls) {
+    const wrap = document.createElement("div");
+    wrap.className = "msg " + who;
+    const w = document.createElement("div");
+    w.className = "who";
+    w.textContent = label;
+    const b = document.createElement("div");
+    b.className = "bubble" + (cls ? " " + cls : "");
+    b.textContent = text;
+    wrap.append(w, b);
+    chat.append(wrap);
+    window.scrollTo(0, document.body.scrollHeight);
+    return b;
+  }
+
+  async function ask(question) {
+    if (turnstileEnabled && !turnstileToken) {
+      addMsg("anton", "Anton", "One moment — please complete the verification below, then ask again.", "thinking");
+      return;
+    }
+    if (suggestions) suggestions.remove();
+    addMsg("user", "You", question);
+    input.value = "";
+    sendBtn.disabled = true;
+    const bubble = addMsg("anton", "Anton", "thinking...", "thinking");
+    try {
+      const res = await fetch(API_BASE + "/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question, history, turnstile_token: turnstileToken }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.detail || "Request failed");
+      bubble.classList.remove("thinking");
+      bubble.textContent = data.answer;
+      history.push({ role: "user", content: question });
+      history.push({ role: "assistant", content: data.answer });
+    } catch (err) {
+      bubble.classList.remove("thinking");
+      bubble.textContent = "Something went wrong: " + err.message;
+    } finally {
+      // Turnstile tokens are single-use; fetch a fresh one for the next question.
+      if (turnstileEnabled && turnstileWidgetId !== null && window.turnstile) {
+        turnstileToken = null;
+        try { window.turnstile.reset(turnstileWidgetId); } catch (e) {}
+      }
+      sendBtn.disabled = false;
+      input.focus();
+    }
+  }
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const q = input.value.trim();
+    if (q) ask(q);
+  });
+
+  document.querySelectorAll(".suggestions button").forEach((b) => {
+    b.addEventListener("click", () => ask(b.textContent));
+  });
+
+  initConfig();
+</script>
+</body>
+</html>
