@@ -16,6 +16,9 @@ __pycache__/
 BUILD_SHA
 server.log
 server.err.log
+start-service.log
+uvicorn.out.log
+uvicorn.err.log
 
 # OS / editor
 .DS_Store

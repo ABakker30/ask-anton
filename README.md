@@ -94,16 +94,24 @@ path differs from `C:\ask-anton`, set `ASK_DIR` in the SSH environment.
 
 After that, every push to `main` deploys.
 
+## Reboot persistence (startup task)
+A Windows Scheduled Task named **`ask-anton`** (runs as SYSTEM at startup) launches the server via
+`start-service.ps1` so it comes back after a reboot. Registration command is in the header of
+`start-service.ps1`. The launcher loads secrets from Machine-scope env (so it doesn't depend on the
+Task Scheduler service's environment) and starts the server via `askpython.exe` (see below).
+
 ## IMPORTANT: co-existence with the Gestura engine
 The engine's `deploy.ps1` does a blanket `Get-Process python | Stop-Process` on every deploy.
-To keep that from killing this app, Ask Anton runs under an isolated `.venv` and is launched with
-**`pythonw.exe`** (process name `pythonw`, which the engine's `python` match does not hit). This
-script, in turn, only ever stops the process **listening on port 8001** — never a blanket kill —
-so it can't take the engine down either.
+To keep that from killing this app, Ask Anton runs its venv interpreter under a **renamed copy,
+`askpython.exe`** (created automatically by `deploy.ps1`). That name is invisible to the engine's
+`python` match, and — unlike `pythonw.exe` — it's **console-subsystem**, so it also starts
+correctly under the non-interactive SSH deploy and the SYSTEM startup task (`pythonw` fails in
+"session 0"). This script, in turn, only ever stops the process **listening on port 8001** — never
+a blanket kill — so it can't take the engine down either.
 
 **Cleaner long-term fix (optional):** change the engine's `deploy.ps1` to stop the process on
-port 8000 specifically instead of `Get-Process python | Stop-Process`. Until then, the
-`pythonw.exe` approach keeps the two services fully independent.
+port 8000 specifically instead of `Get-Process python | Stop-Process`. Until then, the renamed
+`askpython.exe` keeps the two services fully independent.
 
 ## Updating the public content
 `public/*.md` is curated in the private knowledge base and copied here when promoted. After a
