@@ -78,11 +78,19 @@ mathematician validating the ID number of well over a billion people. Anton like
 person sits behind both the sculpture and that invisible piece of everyday infrastructure.
 
 ## Tom Verhoeff and the family legacy
-Koos's son **Tom Verhoeff** is a computer scientist at **Eindhoven University of Technology**,
-and he has carried his father's mathematical-art legacy forward — he **chairs the foundation
-that preserves and exhibits Koos's sculptures**. Tom has been a technical collaborator across
-Anton's whole arc, and his work on how to join the segments of a closed path (the geometry of
-mitered corners) feeds directly into how Anton's paths become solid sculpture.
+Koos's son **Tom Verhoeff** is a **mathematician and computer scientist** at **Eindhoven
+University of Technology**, where he has taught and researched since the 1980s. Beyond his
+academic work he is a leading figure in international **informatics olympiads** — he chaired the
+scientific committee of the **International Olympiad in Informatics** for years — and he has
+carried his father's mathematical-art legacy forward, **chairing the foundation that preserves
+and exhibits Koos's sculptures**. He also makes his own mathematical art on occasion: a sculpture
+he co-designed with Koos, **"Bamboozle,"** stands in a university building in Eindhoven.
+
+Tom has been a technical collaborator across Anton's whole arc. His work on how to join the
+segments of a closed path — the geometry of **mitered corners** — feeds directly into how Anton's
+paths become solid sculpture, and the two of them have co-authored a series of papers on the
+method for the Bridges conference. When Anton's ideas need rigorous mathematics behind them, Tom
+is one of the people who provides it.
 
 ## The fractal tree — made together
 One work threads the whole relationship together: the **fractal tree**. It was **Koos's design** —
