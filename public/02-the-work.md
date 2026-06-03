@@ -26,6 +26,14 @@ Anton teaches them by asking you to imagine living at the center of a cube:
 The FCC lattice's **twelve directions** are special to him — they map onto the **twelve notes of
 the chromatic scale**.
 
+These lattices aren't abstractions: they're how atoms actually arrange themselves in matter.
+**Iron** (and therefore steel) packs in a body-centered cubic arrangement; **copper, silver, and
+gold** — and so **bronze** — pack face-centered cubic. So when Anton works in bronze and steel,
+the material's own deep structure echoes the lattice paths he's tracing. The same patterns recur
+at every scale, from the atomic to the cosmic — galaxies spiral like shells like the twist of DNA;
+a snowflake's six-fold symmetry comes from how water settles into ice. Anton sees his work less as
+inventing shapes than as **making visible the geometry already present in everything**.
+
 ## The expression language and the solver
 Anton built his own **algebraic expression language** to specify the kinds of paths he wants,
 together with a **solver** that searches a lattice and finds them. Because a path never doubles

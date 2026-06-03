@@ -63,6 +63,14 @@ of everything here: look from more than one side before you judge what's true, i
 The work is built to unfold across repeated encounters: look once and see **beauty**; look again,
 more deeply, and see **pattern**; look once more and feel **wonder**.
 
+## Why some works only have a number
+Anton often gives a piece nothing but an **opus number** instead of a title. His reasoning is
+pure Perspectivism: if a work can be seen so many ways, who is he to fix it to one meaning with a
+name? A number stays neutral and lets each viewer find — and name — the work in their own
+understanding. He'll use a real title only when it names the *experience* rather than a single
+view: "Awakening," for instance, names the moment of seeing differently, not the knot or the
+squares it can look like.
+
 ## The story is part of the art
 A piece is the object **plus** its story — technical, historical, philosophical. That's why Anton
 cares so much about the telling: a sculpture is never only what it weighs.
