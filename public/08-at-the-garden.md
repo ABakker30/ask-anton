@@ -5,7 +5,7 @@ It's a setting he loves, because a garden is already full of the patterns his sc
 celebrate — and he has a vision for making that conversation explicit.
 
 ## The installed works
-- **"Koos Knopje"** — an eight-foot, red figure-eight knot in painted steel. The name is Dutch
+- **"Koos Knoopje"** — an eight-foot, red figure-eight knot in painted steel. The name is Dutch
   for "Koos's little knot": it honors Anton's mentor **Koos Verhoeff**, who first made this knot
   in straight segments. Anton was the first to render it as a flowing curve, so he named it for
   Koos.
