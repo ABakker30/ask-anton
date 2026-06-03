@@ -12,9 +12,13 @@ celebrate — and he has a vision for making that conversation explicit.
 - **A braiding in the cube lattice** — in painted aluminum, weaving through the simplest of the
   three lattices like a knight's path on a chessboard, but in three dimensions. A good piece to
   stand in front of to *see* how a lattice is built.
-- **"Reflection"** — an eight-foot, mirror-polished stainless-steel path, set in a reflecting pool
-  in the middle of the rose garden, with benches to sit and watch it mirror the roses, the water,
-  and the sky.
+- **"Reflection"** — an eight-foot, mirror-polished stainless-steel path that traces every point
+  of a complex polyhedron, set in a reflecting pool in the middle of the rose garden, with benches
+  to sit and watch it mirror the roses, the water, and the sky. Before coming to Norfolk, it was
+  shown in 2023 at the **DIFC in Dubai**, in a reflecting pool beside a sister sculpture, directly
+  across from the office of the **President of the UAE — who acquired the sister piece**. So
+  *Reflection*'s twin now lives in the Emirates while this one comes home to the rose garden: the
+  same gesture, an ocean apart.
 
 ## The vision
 Anton imagines the garden as a place that is at once a **museum of nature and a museum of

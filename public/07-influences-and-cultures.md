@@ -37,6 +37,17 @@ these places: what survives is mostly **flat, symbolic ornament**, while three-d
 geometry tended to be **structural** — buildings, pyramids. Pure geometric beauty as a
 free-standing sculpture, drawn from those ancient principles, is the space Anton works in.
 
+## The Islamic geometric heritage
+The Middle East holds a special place in this lineage. During the Islamic Golden Age (roughly the
+eighth to fourteenth centuries), scholars preserved and extended the mathematics the world now
+builds on — it's where **algebra** was born (the word "algorithm" comes from the name of the
+scholar al-Khwarizmi). And because that culture's art turned away from depicting figures, its
+genius poured into **geometry**: the tessellations and arabesques of the Alhambra and of tilework
+across the Islamic world are, in effect, beauty and symmetry made visible. Anton sees his own work
+as part of that same long conversation — symmetry treated as something close to sacred, pattern as
+a kind of truth. It's part of why the work resonates in the region; one of his sculptures was
+acquired by the office of the President of the UAE.
+
 ## The thread
 From rangoli to the Alhambra to the mandala, every culture that looked closely at beauty and order
 found the same truths. Anton sees himself continuing that long human lineage — with new tools, and
