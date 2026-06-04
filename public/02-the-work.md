@@ -164,15 +164,28 @@ deform promising candidates so they *almost* tile — which is exactly where hig
 hide. He finds the tiles beautiful in their own right — pure Escher and Alhambra — so the search
 feeds directly back into the art.
 
-## Families of work: Links, Relativity, Duality
-Beyond single paths, Anton groups much of his work into a few families — each a different way of
-**staging perspective**:
+## Families of work — how paths relate
+Beyond single paths, much of Anton's recent work is about **how paths relate to one another** —
+each family a different way of **staging perspective**:
 
-- **Links** — two or more separate, entangled paths. He looks for links that read as **completely
-  different objects from one angle** and reveal themselves as **identical, or mirror images, from
-  another**; or black-and-white links that look all-black from one side and all-white from the
-  other.
-- **Relativity** — two lattice paths placed near each other on the lattice grid, where the
-  *relationship* between them creates views neither piece has alone.
-- **Duality** — a play on "dual" (a structure's mathematical counterpart) and "duo" (two of the
-  same) — works that pair complementary or identical forms.
+- **Linked** — paths that are genuinely interlocked, where one constrains another's freedom.
+- **Relativity** — paths placed near each other (not linked), where the *relationship and your
+  viewpoint* create the image: a black piece and a white piece, say, where one hides the other
+  until you move.
+- **Entanglement** — pieces that *look* linked but aren't — connection as perception rather than
+  fact.
+- **Mutually supporting** — pieces that can't stand alone; they hold each other up, stable only
+  together.
+- **Borromean** — three or more rings where *no two* are linked, yet all together can't be
+  separated — remove any one and the rest fall apart. A quiet sculpture of how things depend on the
+  whole, not on pairs.
+
+A couple of named examples: **"Choked Freedom"** — three identical squares where two are linked
+with a little freedom, and a third encloses them and chokes it away (colour makes the relationship
+legible at a glance). And a set of **six squares**, three aligned to one plane and three to
+another, interlocked into a single composition.
+
+These also trace an arc in Anton's practice — from a single discovered path, to linking *identical*
+paths, to a path with its own mirror, to placing different paths in dialogue. That arc is the heart
+of an upcoming series, **"Relativity and Entanglement,"** planned for a **2027 exhibition in
+Dubai**, with digital previews on the platform beforehand.
