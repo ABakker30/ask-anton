@@ -52,5 +52,22 @@
       "three-quarter",
       "studio"
     ]
+  },
+  {
+    "id": "awakening-rotation",
+    "piece": "Awakening",
+    "piece_slug": "awakening",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/awakening/awakening-rotation.mp4",
+    "caption": "Awakening rotating in its corner installation: as the bronze turns, its shadow transforms continuously between the Tibetan endless knot and two linked squares.",
+    "alt": "A bronze sculpture slowly rotating on a turntable in a corner; as it turns, the shadows it casts on the two walls shift between a Tibetan endless knot and two linked squares.",
+    "tags": [
+      "video",
+      "rotation",
+      "shadow",
+      "installation",
+      "endless-knot",
+      "linked-squares"
+    ]
   }
 ]

@@ -50,7 +50,7 @@
   .bubble.thinking { color: var(--muted); font-style: italic; }
   .media { margin-top: 14px; display: flex; flex-direction: column; gap: 16px; }
   .media figure { margin: 0; }
-  .media img {
+  .media img, .media video {
     width: 100%;
     height: auto;
     display: block;
@@ -199,11 +199,21 @@
     media.forEach((m) => {
       if (!m || !m.url) return;
       const fig = document.createElement("figure");
-      const img = document.createElement("img");
-      img.src = m.url;
-      img.alt = m.alt || "";
-      img.loading = "lazy";
-      fig.appendChild(img);
+      if (m.kind === "video") {
+        const vid = document.createElement("video");
+        vid.src = m.url;
+        vid.controls = true;
+        vid.preload = "metadata";
+        vid.playsInline = true;
+        if (m.alt) vid.setAttribute("aria-label", m.alt);
+        fig.appendChild(vid);
+      } else {
+        const img = document.createElement("img");
+        img.src = m.url;
+        img.alt = m.alt || "";
+        img.loading = "lazy";
+        fig.appendChild(img);
+      }
       if (m.caption) {
         const cap = document.createElement("figcaption");
         cap.textContent = m.caption;

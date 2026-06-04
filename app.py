@@ -108,7 +108,7 @@ def _media_catalog_text() -> str:
     for m in MEDIA:
         tags = ", ".join(m.get("tags") or [])
         desc = m.get("alt") or m.get("caption") or m.get("piece") or ""
-        line = f'- {m["id"]} (piece: {m.get("piece")}): {desc}'
+        line = f'- {m["id"]} ({m.get("kind","image")}, piece: {m.get("piece")}): {desc}'
         if tags:
             line += f" [tags: {tags}]"
         lines.append(line)
