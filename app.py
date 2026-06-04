@@ -378,7 +378,12 @@ def healthz() -> dict:
 
 @app.get("/")
 def index() -> FileResponse:
-    return FileResponse(STATIC_DIR / "index.html")
+    # no-cache (revalidate) on the HTML entry point so a deployed UI update always
+    # loads, instead of a stale page lingering in the visitor's browser cache.
+    return FileResponse(
+        STATIC_DIR / "index.html",
+        headers={"Cache-Control": "no-cache, must-revalidate"},
+    )
 
 
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
