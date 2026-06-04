@@ -48,6 +48,22 @@
   .msg.user .bubble { color: var(--accent); }
   .bubble { white-space: pre-wrap; }
   .bubble.thinking { color: var(--muted); font-style: italic; }
+  .media { margin-top: 14px; display: flex; flex-direction: column; gap: 16px; }
+  .media figure { margin: 0; }
+  .media img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    background: var(--panel);
+  }
+  .media figcaption {
+    margin-top: 6px;
+    font-size: 13px;
+    font-style: italic;
+    color: var(--muted);
+  }
   .suggestions { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 28px; }
   .suggestions button {
     background: var(--panel);
@@ -176,6 +192,29 @@
     return b;
   }
 
+  function appendMedia(bubble, media) {
+    if (!Array.isArray(media) || !media.length) return;
+    const box = document.createElement("div");
+    box.className = "media";
+    media.forEach((m) => {
+      if (!m || !m.url) return;
+      const fig = document.createElement("figure");
+      const img = document.createElement("img");
+      img.src = m.url;
+      img.alt = m.alt || "";
+      img.loading = "lazy";
+      fig.appendChild(img);
+      if (m.caption) {
+        const cap = document.createElement("figcaption");
+        cap.textContent = m.caption;
+        fig.appendChild(cap);
+      }
+      box.appendChild(fig);
+    });
+    bubble.appendChild(box);
+    window.scrollTo(0, document.body.scrollHeight);
+  }
+
   async function ask(question) {
     if (turnstileEnabled && !turnstileToken) {
       addMsg("anton", "Anton", "One moment — please complete the verification below, then ask again.", "thinking");
@@ -196,6 +235,7 @@
       if (!res.ok) throw new Error(data.detail || "Request failed");
       bubble.classList.remove("thinking");
       bubble.textContent = data.answer;
+      appendMedia(bubble, data.media);
       history.push({ role: "user", content: question });
       history.push({ role: "assistant", content: data.answer });
     } catch (err) {

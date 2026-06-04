@@ -1,0 +1,56 @@
+[
+  {
+    "id": "awakening-shadow-installation",
+    "piece": "Awakening",
+    "piece_slug": "awakening",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/awakening/awakening-shadow-installation.jpg",
+    "caption": "Awakening in its corner installation — the rotating bronze casts the Tibetan endless knot on one wall and two linked squares on the other.",
+    "alt": "Bronze knot sculpture on a rotating base in a corner, casting two different shadows: a Tibetan endless knot on the left wall and two linked squares on the right.",
+    "tags": [
+      "shadow",
+      "installation",
+      "endless-knot",
+      "linked-squares"
+    ]
+  },
+  {
+    "id": "awakening-endless-knot",
+    "piece": "Awakening",
+    "piece_slug": "awakening",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/awakening/awakening-endless-knot.jpg",
+    "caption": "Awakening, seen from the angle where it reads as the Tibetan endless knot.",
+    "alt": "The bronze Awakening sculpture on a white background, viewed from the angle where its form reads as a Tibetan endless knot.",
+    "tags": [
+      "endless-knot",
+      "studio"
+    ]
+  },
+  {
+    "id": "awakening-linked-squares",
+    "piece": "Awakening",
+    "piece_slug": "awakening",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/awakening/awakening-linked-squares.jpg",
+    "caption": "Awakening, seen from the angle where it reads as two linked squares.",
+    "alt": "The bronze Awakening sculpture on a white background, viewed from the angle where its form reads as two linked squares.",
+    "tags": [
+      "linked-squares",
+      "studio"
+    ]
+  },
+  {
+    "id": "awakening-three-quarter",
+    "piece": "Awakening",
+    "piece_slug": "awakening",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/awakening/awakening-three-quarter.jpg",
+    "caption": "Awakening — a three-quarter view of the bronze form, between its two readings.",
+    "alt": "The bronze Awakening sculpture on a white background, a three-quarter view showing the 3D form between its endless-knot and linked-squares readings.",
+    "tags": [
+      "three-quarter",
+      "studio"
+    ]
+  }
+]

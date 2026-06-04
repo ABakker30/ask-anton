@@ -26,6 +26,7 @@ Config via environment variables (all optional except the API key):
 """
 
 import os
+import re
 import json
 import time
 import threading
@@ -81,6 +82,39 @@ def load_public_corpus() -> str:
 
 CORPUS = load_public_corpus()
 
+# ── Media catalog (exported from Supabase into media_catalog.json) ─────────────
+# Ask Anton reads a shipped catalog file, not the live database: the app keeps no
+# database credentials and cannot reach anything that wasn't deliberately published.
+MEDIA_CATALOG_FILE = APP_DIR / "media_catalog.json"
+MAX_MEDIA_PER_ANSWER = 3
+
+
+def load_media_catalog() -> list:
+    if not MEDIA_CATALOG_FILE.exists():
+        return []
+    try:
+        data = json.loads(MEDIA_CATALOG_FILE.read_text(encoding="utf-8"))
+        return [m for m in data if isinstance(m, dict) and m.get("id") and m.get("url")]
+    except Exception:
+        return []
+
+
+MEDIA = load_media_catalog()
+MEDIA_BY_ID = {m["id"]: m for m in MEDIA}
+
+
+def _media_catalog_text() -> str:
+    lines = []
+    for m in MEDIA:
+        tags = ", ".join(m.get("tags") or [])
+        desc = m.get("alt") or m.get("caption") or m.get("piece") or ""
+        line = f'- {m["id"]} (piece: {m.get("piece")}): {desc}'
+        if tags:
+            line += f" [tags: {tags}]"
+        lines.append(line)
+    return "\n".join(lines)
+
+
 SYSTEM_PROMPT = f"""You are the voice of "Ask Anton," a Q&A guide on the website of the
 mathematical artist Anton Bakker. Visitors ask about Anton and his sculpture; you answer
 warmly and clearly.
@@ -128,6 +162,29 @@ business side aside, but I'm happy to talk about how the pieces are made."
 Here is the approved public material about Anton:
 
 {CORPUS}
+"""
+
+if MEDIA:
+    SYSTEM_PROMPT += f"""
+
+IMAGES - you may show the visitor photographs of Anton's work.
+A catalog of available images is listed below, each with an id and a description. When an
+image genuinely helps (the visitor asks about a specific piece, asks what something looks
+like, or asks to see the work), pick the one to three MOST relevant images and signal your
+choice by ending your reply with one final line in exactly this form:
+MEDIA: id1, id2
+If no image is relevant, end with this line instead:
+MEDIA: none
+Rules for that final line:
+- It must be the very last line of your reply, alone on its own line.
+- Use only ids from the catalog below, comma separated. Never invent an id.
+- Never write the word MEDIA, the ids, or mention this line anywhere in your prose. The
+  visitor never sees the line; the page turns it into pictures that carry their own captions.
+- Do not restate a caption in your prose; each image already appears with its caption.
+- Only attach images when they truly add something. Most answers need none.
+
+Image catalog:
+{_media_catalog_text()}
 """
 
 client = anthropic.Anthropic()
@@ -203,6 +260,43 @@ def _verify_turnstile(token: str, ip: str) -> bool:
         return False
 
 
+# Matches the model's trailing "MEDIA: id, id" (or "MEDIA: none") signal line.
+_MEDIA_LINE_RE = re.compile(r"(?im)^[ \t>*_\-]*MEDIA\s*:\s*(.*?)\s*$")
+
+
+def _extract_media(text: str):
+    """Pull the trailing MEDIA line off the answer; return (clean_answer, media_list).
+
+    The line is stripped from the prose so the visitor never sees it; ids are validated
+    against the shipped catalog so a hallucinated id simply yields no image.
+    """
+    if not MEDIA:
+        return text, []
+    matches = list(_MEDIA_LINE_RE.finditer(text))
+    if not matches:
+        return text, []
+    m = matches[-1]
+    cleaned = (text[: m.start()] + text[m.end():]).strip()
+    media = []
+    ids_raw = m.group(1).strip()
+    if ids_raw.lower() not in ("", "none", "n/a", "-"):
+        seen = set()
+        for tok in re.split(r"[,\s]+", ids_raw):
+            tok = tok.strip().strip("[](){}.,'\"")
+            if tok and tok in MEDIA_BY_ID and tok not in seen:
+                seen.add(tok)
+                item = MEDIA_BY_ID[tok]
+                media.append({
+                    "url": item["url"],
+                    "caption": item.get("caption"),
+                    "alt": item.get("alt"),
+                    "kind": item.get("kind", "image"),
+                })
+                if len(media) >= MAX_MEDIA_PER_ANSWER:
+                    break
+    return cleaned, media
+
+
 class AskRequest(BaseModel):
     question: str
     history: list[dict] = []
@@ -212,6 +306,7 @@ class AskRequest(BaseModel):
 class AskResponse(BaseModel):
     answer: str
     cached_tokens: int
+    media: list[dict] = []
 
 
 @app.post("/ask", response_model=AskResponse)
@@ -250,9 +345,11 @@ def ask(req: AskRequest, request: Request) -> AskResponse:
         messages=messages,
     )
     answer = "".join(block.text for block in response.content if block.type == "text")
+    answer, media = _extract_media(answer.strip())
     return AskResponse(
-        answer=answer.strip(),
+        answer=answer,
         cached_tokens=response.usage.cache_read_input_tokens or 0,
+        media=media,
     )
 
 
