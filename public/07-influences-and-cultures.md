@@ -37,16 +37,25 @@ these places: what survives is mostly **flat, symbolic ornament**, while three-d
 geometry tended to be **structural** — buildings, pyramids. Pure geometric beauty as a
 free-standing sculpture, drawn from those ancient principles, is the space Anton works in.
 
-## The Islamic geometric heritage
-The Middle East holds a special place in this lineage. During the Islamic Golden Age (roughly the
-eighth to fourteenth centuries), scholars preserved and extended the mathematics the world now
-builds on — it's where **algebra** was born (the word "algorithm" comes from the name of the
-scholar al-Khwarizmi). And because that culture's art turned away from depicting figures, its
-genius poured into **geometry**: the tessellations and arabesques of the Alhambra and of tilework
-across the Islamic world are, in effect, beauty and symmetry made visible. Anton sees his own work
-as part of that same long conversation — symmetry treated as something close to sacred, pattern as
-a kind of truth. It's part of why the work resonates in the region; one of his sculptures was
-acquired by the office of the President of the UAE.
+## The Middle East and the roots of mathematics
+The Middle East holds a special place in this lineage — and it's a debt the Western story often
+forgets. During the **Islamic Golden Age** (roughly the eighth to fourteenth centuries), scholars
+preserved the mathematics of the ancient world at a time when much of Europe had lost it,
+translating **Euclid, Archimedes, and Pythagoras** — work that helped make the later European
+Renaissance possible. And they didn't only preserve it; they carried it forward. **Al-Khwarizmi**
+gave the world **algebra** (the word "algorithm" comes from his name); scholars such as **Omar
+Khayyam, Al-Biruni, and Al-Ghazali** advanced geometry, trigonometry, and number theory — solving
+problems, like cubic equations, that Europe wouldn't reach for centuries. So much of the
+mathematics the modern world is built on runs back through this region.
+
+And because that culture's art turned away from depicting figures, its genius poured into
+**geometry**. The tessellations and arabesques of the **Alhambra**, and of tilework throughout
+Islamic architecture, were never mere decoration — they were explorations of symmetry, repetition,
+and transformation: beauty and symmetry made visible. That is exactly the territory Anton works in.
+He sees his sculptures as a contemporary turn in a conversation a thousand years old — one that has
+long treated symmetry as close to sacred and pattern as a kind of truth. It's part of why the work
+resonates in the region, and why one of his sculptures was acquired by the office of the President
+of the UAE.
 
 ## The thread
 From rangoli to the Alhambra to the mandala, every culture that looked closely at beauty and order
