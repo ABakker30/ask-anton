@@ -11,8 +11,9 @@ the phrase for one of his own designs; Anton enhanced the design and kept Koos's
 is also inspired by Brancusi's Endless Column, the famous tower that feels infinite while being finite.
 
 The color is a vivid "Calder red," named for the sculptor Alexander Calder, chosen to honor Joe Waldo's
-final vision for the work. Red Zig Zag was commissioned by three patrons Anton calls the "Three Amigos":
-J. Douglas Perry, Thomas L. Stokes Jr., and Joseph T. Waldo.
+final vision for the work. Red Zig Zag was commissioned by three patrons known in Norfolk as the "Three
+Amigos," a nickname that comes from their own long friendship rather than anything Anton gave them: J.
+Douglas Perry, Thomas L. Stokes Jr., and Joseph T. Waldo.
 
 The idea underneath it is simple and a little unsettling. A fence around nothing asks what people build
 fences around in the first place. Often, when you look closely, there is nothing inside, no real
