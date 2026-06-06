@@ -1,21 +1,5 @@
 [
   {
-    "id": "adaf-booth-1",
-    "piece": "Abu Dhabi Art (2021)",
-    "piece_slug": "abu-dhabi-art",
-    "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/abu-dhabi-art/adaf-booth-1.jpg",
-    "caption": "Anton's sculptures on view at Abu Dhabi Art, 2021, on the stand of Leila Heller Gallery.",
-    "alt": "Anton's sculptures on view at Abu Dhabi Art, 2021, on the stand of Leila Heller Gallery.",
-    "tags": [
-      "exhibit:abu-dhabi-art",
-      "venue:leila-heller",
-      "location:abu-dhabi",
-      "year:2021",
-      "type:art-fair"
-    ]
-  },
-  {
     "id": "adaf-booth-2",
     "piece": "Abu Dhabi Art (2021)",
     "piece_slug": "abu-dhabi-art",
@@ -32,19 +16,19 @@
     ]
   },
   {
-    "id": "momath-opening-reception",
-    "piece": "Alternative Perspective (MoMath)",
-    "piece_slug": "alternative-perspective",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/momath-opening-reception.mp4",
-    "caption": "The opening reception of Alternative Perspective at MoMath, 2021.",
-    "alt": "The opening reception of Alternative Perspective at MoMath, 2021.",
+    "id": "adaf-booth-1",
+    "piece": "Abu Dhabi Art (2021)",
+    "piece_slug": "abu-dhabi-art",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/abu-dhabi-art/adaf-booth-1.jpg",
+    "caption": "Anton's sculptures on view at Abu Dhabi Art, 2021, on the stand of Leila Heller Gallery.",
+    "alt": "Anton's sculptures on view at Abu Dhabi Art, 2021, on the stand of Leila Heller Gallery.",
     "tags": [
-      "exhibit:alternative-perspective",
-      "venue:momath",
-      "location:new-york",
+      "exhibit:abu-dhabi-art",
+      "venue:leila-heller",
+      "location:abu-dhabi",
       "year:2021",
-      "type:opening"
+      "type:art-fair"
     ]
   },
   {
@@ -61,6 +45,22 @@
       "location:new-york",
       "year:2021",
       "type:install-view"
+    ]
+  },
+  {
+    "id": "momath-opening-reception",
+    "piece": "Alternative Perspective (MoMath)",
+    "piece_slug": "alternative-perspective",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/momath-opening-reception.mp4",
+    "caption": "The opening reception of Alternative Perspective at MoMath, 2021.",
+    "alt": "The opening reception of Alternative Perspective at MoMath, 2021.",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "type:opening"
     ]
   },
   {
@@ -378,25 +378,6 @@
     ]
   },
   {
-    "id": "fence-around-nothing",
-    "piece": "Fence around nothing",
-    "piece_slug": "fence-around-nothing",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/fence-around-nothing.mp4",
-    "caption": "The 'fence around nothing,' a bronze zigzag that encloses only empty space, rotating on its base. The studio sibling of the monumental Red Zig Zag.",
-    "alt": "The 'fence around nothing,' a bronze zigzag that encloses only empty space, rotating on its base. The studio sibling of the monumental Red Zig Zag.",
-    "tags": [
-      "exhibit:alternative-perspective",
-      "venue:momath",
-      "location:new-york",
-      "year:2021",
-      "series:fence-around-nothing",
-      "material:bronze",
-      "type:zigzag",
-      "related:red-zigzag"
-    ]
-  },
-  {
     "id": "momath-red-fence-gallery",
     "piece": "Fence around nothing",
     "piece_slug": "fence-around-nothing",
@@ -416,13 +397,32 @@
     ]
   },
   {
-    "id": "ps-fractal-tree",
+    "id": "fence-around-nothing",
+    "piece": "Fence around nothing",
+    "piece_slug": "fence-around-nothing",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/fence-around-nothing.mp4",
+    "caption": "The 'fence around nothing,' a bronze zigzag that encloses only empty space, rotating on its base. The studio sibling of the monumental Red Zig Zag.",
+    "alt": "The 'fence around nothing,' a bronze zigzag that encloses only empty space, rotating on its base. The studio sibling of the monumental Red Zig Zag.",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "series:fence-around-nothing",
+      "material:bronze",
+      "type:zigzag",
+      "related:red-zigzag"
+    ]
+  },
+  {
+    "id": "ps-fractal-tree-video",
     "piece": "Fractal tree",
     "piece_slug": "fractal-tree",
-    "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree.jpg",
-    "caption": "Anton's fractal tree in patinated steel, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
-    "alt": "Anton's fractal tree in patinated steel, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree-video.mp4",
+    "caption": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
+    "alt": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
     "tags": [
       "exhibit:perspectives-of-symmetry",
       "venue:leila-heller",
@@ -435,13 +435,13 @@
     ]
   },
   {
-    "id": "ps-fractal-tree-video",
+    "id": "ps-fractal-tree",
     "piece": "Fractal tree",
     "piece_slug": "fractal-tree",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree-video.mp4",
-    "caption": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
-    "alt": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree.jpg",
+    "caption": "Anton's fractal tree in patinated steel, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
+    "alt": "Anton's fractal tree in patinated steel, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
     "tags": [
       "exhibit:perspectives-of-symmetry",
       "venue:leila-heller",
@@ -534,6 +534,27 @@
     ]
   },
   {
+    "id": "difc23-kite-video",
+    "piece": "Heptagon",
+    "piece_slug": "heptagon",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-kite-video.mp4",
+    "caption": "Heptagon at the DIFC Sculpture Park, Dubai, 2023, a mirror-polished closed seven-step lattice path.",
+    "alt": "Heptagon at the DIFC Sculpture Park, Dubai, 2023, a mirror-polished closed seven-step lattice path.",
+    "tags": [
+      "exhibit:difc-sculpture-park-2023",
+      "venue:difc",
+      "location:dubai",
+      "year:2023",
+      "type:public-art",
+      "outdoor",
+      "series:heptagon",
+      "type:closed-path",
+      "lattice:fcc",
+      "material:mirror-polished-stainless"
+    ]
+  },
+  {
     "id": "difc23-kite-render",
     "piece": "Heptagon",
     "piece_slug": "heptagon",
@@ -553,27 +574,6 @@
       "lattice:fcc",
       "type:render",
       "type:digital"
-    ]
-  },
-  {
-    "id": "difc23-kite-video",
-    "piece": "Heptagon",
-    "piece_slug": "heptagon",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-kite-video.mp4",
-    "caption": "Heptagon at the DIFC Sculpture Park, Dubai, 2023, a mirror-polished closed seven-step lattice path.",
-    "alt": "Heptagon at the DIFC Sculpture Park, Dubai, 2023, a mirror-polished closed seven-step lattice path.",
-    "tags": [
-      "exhibit:difc-sculpture-park-2023",
-      "venue:difc",
-      "location:dubai",
-      "year:2023",
-      "type:public-art",
-      "outdoor",
-      "series:heptagon",
-      "type:closed-path",
-      "lattice:fcc",
-      "material:mirror-polished-stainless"
     ]
   },
   {
@@ -1038,6 +1038,28 @@
     ]
   },
   {
+    "id": "difc23-ring-knot-render",
+    "piece": "Reflection",
+    "piece_slug": "reflection",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-ring-knot-render.mp4",
+    "caption": "A rotating render of Reflection, a Hamiltonian path on a cuboctahedron. Anton renders his forms digitally before they are fabricated.",
+    "alt": "A rotating render of Reflection, a Hamiltonian path on a cuboctahedron. Anton renders his forms digitally before they are fabricated.",
+    "tags": [
+      "exhibit:difc-sculpture-park-2023",
+      "venue:difc",
+      "location:dubai",
+      "year:2023",
+      "type:public-art",
+      "outdoor",
+      "series:reflection",
+      "type:hamiltonian-path",
+      "lattice:cuboctahedron",
+      "type:render",
+      "type:digital"
+    ]
+  },
+  {
     "id": "difc23-ring-knot-video",
     "piece": "Reflection",
     "piece_slug": "reflection",
@@ -1059,25 +1081,98 @@
     ]
   },
   {
-    "id": "difc23-ring-knot-render",
-    "piece": "Reflection",
-    "piece_slug": "reflection",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-ring-knot-render.mp4",
-    "caption": "A rotating render of Reflection, a Hamiltonian path on a cuboctahedron. Anton renders his forms digitally before they are fabricated.",
-    "alt": "A rotating render of Reflection, a Hamiltonian path on a cuboctahedron. Anton renders his forms digitally before they are fabricated.",
+    "id": "reflective-duo-gate",
+    "piece": "Reflective Duo",
+    "piece_slug": "reflective-duo",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2024/reflective-duo-gate.jpg",
+    "caption": "Reflective Duo framed by the DIFC Gate at the third DIFC Sculpture Park, Dubai, 2024. Two identical mirror-polished forms placed relative to each other in the lattice; from some angles they read as different forms, from others as reflective counterparts.",
+    "alt": "Reflective Duo framed by the DIFC Gate at the third DIFC Sculpture Park, Dubai, 2024. Two identical mirror-polished forms placed relative to each other in the lattice; from some angles they read as different forms, from others as reflective counterparts.",
     "tags": [
-      "exhibit:difc-sculpture-park-2023",
+      "exhibit:difc-sculpture-park-2024",
       "venue:difc",
       "location:dubai",
-      "year:2023",
+      "year:2024",
       "type:public-art",
-      "outdoor",
-      "series:reflection",
-      "type:hamiltonian-path",
-      "lattice:cuboctahedron",
-      "type:render",
-      "type:digital"
+      "series:reflective-duo",
+      "material:mirror-polished-stainless",
+      "type:relativity"
+    ]
+  },
+  {
+    "id": "reflective-duo-day",
+    "piece": "Reflective Duo",
+    "piece_slug": "reflective-duo",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2024/reflective-duo-day.jpg",
+    "caption": "Reflective Duo seen head-on at the DIFC Sculpture Park, Dubai, 2024, where the two forms read as a mirrored pair.",
+    "alt": "Reflective Duo seen head-on at the DIFC Sculpture Park, Dubai, 2024, where the two forms read as a mirrored pair.",
+    "tags": [
+      "exhibit:difc-sculpture-park-2024",
+      "venue:difc",
+      "location:dubai",
+      "year:2024",
+      "type:public-art",
+      "series:reflective-duo",
+      "material:mirror-polished-stainless",
+      "type:relativity"
+    ]
+  },
+  {
+    "id": "reflective-duo-skyline",
+    "piece": "Reflective Duo",
+    "piece_slug": "reflective-duo",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2024/reflective-duo-skyline.jpg",
+    "caption": "Reflective Duo against the Dubai skyline at the DIFC Sculpture Park, 2024.",
+    "alt": "Reflective Duo against the Dubai skyline at the DIFC Sculpture Park, 2024.",
+    "tags": [
+      "exhibit:difc-sculpture-park-2024",
+      "venue:difc",
+      "location:dubai",
+      "year:2024",
+      "type:public-art",
+      "series:reflective-duo",
+      "material:mirror-polished-stainless",
+      "type:relativity"
+    ]
+  },
+  {
+    "id": "reflective-duo-night",
+    "piece": "Reflective Duo",
+    "piece_slug": "reflective-duo",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2024/reflective-duo-night.jpg",
+    "caption": "Reflective Duo at night in the DIFC, Dubai, 2024, the towers and lights caught in its mirror-polished surfaces.",
+    "alt": "Reflective Duo at night in the DIFC, Dubai, 2024, the towers and lights caught in its mirror-polished surfaces.",
+    "tags": [
+      "exhibit:difc-sculpture-park-2024",
+      "venue:difc",
+      "location:dubai",
+      "year:2024",
+      "type:public-art",
+      "series:reflective-duo",
+      "material:mirror-polished-stainless",
+      "type:relativity"
+    ]
+  },
+  {
+    "id": "reflective-duo-indoor",
+    "piece": "Reflective Duo",
+    "piece_slug": "reflective-duo",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2024/reflective-duo-indoor.jpg",
+    "caption": "Reflective Duo indoors at the DIFC, where from this angle the two forms align into a single flame-like silhouette.",
+    "alt": "Reflective Duo indoors at the DIFC, where from this angle the two forms align into a single flame-like silhouette.",
+    "tags": [
+      "exhibit:difc-sculpture-park-2024",
+      "venue:difc",
+      "location:dubai",
+      "year:2024",
+      "type:public-art",
+      "series:reflective-duo",
+      "material:mirror-polished-stainless",
+      "type:relativity"
     ]
   },
   {
