@@ -12,6 +12,7 @@ across many mediums. Returning to the DIFC park placed Anton's lattice-path form
 of the city, at architectural scale and open to everyone.
 
 His two works that year were large mirror-polished stainless sculptures set in the centre's reflecting
-pools, an octagonal ring knot and an angular faceted form. Their polished faces gather the surrounding
-towers, the sky, and the water into the closed lattice paths, so the city itself becomes part of each
-sculpture as you move around it.
+pools: Heptagon, a closed seven-step lattice path, and Reflection, a Hamiltonian path on a cuboctahedron.
+Their polished faces gather the surrounding towers, the sky, and the water into the closed lattice paths,
+so the city itself becomes part of each sculpture as you move around it. Reflection has since found a
+permanent home at the Norfolk Botanical Gardens in Virginia.

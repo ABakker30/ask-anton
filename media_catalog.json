@@ -32,22 +32,6 @@
     ]
   },
   {
-    "id": "alt-perspective-install",
-    "piece": "Alternative Perspective (MoMath)",
-    "piece_slug": "alternative-perspective",
-    "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/alt-perspective-install.jpg",
-    "caption": "Inside Alternative Perspective at MoMath, 2021: red wall reliefs of the linked-squares and endless-knot forms beside a patinated bronze sculpture (Opus 125707).",
-    "alt": "Inside Alternative Perspective at MoMath, 2021: red wall reliefs of the linked-squares and endless-knot forms beside a patinated bronze sculpture (Opus 125707).",
-    "tags": [
-      "exhibit:alternative-perspective",
-      "venue:momath",
-      "location:new-york",
-      "year:2021",
-      "type:install-view"
-    ]
-  },
-  {
     "id": "momath-opening-reception",
     "piece": "Alternative Perspective (MoMath)",
     "piece_slug": "alternative-perspective",
@@ -61,6 +45,22 @@
       "location:new-york",
       "year:2021",
       "type:opening"
+    ]
+  },
+  {
+    "id": "alt-perspective-install",
+    "piece": "Alternative Perspective (MoMath)",
+    "piece_slug": "alternative-perspective",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/alt-perspective-install.jpg",
+    "caption": "Inside Alternative Perspective at MoMath, 2021: red wall reliefs of the linked-squares and endless-knot forms beside a patinated bronze sculpture (Opus 125707).",
+    "alt": "Inside Alternative Perspective at MoMath, 2021: red wall reliefs of the linked-squares and endless-knot forms beside a patinated bronze sculpture (Opus 125707).",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "type:install-view"
     ]
   },
   {
@@ -364,8 +364,8 @@
     "piece_slug": "difc-sculpture-park-2023",
     "kind": "image",
     "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-pool-hero.jpg",
-    "caption": "Two of Anton's mirror-polished stainless sculptures in the reflecting pool at the DIFC Sculpture Park, Dubai, 2023, the city gathered into their surfaces.",
-    "alt": "Two of Anton's mirror-polished stainless sculptures in the reflecting pool at the DIFC Sculpture Park, Dubai, 2023, the city gathered into their surfaces.",
+    "caption": "Reflection and Heptagon, two mirror-polished stainless sculptures, in the reflecting pool at the DIFC Sculpture Park, Dubai, 2023.",
+    "alt": "Reflection and Heptagon, two mirror-polished stainless sculptures, in the reflecting pool at the DIFC Sculpture Park, Dubai, 2023.",
     "tags": [
       "exhibit:difc-sculpture-park-2023",
       "venue:difc",
@@ -375,25 +375,6 @@
       "outdoor",
       "type:install-view",
       "material:mirror-polished-stainless"
-    ]
-  },
-  {
-    "id": "momath-red-fence-gallery",
-    "piece": "Fence around nothing",
-    "piece_slug": "fence-around-nothing",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/momath-red-fence-gallery.mp4",
-    "caption": "A red painted-steel 'fence around nothing' on the gallery floor at MoMath, 2021, the form Anton later realized monumentally as Red Zig Zag in Norfolk.",
-    "alt": "A red painted-steel 'fence around nothing' on the gallery floor at MoMath, 2021, the form Anton later realized monumentally as Red Zig Zag in Norfolk.",
-    "tags": [
-      "exhibit:alternative-perspective",
-      "venue:momath",
-      "location:new-york",
-      "year:2021",
-      "series:fence-around-nothing",
-      "related:red-zigzag",
-      "material:painted-steel",
-      "type:zigzag"
     ]
   },
   {
@@ -416,13 +397,32 @@
     ]
   },
   {
-    "id": "ps-fractal-tree-video",
+    "id": "momath-red-fence-gallery",
+    "piece": "Fence around nothing",
+    "piece_slug": "fence-around-nothing",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/momath-red-fence-gallery.mp4",
+    "caption": "A red painted-steel 'fence around nothing' on the gallery floor at MoMath, 2021, the form Anton later realized monumentally as Red Zig Zag in Norfolk.",
+    "alt": "A red painted-steel 'fence around nothing' on the gallery floor at MoMath, 2021, the form Anton later realized monumentally as Red Zig Zag in Norfolk.",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "series:fence-around-nothing",
+      "related:red-zigzag",
+      "material:painted-steel",
+      "type:zigzag"
+    ]
+  },
+  {
+    "id": "ps-fractal-tree",
     "piece": "Fractal tree",
     "piece_slug": "fractal-tree",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree-video.mp4",
-    "caption": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
-    "alt": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree.jpg",
+    "caption": "Anton's fractal tree in patinated steel, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
+    "alt": "Anton's fractal tree in patinated steel, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
     "tags": [
       "exhibit:perspectives-of-symmetry",
       "venue:leila-heller",
@@ -435,13 +435,13 @@
     ]
   },
   {
-    "id": "ps-fractal-tree",
+    "id": "ps-fractal-tree-video",
     "piece": "Fractal tree",
     "piece_slug": "fractal-tree",
-    "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree.jpg",
-    "caption": "Anton's fractal tree in patinated steel, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
-    "alt": "Anton's fractal tree in patinated steel, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree-video.mp4",
+    "caption": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
+    "alt": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
     "tags": [
       "exhibit:perspectives-of-symmetry",
       "venue:leila-heller",
@@ -510,6 +510,70 @@
       "year:2021",
       "material:gold",
       "type:jewelry"
+    ]
+  },
+  {
+    "id": "difc23-kite-night",
+    "piece": "Heptagon",
+    "piece_slug": "heptagon",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-kite-night.jpg",
+    "caption": "Heptagon, a mirror-polished stainless sculpture of a closed seven-step lattice path, lit at night in the DIFC reflecting pool, Dubai, 2023.",
+    "alt": "Heptagon, a mirror-polished stainless sculpture of a closed seven-step lattice path, lit at night in the DIFC reflecting pool, Dubai, 2023.",
+    "tags": [
+      "exhibit:difc-sculpture-park-2023",
+      "venue:difc",
+      "location:dubai",
+      "year:2023",
+      "type:public-art",
+      "outdoor",
+      "series:heptagon",
+      "type:closed-path",
+      "lattice:fcc",
+      "material:mirror-polished-stainless"
+    ]
+  },
+  {
+    "id": "difc23-kite-render",
+    "piece": "Heptagon",
+    "piece_slug": "heptagon",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-kite-render.mp4",
+    "caption": "A rotating render of Heptagon, part of Anton's render-first process.",
+    "alt": "A rotating render of Heptagon, part of Anton's render-first process.",
+    "tags": [
+      "exhibit:difc-sculpture-park-2023",
+      "venue:difc",
+      "location:dubai",
+      "year:2023",
+      "type:public-art",
+      "outdoor",
+      "series:heptagon",
+      "type:closed-path",
+      "lattice:fcc",
+      "type:render",
+      "type:digital"
+    ]
+  },
+  {
+    "id": "difc23-kite-video",
+    "piece": "Heptagon",
+    "piece_slug": "heptagon",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-kite-video.mp4",
+    "caption": "Heptagon at the DIFC Sculpture Park, Dubai, 2023, a mirror-polished closed seven-step lattice path.",
+    "alt": "Heptagon at the DIFC Sculpture Park, Dubai, 2023, a mirror-polished closed seven-step lattice path.",
+    "tags": [
+      "exhibit:difc-sculpture-park-2023",
+      "venue:difc",
+      "location:dubai",
+      "year:2023",
+      "type:public-art",
+      "outdoor",
+      "series:heptagon",
+      "type:closed-path",
+      "lattice:fcc",
+      "material:mirror-polished-stainless"
     ]
   },
   {
@@ -735,124 +799,6 @@
     ]
   },
   {
-    "id": "difc23-kite-night",
-    "piece": "Mirror-polished kite",
-    "piece_slug": "kite-steel",
-    "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-kite-night.jpg",
-    "caption": "Anton's angular mirror-polished sculpture lit at night in the DIFC reflecting pool, Dubai, 2023.",
-    "alt": "Anton's angular mirror-polished sculpture lit at night in the DIFC reflecting pool, Dubai, 2023.",
-    "tags": [
-      "exhibit:difc-sculpture-park-2023",
-      "venue:difc",
-      "location:dubai",
-      "year:2023",
-      "type:public-art",
-      "outdoor",
-      "material:mirror-polished-stainless",
-      "type:angular"
-    ]
-  },
-  {
-    "id": "difc23-kite-render",
-    "piece": "Mirror-polished kite",
-    "piece_slug": "kite-steel",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-kite-render.mp4",
-    "caption": "A rotating render of the angular sculpture, part of Anton's render-first process.",
-    "alt": "A rotating render of the angular sculpture, part of Anton's render-first process.",
-    "tags": [
-      "exhibit:difc-sculpture-park-2023",
-      "venue:difc",
-      "location:dubai",
-      "year:2023",
-      "type:public-art",
-      "outdoor",
-      "material:mirror-polished-stainless",
-      "type:angular",
-      "type:render",
-      "type:digital"
-    ]
-  },
-  {
-    "id": "difc23-kite-video",
-    "piece": "Mirror-polished kite",
-    "piece_slug": "kite-steel",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-kite-video.mp4",
-    "caption": "Anton's angular mirror-polished sculpture at the DIFC Sculpture Park, Dubai, 2023.",
-    "alt": "Anton's angular mirror-polished sculpture at the DIFC Sculpture Park, Dubai, 2023.",
-    "tags": [
-      "exhibit:difc-sculpture-park-2023",
-      "venue:difc",
-      "location:dubai",
-      "year:2023",
-      "type:public-art",
-      "outdoor",
-      "material:mirror-polished-stainless",
-      "type:angular"
-    ]
-  },
-  {
-    "id": "difc23-ring-knot",
-    "piece": "Mirror-polished ring knot",
-    "piece_slug": "ring-knot-steel",
-    "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-ring-knot.jpg",
-    "caption": "A mirror-polished stainless ring knot in the DIFC reflecting pool, Dubai, 2023; its faces fold the buildings, sky, and water into the closed lattice path.",
-    "alt": "A mirror-polished stainless ring knot in the DIFC reflecting pool, Dubai, 2023; its faces fold the buildings, sky, and water into the closed lattice path.",
-    "tags": [
-      "exhibit:difc-sculpture-park-2023",
-      "venue:difc",
-      "location:dubai",
-      "year:2023",
-      "type:public-art",
-      "outdoor",
-      "material:mirror-polished-stainless",
-      "type:knot"
-    ]
-  },
-  {
-    "id": "difc23-ring-knot-render",
-    "piece": "Mirror-polished ring knot",
-    "piece_slug": "ring-knot-steel",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-ring-knot-render.mp4",
-    "caption": "A rotating render of the ring-knot sculpture. Anton discovers and renders his forms digitally before they are fabricated.",
-    "alt": "A rotating render of the ring-knot sculpture. Anton discovers and renders his forms digitally before they are fabricated.",
-    "tags": [
-      "exhibit:difc-sculpture-park-2023",
-      "venue:difc",
-      "location:dubai",
-      "year:2023",
-      "type:public-art",
-      "outdoor",
-      "material:mirror-polished-stainless",
-      "type:knot",
-      "type:render",
-      "type:digital"
-    ]
-  },
-  {
-    "id": "difc23-ring-knot-video",
-    "piece": "Mirror-polished ring knot",
-    "piece_slug": "ring-knot-steel",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-ring-knot-video.mp4",
-    "caption": "Anton's mirror-polished ring knot in the DIFC reflecting pool, Dubai, 2023.",
-    "alt": "Anton's mirror-polished ring knot in the DIFC reflecting pool, Dubai, 2023.",
-    "tags": [
-      "exhibit:difc-sculpture-park-2023",
-      "venue:difc",
-      "location:dubai",
-      "year:2023",
-      "type:public-art",
-      "outdoor",
-      "material:mirror-polished-stainless",
-      "type:knot"
-    ]
-  },
-  {
     "id": "mobius-steel",
     "piece": "Mobius path (steel)",
     "piece_slug": "mobius-steel",
@@ -1068,6 +1014,70 @@
       "year:2025",
       "type:open-path",
       "installation"
+    ]
+  },
+  {
+    "id": "difc23-ring-knot",
+    "piece": "Reflection",
+    "piece_slug": "reflection",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-ring-knot.jpg",
+    "caption": "Reflection, a mirror-polished stainless Hamiltonian path on a cuboctahedron, in the DIFC reflecting pool, Dubai, 2023. It has since found a home at the Norfolk Botanical Gardens.",
+    "alt": "Reflection, a mirror-polished stainless Hamiltonian path on a cuboctahedron, in the DIFC reflecting pool, Dubai, 2023. It has since found a home at the Norfolk Botanical Gardens.",
+    "tags": [
+      "exhibit:difc-sculpture-park-2023",
+      "venue:difc",
+      "location:dubai",
+      "year:2023",
+      "type:public-art",
+      "outdoor",
+      "series:reflection",
+      "type:hamiltonian-path",
+      "lattice:cuboctahedron",
+      "material:mirror-polished-stainless"
+    ]
+  },
+  {
+    "id": "difc23-ring-knot-video",
+    "piece": "Reflection",
+    "piece_slug": "reflection",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-ring-knot-video.mp4",
+    "caption": "Reflection in the DIFC reflecting pool, Dubai, 2023, a mirror-polished Hamiltonian path on a cuboctahedron.",
+    "alt": "Reflection in the DIFC reflecting pool, Dubai, 2023, a mirror-polished Hamiltonian path on a cuboctahedron.",
+    "tags": [
+      "exhibit:difc-sculpture-park-2023",
+      "venue:difc",
+      "location:dubai",
+      "year:2023",
+      "type:public-art",
+      "outdoor",
+      "series:reflection",
+      "type:hamiltonian-path",
+      "lattice:cuboctahedron",
+      "material:mirror-polished-stainless"
+    ]
+  },
+  {
+    "id": "difc23-ring-knot-render",
+    "piece": "Reflection",
+    "piece_slug": "reflection",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-ring-knot-render.mp4",
+    "caption": "A rotating render of Reflection, a Hamiltonian path on a cuboctahedron. Anton renders his forms digitally before they are fabricated.",
+    "alt": "A rotating render of Reflection, a Hamiltonian path on a cuboctahedron. Anton renders his forms digitally before they are fabricated.",
+    "tags": [
+      "exhibit:difc-sculpture-park-2023",
+      "venue:difc",
+      "location:dubai",
+      "year:2023",
+      "type:public-art",
+      "outdoor",
+      "series:reflection",
+      "type:hamiltonian-path",
+      "lattice:cuboctahedron",
+      "type:render",
+      "type:digital"
     ]
   },
   {
