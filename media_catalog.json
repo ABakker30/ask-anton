@@ -198,5 +198,140 @@
       "koos-verhoeff",
       "portrait"
     ]
+  },
+  {
+    "id": "red-zigzag-hero",
+    "piece": "Red Zigzag",
+    "piece_slug": "red-zigzag",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/red-zigzag/red-zigzag-hero.jpg",
+    "caption": "Red Zigzag, a 14-foot 'fence around nothing' in painted stainless steel, installed February 2025 in Norfolk, Virginia, across from the Chrysler Museum of Art.",
+    "alt": "A tall, bright red zigzagging open sculpture on a concrete plinth against a blue sky, with low museum-district buildings and bare trees behind it.",
+    "tags": [
+      "red-zigzag",
+      "sculpture",
+      "series:red-zigzag",
+      "material:painted-stainless-steel",
+      "venue:chrysler-museum",
+      "location:norfolk-va",
+      "year:2025",
+      "type:open-path"
+    ]
+  },
+  {
+    "id": "red-zigzag-against-sky",
+    "piece": "Red Zigzag",
+    "piece_slug": "red-zigzag",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/red-zigzag/red-zigzag-against-sky.jpg",
+    "caption": "Red Zigzag seen from below, its painted stainless steel folding back and forth up fourteen feet against the sky.",
+    "alt": "Low-angle view of the bright red Red Zigzag sculpture rising into a deep blue sky, modern apartment buildings behind, anchor bolts visible at the base.",
+    "tags": [
+      "red-zigzag",
+      "sculpture",
+      "series:red-zigzag",
+      "material:painted-stainless-steel",
+      "venue:chrysler-museum",
+      "location:norfolk-va",
+      "year:2025",
+      "type:open-path"
+    ]
+  },
+  {
+    "id": "red-zigzag-detail",
+    "piece": "Red Zigzag",
+    "piece_slug": "red-zigzag",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/red-zigzag/red-zigzag-detail.jpg",
+    "caption": "A close view of Red Zigzag, where the glossy red faces catch the light and the open folds read as a path with no beginning or end.",
+    "alt": "Close-up of the glossy red faceted beams of Red Zigzag against a blue sky with thin clouds.",
+    "tags": [
+      "red-zigzag",
+      "sculpture",
+      "series:red-zigzag",
+      "material:painted-stainless-steel",
+      "venue:chrysler-museum",
+      "location:norfolk-va",
+      "year:2025",
+      "type:open-path",
+      "detail"
+    ]
+  },
+  {
+    "id": "red-zigzag-at-chrysler-museum",
+    "piece": "Red Zigzag",
+    "piece_slug": "red-zigzag",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/red-zigzag/red-zigzag-at-chrysler-museum.jpg",
+    "caption": "Red Zigzag on its corner across from the Chrysler Museum of Art in Norfolk, Virginia.",
+    "alt": "The red Red Zigzag sculpture on a plinth at a street corner, with a Chrysler Museum of Art sign and the museum grounds across the road.",
+    "tags": [
+      "red-zigzag",
+      "sculpture",
+      "series:red-zigzag",
+      "material:painted-stainless-steel",
+      "venue:chrysler-museum",
+      "location:norfolk-va",
+      "year:2025",
+      "type:open-path"
+    ]
+  },
+  {
+    "id": "red-zigzag-streetscape",
+    "piece": "Red Zigzag",
+    "piece_slug": "red-zigzag",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/red-zigzag/red-zigzag-streetscape.jpg",
+    "caption": "Red Zigzag in its downtown Norfolk setting, marking a street corner near the Chrysler Museum.",
+    "alt": "Street-level view of the red zigzag sculpture on a planted median at a downtown intersection, with roads, trees, and city buildings around it.",
+    "tags": [
+      "red-zigzag",
+      "sculpture",
+      "series:red-zigzag",
+      "material:painted-stainless-steel",
+      "venue:chrysler-museum",
+      "location:norfolk-va",
+      "year:2025",
+      "type:open-path"
+    ]
+  },
+  {
+    "id": "red-zigzag-against-building",
+    "piece": "Red Zigzag",
+    "piece_slug": "red-zigzag",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/red-zigzag/red-zigzag-against-building.jpg",
+    "caption": "Red Zigzag against a pale brick facade, its full fourteen-foot height rising from a single base.",
+    "alt": "The bright red zigzag sculpture photographed straight on against a white brick building, standing on a concrete plinth.",
+    "tags": [
+      "red-zigzag",
+      "sculpture",
+      "series:red-zigzag",
+      "material:painted-stainless-steel",
+      "venue:chrysler-museum",
+      "location:norfolk-va",
+      "year:2025",
+      "type:open-path"
+    ]
+  },
+  {
+    "id": "red-zigzag-installation",
+    "piece": "Red Zigzag",
+    "piece_slug": "red-zigzag",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/red-zigzag/red-zigzag-installation.jpg",
+    "caption": "Red Zigzag being lifted into place by crane on installation day, February 14, 2025.",
+    "alt": "The red zigzag sculpture suspended from a tall yellow crane against a clear blue sky during installation, with a truck and workers below.",
+    "tags": [
+      "red-zigzag",
+      "sculpture",
+      "series:red-zigzag",
+      "material:painted-stainless-steel",
+      "venue:chrysler-museum",
+      "location:norfolk-va",
+      "year:2025",
+      "type:open-path",
+      "installation"
+    ]
   }
 ]
