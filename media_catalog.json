@@ -230,6 +230,23 @@
     ]
   },
   {
+    "id": "ps-mirror-curve",
+    "piece": "Curved path (mirror-polished steel)",
+    "piece_slug": "curved-steel",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-mirror-curve.jpg",
+    "caption": "A mirror-polished stainless curved path, its surface folding the gallery and the viewer into the form, at Perspectives of Symmetry, Dubai.",
+    "alt": "A mirror-polished stainless curved path, its surface folding the gallery and the viewer into the form, at Perspectives of Symmetry, Dubai.",
+    "tags": [
+      "exhibit:perspectives-of-symmetry",
+      "venue:leila-heller",
+      "location:dubai",
+      "year:2021",
+      "material:mirror-polished-stainless",
+      "type:curve"
+    ]
+  },
+  {
     "id": "fence-around-nothing",
     "piece": "Fence around nothing",
     "piece_slug": "fence-around-nothing",
@@ -268,6 +285,44 @@
     ]
   },
   {
+    "id": "ps-fractal-tree",
+    "piece": "Fractal tree",
+    "piece_slug": "fractal-tree",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree.jpg",
+    "caption": "Anton's fractal tree in patinated steel, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
+    "alt": "Anton's fractal tree in patinated steel, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
+    "tags": [
+      "exhibit:perspectives-of-symmetry",
+      "venue:leila-heller",
+      "location:dubai",
+      "year:2021",
+      "series:fractal-tree",
+      "material:steel",
+      "type:fractal",
+      "related:koos-verhoeff"
+    ]
+  },
+  {
+    "id": "ps-fractal-tree-video",
+    "piece": "Fractal tree",
+    "piece_slug": "fractal-tree",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree-video.mp4",
+    "caption": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
+    "alt": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
+    "tags": [
+      "exhibit:perspectives-of-symmetry",
+      "venue:leila-heller",
+      "location:dubai",
+      "year:2021",
+      "series:fractal-tree",
+      "material:steel",
+      "type:fractal",
+      "related:koos-verhoeff"
+    ]
+  },
+  {
     "id": "gold-pendant-momath",
     "piece": "Gold pendant",
     "piece_slug": "gold-jewelry",
@@ -282,6 +337,23 @@
       "year:2021",
       "material:gold",
       "type:jewelry"
+    ]
+  },
+  {
+    "id": "ps-mirror-knot",
+    "piece": "Knotted path (mirror-polished steel)",
+    "piece_slug": "knotted-steel",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-mirror-knot.jpg",
+    "caption": "A mirror-polished stainless knot, its reflections turning the room into part of the sculpture, at Leila Heller Gallery, Dubai.",
+    "alt": "A mirror-polished stainless knot, its reflections turning the room into part of the sculpture, at Leila Heller Gallery, Dubai.",
+    "tags": [
+      "exhibit:perspectives-of-symmetry",
+      "venue:leila-heller",
+      "location:dubai",
+      "year:2021",
+      "material:mirror-polished-stainless",
+      "type:knot"
     ]
   },
   {
@@ -465,6 +537,71 @@
       "series:mobius",
       "material:mirror-polished-stainless",
       "type:mobius"
+    ]
+  },
+  {
+    "id": "ps-install-wide",
+    "piece": "Perspectives of Symmetry (Leila Heller, Dubai)",
+    "piece_slug": "perspectives-of-symmetry",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-install-wide.jpg",
+    "caption": "Inside Perspectives of Symmetry, Anton's Middle East solo debut at Leila Heller Gallery, Dubai, 2021, with bronze and mirror-polished stainless works on pedestals.",
+    "alt": "Inside Perspectives of Symmetry, Anton's Middle East solo debut at Leila Heller Gallery, Dubai, 2021, with bronze and mirror-polished stainless works on pedestals.",
+    "tags": [
+      "exhibit:perspectives-of-symmetry",
+      "venue:leila-heller",
+      "location:dubai",
+      "year:2021",
+      "type:install-view"
+    ]
+  },
+  {
+    "id": "ps-walkthrough",
+    "piece": "Perspectives of Symmetry (Leila Heller, Dubai)",
+    "piece_slug": "perspectives-of-symmetry",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-walkthrough.mp4",
+    "caption": "A walk through Perspectives of Symmetry at Leila Heller Gallery, Dubai, 2021.",
+    "alt": "A walk through Perspectives of Symmetry at Leila Heller Gallery, Dubai, 2021.",
+    "tags": [
+      "exhibit:perspectives-of-symmetry",
+      "venue:leila-heller",
+      "location:dubai",
+      "year:2021",
+      "type:install-view",
+      "type:walkthrough"
+    ]
+  },
+  {
+    "id": "ps-install-tree",
+    "piece": "Perspectives of Symmetry (Leila Heller, Dubai)",
+    "piece_slug": "perspectives-of-symmetry",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-install-tree.jpg",
+    "caption": "A gallery view of Perspectives of Symmetry, the black steel fractal tree at the center surrounded by mirror-polished and bronze sculptures.",
+    "alt": "A gallery view of Perspectives of Symmetry, the black steel fractal tree at the center surrounded by mirror-polished and bronze sculptures.",
+    "tags": [
+      "exhibit:perspectives-of-symmetry",
+      "venue:leila-heller",
+      "location:dubai",
+      "year:2021",
+      "type:install-view"
+    ]
+  },
+  {
+    "id": "ps-install-symmetric",
+    "piece": "Perspectives of Symmetry (Leila Heller, Dubai)",
+    "piece_slug": "perspectives-of-symmetry",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-install-symmetric.jpg",
+    "caption": "A symmetric view of Perspectives of Symmetry: two mirror-polished curved sculptures flanking the gallery, Dubai, 2021.",
+    "alt": "A symmetric view of Perspectives of Symmetry: two mirror-polished curved sculptures flanking the gallery, Dubai, 2021.",
+    "tags": [
+      "exhibit:perspectives-of-symmetry",
+      "venue:leila-heller",
+      "location:dubai",
+      "year:2021",
+      "type:install-view"
     ]
   },
   {
