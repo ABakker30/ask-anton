@@ -132,6 +132,170 @@
     ]
   },
   {
+    "id": "arch-building-5",
+    "piece": "Architecture at scale",
+    "piece_slug": "architecture",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/architecture/arch-building-5.jpg",
+    "caption": "A lattice-path form drawn up into a building, its facade a field of interlocking geometric pattern.",
+    "alt": "A lattice-path form drawn up into a building, its facade a field of interlocking geometric pattern.",
+    "tags": [
+      "theme:architecture",
+      "type:architecture",
+      "type:render",
+      "type:digital",
+      "type:building"
+    ]
+  },
+  {
+    "id": "arch-building-4",
+    "piece": "Architecture at scale",
+    "piece_slug": "architecture",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/architecture/arch-building-4.jpg",
+    "caption": "Anton's geometry at architectural scale: a lattice-path form as a building with a patterned glass facade.",
+    "alt": "Anton's geometry at architectural scale: a lattice-path form as a building with a patterned glass facade.",
+    "tags": [
+      "theme:architecture",
+      "type:architecture",
+      "type:render",
+      "type:digital",
+      "type:building"
+    ]
+  },
+  {
+    "id": "arch-building-3",
+    "piece": "Architecture at scale",
+    "piece_slug": "architecture",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/architecture/arch-building-3.jpg",
+    "caption": "A lattice-path building, the zigzag rising over a green base, the facade carrying the lattice pattern as ornament.",
+    "alt": "A lattice-path building, the zigzag rising over a green base, the facade carrying the lattice pattern as ornament.",
+    "tags": [
+      "theme:architecture",
+      "type:architecture",
+      "type:render",
+      "type:digital",
+      "type:building"
+    ]
+  },
+  {
+    "id": "arch-building-2",
+    "piece": "Architecture at scale",
+    "piece_slug": "architecture",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/architecture/arch-building-2.jpg",
+    "caption": "A lattice-path form realized as architecture, its angular masses folding around planted terraces.",
+    "alt": "A lattice-path form realized as architecture, its angular masses folding around planted terraces.",
+    "tags": [
+      "theme:architecture",
+      "type:architecture",
+      "type:render",
+      "type:digital",
+      "type:building"
+    ]
+  },
+  {
+    "id": "arch-building-1",
+    "piece": "Architecture at scale",
+    "piece_slug": "architecture",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/architecture/arch-building-1.jpg",
+    "caption": "One of Anton's lattice-path forms imagined as a building, its zigzag volume clad in a geometric lattice facade with planted terraces.",
+    "alt": "One of Anton's lattice-path forms imagined as a building, its zigzag volume clad in a geometric lattice facade with planted terraces.",
+    "tags": [
+      "theme:architecture",
+      "type:architecture",
+      "type:render",
+      "type:digital",
+      "type:building"
+    ]
+  },
+  {
+    "id": "arch-dubai-street",
+    "piece": "Architecture at scale",
+    "piece_slug": "architecture",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/architecture/arch-dubai-street.mp4",
+    "caption": "Street-level view of a lattice-path monument set among Dubai's towers.",
+    "alt": "Street-level view of a lattice-path monument set among Dubai's towers.",
+    "tags": [
+      "theme:architecture",
+      "type:architecture",
+      "type:render",
+      "type:digital",
+      "location:dubai",
+      "type:monument"
+    ]
+  },
+  {
+    "id": "arch-dubai-overview",
+    "piece": "Architecture at scale",
+    "piece_slug": "architecture",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/architecture/arch-dubai-overview.mp4",
+    "caption": "A lattice-path sculpture at monumental scale in a Dubai cityscape, seen from above.",
+    "alt": "A lattice-path sculpture at monumental scale in a Dubai cityscape, seen from above.",
+    "tags": [
+      "theme:architecture",
+      "type:architecture",
+      "type:render",
+      "type:digital",
+      "location:dubai",
+      "type:monument"
+    ]
+  },
+  {
+    "id": "arch-lattice-monument",
+    "piece": "Architecture at scale",
+    "piece_slug": "architecture",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/architecture/arch-lattice-monument.mp4",
+    "caption": "An interlocking cube-lattice form at monumental scale on a city plaza.",
+    "alt": "An interlocking cube-lattice form at monumental scale on a city plaza.",
+    "tags": [
+      "theme:architecture",
+      "type:architecture",
+      "type:render",
+      "type:digital",
+      "type:monument"
+    ]
+  },
+  {
+    "id": "arch-spiral-monument",
+    "piece": "Architecture at scale",
+    "piece_slug": "architecture",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/architecture/arch-spiral-monument.mp4",
+    "caption": "A spiral lattice-path form at monumental scale on a city plaza.",
+    "alt": "A spiral lattice-path form at monumental scale on a city plaza.",
+    "tags": [
+      "theme:architecture",
+      "type:architecture",
+      "type:render",
+      "type:digital",
+      "type:monument",
+      "type:spiral"
+    ]
+  },
+  {
+    "id": "arch-fractal-tree-monument",
+    "piece": "Architecture at scale",
+    "piece_slug": "architecture",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/architecture/arch-fractal-tree-monument.mp4",
+    "caption": "Anton's fractal tree imagined as a monumental public sculpture at city scale.",
+    "alt": "Anton's fractal tree imagined as a monumental public sculpture at city scale.",
+    "tags": [
+      "theme:architecture",
+      "type:architecture",
+      "type:render",
+      "type:digital",
+      "series:fractal-tree",
+      "type:monument"
+    ]
+  },
+  {
     "id": "awakening-shadow-installation",
     "piece": "Awakening",
     "piece_slug": "awakening",
@@ -207,32 +371,13 @@
     ]
   },
   {
-    "id": "sj-30",
+    "id": "sj-12",
     "piece": "Bakker and Jafri (textured renders)",
     "piece_slug": "bakker-jafri",
     "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-30.jpg",
-    "caption": "A faceted lattice-path form skinned with Sacha Jafri's painting.",
-    "alt": "A faceted lattice-path form skinned with Sacha Jafri's painting.",
-    "tags": [
-      "collaboration:sacha-jafri",
-      "type:render",
-      "type:digital",
-      "material:digital",
-      "location:dubai",
-      "year:2021",
-      "related:leila-heller",
-      "series:bakker-jafri"
-    ]
-  },
-  {
-    "id": "sj-01",
-    "piece": "Bakker and Jafri (textured renders)",
-    "piece_slug": "bakker-jafri",
-    "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-01.jpg",
-    "caption": "An angular lattice-path form rendered with Sacha Jafri's painting textures, a 2021 digital collaboration.",
-    "alt": "An angular lattice-path form rendered with Sacha Jafri's painting textures, a 2021 digital collaboration.",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-12.jpg",
+    "caption": "An interlocking double-diamond form wearing Sacha Jafri's vivid abstraction.",
+    "alt": "An interlocking double-diamond form wearing Sacha Jafri's vivid abstraction.",
     "tags": [
       "collaboration:sacha-jafri",
       "type:render",
@@ -283,13 +428,13 @@
     ]
   },
   {
-    "id": "sj-62",
+    "id": "sj-01",
     "piece": "Bakker and Jafri (textured renders)",
     "piece_slug": "bakker-jafri",
     "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-62.jpg",
-    "caption": "An angular knotted form, its inner faces opening onto Sacha Jafri's colour.",
-    "alt": "An angular knotted form, its inner faces opening onto Sacha Jafri's colour.",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-01.jpg",
+    "caption": "An angular lattice-path form rendered with Sacha Jafri's painting textures, a 2021 digital collaboration.",
+    "alt": "An angular lattice-path form rendered with Sacha Jafri's painting textures, a 2021 digital collaboration.",
     "tags": [
       "collaboration:sacha-jafri",
       "type:render",
@@ -302,13 +447,32 @@
     ]
   },
   {
-    "id": "sj-12",
+    "id": "sj-30",
     "piece": "Bakker and Jafri (textured renders)",
     "piece_slug": "bakker-jafri",
     "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-12.jpg",
-    "caption": "An interlocking double-diamond form wearing Sacha Jafri's vivid abstraction.",
-    "alt": "An interlocking double-diamond form wearing Sacha Jafri's vivid abstraction.",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-30.jpg",
+    "caption": "A faceted lattice-path form skinned with Sacha Jafri's painting.",
+    "alt": "A faceted lattice-path form skinned with Sacha Jafri's painting.",
+    "tags": [
+      "collaboration:sacha-jafri",
+      "type:render",
+      "type:digital",
+      "material:digital",
+      "location:dubai",
+      "year:2021",
+      "related:leila-heller",
+      "series:bakker-jafri"
+    ]
+  },
+  {
+    "id": "sj-62",
+    "piece": "Bakker and Jafri (textured renders)",
+    "piece_slug": "bakker-jafri",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-62.jpg",
+    "caption": "An angular knotted form, its inner faces opening onto Sacha Jafri's colour.",
+    "alt": "An angular knotted form, its inner faces opening onto Sacha Jafri's colour.",
     "tags": [
       "collaboration:sacha-jafri",
       "type:render",
@@ -511,25 +675,6 @@
     ]
   },
   {
-    "id": "fence-around-nothing",
-    "piece": "Fence around nothing",
-    "piece_slug": "fence-around-nothing",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/fence-around-nothing.mp4",
-    "caption": "The 'fence around nothing,' a bronze zigzag that encloses only empty space, rotating on its base. The studio sibling of the monumental Red Zig Zag.",
-    "alt": "The 'fence around nothing,' a bronze zigzag that encloses only empty space, rotating on its base. The studio sibling of the monumental Red Zig Zag.",
-    "tags": [
-      "exhibit:alternative-perspective",
-      "venue:momath",
-      "location:new-york",
-      "year:2021",
-      "series:fence-around-nothing",
-      "material:bronze",
-      "type:zigzag",
-      "related:red-zigzag"
-    ]
-  },
-  {
     "id": "momath-red-fence-gallery",
     "piece": "Fence around nothing",
     "piece_slug": "fence-around-nothing",
@@ -546,6 +691,25 @@
       "related:red-zigzag",
       "material:painted-steel",
       "type:zigzag"
+    ]
+  },
+  {
+    "id": "fence-around-nothing",
+    "piece": "Fence around nothing",
+    "piece_slug": "fence-around-nothing",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/fence-around-nothing.mp4",
+    "caption": "The 'fence around nothing,' a bronze zigzag that encloses only empty space, rotating on its base. The studio sibling of the monumental Red Zig Zag.",
+    "alt": "The 'fence around nothing,' a bronze zigzag that encloses only empty space, rotating on its base. The studio sibling of the monumental Red Zig Zag.",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "series:fence-around-nothing",
+      "material:bronze",
+      "type:zigzag",
+      "related:red-zigzag"
     ]
   },
   {
@@ -667,6 +831,27 @@
     ]
   },
   {
+    "id": "difc23-kite-video",
+    "piece": "Heptagon",
+    "piece_slug": "heptagon",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-kite-video.mp4",
+    "caption": "Heptagon at the DIFC Sculpture Park, Dubai, 2023, a mirror-polished closed seven-step lattice path.",
+    "alt": "Heptagon at the DIFC Sculpture Park, Dubai, 2023, a mirror-polished closed seven-step lattice path.",
+    "tags": [
+      "exhibit:difc-sculpture-park-2023",
+      "venue:difc",
+      "location:dubai",
+      "year:2023",
+      "type:public-art",
+      "outdoor",
+      "series:heptagon",
+      "type:closed-path",
+      "lattice:fcc",
+      "material:mirror-polished-stainless"
+    ]
+  },
+  {
     "id": "difc23-kite-render",
     "piece": "Heptagon",
     "piece_slug": "heptagon",
@@ -686,27 +871,6 @@
       "lattice:fcc",
       "type:render",
       "type:digital"
-    ]
-  },
-  {
-    "id": "difc23-kite-video",
-    "piece": "Heptagon",
-    "piece_slug": "heptagon",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-kite-video.mp4",
-    "caption": "Heptagon at the DIFC Sculpture Park, Dubai, 2023, a mirror-polished closed seven-step lattice path.",
-    "alt": "Heptagon at the DIFC Sculpture Park, Dubai, 2023, a mirror-polished closed seven-step lattice path.",
-    "tags": [
-      "exhibit:difc-sculpture-park-2023",
-      "venue:difc",
-      "location:dubai",
-      "year:2023",
-      "type:public-art",
-      "outdoor",
-      "series:heptagon",
-      "type:closed-path",
-      "lattice:fcc",
-      "material:mirror-polished-stainless"
     ]
   },
   {
