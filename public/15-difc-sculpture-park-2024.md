@@ -6,7 +6,8 @@ open-air show gathered sixty-five works by some forty international artists, on 
 13 November 2024 through April 2025, each piece offered as a thread in a larger tapestry of the city's
 life.
 
-Anton's contribution was Reflections of Reality: two identical mirror-polished stainless forms placed in a
+Anton's contribution was Reflections of Reality I, the first in a three-part series (I, II, and III): two
+identical mirror-polished stainless forms placed in a
 specific relationship to each other within the lattice grid. From some angles the two read as completely
 different shapes; from others they resolve into reflective counterparts of one another. It is one of his
 clearest statements of the idea at the center of his work, that a change of viewpoint can change what a

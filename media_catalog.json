@@ -378,25 +378,6 @@
     ]
   },
   {
-    "id": "momath-red-fence-gallery",
-    "piece": "Fence around nothing",
-    "piece_slug": "fence-around-nothing",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/momath-red-fence-gallery.mp4",
-    "caption": "A red painted-steel 'fence around nothing' on the gallery floor at MoMath, 2021, the form Anton later realized monumentally as Red Zig Zag in Norfolk.",
-    "alt": "A red painted-steel 'fence around nothing' on the gallery floor at MoMath, 2021, the form Anton later realized monumentally as Red Zig Zag in Norfolk.",
-    "tags": [
-      "exhibit:alternative-perspective",
-      "venue:momath",
-      "location:new-york",
-      "year:2021",
-      "series:fence-around-nothing",
-      "related:red-zigzag",
-      "material:painted-steel",
-      "type:zigzag"
-    ]
-  },
-  {
     "id": "fence-around-nothing",
     "piece": "Fence around nothing",
     "piece_slug": "fence-around-nothing",
@@ -416,13 +397,32 @@
     ]
   },
   {
-    "id": "ps-fractal-tree-video",
+    "id": "momath-red-fence-gallery",
+    "piece": "Fence around nothing",
+    "piece_slug": "fence-around-nothing",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/momath-red-fence-gallery.mp4",
+    "caption": "A red painted-steel 'fence around nothing' on the gallery floor at MoMath, 2021, the form Anton later realized monumentally as Red Zig Zag in Norfolk.",
+    "alt": "A red painted-steel 'fence around nothing' on the gallery floor at MoMath, 2021, the form Anton later realized monumentally as Red Zig Zag in Norfolk.",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "series:fence-around-nothing",
+      "related:red-zigzag",
+      "material:painted-steel",
+      "type:zigzag"
+    ]
+  },
+  {
+    "id": "ps-fractal-tree",
     "piece": "Fractal tree",
     "piece_slug": "fractal-tree",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree-video.mp4",
-    "caption": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
-    "alt": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree.jpg",
+    "caption": "Anton's fractal tree in patinated steel, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
+    "alt": "Anton's fractal tree in patinated steel, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
     "tags": [
       "exhibit:perspectives-of-symmetry",
       "venue:leila-heller",
@@ -435,13 +435,13 @@
     ]
   },
   {
-    "id": "ps-fractal-tree",
+    "id": "ps-fractal-tree-video",
     "piece": "Fractal tree",
     "piece_slug": "fractal-tree",
-    "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree.jpg",
-    "caption": "Anton's fractal tree in patinated steel, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
-    "alt": "Anton's fractal tree in patinated steel, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree-video.mp4",
+    "caption": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
+    "alt": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
     "tags": [
       "exhibit:perspectives-of-symmetry",
       "venue:leila-heller",
@@ -1038,6 +1038,27 @@
     ]
   },
   {
+    "id": "difc23-ring-knot-video",
+    "piece": "Reflection",
+    "piece_slug": "reflection",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-ring-knot-video.mp4",
+    "caption": "Reflection in the DIFC reflecting pool, Dubai, 2023, a mirror-polished Hamiltonian path on a cuboctahedron.",
+    "alt": "Reflection in the DIFC reflecting pool, Dubai, 2023, a mirror-polished Hamiltonian path on a cuboctahedron.",
+    "tags": [
+      "exhibit:difc-sculpture-park-2023",
+      "venue:difc",
+      "location:dubai",
+      "year:2023",
+      "type:public-art",
+      "outdoor",
+      "series:reflection",
+      "type:hamiltonian-path",
+      "lattice:cuboctahedron",
+      "material:mirror-polished-stainless"
+    ]
+  },
+  {
     "id": "difc23-ring-knot-render",
     "piece": "Reflection",
     "piece_slug": "reflection",
@@ -1060,30 +1081,9 @@
     ]
   },
   {
-    "id": "difc23-ring-knot-video",
-    "piece": "Reflection",
-    "piece_slug": "reflection",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-ring-knot-video.mp4",
-    "caption": "Reflection in the DIFC reflecting pool, Dubai, 2023, a mirror-polished Hamiltonian path on a cuboctahedron.",
-    "alt": "Reflection in the DIFC reflecting pool, Dubai, 2023, a mirror-polished Hamiltonian path on a cuboctahedron.",
-    "tags": [
-      "exhibit:difc-sculpture-park-2023",
-      "venue:difc",
-      "location:dubai",
-      "year:2023",
-      "type:public-art",
-      "outdoor",
-      "series:reflection",
-      "type:hamiltonian-path",
-      "lattice:cuboctahedron",
-      "material:mirror-polished-stainless"
-    ]
-  },
-  {
     "id": "reflective-duo-gate",
-    "piece": "Reflections of Reality",
-    "piece_slug": "reflections-of-reality",
+    "piece": "Reflections of Reality I",
+    "piece_slug": "reflections-of-reality-i",
     "kind": "image",
     "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2024/reflective-duo-gate.jpg",
     "caption": "Reflections of Reality framed by the DIFC Gate at the third DIFC Sculpture Park, Dubai, 2024. Two identical mirror-polished forms placed relative to each other in the lattice; from some angles they read as different forms, from others as reflective counterparts.",
@@ -1100,9 +1100,26 @@
     ]
   },
   {
+    "id": "ror-i-render",
+    "piece": "Reflections of Reality I",
+    "piece_slug": "reflections-of-reality-i",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/reflections-of-reality/ror-i-render.mp4",
+    "caption": "A rotating render of Reflections of Reality I, the design installed at the DIFC in 2024. Two identical mirror-polished forms that read as different shapes, or as reflective counterparts, depending on your viewpoint.",
+    "alt": "A rotating render of Reflections of Reality I, the design installed at the DIFC in 2024. Two identical mirror-polished forms that read as different shapes, or as reflective counterparts, depending on your viewpoint.",
+    "tags": [
+      "series:reflections-of-reality",
+      "material:mirror-polished-stainless",
+      "type:relativity",
+      "type:render",
+      "type:digital",
+      "exhibit:difc-sculpture-park-2024"
+    ]
+  },
+  {
     "id": "reflective-duo-day",
-    "piece": "Reflections of Reality",
-    "piece_slug": "reflections-of-reality",
+    "piece": "Reflections of Reality I",
+    "piece_slug": "reflections-of-reality-i",
     "kind": "image",
     "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2024/reflective-duo-day.jpg",
     "caption": "Reflections of Reality seen head-on at the DIFC Sculpture Park, Dubai, 2024, where the two forms read as a mirrored pair.",
@@ -1120,8 +1137,8 @@
   },
   {
     "id": "reflective-duo-skyline",
-    "piece": "Reflections of Reality",
-    "piece_slug": "reflections-of-reality",
+    "piece": "Reflections of Reality I",
+    "piece_slug": "reflections-of-reality-i",
     "kind": "image",
     "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2024/reflective-duo-skyline.jpg",
     "caption": "Reflections of Reality against the Dubai skyline at the DIFC Sculpture Park, 2024.",
@@ -1139,8 +1156,8 @@
   },
   {
     "id": "reflective-duo-night",
-    "piece": "Reflections of Reality",
-    "piece_slug": "reflections-of-reality",
+    "piece": "Reflections of Reality I",
+    "piece_slug": "reflections-of-reality-i",
     "kind": "image",
     "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2024/reflective-duo-night.jpg",
     "caption": "Reflections of Reality at night in the DIFC, Dubai, 2024, the towers and lights caught in its mirror-polished surfaces.",
@@ -1158,8 +1175,8 @@
   },
   {
     "id": "reflective-duo-indoor",
-    "piece": "Reflections of Reality",
-    "piece_slug": "reflections-of-reality",
+    "piece": "Reflections of Reality I",
+    "piece_slug": "reflections-of-reality-i",
     "kind": "image",
     "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2024/reflective-duo-indoor.jpg",
     "caption": "Reflections of Reality indoors at the DIFC, where from this angle the two forms align into a single flame-like silhouette.",
@@ -1177,8 +1194,8 @@
   },
   {
     "id": "reflections-of-reality-night-pan",
-    "piece": "Reflections of Reality",
-    "piece_slug": "reflections-of-reality",
+    "piece": "Reflections of Reality I",
+    "piece_slug": "reflections-of-reality-i",
     "kind": "video",
     "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2024/reflections-of-reality-night-pan.mp4",
     "caption": "Reflections of Reality at night in the DIFC lobby, Dubai, 2024; the two mirror-polished forms turn the building and the street into part of the sculpture.",
@@ -1192,6 +1209,38 @@
       "series:reflections-of-reality",
       "material:mirror-polished-stainless",
       "type:relativity"
+    ]
+  },
+  {
+    "id": "ror-ii-render",
+    "piece": "Reflections of Reality II",
+    "piece_slug": "reflections-of-reality-ii",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/reflections-of-reality/ror-ii-render.mp4",
+    "caption": "A rotating render of Reflections of Reality II, the second design in the series: two interlocking diamond forms in mirror-polished steel.",
+    "alt": "A rotating render of Reflections of Reality II, the second design in the series: two interlocking diamond forms in mirror-polished steel.",
+    "tags": [
+      "series:reflections-of-reality",
+      "material:mirror-polished-stainless",
+      "type:relativity",
+      "type:render",
+      "type:digital"
+    ]
+  },
+  {
+    "id": "ror-iii-render",
+    "piece": "Reflections of Reality III",
+    "piece_slug": "reflections-of-reality-iii",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/reflections-of-reality/ror-iii-render.mp4",
+    "caption": "A rotating render of Reflections of Reality III, the third design in the series.",
+    "alt": "A rotating render of Reflections of Reality III, the third design in the series.",
+    "tags": [
+      "series:reflections-of-reality",
+      "material:mirror-polished-stainless",
+      "type:relativity",
+      "type:render",
+      "type:digital"
     ]
   },
   {
