@@ -25,3 +25,6 @@ uvicorn.err.log
 Thumbs.db
 .vscode/
 .idea/
+
+# local embedding model cache (downloaded at runtime, not committed)
+.fastembed_cache/

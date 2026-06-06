@@ -122,9 +122,11 @@
   <div id="chat">
     <div class="suggestions" id="suggestions">
       <button>What is your work about?</button>
-      <button>Why closed paths?</button>
+      <button>Show me Awakening</button>
+      <button>Why are your paths always closed?</button>
+      <button>Where has your work been shown?</button>
       <button>What does "music for the eyes" mean?</button>
-      <button>Who was your mentor?</button>
+      <button>Who was Koos Verhoeff?</button>
     </div>
   </div>
 
@@ -225,12 +227,30 @@
     window.scrollTo(0, document.body.scrollHeight);
   }
 
+  function renderFollowups(followups) {
+    if (!Array.isArray(followups) || !followups.length) return;
+    const box = document.createElement("div");
+    box.className = "suggestions";
+    box.id = "followups";
+    followups.forEach((q) => {
+      if (!q) return;
+      const b = document.createElement("button");
+      b.textContent = q;
+      b.addEventListener("click", () => ask(q));
+      box.appendChild(b);
+    });
+    chat.append(box);
+    window.scrollTo(0, document.body.scrollHeight);
+  }
+
   async function ask(question) {
     if (turnstileEnabled && !turnstileToken) {
       addMsg("anton", "Anton", "One moment — please complete the verification below, then ask again.", "thinking");
       return;
     }
     if (suggestions) suggestions.remove();
+    const staleF = document.getElementById("followups");
+    if (staleF) staleF.remove();
     addMsg("user", "You", question);
     input.value = "";
     sendBtn.disabled = true;
@@ -248,6 +268,7 @@
       appendMedia(bubble, data.media);
       history.push({ role: "user", content: question });
       history.push({ role: "assistant", content: data.answer });
+      renderFollowups(data.followups);
     } catch (err) {
       bubble.classList.remove("thinking");
       bubble.textContent = "Something went wrong: " + err.message;

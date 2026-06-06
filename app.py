@@ -42,6 +42,8 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
+from retrieval import Retriever
+
 MODEL = "claude-opus-4-7"
 APP_DIR = pathlib.Path(__file__).parent
 PUBLIC_DIR = APP_DIR / "public"
@@ -103,9 +105,17 @@ MEDIA = load_media_catalog()
 MEDIA_BY_ID = {m["id"]: m for m in MEDIA}
 
 
-def _media_catalog_text() -> str:
+# Per-question media retrieval (semantic, with keyword fallback). Replaces dumping the
+# whole catalog into the prompt: we now show the model only the few relevant candidates.
+RETRIEVER = Retriever(MEDIA)
+MAX_CANDIDATES = 15
+
+
+def _candidates_text(items: list) -> str:
+    if not items:
+        return "(none)"
     lines = []
-    for m in MEDIA:
+    for m in items:
         tags = ", ".join(m.get("tags") or [])
         desc = m.get("alt") or m.get("caption") or m.get("piece") or ""
         line = f'- {m["id"]} ({m.get("kind","image")}, piece: {m.get("piece")}): {desc}'
@@ -164,27 +174,29 @@ Here is the approved public material about Anton:
 {CORPUS}
 """
 
-if MEDIA:
-    SYSTEM_PROMPT += f"""
+SYSTEM_PROMPT += """
 
-IMAGES - you may show the visitor photographs of Anton's work.
-A catalog of available images is listed below, each with an id and a description. When an
-image genuinely helps (the visitor asks about a specific piece, asks what something looks
-like, or asks to see the work), pick the one to three MOST relevant images and signal your
-choice by ending your reply with one final line in exactly this form:
+IMAGES AND VIDEOS - you may show the visitor photographs or videos of Anton's work. With each
+question you will be given a short list titled "AVAILABLE MEDIA" - each entry has an id, the piece,
+a description, and tags. When showing one genuinely helps (the visitor asks about a piece, asks to
+see something, or asks what it looks like), pick the one to three MOST relevant entries from that list.
+
+FOLLOW-UP SUGGESTIONS - after your answer, propose a few natural next questions the visitor might ask.
+
+END EVERY REPLY with these two lines, each alone on its own line, after your prose:
 MEDIA: id1, id2
-If no image is relevant, end with this line instead:
-MEDIA: none
-Rules for that final line:
-- It must be the very last line of your reply, alone on its own line.
-- Use only ids from the catalog below, comma separated. Never invent an id.
-- Never write the word MEDIA, the ids, or mention this line anywhere in your prose. The
-  visitor never sees the line; the page turns it into pictures that carry their own captions.
-- Do not restate a caption in your prose; each image already appears with its caption.
-- Only attach images when they truly add something. Most answers need none.
-
-Image catalog:
-{_media_catalog_text()}
+SUGGEST: question one | question two | question three
+Rules for those two lines:
+- MEDIA: use only ids from the AVAILABLE MEDIA list given with this question, comma separated. Write
+  "MEDIA: none" when nothing fits. Never invent an id. Only attach media when it truly adds something;
+  most answers need none.
+- SUGGEST: two or three short follow-up questions (each under about eight words), in the SAME language
+  as the visitor, about things you can answer from the material. Do not repeat what you just covered;
+  vary them - a deeper question, a related piece or exhibit, or a "Show me ..." that reveals an image
+  or video.
+- NEVER mention, quote, or hint at the MEDIA or SUGGEST lines in your prose. The visitor never sees
+  them; the page turns MEDIA into pictures and SUGGEST into clickable buttons.
+- Do not restate a media caption in your prose; each image or video already shows its caption.
 """
 
 client = anthropic.Anthropic()
@@ -297,6 +309,22 @@ def _extract_media(text: str):
     return cleaned, media
 
 
+# Matches the model's trailing "SUGGEST: q | q | q" follow-up line.
+_SUGGEST_LINE_RE = re.compile(r"(?im)^[ \t>*_\-]*SUGGEST\s*:\s*(.*?)\s*$")
+
+
+def _extract_suggest(text: str):
+    """Pull the trailing SUGGEST line off the answer; return (clean_answer, followups)."""
+    matches = list(_SUGGEST_LINE_RE.finditer(text))
+    if not matches:
+        return text, []
+    m = matches[-1]
+    cleaned = (text[: m.start()] + text[m.end():]).strip()
+    parts = [p.strip(" -*\t•") for p in m.group(1).split("|")]
+    followups = [p for p in parts if p][:3]
+    return cleaned, followups
+
+
 class AskRequest(BaseModel):
     question: str
     history: list[dict] = []
@@ -307,6 +335,7 @@ class AskResponse(BaseModel):
     answer: str
     cached_tokens: int
     media: list[dict] = []
+    followups: list[str] = []
 
 
 @app.post("/ask", response_model=AskResponse)
@@ -331,7 +360,16 @@ def ask(req: AskRequest, request: Request) -> AskResponse:
         if role in ("user", "assistant") and isinstance(content, str):
             history.append({"role": role, "content": content[:MAX_MSG_CHARS]})
 
-    messages = history + [{"role": "user", "content": question}]
+    # Retrieve the few most relevant media items for this question and show only those
+    # to the model (keeps the cached system prompt small and the picks sharp at scale).
+    candidates = RETRIEVER.retrieve(question, k=MAX_CANDIDATES)
+    user_content = (
+        "AVAILABLE MEDIA (choose only from these ids):\n"
+        + _candidates_text(candidates)
+        + f"\n\nQuestion: {question}"
+    )
+
+    messages = history + [{"role": "user", "content": user_content}]
     response = client.messages.create(
         model=MODEL,
         max_tokens=1500,
@@ -346,10 +384,12 @@ def ask(req: AskRequest, request: Request) -> AskResponse:
     )
     answer = "".join(block.text for block in response.content if block.type == "text")
     answer, media = _extract_media(answer.strip())
+    answer, followups = _extract_suggest(answer)
     return AskResponse(
         answer=answer,
         cached_tokens=response.usage.cache_read_input_tokens or 0,
         media=media,
+        followups=followups,
     )
 
 
@@ -359,6 +399,8 @@ def config() -> dict:
     return {
         "turnstile": bool(TURNSTILE_SECRET),
         "turnstile_sitekey": TURNSTILE_SITEKEY or None,
+        "retrieval": RETRIEVER.status(),
+        "media_items": len(MEDIA),
     }
 
 
