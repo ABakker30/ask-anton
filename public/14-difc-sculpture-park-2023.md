@@ -7,12 +7,12 @@ free public entry and visits from schools and university groups, in keeping with
 accessible.
 
 Anton's sculptures were among the works on view, shown alongside pieces by celebrated international
-artists, including Salvador Dali and Anthony James, together with local and regional talents working
-across many mediums. Returning to the DIFC park placed Anton's lattice-path forms once more in the heart
+artists, including Salvador Dali, Anthony James, and Jeff Koons, together with local and regional talents
+working across many mediums. Returning to the DIFC park placed Anton's lattice-path forms once more in the heart
 of the city, at architectural scale and open to everyone.
 
 His two works that year were large mirror-polished stainless sculptures set in the centre's reflecting
 pools: Heptagon, a closed seven-step lattice path, and Reflection, a Hamiltonian path on a cuboctahedron.
 Their polished faces gather the surrounding towers, the sky, and the water into the closed lattice paths,
-so the city itself becomes part of each sculpture as you move around it. Reflection has since found a
-permanent home at the Norfolk Botanical Gardens in Virginia.
+so the city itself becomes part of each sculpture as you move around it. Heptagon was acquired by the office of the President of the United Arab Emirates, and
+Reflection has since found a permanent home at the Norfolk Botanical Gardens in Virginia.
