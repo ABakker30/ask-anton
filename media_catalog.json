@@ -132,6 +132,22 @@
     ]
   },
   {
+    "id": "arch-building-1",
+    "piece": "Architecture at scale",
+    "piece_slug": "architecture",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/architecture/arch-building-1.jpg",
+    "caption": "One of Anton's lattice-path forms imagined as a building, its zigzag volume clad in a geometric lattice facade with planted terraces.",
+    "alt": "One of Anton's lattice-path forms imagined as a building, its zigzag volume clad in a geometric lattice facade with planted terraces.",
+    "tags": [
+      "theme:architecture",
+      "type:architecture",
+      "type:render",
+      "type:digital",
+      "type:building"
+    ]
+  },
+  {
     "id": "arch-building-5",
     "piece": "Architecture at scale",
     "piece_slug": "architecture",
@@ -196,35 +212,18 @@
     ]
   },
   {
-    "id": "arch-building-1",
-    "piece": "Architecture at scale",
-    "piece_slug": "architecture",
-    "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/architecture/arch-building-1.jpg",
-    "caption": "One of Anton's lattice-path forms imagined as a building, its zigzag volume clad in a geometric lattice facade with planted terraces.",
-    "alt": "One of Anton's lattice-path forms imagined as a building, its zigzag volume clad in a geometric lattice facade with planted terraces.",
-    "tags": [
-      "theme:architecture",
-      "type:architecture",
-      "type:render",
-      "type:digital",
-      "type:building"
-    ]
-  },
-  {
-    "id": "arch-dubai-street",
+    "id": "arch-lattice-monument",
     "piece": "Architecture at scale",
     "piece_slug": "architecture",
     "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/architecture/arch-dubai-street.mp4",
-    "caption": "Street-level view of a lattice-path monument set among Dubai's towers.",
-    "alt": "Street-level view of a lattice-path monument set among Dubai's towers.",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/architecture/arch-lattice-monument.mp4",
+    "caption": "An interlocking cube-lattice form at monumental scale on a city plaza.",
+    "alt": "An interlocking cube-lattice form at monumental scale on a city plaza.",
     "tags": [
       "theme:architecture",
       "type:architecture",
       "type:render",
       "type:digital",
-      "location:dubai",
       "type:monument"
     ]
   },
@@ -246,18 +245,36 @@
     ]
   },
   {
-    "id": "arch-lattice-monument",
+    "id": "arch-fractal-tree-monument",
     "piece": "Architecture at scale",
     "piece_slug": "architecture",
     "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/architecture/arch-lattice-monument.mp4",
-    "caption": "An interlocking cube-lattice form at monumental scale on a city plaza.",
-    "alt": "An interlocking cube-lattice form at monumental scale on a city plaza.",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/architecture/arch-fractal-tree-monument.mp4",
+    "caption": "Anton's fractal tree imagined as a monumental public sculpture at city scale.",
+    "alt": "Anton's fractal tree imagined as a monumental public sculpture at city scale.",
     "tags": [
       "theme:architecture",
       "type:architecture",
       "type:render",
       "type:digital",
+      "series:fractal-tree",
+      "type:monument"
+    ]
+  },
+  {
+    "id": "arch-dubai-street",
+    "piece": "Architecture at scale",
+    "piece_slug": "architecture",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/architecture/arch-dubai-street.mp4",
+    "caption": "Street-level view of a lattice-path monument set among Dubai's towers.",
+    "alt": "Street-level view of a lattice-path monument set among Dubai's towers.",
+    "tags": [
+      "theme:architecture",
+      "type:architecture",
+      "type:render",
+      "type:digital",
+      "location:dubai",
       "type:monument"
     ]
   },
@@ -276,23 +293,6 @@
       "type:digital",
       "type:monument",
       "type:spiral"
-    ]
-  },
-  {
-    "id": "arch-fractal-tree-monument",
-    "piece": "Architecture at scale",
-    "piece_slug": "architecture",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/architecture/arch-fractal-tree-monument.mp4",
-    "caption": "Anton's fractal tree imagined as a monumental public sculpture at city scale.",
-    "alt": "Anton's fractal tree imagined as a monumental public sculpture at city scale.",
-    "tags": [
-      "theme:architecture",
-      "type:architecture",
-      "type:render",
-      "type:digital",
-      "series:fractal-tree",
-      "type:monument"
     ]
   },
   {
@@ -371,13 +371,13 @@
     ]
   },
   {
-    "id": "sj-12",
+    "id": "sj-01",
     "piece": "Bakker and Jafri (textured renders)",
     "piece_slug": "bakker-jafri",
     "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-12.jpg",
-    "caption": "An interlocking double-diamond form wearing Sacha Jafri's vivid abstraction.",
-    "alt": "An interlocking double-diamond form wearing Sacha Jafri's vivid abstraction.",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-01.jpg",
+    "caption": "An angular lattice-path form rendered with Sacha Jafri's painting textures, a 2021 digital collaboration.",
+    "alt": "An angular lattice-path form rendered with Sacha Jafri's painting textures, a 2021 digital collaboration.",
     "tags": [
       "collaboration:sacha-jafri",
       "type:render",
@@ -428,13 +428,13 @@
     ]
   },
   {
-    "id": "sj-01",
+    "id": "sj-62",
     "piece": "Bakker and Jafri (textured renders)",
     "piece_slug": "bakker-jafri",
     "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-01.jpg",
-    "caption": "An angular lattice-path form rendered with Sacha Jafri's painting textures, a 2021 digital collaboration.",
-    "alt": "An angular lattice-path form rendered with Sacha Jafri's painting textures, a 2021 digital collaboration.",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-62.jpg",
+    "caption": "An angular knotted form, its inner faces opening onto Sacha Jafri's colour.",
+    "alt": "An angular knotted form, its inner faces opening onto Sacha Jafri's colour.",
     "tags": [
       "collaboration:sacha-jafri",
       "type:render",
@@ -466,13 +466,13 @@
     ]
   },
   {
-    "id": "sj-62",
+    "id": "sj-12",
     "piece": "Bakker and Jafri (textured renders)",
     "piece_slug": "bakker-jafri",
     "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-62.jpg",
-    "caption": "An angular knotted form, its inner faces opening onto Sacha Jafri's colour.",
-    "alt": "An angular knotted form, its inner faces opening onto Sacha Jafri's colour.",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-12.jpg",
+    "caption": "An interlocking double-diamond form wearing Sacha Jafri's vivid abstraction.",
+    "alt": "An interlocking double-diamond form wearing Sacha Jafri's vivid abstraction.",
     "tags": [
       "collaboration:sacha-jafri",
       "type:render",
@@ -713,13 +713,13 @@
     ]
   },
   {
-    "id": "ps-fractal-tree-video",
+    "id": "ps-fractal-tree",
     "piece": "Fractal tree",
     "piece_slug": "fractal-tree",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree-video.mp4",
-    "caption": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
-    "alt": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree.jpg",
+    "caption": "Anton's fractal tree in patinated steel, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
+    "alt": "Anton's fractal tree in patinated steel, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
     "tags": [
       "exhibit:perspectives-of-symmetry",
       "venue:leila-heller",
@@ -732,13 +732,13 @@
     ]
   },
   {
-    "id": "ps-fractal-tree",
+    "id": "ps-fractal-tree-video",
     "piece": "Fractal tree",
     "piece_slug": "fractal-tree",
-    "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree.jpg",
-    "caption": "Anton's fractal tree in patinated steel, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
-    "alt": "Anton's fractal tree in patinated steel, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree-video.mp4",
+    "caption": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
+    "alt": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
     "tags": [
       "exhibit:perspectives-of-symmetry",
       "venue:leila-heller",
@@ -1179,6 +1179,120 @@
     ]
   },
   {
+    "id": "portal-bronze-finished",
+    "piece": "Portal series",
+    "piece_slug": "portal-series",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/portal-series/portal-bronze-finished.jpg",
+    "caption": "Portal, realized in bronze with a black patina, about 30 inches tall: two interlocking rhombic slabs framing a diamond opening. From the Portal series, made after an evening with the work of Tony Smith.",
+    "alt": "Portal, realized in bronze with a black patina, about 30 inches tall: two interlocking rhombic slabs framing a diamond opening. From the Portal series, made after an evening with the work of Tony Smith.",
+    "tags": [
+      "series:portal",
+      "influence:tony-smith",
+      "material:bronze",
+      "realized",
+      "material:black-patina",
+      "type:sculpture"
+    ]
+  },
+  {
+    "id": "portal-bronze-raw",
+    "piece": "Portal series",
+    "piece_slug": "portal-series",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/portal-series/portal-bronze-raw.jpg",
+    "caption": "The Portal bronze during fabrication, before the black patina, its raw bronze surface still warm-toned.",
+    "alt": "The Portal bronze during fabrication, before the black patina, its raw bronze surface still warm-toned.",
+    "tags": [
+      "series:portal",
+      "influence:tony-smith",
+      "material:bronze",
+      "material:bronze",
+      "type:process"
+    ]
+  },
+  {
+    "id": "portal-triangular",
+    "piece": "Portal series",
+    "piece_slug": "portal-series",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/portal-series/portal-triangular.mp4",
+    "caption": "A triangular portal, a design from the Portal series.",
+    "alt": "A triangular portal, a design from the Portal series.",
+    "tags": [
+      "series:portal",
+      "influence:tony-smith",
+      "material:bronze",
+      "type:render",
+      "type:digital"
+    ]
+  },
+  {
+    "id": "portal-final-render",
+    "piece": "Portal series",
+    "piece_slug": "portal-series",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/portal-series/portal-final-render.mp4",
+    "caption": "A render of Portal, the realized design: two interlocking rhombic slabs framing a diamond opening, in bronze with black patina.",
+    "alt": "A render of Portal, the realized design: two interlocking rhombic slabs framing a diamond opening, in bronze with black patina.",
+    "tags": [
+      "series:portal",
+      "influence:tony-smith",
+      "material:bronze",
+      "type:render",
+      "type:digital",
+      "material:black-patina"
+    ]
+  },
+  {
+    "id": "portal-2-squares",
+    "piece": "Portal series",
+    "piece_slug": "portal-series",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/portal-series/portal-2-squares.mp4",
+    "caption": "Two interlocking square slabs, a design from the Portal series (after Tony Smith).",
+    "alt": "Two interlocking square slabs, a design from the Portal series (after Tony Smith).",
+    "tags": [
+      "series:portal",
+      "influence:tony-smith",
+      "material:bronze",
+      "type:render",
+      "type:digital"
+    ]
+  },
+  {
+    "id": "portal-2-rhombic",
+    "piece": "Portal series",
+    "piece_slug": "portal-series",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/portal-series/portal-2-rhombic.mp4",
+    "caption": "Two rhombic slabs lying in shifted planes, a design from the Portal series.",
+    "alt": "Two rhombic slabs lying in shifted planes, a design from the Portal series.",
+    "tags": [
+      "series:portal",
+      "influence:tony-smith",
+      "material:bronze",
+      "type:render",
+      "type:digital"
+    ]
+  },
+  {
+    "id": "portal-rectangular",
+    "piece": "Portal series",
+    "piece_slug": "portal-series",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/portal-series/portal-rectangular.mp4",
+    "caption": "An hourglass portal, a design from the Portal series.",
+    "alt": "An hourglass portal, a design from the Portal series.",
+    "tags": [
+      "series:portal",
+      "influence:tony-smith",
+      "material:bronze",
+      "type:render",
+      "type:digital"
+    ]
+  },
+  {
     "id": "red-zigzag-hero",
     "piece": "Red Zig Zag",
     "piece_slug": "red-zigzag",
@@ -1335,27 +1449,6 @@
     ]
   },
   {
-    "id": "difc23-ring-knot-video",
-    "piece": "Reflection",
-    "piece_slug": "reflection",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-ring-knot-video.mp4",
-    "caption": "Reflection in the DIFC reflecting pool, Dubai, 2023, a mirror-polished Hamiltonian path on a cuboctahedron.",
-    "alt": "Reflection in the DIFC reflecting pool, Dubai, 2023, a mirror-polished Hamiltonian path on a cuboctahedron.",
-    "tags": [
-      "exhibit:difc-sculpture-park-2023",
-      "venue:difc",
-      "location:dubai",
-      "year:2023",
-      "type:public-art",
-      "outdoor",
-      "series:reflection",
-      "type:hamiltonian-path",
-      "lattice:cuboctahedron",
-      "material:mirror-polished-stainless"
-    ]
-  },
-  {
     "id": "difc23-ring-knot-render",
     "piece": "Reflection",
     "piece_slug": "reflection",
@@ -1378,22 +1471,24 @@
     ]
   },
   {
-    "id": "reflective-duo-gate",
-    "piece": "Reflections of Reality I",
-    "piece_slug": "reflections-of-reality-i",
-    "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2024/reflective-duo-gate.jpg",
-    "caption": "Reflections of Reality framed by the DIFC Gate at the third DIFC Sculpture Park, Dubai, 2024. Two identical mirror-polished forms placed relative to each other in the lattice; from some angles they read as different forms, from others as reflective counterparts.",
-    "alt": "Reflections of Reality framed by the DIFC Gate at the third DIFC Sculpture Park, Dubai, 2024. Two identical mirror-polished forms placed relative to each other in the lattice; from some angles they read as different forms, from others as reflective counterparts.",
+    "id": "difc23-ring-knot-video",
+    "piece": "Reflection",
+    "piece_slug": "reflection",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-ring-knot-video.mp4",
+    "caption": "Reflection in the DIFC reflecting pool, Dubai, 2023, a mirror-polished Hamiltonian path on a cuboctahedron.",
+    "alt": "Reflection in the DIFC reflecting pool, Dubai, 2023, a mirror-polished Hamiltonian path on a cuboctahedron.",
     "tags": [
-      "exhibit:difc-sculpture-park-2024",
+      "exhibit:difc-sculpture-park-2023",
       "venue:difc",
       "location:dubai",
-      "year:2024",
+      "year:2023",
       "type:public-art",
-      "series:reflections-of-reality",
-      "material:mirror-polished-stainless",
-      "type:relativity"
+      "outdoor",
+      "series:reflection",
+      "type:hamiltonian-path",
+      "lattice:cuboctahedron",
+      "material:mirror-polished-stainless"
     ]
   },
   {
@@ -1411,6 +1506,25 @@
       "type:render",
       "type:digital",
       "exhibit:difc-sculpture-park-2024"
+    ]
+  },
+  {
+    "id": "reflective-duo-gate",
+    "piece": "Reflections of Reality I",
+    "piece_slug": "reflections-of-reality-i",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2024/reflective-duo-gate.jpg",
+    "caption": "Reflections of Reality framed by the DIFC Gate at the third DIFC Sculpture Park, Dubai, 2024. Two identical mirror-polished forms placed relative to each other in the lattice; from some angles they read as different forms, from others as reflective counterparts.",
+    "alt": "Reflections of Reality framed by the DIFC Gate at the third DIFC Sculpture Park, Dubai, 2024. Two identical mirror-polished forms placed relative to each other in the lattice; from some angles they read as different forms, from others as reflective counterparts.",
+    "tags": [
+      "exhibit:difc-sculpture-park-2024",
+      "venue:difc",
+      "location:dubai",
+      "year:2024",
+      "type:public-art",
+      "series:reflections-of-reality",
+      "material:mirror-polished-stainless",
+      "type:relativity"
     ]
   },
   {
