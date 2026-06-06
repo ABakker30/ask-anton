@@ -1,21 +1,5 @@
 [
   {
-    "id": "adaf-booth-2",
-    "piece": "Abu Dhabi Art (2021)",
-    "piece_slug": "abu-dhabi-art",
-    "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/abu-dhabi-art/adaf-booth-2.jpg",
-    "caption": "The Leila Heller Gallery stand at Abu Dhabi Art, 2021, where Anton's work was shown; one of his gold spiral sculptures at center.",
-    "alt": "The Leila Heller Gallery stand at Abu Dhabi Art, 2021, where Anton's work was shown; one of his gold spiral sculptures at center.",
-    "tags": [
-      "exhibit:abu-dhabi-art",
-      "venue:leila-heller",
-      "location:abu-dhabi",
-      "year:2021",
-      "type:art-fair"
-    ]
-  },
-  {
     "id": "adaf-booth-1",
     "piece": "Abu Dhabi Art (2021)",
     "piece_slug": "abu-dhabi-art",
@@ -32,19 +16,19 @@
     ]
   },
   {
-    "id": "momath-opening-reception",
-    "piece": "Alternative Perspective (MoMath)",
-    "piece_slug": "alternative-perspective",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/momath-opening-reception.mp4",
-    "caption": "The opening reception of Alternative Perspective at MoMath, 2021.",
-    "alt": "The opening reception of Alternative Perspective at MoMath, 2021.",
+    "id": "adaf-booth-2",
+    "piece": "Abu Dhabi Art (2021)",
+    "piece_slug": "abu-dhabi-art",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/abu-dhabi-art/adaf-booth-2.jpg",
+    "caption": "The Leila Heller Gallery stand at Abu Dhabi Art, 2021, where Anton's work was shown; one of his gold spiral sculptures at center.",
+    "alt": "The Leila Heller Gallery stand at Abu Dhabi Art, 2021, where Anton's work was shown; one of his gold spiral sculptures at center.",
     "tags": [
-      "exhibit:alternative-perspective",
-      "venue:momath",
-      "location:new-york",
+      "exhibit:abu-dhabi-art",
+      "venue:leila-heller",
+      "location:abu-dhabi",
       "year:2021",
-      "type:opening"
+      "type:art-fair"
     ]
   },
   {
@@ -61,6 +45,22 @@
       "location:new-york",
       "year:2021",
       "type:install-view"
+    ]
+  },
+  {
+    "id": "momath-opening-reception",
+    "piece": "Alternative Perspective (MoMath)",
+    "piece_slug": "alternative-perspective",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/momath-opening-reception.mp4",
+    "caption": "The opening reception of Alternative Perspective at MoMath, 2021.",
+    "alt": "The opening reception of Alternative Perspective at MoMath, 2021.",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "type:opening"
     ]
   },
   {
@@ -356,6 +356,25 @@
       "year:2021",
       "material:mirror-polished-stainless",
       "type:curve"
+    ]
+  },
+  {
+    "id": "difc23-pool-hero",
+    "piece": "DIFC Sculpture Park (2023)",
+    "piece_slug": "difc-sculpture-park-2023",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-pool-hero.jpg",
+    "caption": "Two of Anton's mirror-polished stainless sculptures in the reflecting pool at the DIFC Sculpture Park, Dubai, 2023, the city gathered into their surfaces.",
+    "alt": "Two of Anton's mirror-polished stainless sculptures in the reflecting pool at the DIFC Sculpture Park, Dubai, 2023, the city gathered into their surfaces.",
+    "tags": [
+      "exhibit:difc-sculpture-park-2023",
+      "venue:difc",
+      "location:dubai",
+      "year:2023",
+      "type:public-art",
+      "outdoor",
+      "type:install-view",
+      "material:mirror-polished-stainless"
     ]
   },
   {
@@ -716,6 +735,124 @@
     ]
   },
   {
+    "id": "difc23-kite-night",
+    "piece": "Mirror-polished kite",
+    "piece_slug": "kite-steel",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-kite-night.jpg",
+    "caption": "Anton's angular mirror-polished sculpture lit at night in the DIFC reflecting pool, Dubai, 2023.",
+    "alt": "Anton's angular mirror-polished sculpture lit at night in the DIFC reflecting pool, Dubai, 2023.",
+    "tags": [
+      "exhibit:difc-sculpture-park-2023",
+      "venue:difc",
+      "location:dubai",
+      "year:2023",
+      "type:public-art",
+      "outdoor",
+      "material:mirror-polished-stainless",
+      "type:angular"
+    ]
+  },
+  {
+    "id": "difc23-kite-render",
+    "piece": "Mirror-polished kite",
+    "piece_slug": "kite-steel",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-kite-render.mp4",
+    "caption": "A rotating render of the angular sculpture, part of Anton's render-first process.",
+    "alt": "A rotating render of the angular sculpture, part of Anton's render-first process.",
+    "tags": [
+      "exhibit:difc-sculpture-park-2023",
+      "venue:difc",
+      "location:dubai",
+      "year:2023",
+      "type:public-art",
+      "outdoor",
+      "material:mirror-polished-stainless",
+      "type:angular",
+      "type:render",
+      "type:digital"
+    ]
+  },
+  {
+    "id": "difc23-kite-video",
+    "piece": "Mirror-polished kite",
+    "piece_slug": "kite-steel",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-kite-video.mp4",
+    "caption": "Anton's angular mirror-polished sculpture at the DIFC Sculpture Park, Dubai, 2023.",
+    "alt": "Anton's angular mirror-polished sculpture at the DIFC Sculpture Park, Dubai, 2023.",
+    "tags": [
+      "exhibit:difc-sculpture-park-2023",
+      "venue:difc",
+      "location:dubai",
+      "year:2023",
+      "type:public-art",
+      "outdoor",
+      "material:mirror-polished-stainless",
+      "type:angular"
+    ]
+  },
+  {
+    "id": "difc23-ring-knot",
+    "piece": "Mirror-polished ring knot",
+    "piece_slug": "ring-knot-steel",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-ring-knot.jpg",
+    "caption": "A mirror-polished stainless ring knot in the DIFC reflecting pool, Dubai, 2023; its faces fold the buildings, sky, and water into the closed lattice path.",
+    "alt": "A mirror-polished stainless ring knot in the DIFC reflecting pool, Dubai, 2023; its faces fold the buildings, sky, and water into the closed lattice path.",
+    "tags": [
+      "exhibit:difc-sculpture-park-2023",
+      "venue:difc",
+      "location:dubai",
+      "year:2023",
+      "type:public-art",
+      "outdoor",
+      "material:mirror-polished-stainless",
+      "type:knot"
+    ]
+  },
+  {
+    "id": "difc23-ring-knot-render",
+    "piece": "Mirror-polished ring knot",
+    "piece_slug": "ring-knot-steel",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-ring-knot-render.mp4",
+    "caption": "A rotating render of the ring-knot sculpture. Anton discovers and renders his forms digitally before they are fabricated.",
+    "alt": "A rotating render of the ring-knot sculpture. Anton discovers and renders his forms digitally before they are fabricated.",
+    "tags": [
+      "exhibit:difc-sculpture-park-2023",
+      "venue:difc",
+      "location:dubai",
+      "year:2023",
+      "type:public-art",
+      "outdoor",
+      "material:mirror-polished-stainless",
+      "type:knot",
+      "type:render",
+      "type:digital"
+    ]
+  },
+  {
+    "id": "difc23-ring-knot-video",
+    "piece": "Mirror-polished ring knot",
+    "piece_slug": "ring-knot-steel",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-ring-knot-video.mp4",
+    "caption": "Anton's mirror-polished ring knot in the DIFC reflecting pool, Dubai, 2023.",
+    "alt": "Anton's mirror-polished ring knot in the DIFC reflecting pool, Dubai, 2023.",
+    "tags": [
+      "exhibit:difc-sculpture-park-2023",
+      "venue:difc",
+      "location:dubai",
+      "year:2023",
+      "type:public-art",
+      "outdoor",
+      "material:mirror-polished-stainless",
+      "type:knot"
+    ]
+  },
+  {
     "id": "mobius-steel",
     "piece": "Mobius path (steel)",
     "piece_slug": "mobius-steel",
@@ -734,22 +871,6 @@
     ]
   },
   {
-    "id": "ps-install-wide",
-    "piece": "Perspectives of Symmetry (Leila Heller, Dubai)",
-    "piece_slug": "perspectives-of-symmetry",
-    "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-install-wide.jpg",
-    "caption": "Inside Perspectives of Symmetry, Anton's Middle East solo debut at Leila Heller Gallery, Dubai, 2021, with bronze and mirror-polished stainless works on pedestals.",
-    "alt": "Inside Perspectives of Symmetry, Anton's Middle East solo debut at Leila Heller Gallery, Dubai, 2021, with bronze and mirror-polished stainless works on pedestals.",
-    "tags": [
-      "exhibit:perspectives-of-symmetry",
-      "venue:leila-heller",
-      "location:dubai",
-      "year:2021",
-      "type:install-view"
-    ]
-  },
-  {
     "id": "ps-walkthrough",
     "piece": "Perspectives of Symmetry (Leila Heller, Dubai)",
     "piece_slug": "perspectives-of-symmetry",
@@ -764,6 +885,22 @@
       "year:2021",
       "type:install-view",
       "type:walkthrough"
+    ]
+  },
+  {
+    "id": "ps-install-wide",
+    "piece": "Perspectives of Symmetry (Leila Heller, Dubai)",
+    "piece_slug": "perspectives-of-symmetry",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-install-wide.jpg",
+    "caption": "Inside Perspectives of Symmetry, Anton's Middle East solo debut at Leila Heller Gallery, Dubai, 2021, with bronze and mirror-polished stainless works on pedestals.",
+    "alt": "Inside Perspectives of Symmetry, Anton's Middle East solo debut at Leila Heller Gallery, Dubai, 2021, with bronze and mirror-polished stainless works on pedestals.",
+    "tags": [
+      "exhibit:perspectives-of-symmetry",
+      "venue:leila-heller",
+      "location:dubai",
+      "year:2021",
+      "type:install-view"
     ]
   },
   {

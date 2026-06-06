@@ -10,3 +10,8 @@ Anton's sculptures were among the works on view, shown alongside pieces by celeb
 artists, including Salvador Dali and Anthony James, together with local and regional talents working
 across many mediums. Returning to the DIFC park placed Anton's lattice-path forms once more in the heart
 of the city, at architectural scale and open to everyone.
+
+His two works that year were large mirror-polished stainless sculptures set in the centre's reflecting
+pools, an octagonal ring knot and an angular faceted form. Their polished faces gather the surrounding
+towers, the sky, and the water into the closed lattice paths, so the city itself becomes part of each
+sculpture as you move around it.
