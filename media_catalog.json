@@ -1,5 +1,21 @@
 [
   {
+    "id": "alt-perspective-install",
+    "piece": "Alternative Perspective (MoMath)",
+    "piece_slug": "alternative-perspective",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/alt-perspective-install.jpg",
+    "caption": "Inside Alternative Perspective at MoMath, 2021: red wall reliefs of the linked-squares and endless-knot forms beside a patinated bronze sculpture (Opus 125707).",
+    "alt": "Inside Alternative Perspective at MoMath, 2021: red wall reliefs of the linked-squares and endless-knot forms beside a patinated bronze sculpture (Opus 125707).",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "type:install-view"
+    ]
+  },
+  {
     "id": "awakening-shadow-installation",
     "piece": "Awakening",
     "piece_slug": "awakening",
@@ -62,12 +78,88 @@
     "caption": "Awakening rotating in its corner installation: as the bronze turns, its shadow transforms continuously between the Tibetan endless knot and two linked squares.",
     "alt": "A bronze sculpture slowly rotating on a turntable in a corner; as it turns, the shadows it casts on the two walls shift between a Tibetan endless knot and two linked squares.",
     "tags": [
-      "video",
+      "endless-knot",
+      "exhibit:alternative-perspective",
+      "installation",
+      "linked-squares",
+      "location:new-york",
       "rotation",
       "shadow",
-      "installation",
-      "endless-knot",
-      "linked-squares"
+      "venue:momath",
+      "video",
+      "year:2021"
+    ]
+  },
+  {
+    "id": "blue-curved-path",
+    "piece": "Blue curved path",
+    "piece_slug": "blue-curved-path",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/blue-curved-path.mp4",
+    "caption": "A blue curved double-loop path turning on its base, its shadows shifting between a knot and linked loops.",
+    "alt": "A blue curved double-loop path turning on its base, its shadows shifting between a knot and linked loops.",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "series:blue-curved-path",
+      "material:bronze",
+      "type:curve"
+    ]
+  },
+  {
+    "id": "fence-around-nothing",
+    "piece": "Fence around nothing",
+    "piece_slug": "fence-around-nothing",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/fence-around-nothing.mp4",
+    "caption": "The 'fence around nothing,' a bronze zigzag that encloses only empty space, rotating on its base. The studio sibling of the monumental Red Zig Zag.",
+    "alt": "The 'fence around nothing,' a bronze zigzag that encloses only empty space, rotating on its base. The studio sibling of the monumental Red Zig Zag.",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "series:fence-around-nothing",
+      "material:bronze",
+      "type:zigzag",
+      "related:red-zigzag"
+    ]
+  },
+  {
+    "id": "gold-pendant-momath",
+    "piece": "Gold pendant",
+    "piece_slug": "gold-jewelry",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/gold-pendant-momath.jpg",
+    "caption": "A gold pendant set with red stones, one of Anton's rare gold jewelry pieces, shown at MoMath in 2021.",
+    "alt": "A gold pendant set with red stones, one of Anton's rare gold jewelry pieces, shown at MoMath in 2021.",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "material:gold",
+      "type:jewelry"
+    ]
+  },
+  {
+    "id": "knotted-steel",
+    "piece": "Knotted path (steel)",
+    "piece_slug": "knotted-steel",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/knotted-steel.mp4",
+    "caption": "A mirror-polished stainless knot turning, its reflections and shadows shifting as it rotates.",
+    "alt": "A mirror-polished stainless knot turning, its reflections and shadows shifting as it rotates.",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "series:knotted",
+      "material:mirror-polished-stainless",
+      "type:knot"
     ]
   },
   {
@@ -197,6 +289,42 @@
     "tags": [
       "koos-verhoeff",
       "portrait"
+    ]
+  },
+  {
+    "id": "lattice-model",
+    "piece": "Lattice model",
+    "piece_slug": "lattice-model",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/lattice-model.mp4",
+    "caption": "A bronze cube lattice of balls and rods, turning to cast crystalline shadows, a portrait of the atomic grid the paths live in.",
+    "alt": "A bronze cube lattice of balls and rods, turning to cast crystalline shadows, a portrait of the atomic grid the paths live in.",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "series:lattice",
+      "material:bronze",
+      "type:lattice"
+    ]
+  },
+  {
+    "id": "mobius-steel",
+    "piece": "Mobius path (steel)",
+    "piece_slug": "mobius-steel",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/mobius-steel.mp4",
+    "caption": "A mirror-polished stainless Mobius-like loop rotating on its base, its shadow curving through figure-eights.",
+    "alt": "A mirror-polished stainless Mobius-like loop rotating on its base, its shadow curving through figure-eights.",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "series:mobius",
+      "material:mirror-polished-stainless",
+      "type:mobius"
     ]
   },
   {
@@ -332,6 +460,78 @@
       "year:2025",
       "type:open-path",
       "installation"
+    ]
+  },
+  {
+    "id": "braiding",
+    "piece": "Simple-cubic braiding",
+    "piece_slug": "braiding",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/braiding.mp4",
+    "caption": "A woven column of square beams, a simple-cubic braiding, rotating and casting lattice-like shadows.",
+    "alt": "A woven column of square beams, a simple-cubic braiding, rotating and casting lattice-like shadows.",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "series:braiding",
+      "material:bronze",
+      "type:braiding"
+    ]
+  },
+  {
+    "id": "spiral-bronze",
+    "piece": "Spiral (bronze)",
+    "piece_slug": "spiral-bronze",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/spiral-bronze.mp4",
+    "caption": "Interlocking ring-spirals in bronze, rotating, the shadows resolving into different curves from each angle.",
+    "alt": "Interlocking ring-spirals in bronze, rotating, the shadows resolving into different curves from each angle.",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "series:spiral",
+      "material:bronze",
+      "type:spiral"
+    ]
+  },
+  {
+    "id": "spiral-steel",
+    "piece": "Spiral (steel)",
+    "piece_slug": "spiral-steel",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/spiral-steel.mp4",
+    "caption": "The spiral form in mirror-polished stainless, turning to catch the light and shift its shadows.",
+    "alt": "The spiral form in mirror-polished stainless, turning to catch the light and shift its shadows.",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "series:spiral",
+      "material:mirror-polished-stainless",
+      "type:spiral"
+    ]
+  },
+  {
+    "id": "star-compound",
+    "piece": "Star compound",
+    "piece_slug": "star-compound",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/star-compound.mp4",
+    "caption": "A bronze compound star of interlocking squares, rotating, its shadow forming a six-pointed star.",
+    "alt": "A bronze compound star of interlocking squares, rotating, its shadow forming a six-pointed star.",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "series:star",
+      "material:bronze",
+      "type:star"
     ]
   }
 ]
