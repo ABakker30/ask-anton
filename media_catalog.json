@@ -32,22 +32,6 @@
     ]
   },
   {
-    "id": "alt-perspective-install",
-    "piece": "Alternative Perspective (MoMath)",
-    "piece_slug": "alternative-perspective",
-    "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/alt-perspective-install.jpg",
-    "caption": "Inside Alternative Perspective at MoMath, 2021: red wall reliefs of the linked-squares and endless-knot forms beside a patinated bronze sculpture (Opus 125707).",
-    "alt": "Inside Alternative Perspective at MoMath, 2021: red wall reliefs of the linked-squares and endless-knot forms beside a patinated bronze sculpture (Opus 125707).",
-    "tags": [
-      "exhibit:alternative-perspective",
-      "venue:momath",
-      "location:new-york",
-      "year:2021",
-      "type:install-view"
-    ]
-  },
-  {
     "id": "momath-opening-reception",
     "piece": "Alternative Perspective (MoMath)",
     "piece_slug": "alternative-perspective",
@@ -61,6 +45,22 @@
       "location:new-york",
       "year:2021",
       "type:opening"
+    ]
+  },
+  {
+    "id": "alt-perspective-install",
+    "piece": "Alternative Perspective (MoMath)",
+    "piece_slug": "alternative-perspective",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/alt-perspective-install.jpg",
+    "caption": "Inside Alternative Perspective at MoMath, 2021: red wall reliefs of the linked-squares and endless-knot forms beside a patinated bronze sculpture (Opus 125707).",
+    "alt": "Inside Alternative Perspective at MoMath, 2021: red wall reliefs of the linked-squares and endless-knot forms beside a patinated bronze sculpture (Opus 125707).",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "type:install-view"
     ]
   },
   {
@@ -207,6 +207,46 @@
     ]
   },
   {
+    "id": "difc-big-spiral",
+    "piece": "Big Spiral",
+    "piece_slug": "big-spiral",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-sculpture-park/difc-big-spiral.jpg",
+    "caption": "Big Spiral, a monumental mirror-polished stainless sculpture, at the DIFC Sculpture Park, Dubai, 2022, against the city skyline.",
+    "alt": "Big Spiral, a monumental mirror-polished stainless sculpture, at the DIFC Sculpture Park, Dubai, 2022, against the city skyline.",
+    "tags": [
+      "exhibit:difc-sculpture-park",
+      "venue:difc",
+      "location:dubai",
+      "year:2022",
+      "type:public-art",
+      "outdoor",
+      "series:big-spiral",
+      "material:mirror-polished-stainless",
+      "type:spiral"
+    ]
+  },
+  {
+    "id": "difc-big-spiral-video",
+    "piece": "Big Spiral",
+    "piece_slug": "big-spiral",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-sculpture-park/difc-big-spiral-video.mp4",
+    "caption": "Anton's Big Spiral at the DIFC Sculpture Park, Dubai, 2022.",
+    "alt": "Anton's Big Spiral at the DIFC Sculpture Park, Dubai, 2022.",
+    "tags": [
+      "exhibit:difc-sculpture-park",
+      "venue:difc",
+      "location:dubai",
+      "year:2022",
+      "type:public-art",
+      "outdoor",
+      "series:big-spiral",
+      "material:mirror-polished-stainless",
+      "type:spiral"
+    ]
+  },
+  {
     "id": "blue-curved-path",
     "piece": "Blue curved path",
     "piece_slug": "blue-curved-path",
@@ -259,6 +299,46 @@
       "type:digital",
       "lattice:fcc",
       "series:creation-animation"
+    ]
+  },
+  {
+    "id": "difc-cubic-braiding",
+    "piece": "Cubic braiding (red)",
+    "piece_slug": "braiding",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-sculpture-park/difc-cubic-braiding.jpg",
+    "caption": "Cubic Braiding, a red painted-steel woven lattice column, at the DIFC Sculpture Park, Dubai, 2022, with the Museum of the Future beyond.",
+    "alt": "Cubic Braiding, a red painted-steel woven lattice column, at the DIFC Sculpture Park, Dubai, 2022, with the Museum of the Future beyond.",
+    "tags": [
+      "exhibit:difc-sculpture-park",
+      "venue:difc",
+      "location:dubai",
+      "year:2022",
+      "type:public-art",
+      "outdoor",
+      "series:braiding",
+      "material:painted-steel",
+      "type:braiding"
+    ]
+  },
+  {
+    "id": "difc-cubic-braiding-video",
+    "piece": "Cubic braiding (red)",
+    "piece_slug": "braiding",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-sculpture-park/difc-cubic-braiding-video.mp4",
+    "caption": "Anton's red Cubic Braiding at the DIFC Sculpture Park, Dubai, 2022.",
+    "alt": "Anton's red Cubic Braiding at the DIFC Sculpture Park, Dubai, 2022.",
+    "tags": [
+      "exhibit:difc-sculpture-park",
+      "venue:difc",
+      "location:dubai",
+      "year:2022",
+      "type:public-art",
+      "outdoor",
+      "series:braiding",
+      "material:painted-steel",
+      "type:braiding"
     ]
   },
   {
@@ -317,6 +397,25 @@
     ]
   },
   {
+    "id": "ps-fractal-tree-video",
+    "piece": "Fractal tree",
+    "piece_slug": "fractal-tree",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree-video.mp4",
+    "caption": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
+    "alt": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
+    "tags": [
+      "exhibit:perspectives-of-symmetry",
+      "venue:leila-heller",
+      "location:dubai",
+      "year:2021",
+      "series:fractal-tree",
+      "material:steel",
+      "type:fractal",
+      "related:koos-verhoeff"
+    ]
+  },
+  {
     "id": "ps-fractal-tree",
     "piece": "Fractal tree",
     "piece_slug": "fractal-tree",
@@ -336,18 +435,41 @@
     ]
   },
   {
-    "id": "ps-fractal-tree-video",
+    "id": "difc-fractal-tree",
+    "piece": "Fractal tree",
+    "piece_slug": "fractal-tree",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-sculpture-park/difc-fractal-tree.jpg",
+    "caption": "Anton's steel fractal tree, after Koos Verhoeff's design, against the Emirates Towers at the DIFC Sculpture Park, Dubai, 2022.",
+    "alt": "Anton's steel fractal tree, after Koos Verhoeff's design, against the Emirates Towers at the DIFC Sculpture Park, Dubai, 2022.",
+    "tags": [
+      "exhibit:difc-sculpture-park",
+      "venue:difc",
+      "location:dubai",
+      "year:2022",
+      "type:public-art",
+      "outdoor",
+      "series:fractal-tree",
+      "material:steel",
+      "type:fractal",
+      "related:koos-verhoeff"
+    ]
+  },
+  {
+    "id": "difc-fractal-tree-video",
     "piece": "Fractal tree",
     "piece_slug": "fractal-tree",
     "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree-video.mp4",
-    "caption": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
-    "alt": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-sculpture-park/difc-fractal-tree-video.mp4",
+    "caption": "Anton's fractal tree at the DIFC Sculpture Park, Dubai, 2022.",
+    "alt": "Anton's fractal tree at the DIFC Sculpture Park, Dubai, 2022.",
     "tags": [
-      "exhibit:perspectives-of-symmetry",
-      "venue:leila-heller",
+      "exhibit:difc-sculpture-park",
+      "venue:difc",
       "location:dubai",
-      "year:2021",
+      "year:2022",
+      "type:public-art",
+      "outdoor",
       "series:fractal-tree",
       "material:steel",
       "type:fractal",
@@ -369,6 +491,46 @@
       "year:2021",
       "material:gold",
       "type:jewelry"
+    ]
+  },
+  {
+    "id": "difc-knot",
+    "piece": "Knotted path",
+    "piece_slug": "knotted-steel",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-sculpture-park/difc-knot.jpg",
+    "caption": "A mirror-polished stainless knot before the DIFC Gate building, Dubai, 2022.",
+    "alt": "A mirror-polished stainless knot before the DIFC Gate building, Dubai, 2022.",
+    "tags": [
+      "exhibit:difc-sculpture-park",
+      "venue:difc",
+      "location:dubai",
+      "year:2022",
+      "type:public-art",
+      "outdoor",
+      "series:knotted",
+      "material:mirror-polished-stainless",
+      "type:knot"
+    ]
+  },
+  {
+    "id": "difc-knot-video",
+    "piece": "Knotted path",
+    "piece_slug": "knotted-steel",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-sculpture-park/difc-knot-video.mp4",
+    "caption": "Anton's mirror-polished knot at the DIFC Sculpture Park, Dubai, 2022.",
+    "alt": "Anton's mirror-polished knot at the DIFC Sculpture Park, Dubai, 2022.",
+    "tags": [
+      "exhibit:difc-sculpture-park",
+      "venue:difc",
+      "location:dubai",
+      "year:2022",
+      "type:public-art",
+      "outdoor",
+      "series:knotted",
+      "material:mirror-polished-stainless",
+      "type:knot"
     ]
   },
   {
@@ -802,6 +964,46 @@
       "venue:momath",
       "location:new-york",
       "year:2021",
+      "series:spiral",
+      "material:bronze",
+      "type:spiral"
+    ]
+  },
+  {
+    "id": "difc-spiral-bronze",
+    "piece": "Spiral (bronze)",
+    "piece_slug": "spiral-bronze",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-sculpture-park/difc-spiral-bronze.jpg",
+    "caption": "A bronze spiral framed by the DIFC Gate building, at the DIFC Sculpture Park, Dubai, 2022.",
+    "alt": "A bronze spiral framed by the DIFC Gate building, at the DIFC Sculpture Park, Dubai, 2022.",
+    "tags": [
+      "exhibit:difc-sculpture-park",
+      "venue:difc",
+      "location:dubai",
+      "year:2022",
+      "type:public-art",
+      "outdoor",
+      "series:spiral",
+      "material:bronze",
+      "type:spiral"
+    ]
+  },
+  {
+    "id": "difc-spiral-bronze-video",
+    "piece": "Spiral (bronze)",
+    "piece_slug": "spiral-bronze",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-sculpture-park/difc-spiral-bronze-video.mp4",
+    "caption": "Anton's bronze spiral at the DIFC Sculpture Park, Dubai, 2022.",
+    "alt": "Anton's bronze spiral at the DIFC Sculpture Park, Dubai, 2022.",
+    "tags": [
+      "exhibit:difc-sculpture-park",
+      "venue:difc",
+      "location:dubai",
+      "year:2022",
+      "type:public-art",
+      "outdoor",
       "series:spiral",
       "material:bronze",
       "type:spiral"
