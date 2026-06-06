@@ -256,13 +256,34 @@
     sendBtn.disabled = true;
     const bubble = addMsg("anton", "Anton", "thinking...", "thinking");
     try {
-      const res = await fetch(API_BASE + "/ask", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question, history, turnstile_token: turnstileToken }),
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.detail || "Request failed");
+      let data = null;
+      // Try up to twice: a transient gateway error (deploy/restart) returns an HTML
+      // error page, not JSON. Retry once, then show a friendly message.
+      for (let attempt = 0; attempt < 2 && !data; attempt++) {
+        if (attempt) await new Promise((r) => setTimeout(r, 1500));
+        let res, text;
+        try {
+          res = await fetch(API_BASE + "/ask", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ question, history, turnstile_token: turnstileToken }),
+          });
+          text = await res.text();
+        } catch (netErr) {
+          continue; // network blip; retry
+        }
+        let parsed = null;
+        try { parsed = JSON.parse(text); } catch (_) { parsed = null; }
+        if (res.ok && parsed && typeof parsed.answer === "string") {
+          data = parsed;
+        } else if (parsed && parsed.detail) {
+          throw new Error(parsed.detail); // real app message (rate limit, too long, etc.)
+        }
+        // otherwise: HTML / 5xx / gateway error -> loop and retry once
+      }
+      if (!data) {
+        throw new Error("Anton is momentarily unavailable - the server may be restarting. Please try again in a moment.");
+      }
       bubble.classList.remove("thinking");
       bubble.textContent = data.answer;
       appendMedia(bubble, data.media);
@@ -271,7 +292,7 @@
       renderFollowups(data.followups);
     } catch (err) {
       bubble.classList.remove("thinking");
-      bubble.textContent = "Something went wrong: " + err.message;
+      bubble.textContent = err.message;
     } finally {
       // Turnstile tokens are single-use; fetch a fresh one for the next question.
       if (turnstileEnabled && turnstileWidgetId !== null && window.turnstile) {
