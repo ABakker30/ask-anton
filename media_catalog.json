@@ -16,6 +16,90 @@
     ]
   },
   {
+    "id": "momath-opening-reception",
+    "piece": "Alternative Perspective (MoMath)",
+    "piece_slug": "alternative-perspective",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/momath-opening-reception.mp4",
+    "caption": "The opening reception of Alternative Perspective at MoMath, 2021.",
+    "alt": "The opening reception of Alternative Perspective at MoMath, 2021.",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "type:opening"
+    ]
+  },
+  {
+    "id": "momath-opening-gallery",
+    "piece": "Alternative Perspective (MoMath)",
+    "piece_slug": "alternative-perspective",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/momath-opening-gallery.jpg",
+    "caption": "Visitors at the in-person Alternative Perspective exhibit at MoMath, 2021, the sculptures on rotating bases casting shadows on the walls.",
+    "alt": "Visitors at the in-person Alternative Perspective exhibit at MoMath, 2021, the sculptures on rotating bases casting shadows on the walls.",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "type:opening",
+      "type:install-view"
+    ]
+  },
+  {
+    "id": "anton-portrait",
+    "piece": "Anton Bakker",
+    "piece_slug": "anton-bakker",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/anton-portrait.jpg",
+    "caption": "Anton Bakker, photographed for the MoMath exhibit, 2021.",
+    "alt": "Anton Bakker, photographed for the MoMath exhibit, 2021.",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "portrait",
+      "artist"
+    ]
+  },
+  {
+    "id": "anton-with-stainless",
+    "piece": "Anton Bakker",
+    "piece_slug": "anton-bakker",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/anton-with-stainless.jpg",
+    "caption": "Anton Bakker holding one of his mirror-polished stainless sculptures.",
+    "alt": "Anton Bakker holding one of his mirror-polished stainless sculptures.",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "portrait",
+      "artist"
+    ]
+  },
+  {
+    "id": "anton-through-sculpture",
+    "piece": "Anton Bakker",
+    "piece_slug": "anton-bakker",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/anton-through-sculpture.jpg",
+    "caption": "Anton Bakker studying one of his mirror-polished pieces, a study in perspective.",
+    "alt": "Anton Bakker studying one of his mirror-polished pieces, a study in perspective.",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "portrait",
+      "artist"
+    ]
+  },
+  {
     "id": "awakening-shadow-installation",
     "piece": "Awakening",
     "piece_slug": "awakening",
@@ -109,6 +193,43 @@
     ]
   },
   {
+    "id": "creation-animation-951465",
+    "piece": "Creation animation",
+    "piece_slug": "creation-animation",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/creation-animation-951465.mp4",
+    "caption": "A creation animation in red: the lattice assembling, points fixing in space before a path is drawn through them. Opus 951465.",
+    "alt": "A creation animation in red: the lattice assembling, points fixing in space before a path is drawn through them. Opus 951465.",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "type:animation",
+      "type:digital",
+      "series:creation-animation"
+    ]
+  },
+  {
+    "id": "creation-animation-fcc",
+    "piece": "Creation animation (FCC lattice)",
+    "piece_slug": "creation-animation",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/creation-animation-fcc.mp4",
+    "caption": "A creation animation: spheres pack into a face-centered-cubic lattice, the atomic grid from which Anton discovers his paths. Opus 325846.",
+    "alt": "A creation animation: spheres pack into a face-centered-cubic lattice, the atomic grid from which Anton discovers his paths. Opus 325846.",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "type:animation",
+      "type:digital",
+      "lattice:fcc",
+      "series:creation-animation"
+    ]
+  },
+  {
     "id": "fence-around-nothing",
     "piece": "Fence around nothing",
     "piece_slug": "fence-around-nothing",
@@ -125,6 +246,25 @@
       "material:bronze",
       "type:zigzag",
       "related:red-zigzag"
+    ]
+  },
+  {
+    "id": "momath-red-fence-gallery",
+    "piece": "Fence around nothing",
+    "piece_slug": "fence-around-nothing",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/alternative-perspective/momath-red-fence-gallery.mp4",
+    "caption": "A red painted-steel 'fence around nothing' on the gallery floor at MoMath, 2021, the form Anton later realized monumentally as Red Zig Zag in Norfolk.",
+    "alt": "A red painted-steel 'fence around nothing' on the gallery floor at MoMath, 2021, the form Anton later realized monumentally as Red Zig Zag in Norfolk.",
+    "tags": [
+      "exhibit:alternative-perspective",
+      "venue:momath",
+      "location:new-york",
+      "year:2021",
+      "series:fence-around-nothing",
+      "related:red-zigzag",
+      "material:painted-steel",
+      "type:zigzag"
     ]
   },
   {
