@@ -207,6 +207,139 @@
     ]
   },
   {
+    "id": "sj-30",
+    "piece": "Bakker and Jafri (textured renders)",
+    "piece_slug": "bakker-jafri",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-30.jpg",
+    "caption": "A faceted lattice-path form skinned with Sacha Jafri's painting.",
+    "alt": "A faceted lattice-path form skinned with Sacha Jafri's painting.",
+    "tags": [
+      "collaboration:sacha-jafri",
+      "type:render",
+      "type:digital",
+      "material:digital",
+      "location:dubai",
+      "year:2021",
+      "related:leila-heller",
+      "series:bakker-jafri"
+    ]
+  },
+  {
+    "id": "sj-01",
+    "piece": "Bakker and Jafri (textured renders)",
+    "piece_slug": "bakker-jafri",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-01.jpg",
+    "caption": "An angular lattice-path form rendered with Sacha Jafri's painting textures, a 2021 digital collaboration.",
+    "alt": "An angular lattice-path form rendered with Sacha Jafri's painting textures, a 2021 digital collaboration.",
+    "tags": [
+      "collaboration:sacha-jafri",
+      "type:render",
+      "type:digital",
+      "material:digital",
+      "location:dubai",
+      "year:2021",
+      "related:leila-heller",
+      "series:bakker-jafri"
+    ]
+  },
+  {
+    "id": "sj-81",
+    "piece": "Bakker and Jafri (textured renders)",
+    "piece_slug": "bakker-jafri",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-81.jpg",
+    "caption": "A lattice-path form clothed in Sacha Jafri's painted textures.",
+    "alt": "A lattice-path form clothed in Sacha Jafri's painted textures.",
+    "tags": [
+      "collaboration:sacha-jafri",
+      "type:render",
+      "type:digital",
+      "material:digital",
+      "location:dubai",
+      "year:2021",
+      "related:leila-heller",
+      "series:bakker-jafri"
+    ]
+  },
+  {
+    "id": "sj-101",
+    "piece": "Bakker and Jafri (textured renders)",
+    "piece_slug": "bakker-jafri",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-101.jpg",
+    "caption": "A lattice-path sculpture rendered in Sacha Jafri's textures.",
+    "alt": "A lattice-path sculpture rendered in Sacha Jafri's textures.",
+    "tags": [
+      "collaboration:sacha-jafri",
+      "type:render",
+      "type:digital",
+      "material:digital",
+      "location:dubai",
+      "year:2021",
+      "related:leila-heller",
+      "series:bakker-jafri"
+    ]
+  },
+  {
+    "id": "sj-62",
+    "piece": "Bakker and Jafri (textured renders)",
+    "piece_slug": "bakker-jafri",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-62.jpg",
+    "caption": "An angular knotted form, its inner faces opening onto Sacha Jafri's colour.",
+    "alt": "An angular knotted form, its inner faces opening onto Sacha Jafri's colour.",
+    "tags": [
+      "collaboration:sacha-jafri",
+      "type:render",
+      "type:digital",
+      "material:digital",
+      "location:dubai",
+      "year:2021",
+      "related:leila-heller",
+      "series:bakker-jafri"
+    ]
+  },
+  {
+    "id": "sj-12",
+    "piece": "Bakker and Jafri (textured renders)",
+    "piece_slug": "bakker-jafri",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-12.jpg",
+    "caption": "An interlocking double-diamond form wearing Sacha Jafri's vivid abstraction.",
+    "alt": "An interlocking double-diamond form wearing Sacha Jafri's vivid abstraction.",
+    "tags": [
+      "collaboration:sacha-jafri",
+      "type:render",
+      "type:digital",
+      "material:digital",
+      "location:dubai",
+      "year:2021",
+      "related:leila-heller",
+      "series:bakker-jafri"
+    ]
+  },
+  {
+    "id": "bakker-jafri-reel",
+    "piece": "Bakker and Jafri (textured renders)",
+    "piece_slug": "bakker-jafri",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/bakker-jafri-reel.mp4",
+    "caption": "A showcase reel of Anton's sculptures rendered with Sacha Jafri's painting textures, a digital collaboration from their concurrent 2021 exhibitions at Leila Heller Gallery, Dubai.",
+    "alt": "A showcase reel of Anton's sculptures rendered with Sacha Jafri's painting textures, a digital collaboration from their concurrent 2021 exhibitions at Leila Heller Gallery, Dubai.",
+    "tags": [
+      "collaboration:sacha-jafri",
+      "type:render",
+      "type:digital",
+      "material:digital",
+      "location:dubai",
+      "year:2021",
+      "related:leila-heller",
+      "series:bakker-jafri"
+    ]
+  },
+  {
     "id": "difc-big-spiral",
     "piece": "Big Spiral",
     "piece_slug": "big-spiral",
@@ -416,13 +549,13 @@
     ]
   },
   {
-    "id": "ps-fractal-tree",
+    "id": "ps-fractal-tree-video",
     "piece": "Fractal tree",
     "piece_slug": "fractal-tree",
-    "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree.jpg",
-    "caption": "Anton's fractal tree in patinated steel, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
-    "alt": "Anton's fractal tree in patinated steel, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree-video.mp4",
+    "caption": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
+    "alt": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
     "tags": [
       "exhibit:perspectives-of-symmetry",
       "venue:leila-heller",
@@ -435,13 +568,13 @@
     ]
   },
   {
-    "id": "ps-fractal-tree-video",
+    "id": "ps-fractal-tree",
     "piece": "Fractal tree",
     "piece_slug": "fractal-tree",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree-video.mp4",
-    "caption": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
-    "alt": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree.jpg",
+    "caption": "Anton's fractal tree in patinated steel, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
+    "alt": "Anton's fractal tree in patinated steel, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
     "tags": [
       "exhibit:perspectives-of-symmetry",
       "venue:leila-heller",
@@ -534,27 +667,6 @@
     ]
   },
   {
-    "id": "difc23-kite-video",
-    "piece": "Heptagon",
-    "piece_slug": "heptagon",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-kite-video.mp4",
-    "caption": "Heptagon at the DIFC Sculpture Park, Dubai, 2023, a mirror-polished closed seven-step lattice path.",
-    "alt": "Heptagon at the DIFC Sculpture Park, Dubai, 2023, a mirror-polished closed seven-step lattice path.",
-    "tags": [
-      "exhibit:difc-sculpture-park-2023",
-      "venue:difc",
-      "location:dubai",
-      "year:2023",
-      "type:public-art",
-      "outdoor",
-      "series:heptagon",
-      "type:closed-path",
-      "lattice:fcc",
-      "material:mirror-polished-stainless"
-    ]
-  },
-  {
     "id": "difc23-kite-render",
     "piece": "Heptagon",
     "piece_slug": "heptagon",
@@ -574,6 +686,27 @@
       "lattice:fcc",
       "type:render",
       "type:digital"
+    ]
+  },
+  {
+    "id": "difc23-kite-video",
+    "piece": "Heptagon",
+    "piece_slug": "heptagon",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/difc-2023/difc23-kite-video.mp4",
+    "caption": "Heptagon at the DIFC Sculpture Park, Dubai, 2023, a mirror-polished closed seven-step lattice path.",
+    "alt": "Heptagon at the DIFC Sculpture Park, Dubai, 2023, a mirror-polished closed seven-step lattice path.",
+    "tags": [
+      "exhibit:difc-sculpture-park-2023",
+      "venue:difc",
+      "location:dubai",
+      "year:2023",
+      "type:public-art",
+      "outdoor",
+      "series:heptagon",
+      "type:closed-path",
+      "lattice:fcc",
+      "material:mirror-polished-stainless"
     ]
   },
   {

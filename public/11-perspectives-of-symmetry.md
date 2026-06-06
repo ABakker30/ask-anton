@@ -15,3 +15,7 @@ needed no justification.
 The exhibition spanned several of Anton's families: mirror-polished curves and knots that fold the room
 into their surfaces, bronze spirals, and the large steel fractal tree, a three-dimensional Pythagorean
 tree built on a design by his mentor Koos Verhoeff.
+
+The British painter Sacha Jafri was exhibiting at the gallery at the same time. The two artists
+collaborated soon after on a series of digital works that wrap Jafri's painting textures onto Anton's
+sculptural forms (see the Bakker and Jafri collaboration).
