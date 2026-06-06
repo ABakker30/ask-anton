@@ -69,5 +69,134 @@
       "endless-knot",
       "linked-squares"
     ]
+  },
+  {
+    "id": "koos-attic-studio",
+    "piece": "Koos Verhoeff",
+    "piece_slug": "koos-verhoeff",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-verhoeff/koos-attic-studio.jpg",
+    "caption": "Koos Verhoeff in his attic studio, surrounded by his wooden geometric sculptures.",
+    "alt": "Koos Verhoeff, an older man with white hair, standing in an attic studio whose walls and shelves are full of his wooden geometric sculptures, including a large star and several polyhedra.",
+    "tags": [
+      "koos-verhoeff",
+      "portrait",
+      "studio",
+      "wooden-sculpture"
+    ]
+  },
+  {
+    "id": "koos-with-lattice-closeup",
+    "piece": "Koos Verhoeff",
+    "piece_slug": "koos-verhoeff",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-verhoeff/koos-with-lattice-closeup.jpg",
+    "caption": "Koos Verhoeff with some of his wooden lattice sculptures.",
+    "alt": "Close-up of Koos Verhoeff, white beard and glasses, beside several light-wood geometric lattice sculptures.",
+    "tags": [
+      "koos-verhoeff",
+      "portrait",
+      "wooden-sculpture"
+    ]
+  },
+  {
+    "id": "koos-garden-star",
+    "piece": "Koos Verhoeff",
+    "piece_slug": "koos-verhoeff",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-verhoeff/koos-garden-star.jpg",
+    "caption": "Koos Verhoeff in the garden, holding one of his wooden star sculptures.",
+    "alt": "Koos Verhoeff outdoors holding a large light-wood compound-star sculpture made of interlocking wooden beams.",
+    "tags": [
+      "koos-verhoeff",
+      "portrait",
+      "garden",
+      "wooden-sculpture"
+    ]
+  },
+  {
+    "id": "koos-garden-white-star",
+    "piece": "Koos Verhoeff",
+    "piece_slug": "koos-verhoeff",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-verhoeff/koos-garden-white-star.jpg",
+    "caption": "Koos Verhoeff beside a large star sculpture in a garden.",
+    "alt": "Koos Verhoeff standing on a hedge-ringed lawn next to a large white star-shaped sculpture.",
+    "tags": [
+      "koos-verhoeff",
+      "portrait",
+      "garden",
+      "sculpture"
+    ]
+  },
+  {
+    "id": "koos-in-his-study",
+    "piece": "Koos Verhoeff",
+    "piece_slug": "koos-verhoeff",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-verhoeff/koos-in-his-study.jpg",
+    "caption": "Koos Verhoeff in his book-filled study, among his models.",
+    "alt": "Koos Verhoeff seated reading in a cluttered study packed with books and many wooden geometric models.",
+    "tags": [
+      "koos-verhoeff",
+      "portrait",
+      "study"
+    ]
+  },
+  {
+    "id": "koos-study-2006",
+    "piece": "Koos Verhoeff",
+    "piece_slug": "koos-verhoeff",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-verhoeff/koos-study-2006.jpg",
+    "caption": "Koos Verhoeff in his study. Photo: Boudewijn Bollmann, 2006.",
+    "alt": "Koos Verhoeff seated in a book-lined study filled with geometric models, beside a sunny window.",
+    "tags": [
+      "koos-verhoeff",
+      "portrait",
+      "study"
+    ]
+  },
+  {
+    "id": "koos-with-tower-model",
+    "piece": "Koos Verhoeff",
+    "piece_slug": "koos-verhoeff",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-verhoeff/koos-with-tower-model.jpg",
+    "caption": "Koos Verhoeff holding up one of his tall wooden lattice models.",
+    "alt": "Koos Verhoeff in his study holding a tall slender wooden lattice tower model.",
+    "tags": [
+      "koos-verhoeff",
+      "portrait",
+      "study",
+      "wooden-sculpture"
+    ]
+  },
+  {
+    "id": "koos-shop-window",
+    "piece": "Koos Verhoeff",
+    "piece_slug": "koos-verhoeff",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-verhoeff/koos-shop-window.jpg",
+    "caption": "Koos Verhoeff outside a shop whose window displays his wooden sculptures.",
+    "alt": "Koos Verhoeff with a cane outside an optician's shop; the window holds several of his wooden geometric sculptures.",
+    "tags": [
+      "koos-verhoeff",
+      "portrait",
+      "wooden-sculpture"
+    ]
+  },
+  {
+    "id": "koos-installation-site",
+    "piece": "Koos Verhoeff",
+    "piece_slug": "koos-verhoeff",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-verhoeff/koos-installation-site.jpg",
+    "caption": "Koos Verhoeff at an installation site.",
+    "alt": "Koos Verhoeff wearing a hard hat at an outdoor installation site, with wooden pallets behind him.",
+    "tags": [
+      "koos-verhoeff",
+      "portrait"
+    ]
   }
 ]
