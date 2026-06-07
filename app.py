@@ -487,6 +487,24 @@ def config() -> dict:
     }
 
 
+@app.get("/media-catalog")
+def media_catalog() -> list[dict]:
+    """Slim public catalog so the page can offer a 'see more of this piece' gallery.
+    Same data already shipped per-answer; just the full set, grouped client-side by piece."""
+    return [
+        {
+            "id": m["id"],
+            "piece": m.get("piece"),
+            "piece_slug": m.get("piece_slug"),
+            "kind": m.get("kind", "image"),
+            "url": m["url"],
+            "caption": m.get("caption"),
+            "alt": m.get("alt"),
+        }
+        for m in MEDIA
+    ]
+
+
 @app.get("/stats")
 def stats_page() -> FileResponse:
     """Owner dashboard (open as /stats?key=YOUR_TOKEN). The page reads telemetry only

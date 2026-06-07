@@ -81,6 +81,13 @@
   .feedback button:hover { border-color: var(--accent); }
   .feedback .rate { display: flex; align-items: center; gap: 8px; }
   .feedback .share { margin-left: auto; }
+  .media figure img { cursor: zoom-in; }
+  .see-more { background: transparent; border: 1px solid var(--line); color: var(--muted); border-radius: 8px; padding: 6px 12px; cursor: pointer; font: inherit; font-size: 13px; margin: 4px 0 8px; }
+  .see-more:hover { border-color: var(--accent); color: var(--ink); }
+  #lightbox { position: fixed; inset: 0; background: rgba(0,0,0,.9); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 24px; cursor: zoom-out; }
+  #lightbox.open { display: flex; }
+  #lightbox img, #lightbox video { max-width: 94vw; max-height: 84vh; border-radius: 6px; }
+  #lightbox figcaption { color: #ddd; font-size: 13px; margin-top: 12px; max-width: 700px; text-align: center; }
   form {
     position: fixed;
     bottom: 0; left: 0; right: 0;
@@ -208,36 +215,100 @@
     return b;
   }
 
+  // Full catalog (loaded once) powers the "see more of this piece" galleries.
+  const pieceItems = {};   // piece_slug -> [items]
+  const urlPiece = {};     // url -> piece_slug
+  async function loadCatalog() {
+    try {
+      const items = await (await fetch(API_BASE + "/media-catalog")).json();
+      items.forEach((m) => {
+        if (!m || !m.url) return;
+        (pieceItems[m.piece_slug] = pieceItems[m.piece_slug] || []).push(m);
+        urlPiece[m.url] = m.piece_slug;
+      });
+    } catch (e) { /* see-more is best-effort */ }
+  }
+
+  let lightboxEl = null;
+  function openLightbox(m) {
+    if (!lightboxEl) {
+      lightboxEl = document.createElement("div");
+      lightboxEl.id = "lightbox";
+      lightboxEl.addEventListener("click", closeLightbox);
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLightbox(); });
+      document.body.appendChild(lightboxEl);
+    }
+    lightboxEl.innerHTML = "";
+    const fig = document.createElement("figure");
+    fig.style.cssText = "margin:0;display:flex;flex-direction:column;align-items:center";
+    let el;
+    if (m.kind === "video") {
+      el = document.createElement("video");
+      el.src = m.url; el.controls = true; el.autoplay = true; el.playsInline = true;
+      el.addEventListener("click", (e) => e.stopPropagation()); // keep controls usable
+    } else {
+      el = document.createElement("img");
+      el.src = m.url; el.alt = m.alt || "";
+    }
+    fig.appendChild(el);
+    if (m.caption) { const c = document.createElement("figcaption"); c.textContent = m.caption; fig.appendChild(c); }
+    lightboxEl.appendChild(fig);
+    lightboxEl.classList.add("open");
+  }
+  function closeLightbox() { if (lightboxEl) { lightboxEl.classList.remove("open"); lightboxEl.innerHTML = ""; } }
+
+  function mediaFigure(m) {
+    const fig = document.createElement("figure");
+    if (m.kind === "video") {
+      const vid = document.createElement("video");
+      vid.src = m.url; vid.controls = true; vid.preload = "metadata"; vid.playsInline = true;
+      if (m.alt) vid.setAttribute("aria-label", m.alt);
+      fig.appendChild(vid);
+    } else {
+      const img = document.createElement("img");
+      img.src = m.url; img.alt = m.alt || ""; img.loading = "lazy";
+      img.addEventListener("click", () => openLightbox(m));
+      fig.appendChild(img);
+    }
+    if (m.caption) { const cap = document.createElement("figcaption"); cap.textContent = m.caption; fig.appendChild(cap); }
+    return fig;
+  }
+
   function appendMedia(bubble, media) {
     if (!Array.isArray(media) || !media.length) return;
     const box = document.createElement("div");
     box.className = "media";
-    media.forEach((m) => {
-      if (!m || !m.url) return;
-      const fig = document.createElement("figure");
-      if (m.kind === "video") {
-        const vid = document.createElement("video");
-        vid.src = m.url;
-        vid.controls = true;
-        vid.preload = "metadata";
-        vid.playsInline = true;
-        if (m.alt) vid.setAttribute("aria-label", m.alt);
-        fig.appendChild(vid);
-      } else {
-        const img = document.createElement("img");
-        img.src = m.url;
-        img.alt = m.alt || "";
-        img.loading = "lazy";
-        fig.appendChild(img);
-      }
-      if (m.caption) {
-        const cap = document.createElement("figcaption");
-        cap.textContent = m.caption;
-        fig.appendChild(cap);
-      }
-      box.appendChild(fig);
-    });
+    const shown = new Set();
+    media.forEach((m) => { if (m && m.url) { box.appendChild(mediaFigure(m)); shown.add(m.url); } });
     bubble.appendChild(box);
+
+    // Offer the rest of the piece(s) shown, if the catalog has more than we displayed.
+    const slugs = new Set();
+    media.forEach((m) => { const s = m && urlPiece[m.url]; if (s) slugs.add(s); });
+    let more = [];
+    slugs.forEach((s) => (pieceItems[s] || []).forEach((m) => { if (!shown.has(m.url)) more.push(m); }));
+    const seen = new Set();
+    more = more.filter((m) => !seen.has(m.url) && seen.add(m.url));
+    if (more.length) {
+      let label = "See more images";
+      if (slugs.size === 1) {
+        const s = [...slugs][0];
+        const nm = pieceItems[s] && pieceItems[s][0] && pieceItems[s][0].piece;
+        if (nm) label = "See more of " + nm;
+      }
+      const btn = document.createElement("button");
+      btn.className = "see-more";
+      btn.textContent = label + " (" + more.length + ")";
+      btn.addEventListener("click", () => {
+        const grid = document.createElement("div");
+        grid.className = "media";
+        more.forEach((m) => grid.appendChild(mediaFigure(m)));
+        bubble.appendChild(grid);
+        btn.remove();
+        window.scrollTo(0, document.body.scrollHeight);
+      });
+      bubble.appendChild(btn);
+    }
     window.scrollTo(0, document.body.scrollHeight);
   }
 
@@ -446,6 +517,7 @@
   }
 
   initConfig().then(maybeAutoAsk);
+  loadCatalog();
 </script>
 </body>
 </html>
