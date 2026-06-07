@@ -79,6 +79,8 @@
   .feedback { color: var(--muted); font-size: 13px; margin: 2px 0 18px; display: flex; align-items: center; gap: 8px; }
   .feedback button { background: transparent; border: 1px solid var(--line); color: var(--muted); border-radius: 6px; padding: 2px 9px; cursor: pointer; font-size: 14px; }
   .feedback button:hover { border-color: var(--accent); }
+  .feedback .rate { display: flex; align-items: center; gap: 8px; }
+  .feedback .share { margin-left: auto; }
   form {
     position: fixed;
     bottom: 0; left: 0; right: 0;
@@ -175,7 +177,7 @@
       const cfg = await (await fetch(API_BASE + "/config")).json();
       if (cfg.turnstile && cfg.turnstile_sitekey) {
         turnstileEnabled = true;
-        window.__onTurnstile = (t) => { turnstileToken = t; };
+        window.__onTurnstile = (t) => { turnstileToken = t; maybeAutoAsk(); };
         window.__renderTurnstile = () => {
           turnstileWidgetId = window.turnstile.render("#turnstile-holder", {
             sitekey: cfg.turnstile_sitekey,
@@ -258,9 +260,12 @@
   function renderFeedback(question) {
     const wrap = document.createElement("div");
     wrap.className = "feedback";
+
+    const rate = document.createElement("span");
+    rate.className = "rate";
     const label = document.createElement("span");
     label.textContent = "Was this helpful?";
-    wrap.appendChild(label);
+    rate.appendChild(label);
     let done = false;
     [["👍", 1], ["👎", -1]].forEach(([glyph, rating]) => {
       const b = document.createElement("button");
@@ -269,7 +274,7 @@
       b.addEventListener("click", () => {
         if (done) return;
         done = true;
-        wrap.textContent = "Thank you for the feedback.";
+        rate.textContent = "Thank you for the feedback.";
         try {
           fetch(API_BASE + "/feedback", {
             method: "POST", headers: { "Content-Type": "application/json" },
@@ -277,8 +282,26 @@
           });
         } catch (e) {}
       });
-      wrap.appendChild(b);
+      rate.appendChild(b);
     });
+    wrap.appendChild(rate);
+
+    // Share: copies (or shares) a link that re-opens this question for anyone.
+    const share = document.createElement("button");
+    share.className = "share";
+    share.textContent = "Share";
+    share.addEventListener("click", async () => {
+      const url = location.origin + "/?q=" + encodeURIComponent(question);
+      const copied = () => { share.textContent = "Link copied"; setTimeout(() => (share.textContent = "Share"), 1800); };
+      try {
+        if (navigator.share) { await navigator.share({ title: "Ask Anton", text: question, url }); }
+        else { await navigator.clipboard.writeText(url); copied(); }
+      } catch (e) {
+        try { await navigator.clipboard.writeText(url); copied(); } catch (_) {}
+      }
+    });
+    wrap.appendChild(share);
+
     chat.append(wrap);
   }
 
@@ -409,7 +432,20 @@
     b.addEventListener("click", () => ask(b.textContent, "pill"));
   });
 
-  initConfig();
+  // Shareable links: opening ?q=... (or ?ask=...) re-asks that question for the visitor.
+  let pendingQ = (() => {
+    const p = new URLSearchParams(location.search);
+    return (p.get("q") || p.get("ask") || "").trim().slice(0, 400);
+  })();
+  function maybeAutoAsk() {
+    if (!pendingQ) return;
+    if (turnstileEnabled && !turnstileToken) return; // wait until verification completes
+    const q = pendingQ; pendingQ = "";
+    try { window.history.replaceState(null, "", location.pathname); } catch (e) {}
+    ask(q, "link");
+  }
+
+  initConfig().then(maybeAutoAsk);
 </script>
 </body>
 </html>
