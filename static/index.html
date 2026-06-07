@@ -146,6 +146,15 @@
   const suggestions = document.getElementById("suggestions");
   const history = [];
 
+  // Anonymous per-visit session id (no PII) for usage telemetry.
+  let sessionId = sessionStorage.getItem("aa_sid");
+  if (!sessionId) {
+    sessionId = (window.crypto && crypto.randomUUID)
+      ? crypto.randomUUID()
+      : Date.now() + "-" + Math.random().toString(36).slice(2);
+    sessionStorage.setItem("aa_sid", sessionId);
+  }
+
   // Served from the box (same origin) in production; falls back to the local
   // uvicorn when the file is opened from a preview pane or file://.
   const API_BASE =
@@ -236,14 +245,14 @@
       if (!q) return;
       const b = document.createElement("button");
       b.textContent = q;
-      b.addEventListener("click", () => ask(q));
+      b.addEventListener("click", () => ask(q, "pill"));
       box.appendChild(b);
     });
     chat.append(box);
     window.scrollTo(0, document.body.scrollHeight);
   }
 
-  async function ask(question) {
+  async function ask(question, source) {
     if (turnstileEnabled && !turnstileToken) {
       addMsg("anton", "Anton", "One moment — please complete the verification below, then ask again.", "thinking");
       return;
@@ -266,7 +275,7 @@
           res = await fetch(API_BASE + "/ask", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ question, history, turnstile_token: turnstileToken }),
+            body: JSON.stringify({ question, history, turnstile_token: turnstileToken, session_id: sessionId, source: source || "type" }),
           });
           text = await res.text();
         } catch (netErr) {
@@ -307,11 +316,11 @@
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const q = input.value.trim();
-    if (q) ask(q);
+    if (q) ask(q, "type");
   });
 
   document.querySelectorAll(".suggestions button").forEach((b) => {
-    b.addEventListener("click", () => ask(b.textContent));
+    b.addEventListener("click", () => ask(b.textContent, "pill"));
   });
 
   initConfig();

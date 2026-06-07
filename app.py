@@ -43,6 +43,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from retrieval import Retriever
+import telemetry
 
 MODEL = "claude-opus-4-7"
 APP_DIR = pathlib.Path(__file__).parent
@@ -329,6 +330,8 @@ class AskRequest(BaseModel):
     question: str
     history: list[dict] = []
     turnstile_token: str | None = None
+    session_id: str | None = None
+    source: str | None = None   # "pill" or "type"
 
 
 class AskResponse(BaseModel):
@@ -362,6 +365,7 @@ def ask(req: AskRequest, request: Request) -> AskResponse:
 
     # Retrieve the few most relevant media items for this question and show only those
     # to the model (keeps the cached system prompt small and the picks sharp at scale).
+    t0 = time.monotonic()
     candidates = RETRIEVER.retrieve(question, k=MAX_CANDIDATES)
     user_content = (
         "AVAILABLE MEDIA (choose only from these ids):\n"
@@ -385,6 +389,20 @@ def ask(req: AskRequest, request: Request) -> AskResponse:
     answer = "".join(block.text for block in response.content if block.type == "text")
     answer, media = _extract_media(answer.strip())
     answer, followups = _extract_suggest(answer)
+
+    # Anonymous, fire-and-forget telemetry (no IP, no PII). Never blocks or breaks /ask.
+    telemetry.log({
+        "session_id": (req.session_id or "")[:64] or None,
+        "question": question[:2000],
+        "country": (request.headers.get("cf-ipcountry") or "")[:8] or None,
+        "latency_ms": int((time.monotonic() - t0) * 1000),
+        "media_count": len(media),
+        "media_ids": [m["url"].rsplit("/", 1)[-1].rsplit(".", 1)[0] for m in media] or None,
+        "from_pill": (req.source == "pill"),
+        "retrieval": RETRIEVER.status(),
+        "answer_chars": len(answer),
+    })
+
     return AskResponse(
         answer=answer,
         cached_tokens=response.usage.cache_read_input_tokens or 0,
@@ -401,6 +419,7 @@ def config() -> dict:
         "turnstile_sitekey": TURNSTILE_SITEKEY or None,
         "retrieval": RETRIEVER.status(),
         "media_items": len(MEDIA),
+        "telemetry": telemetry.enabled(),
     }
 
 

@@ -19,7 +19,7 @@ $here = $PSScriptRoot
 $log  = Join-Path $here "start-service.log"
 "=== supervisor started $(Get-Date) (user=$env:USERNAME) ===" | Out-File $log -Encoding ascii
 
-foreach ($n in 'ANTHROPIC_API_KEY','TURNSTILE_SECRET','TURNSTILE_SITEKEY') {
+foreach ($n in 'ANTHROPIC_API_KEY','TURNSTILE_SECRET','TURNSTILE_SITEKEY','SUPABASE_URL','SUPABASE_ANON_KEY') {
     $v = [Environment]::GetEnvironmentVariable($n,'Machine')
     if ($v) { [Environment]::SetEnvironmentVariable($n,$v,'Process') }
 }
