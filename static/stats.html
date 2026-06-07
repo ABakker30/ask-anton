@@ -110,6 +110,12 @@
     sc.appendChild(table(d.by_country||[], "country","n", maxOf(d.by_country||[],"n"))); cols2.appendChild(sc);
     m.appendChild(cols2);
 
+    const cols3 = el("div", {class:"cols"});
+    const ssrc = el("section"); ssrc.appendChild(el("h2",null,"By input method (type / pill / voice)"));
+    ssrc.appendChild(table(d.by_source||[], "source","n", maxOf(d.by_source||[],"n"))); cols3.appendChild(ssrc);
+    cols3.appendChild(el("section")); // spacer to keep the two-column grid balanced
+    m.appendChild(cols3);
+
     const rd = d.recent_down || [];
     const sd = el("section"); sd.appendChild(el("h2",null,"Flagged answers (thumbs-down)"));
     const td = el("table");

@@ -62,7 +62,7 @@ def stats(token: str):
         return None
 
 
-def _post(table: str, event: dict) -> None:
+def _insert(table: str, event: dict) -> bool:
     try:
         data = json.dumps([event]).encode("utf-8")
         req = urllib.request.Request(
@@ -77,5 +77,16 @@ def _post(table: str, event: dict) -> None:
             },
         )
         urllib.request.urlopen(req, timeout=8).close()
+        return True
     except Exception:
-        pass  # telemetry is best-effort and must never surface to the visitor
+        return False
+
+
+def _post(table: str, event: dict) -> None:
+    # Best-effort; must never surface to the visitor. If the insert fails because a newer
+    # column (e.g. 'source') doesn't exist yet, retry without it so base telemetry survives
+    # until the migration is applied.
+    if _insert(table, event):
+        return
+    if "source" in event:
+        _insert(table, {k: v for k, v in event.items() if k != "source"})

@@ -383,6 +383,7 @@ def _log_ask(req, request, question, answer, media, t0):
         "media_count": len(media),
         "media_ids": [m["url"].rsplit("/", 1)[-1].rsplit(".", 1)[0] for m in media] or None,
         "from_pill": (req.source == "pill"),
+        "source": (req.source or "type")[:16],   # type | pill | voice | link
         "retrieval": RETRIEVER.status(),
         "answer_chars": len(answer),
     })
