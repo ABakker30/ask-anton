@@ -36,18 +36,14 @@ def feedback(event: dict) -> None:
     threading.Thread(target=_post, args=("feedback", event), daemon=True).start()
 
 
-def stats(token: str):
-    """Call the token-gated `ask_stats` RPC (security-definer) and return its JSON.
-
-    Returns the aggregates dict if the token matches, else None. The public app only
-    forwards the token; the database function is the gate and returns aggregates only.
-    """
+def _rpc(fn: str, token: str):
+    """Call a token-gated security-definer RPC and return its JSON (None if token wrong)."""
     if not _ENABLED:
         return None
     try:
         data = json.dumps({"p_token": token or ""}).encode("utf-8")
         req = urllib.request.Request(
-            f"{_URL}/rest/v1/rpc/ask_stats",
+            f"{_URL}/rest/v1/rpc/{fn}",
             data=data,
             method="POST",
             headers={
@@ -60,6 +56,24 @@ def stats(token: str):
             return json.loads(resp.read().decode())  # null -> None when token is wrong
     except Exception:
         return None
+
+
+def stats(token: str):
+    """Token-gated usage aggregates (ask_stats). The DB function is the gate."""
+    return _rpc("ask_stats", token)
+
+
+def leads(token: str):
+    """Token-gated subscribers + inquiries (ask_leads). PII — gated by the function."""
+    return _rpc("ask_leads", token)
+
+
+def save(table: str, event: dict) -> bool:
+    """Synchronous insert that returns success — for /subscribe and /inquire, so the page
+    can confirm to the visitor (unlike fire-and-forget telemetry)."""
+    if not _ENABLED:
+        return False
+    return _insert(table, event)
 
 
 def _insert(table: str, event: dict) -> bool:

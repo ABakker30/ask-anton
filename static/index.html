@@ -136,12 +136,42 @@
   button.mic.listening { color: #e06a6a; animation: micpulse 1.2s ease-in-out infinite; }
   @keyframes micpulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
   #turnstile-holder { max-width: 760px; margin: 10px auto 0; display: flex; justify-content: center; pointer-events: auto; }
+  .header-actions { margin-top: 12px; font-size: 13px; color: var(--muted); }
+  .header-actions .dot { margin: 0 8px; color: var(--line); }
+  .link-btn { background: none; border: 0; color: var(--accent); cursor: pointer; font: inherit; font-size: 13px; padding: 0; }
+  .link-btn:hover { text-decoration: underline; }
+  .modal { position: fixed; inset: 0; background: rgba(0,0,0,.6); display: none; align-items: center; justify-content: center; z-index: 1100; padding: 20px; }
+  .modal.open { display: flex; }
+  .modal-card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 22px; max-width: 440px; width: 100%; }
+  .modal-card h3 { margin: 0 0 6px; font-size: 19px; }
+  .modal-card p.sub { margin: 0 0 14px; color: var(--muted); font-size: 14px; }
+  .modal-card label { display: block; font-size: 12px; color: var(--muted); margin: 12px 0 4px; }
+  .modal-card input, .modal-card textarea { width: 100%; padding: 10px; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; color: var(--ink); font: inherit; }
+  .modal-card textarea { min-height: 92px; resize: vertical; }
+  .modal-row { display: flex; gap: 10px; justify-content: flex-end; align-items: center; margin-top: 18px; }
+  .modal-row .status { margin-right: auto; font-size: 13px; color: var(--muted); }
+  .modal-btn { background: var(--accent); color: #1a1408; border: 0; border-radius: 8px; padding: 9px 16px; cursor: pointer; font: inherit; }
+  .modal-btn.secondary { background: transparent; border: 1px solid var(--line); color: var(--muted); }
+  .hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; overflow: hidden; }
+  .join-card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin: 4px 0 22px; }
+  .join-card .jc-title { font-size: 15px; margin-bottom: 4px; }
+  .join-card .jc-sub { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
+  .join-card .jc-row { display: flex; gap: 8px; }
+  .join-card input { flex: 1; padding: 9px 12px; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; color: var(--ink); font: inherit; }
+  .join-card button.join { background: var(--accent); color: #1a1408; border: 0; border-radius: 8px; padding: 9px 14px; cursor: pointer; font: inherit; }
+  .join-card .jc-dismiss { background: none; border: 0; color: var(--muted); font-size: 12px; cursor: pointer; margin-top: 10px; padding: 0; }
+  .join-card .jc-status { color: var(--muted); font-size: 13px; margin-top: 8px; }
 </style>
 </head>
 <body>
   <header>
     <h1>Ask Anton</h1>
     <p>Questions about Anton Bakker and his lattice-path sculpture</p>
+    <div class="header-actions">
+      <button type="button" class="link-btn" id="joinLink">Join the list</button>
+      <span class="dot">·</span>
+      <button type="button" class="link-btn" id="inquireLink">Inquire</button>
+    </div>
   </header>
 
   <div id="chat">
@@ -166,6 +196,8 @@
     <div id="turnstile-holder"></div>
   </form>
 
+  <div id="modal" class="modal" aria-hidden="true"><div class="modal-card" id="modalCard"></div></div>
+
 <script>
   const chat = document.getElementById("chat");
   const form = document.getElementById("form");
@@ -173,6 +205,8 @@
   const sendBtn = document.getElementById("send");
   const suggestions = document.getElementById("suggestions");
   const history = [];
+  let lastPiece = "";     // most recent piece shown, used to pre-scope an inquiry
+  let answerCount = 0;    // gentle email card appears after a couple of answers
 
   // Anonymous per-visit session id (no PII) for usage telemetry.
   let sessionId = sessionStorage.getItem("aa_sid");
@@ -301,6 +335,9 @@
     // Offer the rest of the piece(s) shown, if the catalog has more than we displayed.
     const slugs = new Set();
     media.forEach((m) => { const s = m && urlPiece[m.url]; if (s) slugs.add(s); });
+    // Remember the current piece so an "Inquire" can be pre-scoped to it.
+    const firstSlug = media[0] && urlPiece[media[0].url];
+    if (firstSlug && pieceItems[firstSlug] && pieceItems[firstSlug][0]) lastPiece = pieceItems[firstSlug][0].piece;
     let more = [];
     slugs.forEach((s) => (pieceItems[s] || []).forEach((m) => { if (!shown.has(m.url)) more.push(m); }));
     const seen = new Set();
@@ -390,6 +427,7 @@
     wrap.appendChild(share);
 
     chat.append(wrap);
+    maybeShowJoinCard();
   }
 
   function bodyFor(question, source) {
@@ -589,6 +627,120 @@
     try { window.history.replaceState(null, "", location.pathname); } catch (e) {}
     ask(q, "link");
   }
+
+  // ── Lead capture: email list + inquiries (anon insert-only; owner reads via /leads) ──
+  const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+  function escapeHtml(s) { return (s || "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+  async function postJSON(url, body) {
+    try {
+      const res = await fetch(API_BASE + url, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+      let data = null; try { data = await res.json(); } catch (_) {}
+      return { ok: res.ok, detail: data && data.detail };
+    } catch (e) { return { ok: false, detail: null }; }
+  }
+
+  const modal = document.getElementById("modal");
+  const modalCard = document.getElementById("modalCard");
+  function openModal(html) {
+    modalCard.innerHTML = html;
+    modal.classList.add("open"); modal.setAttribute("aria-hidden", "false");
+    const f = modalCard.querySelector("input, textarea"); if (f) f.focus();
+  }
+  function closeModal() { modal.classList.remove("open"); modal.setAttribute("aria-hidden", "true"); modalCard.innerHTML = ""; }
+  modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && modal.classList.contains("open")) closeModal(); });
+
+  function joinSuppressed() { try { return localStorage.getItem("aa_join") === "1"; } catch (e) { return false; } }
+  function suppressJoin() { try { localStorage.setItem("aa_join", "1"); } catch (e) {} const c = document.getElementById("joinCard"); if (c) c.remove(); }
+
+  function openSubscribeModal(source) {
+    openModal(
+      "<h3>Join Anton's list</h3>" +
+      '<p class="sub">An occasional note — new work, and where it\'s showing next. No spam.</p>' +
+      '<input class="hp" type="text" id="m_hp" tabindex="-1" autocomplete="off" aria-hidden="true" />' +
+      '<label for="m_email">Email</label><input id="m_email" type="email" inputmode="email" placeholder="you@example.com" />' +
+      '<div class="modal-row"><span class="status" id="m_status"></span>' +
+      '<button class="modal-btn secondary" id="m_cancel" type="button">Close</button>' +
+      '<button class="modal-btn" id="m_join" type="button">Join</button></div>'
+    );
+    document.getElementById("m_cancel").onclick = closeModal;
+    document.getElementById("m_join").onclick = async () => {
+      const email = document.getElementById("m_email").value.trim();
+      const status = document.getElementById("m_status");
+      if (!EMAIL_RE.test(email)) { status.textContent = "Please enter a valid email."; return; }
+      status.textContent = "…";
+      const r = await postJSON("/subscribe", { email, source: source || "header", session_id: sessionId, website: document.getElementById("m_hp").value });
+      if (r.ok) {
+        openModal("<h3>You're on the list.</h3><p class=\"sub\">Thank you — Anton will be in touch with new work.</p><div class=\"modal-row\"><button class=\"modal-btn\" id=\"m_done\" type=\"button\">Done</button></div>");
+        document.getElementById("m_done").onclick = closeModal; suppressJoin();
+      } else { status.textContent = r.detail || "Something went wrong. Please try again."; }
+    };
+  }
+
+  function openInquireModal(context) {
+    const ctxLabel = context ? " — about " + escapeHtml(context) : "";
+    openModal(
+      "<h3>Inquire</h3>" +
+      '<p class="sub">Interested in a piece, a commission, or an exhibition? Leave a note and Anton will reply.</p>' +
+      '<input class="hp" type="text" id="i_hp" tabindex="-1" autocomplete="off" aria-hidden="true" />' +
+      '<label for="i_name">Name</label><input id="i_name" type="text" placeholder="Your name" />' +
+      '<label for="i_email">Email</label><input id="i_email" type="email" inputmode="email" placeholder="you@example.com" />' +
+      '<label for="i_msg">Message' + ctxLabel + '</label><textarea id="i_msg" placeholder="What would you like to ask Anton?"></textarea>' +
+      '<div class="modal-row"><span class="status" id="i_status"></span>' +
+      '<button class="modal-btn secondary" id="i_cancel" type="button">Close</button>' +
+      '<button class="modal-btn" id="i_send" type="button">Send</button></div>'
+    );
+    document.getElementById("i_cancel").onclick = closeModal;
+    document.getElementById("i_send").onclick = async () => {
+      const email = document.getElementById("i_email").value.trim();
+      const status = document.getElementById("i_status");
+      if (!EMAIL_RE.test(email)) { status.textContent = "Please enter a valid email so Anton can reply."; return; }
+      status.textContent = "…";
+      const r = await postJSON("/inquire", {
+        name: document.getElementById("i_name").value.trim(),
+        email,
+        message: document.getElementById("i_msg").value.trim(),
+        context: context || "general",
+        session_id: sessionId,
+        website: document.getElementById("i_hp").value,
+      });
+      if (r.ok) {
+        openModal('<h3>Sent.</h3><p class="sub">Thank you — Anton will get back to you.</p><div class="modal-row"><button class="modal-btn" id="i_done" type="button">Done</button></div>');
+        document.getElementById("i_done").onclick = closeModal;
+      } else { status.textContent = r.detail || "Couldn't send. Please try again."; }
+    };
+  }
+
+  // After a couple of answers, gently offer the list (unless already joined/dismissed).
+  function maybeShowJoinCard() {
+    answerCount++;
+    if (answerCount < 2 || joinSuppressed() || document.getElementById("joinCard")) return;
+    const card = document.createElement("div");
+    card.className = "join-card"; card.id = "joinCard";
+    card.innerHTML =
+      '<div class="jc-title">Enjoying this?</div>' +
+      '<div class="jc-sub">Anton sends an occasional note — new work, and where it\'s showing next.</div>' +
+      '<div class="jc-row"><input class="hp" type="text" id="jc_hp" tabindex="-1" autocomplete="off" aria-hidden="true" />' +
+      '<input id="jc_email" type="email" inputmode="email" placeholder="you@example.com" />' +
+      '<button class="join" id="jc_join" type="button">Join</button></div>' +
+      '<button class="jc-dismiss" id="jc_dismiss" type="button">No thanks</button>';
+    chat.append(card);
+    window.scrollTo(0, document.body.scrollHeight);
+    document.getElementById("jc_dismiss").onclick = suppressJoin;
+    document.getElementById("jc_join").onclick = async () => {
+      const email = document.getElementById("jc_email").value.trim();
+      let s = card.querySelector(".jc-status");
+      if (!s) { s = document.createElement("div"); s.className = "jc-status"; card.appendChild(s); }
+      if (!EMAIL_RE.test(email)) { s.textContent = "Please enter a valid email."; return; }
+      s.textContent = "…";
+      const r = await postJSON("/subscribe", { email, source: "card", session_id: sessionId, website: document.getElementById("jc_hp").value });
+      if (r.ok) { card.innerHTML = '<div class="jc-title">You\'re on the list.</div><div class="jc-sub">Thank you — new work coming your way.</div>'; try { localStorage.setItem("aa_join", "1"); } catch (e) {} }
+      else { s.textContent = r.detail || "Something went wrong."; }
+    };
+  }
+
+  document.getElementById("joinLink").addEventListener("click", () => openSubscribeModal("header"));
+  document.getElementById("inquireLink").addEventListener("click", () => openInquireModal(lastPiece));
 
   initConfig().then(maybeAutoAsk);
   loadCatalog();

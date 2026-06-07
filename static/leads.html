@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex" />
+<title>Ask Anton - leads</title>
+<style>
+  :root { --bg:#0e0f12; --panel:#16181d; --line:#262a31; --ink:#e8e9ec; --muted:#9aa0aa; --accent:#c8a96a; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.5 "Georgia","Times New Roman",serif; }
+  header { padding:20px; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
+  header h1 { margin:0; font-size:20px; }
+  header .gen { color:var(--muted); font-size:12px; font-style:italic; }
+  main { max-width:1000px; margin:0 auto; padding:20px; }
+  .cards { display:flex; flex-wrap:wrap; gap:12px; margin-bottom:24px; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:14px 18px; min-width:150px; }
+  .card .v { font-size:26px; color:var(--accent); }
+  .card .k { font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:1px; }
+  section { margin:26px 0; }
+  section h2 { font-size:15px; color:var(--muted); text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid var(--line); padding-bottom:6px; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  td, th { padding:6px 8px; border-bottom:1px solid var(--line); vertical-align:top; text-align:left; }
+  th { color:var(--muted); font-weight:normal; font-size:12px; text-transform:uppercase; letter-spacing:1px; }
+  td.date { color:var(--muted); white-space:nowrap; width:120px; }
+  td.email { color:var(--accent); white-space:nowrap; }
+  #gate { max-width:420px; margin:80px auto; text-align:center; }
+  #gate input { width:100%; padding:10px; background:var(--panel); border:1px solid var(--line); border-radius:8px; color:var(--ink); font:inherit; margin:10px 0; }
+  #gate button, #refresh { background:var(--accent); color:#1a1408; border:0; border-radius:8px; padding:9px 16px; cursor:pointer; font:inherit; }
+  .err { color:#e08a8a; }
+  .muted { color:var(--muted); }
+  a.tab { color:var(--muted); text-decoration:none; font-size:13px; }
+  a.tab:hover { color:var(--ink); }
+</style>
+</head>
+<body>
+<div id="gate" style="display:none">
+  <h1>Ask Anton - leads</h1>
+  <p class="muted">Enter your dashboard key.</p>
+  <input id="key" type="password" placeholder="dashboard key" />
+  <div><button id="go">View</button></div>
+  <p id="gateErr" class="err"></p>
+</div>
+
+<div id="app" style="display:none">
+  <header>
+    <h1>Ask Anton - leads</h1>
+    <span><span class="gen" id="gen"></span> &nbsp; <a class="tab" id="statsLink" href="#">usage stats &rarr;</a> &nbsp; <button id="refresh">Refresh</button></span>
+  </header>
+  <main id="main"></main>
+</div>
+
+<script>
+  const qs = new URLSearchParams(location.search);
+  let key = qs.get("key") || "";
+
+  function el(t, attrs, html) {
+    const e = document.createElement(t);
+    if (attrs) for (const k in attrs) e.setAttribute(k, attrs[k]);
+    if (html != null) e.innerHTML = html;
+    return e;
+  }
+  function esc(s){ return (s==null?"":String(s)).replace(/[&<>]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c])); }
+  function when(s){ try { return new Date(s).toLocaleString(); } catch(e){ return ""; } }
+
+  function render(d) {
+    document.getElementById("gen").textContent = "as of " + when(d.generated_at);
+    document.getElementById("statsLink").href = "/stats?key=" + encodeURIComponent(key);
+    const m = document.getElementById("main");
+    m.innerHTML = "";
+
+    const cards = el("div", {class:"cards"});
+    [["subscribers", d.subscriber_count], ["inquiries", d.inquiry_count]].forEach(([k,v])=>{
+      const c = el("div", {class:"card"});
+      c.appendChild(el("div",{class:"v"}, v==null?0:v));
+      c.appendChild(el("div",{class:"k"}, k));
+      cards.appendChild(c);
+    });
+    m.appendChild(cards);
+
+    // Inquiries
+    const si = el("section"); si.appendChild(el("h2",null,"Inquiries"));
+    const it = el("table");
+    it.appendChild(el("tr", null, "<th>When</th><th>Name</th><th>Email</th><th>About</th><th>Message</th>"));
+    (d.inquiries||[]).forEach(r => {
+      const tr = el("tr");
+      tr.appendChild(el("td", {class:"date"}, esc(when(r.created_at))));
+      tr.appendChild(el("td", null, esc(r.name||"")));
+      tr.appendChild(el("td", {class:"email"}, esc(r.email||"")));
+      tr.appendChild(el("td", null, esc(r.context||"")));
+      tr.appendChild(el("td", null, esc(r.message||"")));
+      it.appendChild(tr);
+    });
+    if (!(d.inquiries||[]).length) it.appendChild(el("tr", null, '<td colspan="5" class="muted">No inquiries yet.</td>'));
+    si.appendChild(it); m.appendChild(si);
+
+    // Subscribers
+    const ss = el("section"); ss.appendChild(el("h2",null,"Subscribers"));
+    const st = el("table");
+    st.appendChild(el("tr", null, "<th>When</th><th>Email</th><th>Source</th>"));
+    (d.subscribers||[]).forEach(r => {
+      const tr = el("tr");
+      tr.appendChild(el("td", {class:"date"}, esc(when(r.created_at))));
+      tr.appendChild(el("td", {class:"email"}, esc(r.email||"")));
+      tr.appendChild(el("td", {class:"muted"}, esc(r.source||"")));
+      st.appendChild(tr);
+    });
+    if (!(d.subscribers||[]).length) st.appendChild(el("tr", null, '<td colspan="3" class="muted">No subscribers yet.</td>'));
+    ss.appendChild(st); m.appendChild(ss);
+  }
+
+  async function load() {
+    try {
+      const res = await fetch("/leads-data?key=" + encodeURIComponent(key));
+      if (res.status === 403) { showGate("That key didn't work."); return; }
+      if (!res.ok) { showGate("Couldn't load (" + res.status + ")."); return; }
+      const d = await res.json();
+      document.getElementById("gate").style.display = "none";
+      document.getElementById("app").style.display = "block";
+      render(d);
+    } catch (e) { showGate("Network error."); }
+  }
+  function showGate(msg) {
+    document.getElementById("app").style.display = "none";
+    document.getElementById("gate").style.display = "block";
+    document.getElementById("gateErr").textContent = msg || "";
+  }
+  document.getElementById("go").addEventListener("click", () => {
+    key = document.getElementById("key").value.trim();
+    if (key) { history.replaceState(null,"","/leads"); load(); }
+  });
+  document.getElementById("refresh").addEventListener("click", load);
+
+  if (key) load(); else showGate("");
+</script>
+</body>
+</html>

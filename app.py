@@ -255,6 +255,30 @@ def _check_rate(ip: str) -> None:
                 _buckets.pop(k, None)
 
 
+# Light, separate limiter for the lead forms (subscribe / inquire) so they don't draw down
+# the question budget — and so a bot can't spam the lists. Fixed window per IP.
+_form_hits: dict[str, list] = {}
+FORM_MAX = 6
+FORM_WINDOW = 600.0  # 10 minutes
+
+
+def _check_form_rate(ip: str) -> None:
+    now = time.monotonic()
+    with _lock:
+        count, start = _form_hits.get(ip, [0, now])
+        if now - start > FORM_WINDOW:
+            count, start = 0, now
+        if count >= FORM_MAX:
+            raise HTTPException(status_code=429, detail="Too many submissions. Please try again later.")
+        _form_hits[ip] = [count + 1, start]
+        if len(_form_hits) > 10000:
+            for k in [k for k, v in _form_hits.items() if now - v[1] > FORM_WINDOW]:
+                _form_hits.pop(k, None)
+
+
+_EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
+
+
 def _verify_turnstile(token: str, ip: str) -> bool:
     if not TURNSTILE_SECRET:
         return True
@@ -472,6 +496,60 @@ def feedback(req: FeedbackRequest) -> dict:
     return {"ok": True}
 
 
+class SubscribeRequest(BaseModel):
+    email: str
+    source: str | None = None
+    session_id: str | None = None
+    website: str | None = None   # honeypot; real users leave it empty
+
+
+class InquireRequest(BaseModel):
+    name: str | None = None
+    email: str
+    message: str | None = None
+    context: str | None = None
+    session_id: str | None = None
+    website: str | None = None   # honeypot
+
+
+@app.post("/subscribe")
+def subscribe(req: SubscribeRequest, request: Request) -> dict:
+    """Add an email to Anton's list (anon insert-only; the app can't read the list back)."""
+    if req.website:  # honeypot tripped -> a bot; silently drop, pretend success
+        return {"ok": True}
+    _check_form_rate(_client_ip(request))
+    email = (req.email or "").strip().lower()
+    if not _EMAIL_RE.match(email) or len(email) > 254:
+        raise HTTPException(status_code=400, detail="Please enter a valid email address.")
+    if not telemetry.save("subscribers", {
+        "email": email,
+        "source": (req.source or "")[:40] or None,
+        "session_id": (req.session_id or "")[:64] or None,
+    }):
+        raise HTTPException(status_code=503, detail="Could not save right now. Please try again in a moment.")
+    return {"ok": True}
+
+
+@app.post("/inquire")
+def inquire(req: InquireRequest, request: Request) -> dict:
+    """Record an inquiry/lead (anon insert-only). Anton reads them on the token-gated /leads page."""
+    if req.website:
+        return {"ok": True}
+    _check_form_rate(_client_ip(request))
+    email = (req.email or "").strip().lower()
+    if not _EMAIL_RE.match(email) or len(email) > 254:
+        raise HTTPException(status_code=400, detail="Please enter a valid email so Anton can reply.")
+    if not telemetry.save("inquiries", {
+        "name": ((req.name or "").strip())[:120] or None,
+        "email": email,
+        "message": ((req.message or "").strip())[:4000] or None,
+        "context": ((req.context or "").strip())[:200] or None,
+        "session_id": (req.session_id or "")[:64] or None,
+    }):
+        raise HTTPException(status_code=503, detail="Could not send right now. Please try again in a moment.")
+    return {"ok": True}
+
+
 @app.get("/config")
 def config() -> dict:
     """Frontend config: whether Turnstile is on, and the public sitekey."""
@@ -521,6 +599,26 @@ def stats_data(key: str = "") -> dict:
     if not telemetry.enabled():
         raise HTTPException(status_code=503, detail="Telemetry is not configured.")
     data = telemetry.stats(key)
+    if not data:
+        raise HTTPException(status_code=403, detail="Invalid or missing key.")
+    return data
+
+
+@app.get("/leads")
+def leads_page() -> FileResponse:
+    """Owner leads view (open as /leads?key=YOUR_TOKEN). Subscribers + inquiries (PII) are
+    read only through the token-gated RPC, so no powerful key is exposed."""
+    return FileResponse(
+        STATIC_DIR / "leads.html",
+        headers={"Cache-Control": "no-cache, must-revalidate"},
+    )
+
+
+@app.get("/leads-data")
+def leads_data(key: str = "") -> dict:
+    if not telemetry.enabled():
+        raise HTTPException(status_code=503, detail="Telemetry is not configured.")
+    data = telemetry.leads(key)
     if not data:
         raise HTTPException(status_code=403, detail="Invalid or missing key.")
     return data
