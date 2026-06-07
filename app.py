@@ -427,6 +427,26 @@ def config() -> dict:
     }
 
 
+@app.get("/stats")
+def stats_page() -> FileResponse:
+    """Owner dashboard (open as /stats?key=YOUR_TOKEN). The page reads telemetry only
+    through the token-gated RPC, so no powerful key is exposed."""
+    return FileResponse(
+        STATIC_DIR / "stats.html",
+        headers={"Cache-Control": "no-cache, must-revalidate"},
+    )
+
+
+@app.get("/stats-data")
+def stats_data(key: str = "") -> dict:
+    if not telemetry.enabled():
+        raise HTTPException(status_code=503, detail="Telemetry is not configured.")
+    data = telemetry.stats(key)
+    if not data:
+        raise HTTPException(status_code=403, detail="Invalid or missing key.")
+    return data
+
+
 @app.get("/build-info")
 def build_info() -> dict:
     """Deployed commit SHA, for CI to verify the public URL is serving new code."""

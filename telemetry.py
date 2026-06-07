@@ -29,6 +29,32 @@ def log(event: dict) -> None:
     threading.Thread(target=_post, args=(event,), daemon=True).start()
 
 
+def stats(token: str):
+    """Call the token-gated `ask_stats` RPC (security-definer) and return its JSON.
+
+    Returns the aggregates dict if the token matches, else None. The public app only
+    forwards the token; the database function is the gate and returns aggregates only.
+    """
+    if not _ENABLED:
+        return None
+    try:
+        data = json.dumps({"p_token": token or ""}).encode("utf-8")
+        req = urllib.request.Request(
+            f"{_URL}/rest/v1/rpc/ask_stats",
+            data=data,
+            method="POST",
+            headers={
+                "apikey": _KEY,
+                "Authorization": f"Bearer {_KEY}",
+                "Content-Type": "application/json",
+            },
+        )
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            return json.loads(resp.read().decode())  # null -> None when token is wrong
+    except Exception:
+        return None
+
+
 def _post(event: dict) -> None:
     try:
         data = json.dumps([event]).encode("utf-8")

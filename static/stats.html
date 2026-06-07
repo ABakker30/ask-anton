@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex" />
+<title>Ask Anton - usage</title>
+<style>
+  :root { --bg:#0e0f12; --panel:#16181d; --line:#262a31; --ink:#e8e9ec; --muted:#9aa0aa; --accent:#c8a96a; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.5 "Georgia","Times New Roman",serif; }
+  header { padding:20px; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
+  header h1 { margin:0; font-size:20px; }
+  header .gen { color:var(--muted); font-size:12px; font-style:italic; }
+  main { max-width:1000px; margin:0 auto; padding:20px; }
+  .cards { display:flex; flex-wrap:wrap; gap:12px; margin-bottom:24px; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:14px 18px; min-width:130px; }
+  .card .v { font-size:26px; color:var(--accent); }
+  .card .k { font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:1px; }
+  section { margin:26px 0; }
+  section h2 { font-size:15px; color:var(--muted); text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid var(--line); padding-bottom:6px; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  td { padding:6px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+  td.n { text-align:right; color:var(--accent); width:64px; white-space:nowrap; }
+  .bar { background:var(--panel); border-radius:4px; height:8px; margin-top:4px; }
+  .bar > i { display:block; height:8px; background:var(--accent); border-radius:4px; }
+  .cols { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+  @media (max-width:720px){ .cols{ grid-template-columns:1fr; } }
+  #gate { max-width:420px; margin:80px auto; text-align:center; }
+  #gate input { width:100%; padding:10px; background:var(--panel); border:1px solid var(--line); border-radius:8px; color:var(--ink); font:inherit; margin:10px 0; }
+  #gate button, #refresh { background:var(--accent); color:#1a1408; border:0; border-radius:8px; padding:9px 16px; cursor:pointer; font:inherit; }
+  .err { color:#e08a8a; }
+  .muted { color:var(--muted); }
+</style>
+</head>
+<body>
+<div id="gate" style="display:none">
+  <h1>Ask Anton - usage</h1>
+  <p class="muted">Enter your dashboard key.</p>
+  <input id="key" type="password" placeholder="dashboard key" />
+  <div><button id="go">View</button></div>
+  <p id="gateErr" class="err"></p>
+</div>
+
+<div id="app" style="display:none">
+  <header>
+    <h1>Ask Anton - usage</h1>
+    <span><span class="gen" id="gen"></span> &nbsp; <button id="refresh">Refresh</button></span>
+  </header>
+  <main id="main"></main>
+</div>
+
+<script>
+  const qs = new URLSearchParams(location.search);
+  let key = qs.get("key") || "";
+
+  function el(t, attrs, html) {
+    const e = document.createElement(t);
+    if (attrs) for (const k in attrs) e.setAttribute(k, attrs[k]);
+    if (html != null) e.innerHTML = html;
+    return e;
+  }
+  function esc(s){ return (s==null?"":String(s)).replace(/[&<>]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c])); }
+
+  function table(rows, labelKey, n, max) {
+    const t = el("table");
+    rows.forEach(r => {
+      const tr = el("tr");
+      const w = max ? Math.round((r[n] / max) * 100) : 0;
+      tr.appendChild(el("td", null, esc(r[labelKey]) + (max ? `<div class="bar"><i style="width:${w}%"></i></div>` : "")));
+      tr.appendChild(el("td", {class:"n"}, r[n]));
+      t.appendChild(tr);
+    });
+    if (!rows.length) t.appendChild(el("tr", null, '<td class="muted">No data yet.</td>'));
+    return t;
+  }
+  const maxOf = (rows, n) => rows.reduce((m,r)=>Math.max(m, r[n]||0), 0) || 1;
+
+  function render(d) {
+    document.getElementById("gen").textContent = "as of " + new Date(d.generated_at).toLocaleString();
+    const m = document.getElementById("main");
+    m.innerHTML = "";
+    const t = d.totals || {}, lat = d.latency || {};
+    const cards = el("div", {class:"cards"});
+    [["asks", t.asks], ["sessions", t.sessions], ["with media", t.with_media],
+     ["from a pill", t.from_pill], ["avg latency", (lat.avg_ms||0)+" ms"]].forEach(([k,v])=>{
+      const c = el("div", {class:"card"});
+      c.appendChild(el("div",{class:"v"}, v==null?0:v));
+      c.appendChild(el("div",{class:"k"}, k));
+      cards.appendChild(c);
+    });
+    m.appendChild(cards);
+
+    const day = d.by_day || [];
+    const s1 = el("section"); s1.appendChild(el("h2",null,"Usage by day"));
+    s1.appendChild(table(day, "day", "asks", maxOf(day,"asks"))); m.appendChild(s1);
+
+    const cols = el("div", {class:"cols"});
+    const sq = el("section"); sq.appendChild(el("h2",null,"Top questions"));
+    sq.appendChild(table(d.top_questions||[], "question","n", maxOf(d.top_questions||[],"n"))); cols.appendChild(sq);
+    const sg = el("section"); sg.appendChild(el("h2",null,"Gaps (no media shown)"));
+    sg.appendChild(table(d.gaps||[], "question","n", maxOf(d.gaps||[],"n"))); cols.appendChild(sg);
+    m.appendChild(cols);
+
+    const cols2 = el("div", {class:"cols"});
+    const sm = el("section"); sm.appendChild(el("h2",null,"Most-shown pieces"));
+    sm.appendChild(table(d.top_media||[], "media","n", maxOf(d.top_media||[],"n"))); cols2.appendChild(sm);
+    const sc = el("section"); sc.appendChild(el("h2",null,"By country"));
+    sc.appendChild(table(d.by_country||[], "country","n", maxOf(d.by_country||[],"n"))); cols2.appendChild(sc);
+    m.appendChild(cols2);
+  }
+
+  async function load() {
+    try {
+      const res = await fetch("/stats-data?key=" + encodeURIComponent(key));
+      if (res.status === 403) { showGate("That key didn't work."); return; }
+      if (!res.ok) { showGate("Couldn't load (" + res.status + ")."); return; }
+      const d = await res.json();
+      document.getElementById("gate").style.display = "none";
+      document.getElementById("app").style.display = "block";
+      render(d);
+    } catch (e) { showGate("Network error."); }
+  }
+  function showGate(msg) {
+    document.getElementById("app").style.display = "none";
+    document.getElementById("gate").style.display = "block";
+    document.getElementById("gateErr").textContent = msg || "";
+  }
+  document.getElementById("go").addEventListener("click", () => {
+    key = document.getElementById("key").value.trim();
+    if (key) { history.replaceState(null,"","/stats"); load(); }
+  });
+  document.getElementById("refresh").addEventListener("click", load);
+
+  if (key) load(); else showGate("");
+</script>
+</body>
+</html>
