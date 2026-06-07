@@ -8,6 +8,6 @@ of encouraging public art across Dubai.
 
 Several of Anton's sculptures stood among them, shown outdoors at architectural scale against the city
 skyline. They included a monumental mirror-polished Big Spiral, a bronze spiral framed by the DIFC Gate,
-a mirror-polished knot, the red painted-steel Cubic Braiding, and the steel fractal tree built on his
+a mirror-polished knot, the red painted-steel Cubic Braiding, and the patinated bronze fractal tree built on his
 mentor Koos Verhoeff's design. Seen against the towers, the reflective surfaces gather the buildings and
 the sky into the forms, so the city itself becomes part of each sculpture as you move around it.

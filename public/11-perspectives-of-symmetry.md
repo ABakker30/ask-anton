@@ -13,7 +13,7 @@ geometers of ancient Greece to the architects of the Islamic golden age, for who
 needed no justification.
 
 The exhibition spanned several of Anton's families: mirror-polished curves and knots that fold the room
-into their surfaces, bronze spirals, and the large steel fractal tree, a three-dimensional Pythagorean
+into their surfaces, bronze spirals, and the patinated bronze fractal tree, a three-dimensional Pythagorean
 tree built on a design by his mentor Koos Verhoeff.
 
 The British painter Sacha Jafri was exhibiting at the gallery at the same time. The two artists
