@@ -80,10 +80,11 @@
     document.getElementById("gen").textContent = "as of " + new Date(d.generated_at).toLocaleString();
     const m = document.getElementById("main");
     m.innerHTML = "";
-    const t = d.totals || {}, lat = d.latency || {};
+    const t = d.totals || {}, lat = d.latency || {}, fb = d.feedback || {};
     const cards = el("div", {class:"cards"});
     [["asks", t.asks], ["sessions", t.sessions], ["with media", t.with_media],
-     ["from a pill", t.from_pill], ["avg latency", (lat.avg_ms||0)+" ms"]].forEach(([k,v])=>{
+     ["from a pill", t.from_pill], ["avg latency", (lat.avg_ms||0)+" ms"],
+     ["helpful", "👍 "+(fb.up||0)+" / 👎 "+(fb.down||0)]].forEach(([k,v])=>{
       const c = el("div", {class:"card"});
       c.appendChild(el("div",{class:"v"}, v==null?0:v));
       c.appendChild(el("div",{class:"k"}, k));
@@ -108,6 +109,18 @@
     const sc = el("section"); sc.appendChild(el("h2",null,"By country"));
     sc.appendChild(table(d.by_country||[], "country","n", maxOf(d.by_country||[],"n"))); cols2.appendChild(sc);
     m.appendChild(cols2);
+
+    const rd = d.recent_down || [];
+    const sd = el("section"); sd.appendChild(el("h2",null,"Flagged answers (thumbs-down)"));
+    const td = el("table");
+    rd.forEach(r => {
+      const tr = el("tr");
+      tr.appendChild(el("td", null, esc(r.question)));
+      tr.appendChild(el("td", {class:"n"}, r.created_at ? new Date(r.created_at).toLocaleDateString() : ""));
+      td.appendChild(tr);
+    });
+    if (!rd.length) td.appendChild(el("tr", null, '<td class="muted">None — no thumbs-down yet.</td>'));
+    sd.appendChild(td); m.appendChild(sd);
   }
 
   async function load() {

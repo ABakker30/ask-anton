@@ -453,6 +453,24 @@ def ask_stream(req: AskRequest, request: Request):
     )
 
 
+class FeedbackRequest(BaseModel):
+    session_id: str | None = None
+    question: str | None = None
+    rating: int = 0   # 1 = helpful, -1 = not helpful
+
+
+@app.post("/feedback")
+def feedback(req: FeedbackRequest) -> dict:
+    if req.rating not in (1, -1):
+        raise HTTPException(status_code=400, detail="Invalid rating.")
+    telemetry.feedback({
+        "session_id": (req.session_id or "")[:64] or None,
+        "question": (req.question or "")[:2000] or None,
+        "rating": req.rating,
+    })
+    return {"ok": True}
+
+
 @app.get("/config")
 def config() -> dict:
     """Frontend config: whether Turnstile is on, and the public sitekey."""

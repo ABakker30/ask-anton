@@ -26,7 +26,14 @@ def log(event: dict) -> None:
     """Queue one telemetry row. Returns immediately; the POST runs in a daemon thread."""
     if not _ENABLED:
         return
-    threading.Thread(target=_post, args=(event,), daemon=True).start()
+    threading.Thread(target=_post, args=("telemetry", event), daemon=True).start()
+
+
+def feedback(event: dict) -> None:
+    """Queue one anonymous feedback row (helpful / not). Fire-and-forget."""
+    if not _ENABLED:
+        return
+    threading.Thread(target=_post, args=("feedback", event), daemon=True).start()
 
 
 def stats(token: str):
@@ -55,11 +62,11 @@ def stats(token: str):
         return None
 
 
-def _post(event: dict) -> None:
+def _post(table: str, event: dict) -> None:
     try:
         data = json.dumps([event]).encode("utf-8")
         req = urllib.request.Request(
-            f"{_URL}/rest/v1/telemetry",
+            f"{_URL}/rest/v1/{table}",
             data=data,
             method="POST",
             headers={

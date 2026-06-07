@@ -76,6 +76,9 @@
     font-size: 13px;
   }
   .suggestions button:hover { color: var(--ink); border-color: var(--accent); }
+  .feedback { color: var(--muted); font-size: 13px; margin: 2px 0 18px; display: flex; align-items: center; gap: 8px; }
+  .feedback button { background: transparent; border: 1px solid var(--line); color: var(--muted); border-radius: 6px; padding: 2px 9px; cursor: pointer; font-size: 14px; }
+  .feedback button:hover { border-color: var(--accent); }
   form {
     position: fixed;
     bottom: 0; left: 0; right: 0;
@@ -252,6 +255,33 @@
     window.scrollTo(0, document.body.scrollHeight);
   }
 
+  function renderFeedback(question) {
+    const wrap = document.createElement("div");
+    wrap.className = "feedback";
+    const label = document.createElement("span");
+    label.textContent = "Was this helpful?";
+    wrap.appendChild(label);
+    let done = false;
+    [["👍", 1], ["👎", -1]].forEach(([glyph, rating]) => {
+      const b = document.createElement("button");
+      b.textContent = glyph;
+      b.setAttribute("aria-label", rating === 1 ? "Helpful" : "Not helpful");
+      b.addEventListener("click", () => {
+        if (done) return;
+        done = true;
+        wrap.textContent = "Thank you for the feedback.";
+        try {
+          fetch(API_BASE + "/feedback", {
+            method: "POST", headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ session_id: sessionId, question, rating }),
+          });
+        } catch (e) {}
+      });
+      wrap.appendChild(b);
+    });
+    chat.append(wrap);
+  }
+
   function bodyFor(question, source) {
     return JSON.stringify({ question, history, turnstile_token: turnstileToken, session_id: sessionId, source: source || "type" });
   }
@@ -308,6 +338,7 @@
     appendMedia(bubble, media);
     history.push({ role: "user", content: question });
     history.push({ role: "assistant", content: answer });
+    renderFeedback(question);
     renderFollowups(followups);
     return true;
   }
@@ -333,6 +364,7 @@
     appendMedia(bubble, data.media);
     history.push({ role: "user", content: question });
     history.push({ role: "assistant", content: data.answer });
+    renderFeedback(question);
     renderFollowups(data.followups);
   }
 
