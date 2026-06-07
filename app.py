@@ -38,7 +38,7 @@ import pathlib
 import anthropic
 from fastapi import FastAPI, Request, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
@@ -341,56 +341,40 @@ class AskResponse(BaseModel):
     followups: list[str] = []
 
 
-@app.post("/ask", response_model=AskResponse)
-def ask(req: AskRequest, request: Request) -> AskResponse:
+# Detects where the model's trailing control lines (MEDIA:/SUGGEST:) begin.
+_CTRL_RE = re.compile(r"(?im)^[ \t>*_\-]*(?:MEDIA|SUGGEST)\s*:")
+_SYSTEM_BLOCK = [{"type": "text", "text": SYSTEM_PROMPT, "cache_control": {"type": "ephemeral"}}]
+
+
+def _prep(req: AskRequest, request: Request):
+    """Shared prep for /ask and /ask-stream: rate-limit, verify, validate, retrieve media
+    candidates, build messages. Raises HTTPException on failure; returns (question, messages)."""
     ip = _client_ip(request)
     _check_rate(ip)
-
     if not _verify_turnstile(req.turnstile_token or "", ip):
         raise HTTPException(status_code=403, detail="Verification failed. Please reload the page.")
-
     question = (req.question or "").strip()
     if not question:
         raise HTTPException(status_code=400, detail="Please enter a question.")
     if len(question) > MAX_QUESTION_CHARS:
         raise HTTPException(status_code=400, detail="That question is too long.")
-
-    # Sanitize and clamp history (defensive against prompt-stuffing cost abuse).
     history = []
     for m in (req.history or [])[-MAX_HISTORY_MSGS:]:
         role = m.get("role")
         content = m.get("content")
         if role in ("user", "assistant") and isinstance(content, str):
             history.append({"role": role, "content": content[:MAX_MSG_CHARS]})
-
-    # Retrieve the few most relevant media items for this question and show only those
-    # to the model (keeps the cached system prompt small and the picks sharp at scale).
-    t0 = time.monotonic()
     candidates = RETRIEVER.retrieve(question, k=MAX_CANDIDATES)
     user_content = (
         "AVAILABLE MEDIA (choose only from these ids):\n"
         + _candidates_text(candidates)
         + f"\n\nQuestion: {question}"
     )
+    return question, history + [{"role": "user", "content": user_content}]
 
-    messages = history + [{"role": "user", "content": user_content}]
-    response = client.messages.create(
-        model=MODEL,
-        max_tokens=1500,
-        system=[
-            {
-                "type": "text",
-                "text": SYSTEM_PROMPT,
-                "cache_control": {"type": "ephemeral"},
-            }
-        ],
-        messages=messages,
-    )
-    answer = "".join(block.text for block in response.content if block.type == "text")
-    answer, media = _extract_media(answer.strip())
-    answer, followups = _extract_suggest(answer)
 
-    # Anonymous, fire-and-forget telemetry (no IP, no PII). Never blocks or breaks /ask.
+def _log_ask(req, request, question, answer, media, t0):
+    """Anonymous, fire-and-forget telemetry (no IP, no PII). Never blocks or breaks the request."""
     telemetry.log({
         "session_id": (req.session_id or "")[:64] or None,
         "question": question[:2000],
@@ -403,11 +387,69 @@ def ask(req: AskRequest, request: Request) -> AskResponse:
         "answer_chars": len(answer),
     })
 
+
+def _sse(event: str, obj) -> str:
+    return f"event: {event}\ndata: {json.dumps(obj)}\n\n"
+
+
+@app.post("/ask", response_model=AskResponse)
+def ask(req: AskRequest, request: Request) -> AskResponse:
+    question, messages = _prep(req, request)
+    t0 = time.monotonic()
+    response = client.messages.create(model=MODEL, max_tokens=1500, system=_SYSTEM_BLOCK, messages=messages)
+    answer = "".join(block.text for block in response.content if block.type == "text")
+    answer, media = _extract_media(answer.strip())
+    answer, followups = _extract_suggest(answer)
+    _log_ask(req, request, question, answer, media, t0)
     return AskResponse(
         answer=answer,
         cached_tokens=response.usage.cache_read_input_tokens or 0,
         media=media,
         followups=followups,
+    )
+
+
+@app.post("/ask-stream")
+def ask_stream(req: AskRequest, request: Request):
+    """Streaming /ask: streams prose as it's generated, withholds the trailing MEDIA:/SUGGEST:
+    control lines, then sends media + follow-ups in a final 'done' event."""
+    question, messages = _prep(req, request)
+
+    def gen():
+        t0 = time.monotonic()
+        full = ""
+        sent = 0
+        cut = None  # index where control lines begin
+        try:
+            with client.messages.stream(
+                model=MODEL, max_tokens=1500, system=_SYSTEM_BLOCK, messages=messages
+            ) as stream:
+                for piece in stream.text_stream:
+                    full += piece
+                    if cut is None:
+                        mm = _CTRL_RE.search(full)
+                        if mm:
+                            cut = mm.start()
+                    # Emit visible prose only; hold back a small tail so a forming
+                    # "\nMEDIA:" boundary is never leaked to the page.
+                    safe = cut if cut is not None else max(sent, len(full) - 16)
+                    if safe > sent:
+                        yield _sse("delta", {"text": full[sent:safe]})
+                        sent = safe
+            if cut is None and sent < len(full):
+                yield _sse("delta", {"text": full[sent:]})
+            answer = (full[:cut] if cut is not None else full).strip()
+            _, media = _extract_media(full)
+            _, followups = _extract_suggest(full)
+            yield _sse("done", {"media": media, "followups": followups})
+            _log_ask(req, request, question, answer, media, t0)
+        except Exception:
+            yield _sse("error", {"detail": "The server hit a snag. Please try again."})
+
+    return StreamingResponse(
+        gen(),
+        media_type="text/event-stream",
+        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
     )
 
 

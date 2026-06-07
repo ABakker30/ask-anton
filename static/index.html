@@ -252,6 +252,90 @@
     window.scrollTo(0, document.body.scrollHeight);
   }
 
+  function bodyFor(question, source) {
+    return JSON.stringify({ question, history, turnstile_token: turnstileToken, session_id: sessionId, source: source || "type" });
+  }
+
+  function parseSSE(raw) {
+    let event = "message", data = "";
+    raw.split("\n").forEach((line) => {
+      if (line.startsWith("event:")) event = line.slice(6).trim();
+      else if (line.startsWith("data:")) data += line.slice(5).trim();
+    });
+    try { return { event, data: data ? JSON.parse(data) : {} }; } catch (_) { return null; }
+  }
+
+  // Streaming path: returns true if it handled the turn, false to fall back to /ask.
+  async function streamAsk(question, source, bubble) {
+    let res;
+    try {
+      res = await fetch(API_BASE + "/ask-stream", {
+        method: "POST", headers: { "Content-Type": "application/json" }, body: bodyFor(question, source),
+      });
+    } catch (e) { return false; }
+    const ct = res.headers.get("content-type") || "";
+    if (!res.ok || !ct.includes("text/event-stream") || !res.body) {
+      let detail = null;
+      try { detail = (await res.json()).detail; } catch (_) {}
+      if (detail) { bubble.classList.remove("thinking"); bubble.textContent = detail; return true; }
+      return false; // transient -> fall back
+    }
+    const reader = res.body.getReader(), dec = new TextDecoder();
+    let buf = "", answer = "", started = false, media = [], followups = [];
+    while (true) {
+      let chunk;
+      try { chunk = await reader.read(); } catch (e) { break; }
+      if (chunk.done) break;
+      buf += dec.decode(chunk.value, { stream: true });
+      let i;
+      while ((i = buf.indexOf("\n\n")) >= 0) {
+        const ev = parseSSE(buf.slice(0, i));
+        buf = buf.slice(i + 2);
+        if (!ev) continue;
+        if (ev.event === "delta") {
+          if (!started) { bubble.classList.remove("thinking"); bubble.textContent = ""; started = true; }
+          answer += ev.data.text || "";
+          bubble.textContent = answer;
+          window.scrollTo(0, document.body.scrollHeight);
+        } else if (ev.event === "done") {
+          media = ev.data.media || []; followups = ev.data.followups || [];
+        } else if (ev.event === "error" && !started) {
+          return false; // nothing shown yet -> fall back
+        }
+      }
+    }
+    if (!started) return false;
+    appendMedia(bubble, media);
+    history.push({ role: "user", content: question });
+    history.push({ role: "assistant", content: answer });
+    renderFollowups(followups);
+    return true;
+  }
+
+  // Non-streaming fallback (with a single retry for transient gateway/restart errors).
+  async function nonStreamAsk(question, source, bubble) {
+    let data = null;
+    for (let attempt = 0; attempt < 2 && !data; attempt++) {
+      if (attempt) await new Promise((r) => setTimeout(r, 1500));
+      let res, text;
+      try {
+        res = await fetch(API_BASE + "/ask", { method: "POST", headers: { "Content-Type": "application/json" }, body: bodyFor(question, source) });
+        text = await res.text();
+      } catch (netErr) { continue; }
+      let parsed = null;
+      try { parsed = JSON.parse(text); } catch (_) {}
+      if (res.ok && parsed && typeof parsed.answer === "string") data = parsed;
+      else if (parsed && parsed.detail) throw new Error(parsed.detail);
+    }
+    if (!data) throw new Error("Anton is momentarily unavailable - the server may be restarting. Please try again in a moment.");
+    bubble.classList.remove("thinking");
+    bubble.textContent = data.answer;
+    appendMedia(bubble, data.media);
+    history.push({ role: "user", content: question });
+    history.push({ role: "assistant", content: data.answer });
+    renderFollowups(data.followups);
+  }
+
   async function ask(question, source) {
     if (turnstileEnabled && !turnstileToken) {
       addMsg("anton", "Anton", "One moment — please complete the verification below, then ask again.", "thinking");
@@ -265,40 +349,8 @@
     sendBtn.disabled = true;
     const bubble = addMsg("anton", "Anton", "thinking...", "thinking");
     try {
-      let data = null;
-      // Try up to twice: a transient gateway error (deploy/restart) returns an HTML
-      // error page, not JSON. Retry once, then show a friendly message.
-      for (let attempt = 0; attempt < 2 && !data; attempt++) {
-        if (attempt) await new Promise((r) => setTimeout(r, 1500));
-        let res, text;
-        try {
-          res = await fetch(API_BASE + "/ask", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ question, history, turnstile_token: turnstileToken, session_id: sessionId, source: source || "type" }),
-          });
-          text = await res.text();
-        } catch (netErr) {
-          continue; // network blip; retry
-        }
-        let parsed = null;
-        try { parsed = JSON.parse(text); } catch (_) { parsed = null; }
-        if (res.ok && parsed && typeof parsed.answer === "string") {
-          data = parsed;
-        } else if (parsed && parsed.detail) {
-          throw new Error(parsed.detail); // real app message (rate limit, too long, etc.)
-        }
-        // otherwise: HTML / 5xx / gateway error -> loop and retry once
-      }
-      if (!data) {
-        throw new Error("Anton is momentarily unavailable - the server may be restarting. Please try again in a moment.");
-      }
-      bubble.classList.remove("thinking");
-      bubble.textContent = data.answer;
-      appendMedia(bubble, data.media);
-      history.push({ role: "user", content: question });
-      history.push({ role: "assistant", content: data.answer });
-      renderFollowups(data.followups);
+      const handled = await streamAsk(question, source, bubble);
+      if (!handled) await nonStreamAsk(question, source, bubble);
     } catch (err) {
       bubble.classList.remove("thinking");
       bubble.textContent = err.message;
@@ -309,7 +361,9 @@
         try { window.turnstile.reset(turnstileWidgetId); } catch (e) {}
       }
       sendBtn.disabled = false;
-      input.focus();
+      // Only refocus on desktop (fine pointer). On touch, leave focus off so the
+      // mobile keyboard doesn't pop up and eat the screen after each answer.
+      if (window.matchMedia && window.matchMedia("(pointer: fine)").matches) input.focus();
     }
   }
 
