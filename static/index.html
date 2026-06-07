@@ -344,56 +344,7 @@
     window.scrollTo(0, document.body.scrollHeight);
   }
 
-  function escapeHtml(s) {
-    return (s || "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-  }
-  function flashBtn(btn, msg) {
-    if (btn._flashing) return;
-    btn._flashing = true;
-    const orig = btn.textContent;
-    btn.textContent = msg;
-    setTimeout(() => { btn.textContent = orig; btn._flashing = false; }, 1800);
-  }
-
-  // Copy the actual answer (text + inline images) so it can be pasted as-is into
-  // email / docs / chat — no link, and no LLM re-run that might give a different answer.
-  async function copyAnswer(answer, media, btn) {
-    answer = (answer || "").trim();
-    const site = location.origin;
-    const items = (media || []).filter((m) => m && m.url);
-    let plain = answer;
-    if (items.length) {
-      plain += "\n";
-      items.forEach((m) => { plain += "\n" + (m.caption ? m.caption + " — " : "") + m.url; });
-    }
-    plain += "\n\n— via Ask Anton, " + site;
-    let html = answer.split(/\n{2,}/).map((p) => "<p>" + escapeHtml(p).replace(/\n/g, "<br>") + "</p>").join("");
-    items.forEach((m) => {
-      if (m.kind === "video") {
-        html += '<p><a href="' + m.url + '">' + escapeHtml(m.caption || "Watch video") + "</a></p>";
-      } else {
-        html += '<p><img src="' + m.url + '" alt="' + escapeHtml(m.alt || "") + '" style="max-width:100%;height:auto"></p>';
-        if (m.caption) html += "<p><em>" + escapeHtml(m.caption) + "</em></p>";
-      }
-    });
-    html += '<p>— via <a href="' + site + '">Ask Anton</a></p>';
-    // Prefer rich clipboard (text + inline images); fall back to native share, then plain text.
-    try {
-      if (navigator.clipboard && window.ClipboardItem) {
-        await navigator.clipboard.write([new ClipboardItem({
-          "text/html": new Blob([html], { type: "text/html" }),
-          "text/plain": new Blob([plain], { type: "text/plain" }),
-        })]);
-        flashBtn(btn, "Copied"); return;
-      }
-    } catch (e) {}
-    try {
-      if (navigator.share) { await navigator.share({ title: "Ask Anton", text: plain }); return; }
-    } catch (e) { if (e && e.name === "AbortError") return; }
-    try { await navigator.clipboard.writeText(plain); flashBtn(btn, "Copied"); } catch (e) {}
-  }
-
-  function renderFeedback(question, answer, media) {
+  function renderFeedback(question) {
     const wrap = document.createElement("div");
     wrap.className = "feedback";
 
@@ -422,13 +373,21 @@
     });
     wrap.appendChild(rate);
 
-    // Copy the actual answer (text + images) — pastes into email/docs/chat as-is.
-    const copyBtn = document.createElement("button");
-    copyBtn.className = "share";
-    copyBtn.textContent = "Copy";
-    copyBtn.title = "Copy the answer with its images";
-    copyBtn.addEventListener("click", () => copyAnswer(answer, media, copyBtn));
-    wrap.appendChild(copyBtn);
+    // Share: copies (or shares) a link that re-opens this question for anyone.
+    const share = document.createElement("button");
+    share.className = "share";
+    share.textContent = "Share";
+    share.addEventListener("click", async () => {
+      const url = location.origin + "/?q=" + encodeURIComponent(question);
+      const copied = () => { share.textContent = "Link copied"; setTimeout(() => (share.textContent = "Share"), 1800); };
+      try {
+        if (navigator.share) { await navigator.share({ title: "Ask Anton", text: question, url }); }
+        else { await navigator.clipboard.writeText(url); copied(); }
+      } catch (e) {
+        try { await navigator.clipboard.writeText(url); copied(); } catch (_) {}
+      }
+    });
+    wrap.appendChild(share);
 
     chat.append(wrap);
   }
@@ -489,7 +448,7 @@
     appendMedia(bubble, media);
     history.push({ role: "user", content: question });
     history.push({ role: "assistant", content: answer });
-    renderFeedback(question, answer, media);
+    renderFeedback(question);
     renderFollowups(followups);
     return true;
   }
@@ -515,7 +474,7 @@
     appendMedia(bubble, data.media);
     history.push({ role: "user", content: question });
     history.push({ role: "assistant", content: data.answer });
-    renderFeedback(question, data.answer, data.media);
+    renderFeedback(question);
     renderFollowups(data.followups);
   }
 
