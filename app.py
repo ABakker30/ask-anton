@@ -420,6 +420,10 @@ def config() -> dict:
         "retrieval": RETRIEVER.status(),
         "media_items": len(MEDIA),
         "telemetry": telemetry.enabled(),
+        "env": {
+            "supabase_url": bool(os.environ.get("SUPABASE_URL")),
+            "supabase_anon_key": bool(os.environ.get("SUPABASE_ANON_KEY")),
+        },
     }
 
 
