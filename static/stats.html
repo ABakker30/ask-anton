@@ -113,7 +113,8 @@
     const cols3 = el("div", {class:"cols"});
     const ssrc = el("section"); ssrc.appendChild(el("h2",null,"By input method (type / pill / voice)"));
     ssrc.appendChild(table(d.by_source||[], "source","n", maxOf(d.by_source||[],"n"))); cols3.appendChild(ssrc);
-    cols3.appendChild(el("section")); // spacer to keep the two-column grid balanced
+    const scmp = el("section"); scmp.appendChild(el("h2",null,"By campaign (UTM)"));
+    scmp.appendChild(table(d.by_campaign||[], "campaign","n", maxOf(d.by_campaign||[],"n"))); cols3.appendChild(scmp);
     m.appendChild(cols3);
 
     const rd = d.recent_down || [];

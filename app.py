@@ -356,6 +356,7 @@ class AskRequest(BaseModel):
     turnstile_token: str | None = None
     session_id: str | None = None
     source: str | None = None   # "pill" or "type"
+    campaign: str | None = None   # UTM attribution (utm_source / utm_campaign / utm_medium)
 
 
 class AskResponse(BaseModel):
@@ -408,6 +409,7 @@ def _log_ask(req, request, question, answer, media, t0):
         "media_ids": [m["url"].rsplit("/", 1)[-1].rsplit(".", 1)[0] for m in media] or None,
         "from_pill": (req.source == "pill"),
         "source": (req.source or "type")[:16],   # type | pill | voice | link
+        "campaign": (req.campaign or "")[:80] or None,   # UTM attribution
         "retrieval": RETRIEVER.status(),
         "answer_chars": len(answer),
     })

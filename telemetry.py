@@ -98,9 +98,10 @@ def _insert(table: str, event: dict) -> bool:
 
 def _post(table: str, event: dict) -> None:
     # Best-effort; must never surface to the visitor. If the insert fails because a newer
-    # column (e.g. 'source') doesn't exist yet, retry without it so base telemetry survives
-    # until the migration is applied.
+    # optional column (e.g. 'source'/'campaign') doesn't exist yet, retry without those so
+    # base telemetry survives until the migration is applied.
     if _insert(table, event):
         return
-    if "source" in event:
-        _insert(table, {k: v for k, v in event.items() if k != "source"})
+    optional = ("source", "campaign")
+    if any(k in event for k in optional):
+        _insert(table, {k: v for k, v in event.items() if k not in optional})

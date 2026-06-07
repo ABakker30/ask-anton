@@ -217,6 +217,18 @@
     sessionStorage.setItem("aa_sid", sessionId);
   }
 
+  // First-touch campaign attribution from UTM params (no PII). Kept for the session so
+  // every question this visit is credited to the ad/campaign that brought them.
+  let campaign = sessionStorage.getItem("aa_campaign") || "";
+  (function () {
+    const p = new URLSearchParams(location.search);
+    const src = p.get("utm_source"), camp = p.get("utm_campaign"), med = p.get("utm_medium");
+    if (src || camp) {
+      campaign = [src, camp, med].filter(Boolean).join(" / ").slice(0, 80);
+      try { sessionStorage.setItem("aa_campaign", campaign); } catch (e) {}
+    }
+  })();
+
   // Served from the box (same origin) in production; falls back to the local
   // uvicorn when the file is opened from a preview pane or file://.
   const API_BASE =
@@ -431,7 +443,7 @@
   }
 
   function bodyFor(question, source) {
-    return JSON.stringify({ question, history, turnstile_token: turnstileToken, session_id: sessionId, source: source || "type" });
+    return JSON.stringify({ question, history, turnstile_token: turnstileToken, session_id: sessionId, source: source || "type", campaign: campaign || null });
   }
 
   function parseSSE(raw) {
