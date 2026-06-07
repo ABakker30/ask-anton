@@ -1,12 +1,12 @@
 [
   {
-    "id": "adaf-booth-1",
+    "id": "adaf-booth-2",
     "piece": "Abu Dhabi Art (2021)",
     "piece_slug": "abu-dhabi-art",
     "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/abu-dhabi-art/adaf-booth-1.jpg",
-    "caption": "Anton's sculptures on view at Abu Dhabi Art, 2021, on the stand of Leila Heller Gallery.",
-    "alt": "Anton's sculptures on view at Abu Dhabi Art, 2021, on the stand of Leila Heller Gallery.",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/abu-dhabi-art/adaf-booth-2.jpg",
+    "caption": "The Leila Heller Gallery stand at Abu Dhabi Art, 2021, where Anton's work was shown; one of his gold spiral sculptures at center.",
+    "alt": "The Leila Heller Gallery stand at Abu Dhabi Art, 2021, where Anton's work was shown; one of his gold spiral sculptures at center.",
     "tags": [
       "exhibit:abu-dhabi-art",
       "venue:leila-heller",
@@ -16,13 +16,13 @@
     ]
   },
   {
-    "id": "adaf-booth-2",
+    "id": "adaf-booth-1",
     "piece": "Abu Dhabi Art (2021)",
     "piece_slug": "abu-dhabi-art",
     "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/abu-dhabi-art/adaf-booth-2.jpg",
-    "caption": "The Leila Heller Gallery stand at Abu Dhabi Art, 2021, where Anton's work was shown; one of his gold spiral sculptures at center.",
-    "alt": "The Leila Heller Gallery stand at Abu Dhabi Art, 2021, where Anton's work was shown; one of his gold spiral sculptures at center.",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/abu-dhabi-art/adaf-booth-1.jpg",
+    "caption": "Anton's sculptures on view at Abu Dhabi Art, 2021, on the stand of Leila Heller Gallery.",
+    "alt": "Anton's sculptures on view at Abu Dhabi Art, 2021, on the stand of Leila Heller Gallery.",
     "tags": [
       "exhibit:abu-dhabi-art",
       "venue:leila-heller",
@@ -132,13 +132,29 @@
     ]
   },
   {
-    "id": "arch-building-5",
+    "id": "arch-building-4",
     "piece": "Architecture at scale",
     "piece_slug": "architecture",
     "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/architecture/arch-building-5.jpg",
-    "caption": "A lattice-path form drawn up into a building, its facade a field of interlocking geometric pattern.",
-    "alt": "A lattice-path form drawn up into a building, its facade a field of interlocking geometric pattern.",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/architecture/arch-building-4.jpg",
+    "caption": "Anton's geometry at architectural scale: a lattice-path form as a building with a patterned glass facade.",
+    "alt": "Anton's geometry at architectural scale: a lattice-path form as a building with a patterned glass facade.",
+    "tags": [
+      "theme:architecture",
+      "type:architecture",
+      "type:render",
+      "type:digital",
+      "type:building"
+    ]
+  },
+  {
+    "id": "arch-building-3",
+    "piece": "Architecture at scale",
+    "piece_slug": "architecture",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/architecture/arch-building-3.jpg",
+    "caption": "A lattice-path building, the zigzag rising over a green base, the facade carrying the lattice pattern as ornament.",
+    "alt": "A lattice-path building, the zigzag rising over a green base, the facade carrying the lattice pattern as ornament.",
     "tags": [
       "theme:architecture",
       "type:architecture",
@@ -180,29 +196,13 @@
     ]
   },
   {
-    "id": "arch-building-4",
+    "id": "arch-building-5",
     "piece": "Architecture at scale",
     "piece_slug": "architecture",
     "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/architecture/arch-building-4.jpg",
-    "caption": "Anton's geometry at architectural scale: a lattice-path form as a building with a patterned glass facade.",
-    "alt": "Anton's geometry at architectural scale: a lattice-path form as a building with a patterned glass facade.",
-    "tags": [
-      "theme:architecture",
-      "type:architecture",
-      "type:render",
-      "type:digital",
-      "type:building"
-    ]
-  },
-  {
-    "id": "arch-building-3",
-    "piece": "Architecture at scale",
-    "piece_slug": "architecture",
-    "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/architecture/arch-building-3.jpg",
-    "caption": "A lattice-path building, the zigzag rising over a green base, the facade carrying the lattice pattern as ornament.",
-    "alt": "A lattice-path building, the zigzag rising over a green base, the facade carrying the lattice pattern as ornament.",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/architecture/arch-building-5.jpg",
+    "caption": "A lattice-path form drawn up into a building, its facade a field of interlocking geometric pattern.",
+    "alt": "A lattice-path form drawn up into a building, its facade a field of interlocking geometric pattern.",
     "tags": [
       "theme:architecture",
       "type:architecture",
@@ -390,13 +390,32 @@
     ]
   },
   {
-    "id": "sj-12",
+    "id": "sj-01",
     "piece": "Bakker and Jafri (textured renders)",
     "piece_slug": "bakker-jafri",
     "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-12.jpg",
-    "caption": "An interlocking double-diamond form wearing Sacha Jafri's vivid abstraction.",
-    "alt": "An interlocking double-diamond form wearing Sacha Jafri's vivid abstraction.",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-01.jpg",
+    "caption": "An angular lattice-path form rendered with Sacha Jafri's painting textures, a 2021 digital collaboration.",
+    "alt": "An angular lattice-path form rendered with Sacha Jafri's painting textures, a 2021 digital collaboration.",
+    "tags": [
+      "collaboration:sacha-jafri",
+      "type:render",
+      "type:digital",
+      "material:digital",
+      "location:dubai",
+      "year:2021",
+      "related:leila-heller",
+      "series:bakker-jafri"
+    ]
+  },
+  {
+    "id": "sj-81",
+    "piece": "Bakker and Jafri (textured renders)",
+    "piece_slug": "bakker-jafri",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-81.jpg",
+    "caption": "A lattice-path form clothed in Sacha Jafri's painted textures.",
+    "alt": "A lattice-path form clothed in Sacha Jafri's painted textures.",
     "tags": [
       "collaboration:sacha-jafri",
       "type:render",
@@ -428,13 +447,13 @@
     ]
   },
   {
-    "id": "sj-01",
+    "id": "sj-12",
     "piece": "Bakker and Jafri (textured renders)",
     "piece_slug": "bakker-jafri",
     "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-01.jpg",
-    "caption": "An angular lattice-path form rendered with Sacha Jafri's painting textures, a 2021 digital collaboration.",
-    "alt": "An angular lattice-path form rendered with Sacha Jafri's painting textures, a 2021 digital collaboration.",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-12.jpg",
+    "caption": "An interlocking double-diamond form wearing Sacha Jafri's vivid abstraction.",
+    "alt": "An interlocking double-diamond form wearing Sacha Jafri's vivid abstraction.",
     "tags": [
       "collaboration:sacha-jafri",
       "type:render",
@@ -454,25 +473,6 @@
     "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-30.jpg",
     "caption": "A faceted lattice-path form skinned with Sacha Jafri's painting.",
     "alt": "A faceted lattice-path form skinned with Sacha Jafri's painting.",
-    "tags": [
-      "collaboration:sacha-jafri",
-      "type:render",
-      "type:digital",
-      "material:digital",
-      "location:dubai",
-      "year:2021",
-      "related:leila-heller",
-      "series:bakker-jafri"
-    ]
-  },
-  {
-    "id": "sj-81",
-    "piece": "Bakker and Jafri (textured renders)",
-    "piece_slug": "bakker-jafri",
-    "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/bakker-jafri/sj-81.jpg",
-    "caption": "A lattice-path form clothed in Sacha Jafri's painted textures.",
-    "alt": "A lattice-path form clothed in Sacha Jafri's painted textures.",
     "tags": [
       "collaboration:sacha-jafri",
       "type:render",
@@ -712,39 +712,41 @@
     ]
   },
   {
-    "id": "ps-fractal-tree-video",
-    "piece": "Fractal tree",
-    "piece_slug": "fractal-tree",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree-video.mp4",
-    "caption": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
-    "alt": "Anton's steel fractal tree at Leila Heller Gallery, Dubai, a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
-    "tags": [
-      "exhibit:perspectives-of-symmetry",
-      "venue:leila-heller",
-      "location:dubai",
-      "year:2021",
-      "series:fractal-tree",
-      "material:steel",
-      "type:fractal",
-      "related:koos-verhoeff"
-    ]
-  },
-  {
     "id": "ps-fractal-tree",
     "piece": "Fractal tree",
     "piece_slug": "fractal-tree",
     "kind": "image",
     "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree.jpg",
-    "caption": "Anton's fractal tree in patinated steel, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
-    "alt": "Anton's fractal tree in patinated steel, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
+    "caption": "Anton's patinated bronze fractal tree, about four feet tall, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
+    "alt": "Anton's patinated bronze fractal tree, about four feet tall, a three-dimensional Pythagorean tree built on a design by his mentor Koos Verhoeff, at Leila Heller Gallery, Dubai, 2021.",
     "tags": [
       "exhibit:perspectives-of-symmetry",
       "venue:leila-heller",
       "location:dubai",
       "year:2021",
       "series:fractal-tree",
-      "material:steel",
+      "material:bronze",
+      "material:black-patina",
+      "type:fractal",
+      "related:koos-verhoeff"
+    ]
+  },
+  {
+    "id": "ps-fractal-tree-video",
+    "piece": "Fractal tree",
+    "piece_slug": "fractal-tree",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-fractal-tree-video.mp4",
+    "caption": "Anton's patinated bronze fractal tree, about four feet tall, at Leila Heller Gallery, Dubai (2021), a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
+    "alt": "Anton's patinated bronze fractal tree, about four feet tall, at Leila Heller Gallery, Dubai (2021), a three-dimensional Pythagorean tree after Koos Verhoeff's design.",
+    "tags": [
+      "exhibit:perspectives-of-symmetry",
+      "venue:leila-heller",
+      "location:dubai",
+      "year:2021",
+      "series:fractal-tree",
+      "material:bronze",
+      "material:black-patina",
       "type:fractal",
       "related:koos-verhoeff"
     ]
@@ -792,13 +794,13 @@
     ]
   },
   {
-    "id": "gold-loops",
+    "id": "gold-knot",
     "piece": "Gold jewellery",
     "piece_slug": "gold-jewelry",
     "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/gold-jewelry/gold-loops.jpg",
-    "caption": "Interlocking gold loops, a closed lattice path worn as a pendant (artist proof).",
-    "alt": "Interlocking gold loops, a closed lattice path worn as a pendant (artist proof).",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/gold-jewelry/gold-knot.jpg",
+    "caption": "A gold pendant, a closed lattice-path knot realized at jewellery scale, signed as an artist proof (Anton ap 1/2).",
+    "alt": "A gold pendant, a closed lattice-path knot realized at jewellery scale, signed as an artist proof (Anton ap 1/2).",
     "tags": [
       "series:gold-jewelry",
       "material:gold",
@@ -809,23 +811,6 @@
     ]
   },
   {
-    "id": "gold-garnets",
-    "piece": "Gold jewellery",
-    "piece_slug": "gold-jewelry",
-    "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/gold-jewelry/gold-garnets.jpg",
-    "caption": "A gold pendant set with garnets along its edges, one of the rare pieces Anton has set with stones.",
-    "alt": "A gold pendant set with garnets along its edges, one of the rare pieces Anton has set with stones.",
-    "tags": [
-      "series:gold-jewelry",
-      "material:gold",
-      "type:jewelry",
-      "scale:jewelry",
-      "realized",
-      "material:garnet"
-    ]
-  },
-  {
     "id": "gold-braiding",
     "piece": "Gold jewellery",
     "piece_slug": "gold-jewelry",
@@ -833,6 +818,23 @@
     "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/gold-jewelry/gold-braiding.jpg",
     "caption": "The cubic-braiding form rendered as a gold pendant (artist proof).",
     "alt": "The cubic-braiding form rendered as a gold pendant (artist proof).",
+    "tags": [
+      "series:gold-jewelry",
+      "material:gold",
+      "type:jewelry",
+      "scale:jewelry",
+      "realized",
+      "artist-proof"
+    ]
+  },
+  {
+    "id": "gold-loops",
+    "piece": "Gold jewellery",
+    "piece_slug": "gold-jewelry",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/gold-jewelry/gold-loops.jpg",
+    "caption": "Interlocking gold loops, a closed lattice path worn as a pendant (artist proof).",
+    "alt": "Interlocking gold loops, a closed lattice path worn as a pendant (artist proof).",
     "tags": [
       "series:gold-jewelry",
       "material:gold",
@@ -877,20 +879,20 @@
     ]
   },
   {
-    "id": "gold-knot",
+    "id": "gold-garnets",
     "piece": "Gold jewellery",
     "piece_slug": "gold-jewelry",
     "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/gold-jewelry/gold-knot.jpg",
-    "caption": "A gold pendant, a closed lattice-path knot realized at jewellery scale, signed as an artist proof (Anton ap 1/2).",
-    "alt": "A gold pendant, a closed lattice-path knot realized at jewellery scale, signed as an artist proof (Anton ap 1/2).",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/gold-jewelry/gold-garnets.jpg",
+    "caption": "A gold pendant set with garnets along its edges, one of the rare pieces Anton has set with stones.",
+    "alt": "A gold pendant set with garnets along its edges, one of the rare pieces Anton has set with stones.",
     "tags": [
       "series:gold-jewelry",
       "material:gold",
       "type:jewelry",
       "scale:jewelry",
       "realized",
-      "artist-proof"
+      "material:garnet"
     ]
   },
   {
@@ -1232,22 +1234,6 @@
     ]
   },
   {
-    "id": "ps-install-wide",
-    "piece": "Perspectives of Symmetry (Leila Heller, Dubai)",
-    "piece_slug": "perspectives-of-symmetry",
-    "kind": "image",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-install-wide.jpg",
-    "caption": "Inside Perspectives of Symmetry, Anton's Middle East solo debut at Leila Heller Gallery, Dubai, 2021, with bronze and mirror-polished stainless works on pedestals.",
-    "alt": "Inside Perspectives of Symmetry, Anton's Middle East solo debut at Leila Heller Gallery, Dubai, 2021, with bronze and mirror-polished stainless works on pedestals.",
-    "tags": [
-      "exhibit:perspectives-of-symmetry",
-      "venue:leila-heller",
-      "location:dubai",
-      "year:2021",
-      "type:install-view"
-    ]
-  },
-  {
     "id": "ps-walkthrough",
     "piece": "Perspectives of Symmetry (Leila Heller, Dubai)",
     "piece_slug": "perspectives-of-symmetry",
@@ -1262,6 +1248,22 @@
       "year:2021",
       "type:install-view",
       "type:walkthrough"
+    ]
+  },
+  {
+    "id": "ps-install-wide",
+    "piece": "Perspectives of Symmetry (Leila Heller, Dubai)",
+    "piece_slug": "perspectives-of-symmetry",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/perspectives-of-symmetry/ps-install-wide.jpg",
+    "caption": "Inside Perspectives of Symmetry, Anton's Middle East solo debut at Leila Heller Gallery, Dubai, 2021, with bronze and mirror-polished stainless works on pedestals.",
+    "alt": "Inside Perspectives of Symmetry, Anton's Middle East solo debut at Leila Heller Gallery, Dubai, 2021, with bronze and mirror-polished stainless works on pedestals.",
+    "tags": [
+      "exhibit:perspectives-of-symmetry",
+      "venue:leila-heller",
+      "location:dubai",
+      "year:2021",
+      "type:install-view"
     ]
   },
   {
@@ -1330,22 +1332,6 @@
     ]
   },
   {
-    "id": "portal-2-squares",
-    "piece": "Portal series",
-    "piece_slug": "portal-series",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/portal-series/portal-2-squares.mp4",
-    "caption": "Two interlocking square slabs, a design from the Portal series (after Tony Smith).",
-    "alt": "Two interlocking square slabs, a design from the Portal series (after Tony Smith).",
-    "tags": [
-      "series:portal",
-      "influence:tony-smith",
-      "material:bronze",
-      "type:render",
-      "type:digital"
-    ]
-  },
-  {
     "id": "portal-2-rhombic",
     "piece": "Portal series",
     "piece_slug": "portal-series",
@@ -1353,38 +1339,6 @@
     "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/portal-series/portal-2-rhombic.mp4",
     "caption": "Two rhombic slabs lying in shifted planes, a design from the Portal series.",
     "alt": "Two rhombic slabs lying in shifted planes, a design from the Portal series.",
-    "tags": [
-      "series:portal",
-      "influence:tony-smith",
-      "material:bronze",
-      "type:render",
-      "type:digital"
-    ]
-  },
-  {
-    "id": "portal-rectangular",
-    "piece": "Portal series",
-    "piece_slug": "portal-series",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/portal-series/portal-rectangular.mp4",
-    "caption": "An hourglass portal, a design from the Portal series.",
-    "alt": "An hourglass portal, a design from the Portal series.",
-    "tags": [
-      "series:portal",
-      "influence:tony-smith",
-      "material:bronze",
-      "type:render",
-      "type:digital"
-    ]
-  },
-  {
-    "id": "portal-triangular",
-    "piece": "Portal series",
-    "piece_slug": "portal-series",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/portal-series/portal-triangular.mp4",
-    "caption": "A triangular portal, a design from the Portal series.",
-    "alt": "A triangular portal, a design from the Portal series.",
     "tags": [
       "series:portal",
       "influence:tony-smith",
@@ -1408,6 +1362,54 @@
       "type:render",
       "type:digital",
       "material:black-patina"
+    ]
+  },
+  {
+    "id": "portal-triangular",
+    "piece": "Portal series",
+    "piece_slug": "portal-series",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/portal-series/portal-triangular.mp4",
+    "caption": "A triangular portal, a design from the Portal series.",
+    "alt": "A triangular portal, a design from the Portal series.",
+    "tags": [
+      "series:portal",
+      "influence:tony-smith",
+      "material:bronze",
+      "type:render",
+      "type:digital"
+    ]
+  },
+  {
+    "id": "portal-2-squares",
+    "piece": "Portal series",
+    "piece_slug": "portal-series",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/portal-series/portal-2-squares.mp4",
+    "caption": "Two interlocking square slabs, a design from the Portal series (after Tony Smith).",
+    "alt": "Two interlocking square slabs, a design from the Portal series (after Tony Smith).",
+    "tags": [
+      "series:portal",
+      "influence:tony-smith",
+      "material:bronze",
+      "type:render",
+      "type:digital"
+    ]
+  },
+  {
+    "id": "portal-rectangular",
+    "piece": "Portal series",
+    "piece_slug": "portal-series",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/portal-series/portal-rectangular.mp4",
+    "caption": "An hourglass portal, a design from the Portal series.",
+    "alt": "An hourglass portal, a design from the Portal series.",
+    "tags": [
+      "series:portal",
+      "influence:tony-smith",
+      "material:bronze",
+      "type:render",
+      "type:digital"
     ]
   },
   {
@@ -1610,6 +1612,23 @@
     ]
   },
   {
+    "id": "ror-i-render",
+    "piece": "Reflections of Reality I",
+    "piece_slug": "reflections-of-reality-i",
+    "kind": "video",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/reflections-of-reality/ror-i-render.mp4",
+    "caption": "A rotating render of Reflections of Reality I, the design installed at the DIFC in 2024. Two identical mirror-polished forms that read as different shapes, or as reflective counterparts, depending on your viewpoint.",
+    "alt": "A rotating render of Reflections of Reality I, the design installed at the DIFC in 2024. Two identical mirror-polished forms that read as different shapes, or as reflective counterparts, depending on your viewpoint.",
+    "tags": [
+      "series:reflections-of-reality",
+      "material:mirror-polished-stainless",
+      "type:relativity",
+      "type:render",
+      "type:digital",
+      "exhibit:difc-sculpture-park-2024"
+    ]
+  },
+  {
     "id": "reflective-duo-gate",
     "piece": "Reflections of Reality I",
     "piece_slug": "reflections-of-reality-i",
@@ -1626,23 +1645,6 @@
       "series:reflections-of-reality",
       "material:mirror-polished-stainless",
       "type:relativity"
-    ]
-  },
-  {
-    "id": "ror-i-render",
-    "piece": "Reflections of Reality I",
-    "piece_slug": "reflections-of-reality-i",
-    "kind": "video",
-    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/reflections-of-reality/ror-i-render.mp4",
-    "caption": "A rotating render of Reflections of Reality I, the design installed at the DIFC in 2024. Two identical mirror-polished forms that read as different shapes, or as reflective counterparts, depending on your viewpoint.",
-    "alt": "A rotating render of Reflections of Reality I, the design installed at the DIFC in 2024. Two identical mirror-polished forms that read as different shapes, or as reflective counterparts, depending on your viewpoint.",
-    "tags": [
-      "series:reflections-of-reality",
-      "material:mirror-polished-stainless",
-      "type:relativity",
-      "type:render",
-      "type:digital",
-      "exhibit:difc-sculpture-park-2024"
     ]
   },
   {
