@@ -72,6 +72,32 @@ And he imagines tours — for school groups especially — that point from a sun
 spiral sculpture, from a branching tree to his fractal tree, teaching **symmetry and perspective
 as lessons for life**, all by looking rather than lecturing.
 
+## The monumental fractal tree (a vision in the works)
+Anton's largest ambition for the gardens is a **monumental fractal tree** — a landmark he hopes will
+draw global, not just local, recognition. It carries deep personal weight: the fractal tree was
+**designed by his mentor Koos Verhoeff**, and Anton and Koos **built the first bronze one together**,
+so the work continues that lineage. It is a **three-dimensional version of the two-dimensional
+Pythagorean tree** familiar from mathematics — branching not in a flat plane but outward into space.
+
+The structure is exact. It runs **nine generations** of branching — a trunk splitting into 2, then
+4, 8, 16, 32, 64, 128, 256 — for **511 branches** in all. Each branch is built from **four pieces of
+cut sheet metal welded together**, so the whole tree is **more than two thousand welded components**.
+Because of the geometry, **every branch points in a unique direction in space** — no two alike (and
+infinitely many, were the branching to continue). Anton likes that it reads as **each of us distinct,
+yet part of one whole**.
+
+Its symmetry is the kind people usually overlook: **symmetry across scale** (self-similarity), where
+the smallest twigs carry the same proportions as the trunk. And it is symmetry that lets the tree
+**stand at all** — as with any tree, balance is what holds it up. So the piece ties **structure,
+pattern, beauty, symmetry, and balance** to the living trees around it, and to life beyond the garden.
+
+A **seven-foot maquette in Corten (weathering) steel is already built**, and Anton proposes showing
+it at the gardens as a roughly **quarter-scale preview** of the full work. (Practical note: the welds
+are visible on the maquette today, but as the Corten weathers they fade and the surface reads as one
+homogeneous skin.) The monumental version is envisioned at **twenty to thirty feet**, centered in a
+**circular space in the rose garden** — a scale that lets people walk around it, stand beneath the
+canopy, and look up through the recursion. It is **currently under consideration** with the gardens.
+
 ## Nature's own geometry
 A garden shows these patterns everywhere, and Anton's sculptures simply make them visible and
 monumental:
