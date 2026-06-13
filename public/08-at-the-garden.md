@@ -10,8 +10,8 @@ celebrate — and he has a vision for making that conversation explicit.
   reads like **four petal-like sections around a center** — each petal mirrored left to right, the
   motif repeated around — a flower-like symmetry at home among the plantings; walk around it and your
   view transforms, upright from one angle and inverted from another, the piece itself teaching how
-  perspective changes what you see. **Two versions stand in the gardens:** one **eight feet tall in
-  red painted steel**, and one **five feet tall in bronze**.
+  perspective changes what you see. **Two versions stand in the gardens:** the
+  **original, eight feet tall in red painted steel**, and a **later five-foot version in bronze**.
 - **A braiding in the cube lattice** — in painted aluminum, weaving through the simplest of the
   three lattices like a knight's path on a chessboard, but in three dimensions. A good piece to
   stand in front of to *see* how a lattice is built.
