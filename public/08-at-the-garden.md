@@ -5,15 +5,20 @@ It's a setting he loves, because a garden is already full of the patterns his sc
 celebrate — and he has a vision for making that conversation explicit.
 
 ## The installed works
-- **"Koos Knoopje"** — an eight-foot, red figure-eight knot in painted steel. The name is Dutch
-  for "Koos's little knot": it honors Anton's mentor **Koos Verhoeff**, who first made this knot
-  in straight segments. Anton was the first to render it as a flowing curve, so he named it for
-  Koos.
+- **"Koos Knoopje"** — a **five-foot bronze figure-eight knot**. The name is Dutch for "Koos's
+  little knot": it honors Anton's mentor **Koos Verhoeff**, who first made this knot in straight
+  segments; Anton was the first to render it as a **flowing curve**, and named it for Koos. Its form
+  reads like **four petal-like sections around a center** — each petal mirrored left to right, the
+  motif repeated around — so it carries a flower-like symmetry that feels at home among the
+  plantings. Walk around it and your view transforms: from one angle it stands upright, from another
+  it appears inverted — the piece itself teaching how perspective changes what you see.
 - **A braiding in the cube lattice** — in painted aluminum, weaving through the simplest of the
   three lattices like a knight's path on a chessboard, but in three dimensions. A good piece to
   stand in front of to *see* how a lattice is built.
 - **"Reflection"** — an eight-foot, mirror-polished stainless-steel path that traces every point
-  of a complex polyhedron, set in a reflecting pool in the middle of the rose garden, with benches
+  of a complex polyhedron once and closes back where it began — a **complete journey that returns
+  home**, like a walk through the garden, or a life: a path of points, some chosen and many not,
+  each worth exploring. It is set in a reflecting pool in the middle of the rose garden, with benches
   to sit and watch it mirror the roses, the water, and the sky. Before coming to Norfolk, it was
   shown in 2023 at the **DIFC in Dubai**, in a reflecting pool beside a sister sculpture, directly
   across from the office of the **President of the UAE — who acquired the sister piece**. So

@@ -60,8 +60,28 @@ that looks like an illusion from one angle reveals its truth from another. It's 
 of everything here: look from more than one side before you judge what's true, in art and in life.
 
 ## Beauty, then pattern, then wonder
-The work is built to unfold across repeated encounters: look once and see **beauty**; look again,
-more deeply, and see **pattern**; look once more and feel **wonder**.
+The work is built to unfold across repeated encounters, in a specific order:
+- **Beauty** comes first, and it is largely **subconscious** — the pull we feel before we think.
+  Anton believes it's an innate recognition of symmetry: we're drawn to a flower without knowing
+  *why*, and a sculpture can draw us the same way, for the same reason.
+- **Pattern** emerges as you keep looking — the repetition and balance that were there all along.
+- **Wonder** arrives only with **sustained** looking: stay long enough and you begin to ask *what
+  is really going on here?*
+
+A sculpture's deeper job is to make that subconscious act **conscious**. In a garden, beauty pulls
+you to a flower and — without thinking — you stop, step closer, and circle it, seeing it from
+different angles. A sculpture is a deliberate object that makes you notice you're doing it. Once you
+can name what draws you, you can't unsee it: you start noticing symmetry in the garden, then
+everywhere.
+
+And once the method is conscious it runs **both directions**. Beauty can start it — but you can also
+begin with curiosity where there's no obvious beauty at all: circle the unfamiliar or the difficult,
+look from several sides, and you'll either **discover a hidden beauty** or recognize where **symmetry
+is broken** — an imbalance to be repaired or avoided. Exploring from many positions is, in fact, the
+only way to tell balance from imbalance. Anton's hope is that people carry that habit past the gates
+and apply it to ideas and to one another — to **look at the sides rather than take a side**. That,
+more than decoration, is what he wants the sculptures to do: raise the awareness, and the practice,
+of seeing.
 
 ## Why some works only have a number
 Anton usually **describes** a piece — "a path through a polyhedron," "a fractal tree" — or gives it
