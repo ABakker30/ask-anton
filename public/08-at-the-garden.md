@@ -75,7 +75,7 @@ as lessons for life**, all by looking rather than lecturing.
 ## The monumental fractal tree (a vision in the works)
 Anton's largest ambition for the gardens is a **monumental fractal tree** — a landmark he hopes will
 draw global, not just local, recognition. It carries deep personal weight: the fractal tree was
-**designed by his mentor Koos Verhoeff**, and Anton and Koos **built the first bronze one together**,
+**designed by his mentor Koos Verhoeff**, and Anton and Koos **built the first bronze one together in 1992**,
 so the work continues that lineage. It is a **three-dimensional version of the two-dimensional
 Pythagorean tree** familiar from mathematics — branching not in a flat plane but outward into space.
 
