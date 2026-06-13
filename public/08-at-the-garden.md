@@ -25,6 +25,45 @@ celebrate — and he has a vision for making that conversation explicit.
   *Reflection*'s twin now lives in the Emirates while this one comes home to the rose garden: the
   same gesture, an ocean apart.
 
+## The on-site artist's statements
+These are the statements placed beside the works, for a visitor standing in front of them. They are
+signed by Anton — a statement about the piece, not a biography.
+
+**Koos Knoopje**
+> You are drawn to beauty in this garden. You pause, look closer, walk around it from different
+> angles. This is natural exploration.
+>
+> This bronze knot emerges from the same atomic structures that compose everything around you. As you
+> circle it, perspective shifts. From one angle it stands upright, from another it inverts. Four
+> petals repeat, each bisected by perfect symmetry. Yet the form reveals itself differently depending
+> on where you stand.
+>
+> Beauty draws you in. Exploration reveals pattern. Sustained looking births wonder. These three are
+> not unique to gardens or art, they are everywhere. The real question is whether you will apply them
+> beyond these gates. Will you circle the unfamiliar, the difficult, the unbalanced with genuine
+> curiosity? For in that exploration lies the possibility of discovering hidden beauty, or recognizing
+> what needs to change.
+>
+> — Anton Bakker
+
+**Reflection**
+> You walk through this garden on a path. You choose where to go, what to see, what to linger over.
+> This journey is yours.
+>
+> This stainless steel sculpture traces a path through every point of its structure, a closed loop
+> that returns to where it began. Like your walk through the garden. Like your life itself.
+>
+> Not every point you visit is chosen. Some arrive unbidden. Yet each deserves the same attention.
+> Circle it. Look from different angles. Seek the beauty, the pattern, the symmetry in what you find
+> there. Some points will reveal themselves immediately. Others require sustained looking, genuine
+> exploration, before their meaning emerges.
+>
+> The garden is one point on your larger path. This sculpture is a reminder: every path, every
+> journey, every point visited, they all contain the possibility of beauty and symmetry, if you
+> choose to explore them fully.
+>
+> — Anton Bakker
+
 ## The vision
 Anton imagines the garden as a place that is at once a **museum of nature and a museum of
 sculpture** — the two read side by side. He hopes to add a **monumental fractal tree**, twenty
