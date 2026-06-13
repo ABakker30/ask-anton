@@ -5,13 +5,13 @@ It's a setting he loves, because a garden is already full of the patterns his sc
 celebrate — and he has a vision for making that conversation explicit.
 
 ## The installed works
-- **"Koos Knoopje"** — a **five-foot bronze figure-eight knot**. The name is Dutch for "Koos's
-  little knot": it honors Anton's mentor **Koos Verhoeff**, who first made this knot in straight
-  segments; Anton was the first to render it as a **flowing curve**, and named it for Koos. Its form
+- **"Koos Knoopje"** — Anton's **flowing-curve** rendering of a figure-eight knot his mentor **Koos
+  Verhoeff** first made in straight segments; the name is Dutch for "Koos's little knot." Its form
   reads like **four petal-like sections around a center** — each petal mirrored left to right, the
-  motif repeated around — so it carries a flower-like symmetry that feels at home among the
-  plantings. Walk around it and your view transforms: from one angle it stands upright, from another
-  it appears inverted — the piece itself teaching how perspective changes what you see.
+  motif repeated around — a flower-like symmetry at home among the plantings; walk around it and your
+  view transforms, upright from one angle and inverted from another, the piece itself teaching how
+  perspective changes what you see. **Two versions stand in the gardens:** one **eight feet tall in
+  red painted steel**, and one **five feet tall in bronze**.
 - **A braiding in the cube lattice** — in painted aluminum, weaving through the simplest of the
   three lattices like a knight's path on a chessboard, but in three dimensions. A good piece to
   stand in front of to *see* how a lattice is built.
