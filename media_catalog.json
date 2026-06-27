@@ -2107,5 +2107,228 @@
       "type:knot",
       "related:koos-verhoeff"
     ]
+  },
+  {
+    "id": "koos-uva-card-1952",
+    "piece": "Koos & Escher - archival documents",
+    "piece_slug": "koos-escher-documents",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-escher-documents/koos-uva-card-1952.jpg",
+    "caption": "Koos Verhoeff's University of Amsterdam admission card (Bewijs van Toegang) for 1952-1953, stamped 24 September 1952 - placing him in Amsterdam during the Mathematical Centre years.",
+    "alt": "Koos Verhoeff's University of Amsterdam admission card (Bewijs van Toegang) for 1952-1953, stamped 24 September 1952 - placing him in Amsterdam during the Mathematical Centre years.",
+    "tags": [
+      "series:koos-escher",
+      "person:koos-verhoeff",
+      "venue:university-of-amsterdam",
+      "location:amsterdam",
+      "year:1952",
+      "type:document",
+      "type:archive"
+    ]
+  },
+  {
+    "id": "koos-asva-card-1956",
+    "piece": "Koos & Escher - archival documents",
+    "piece_slug": "koos-escher-documents",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-escher-documents/koos-asva-card-1956.jpg",
+    "caption": "Koos Verhoeff's ASVA (General Student Association of Amsterdam) membership card, 1956-1957, number 5732.",
+    "alt": "Koos Verhoeff's ASVA (General Student Association of Amsterdam) membership card, 1956-1957, number 5732.",
+    "tags": [
+      "series:koos-escher",
+      "person:koos-verhoeff",
+      "location:amsterdam",
+      "year:1956",
+      "type:document",
+      "type:archive"
+    ]
+  },
+  {
+    "id": "icm-1954-proceedings",
+    "piece": "Koos & Escher - archival documents",
+    "piece_slug": "koos-escher-documents",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-escher-documents/icm-1954-proceedings.jpg",
+    "caption": "Page from the Proceedings of the 1954 International Congress of Mathematicians (Amsterdam), naming 'Mr J. Verhoeff of the Mathematical Centre' and the Escher exhibition at the Municipal Museum; illustrated with Escher's Day and Night (1938).",
+    "alt": "Page from the Proceedings of the 1954 International Congress of Mathematicians (Amsterdam), naming 'Mr J. Verhoeff of the Mathematical Centre' and the Escher exhibition at the Municipal Museum; illustrated with Escher's Day and Night (1938).",
+    "tags": [
+      "series:koos-escher",
+      "person:koos-verhoeff",
+      "person:m-c-escher",
+      "event:icm-1954",
+      "location:amsterdam",
+      "year:1954",
+      "type:document",
+      "type:archive"
+    ]
+  },
+  {
+    "id": "koos-escher-admission-1963",
+    "piece": "Koos & Escher - Escher's 1963 MC lectures (Koos's archive)",
+    "piece_slug": "koos-escher-lectures",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-escher-lectures/koos-escher-admission-1963.jpg",
+    "caption": "Admission card (Bewijs van Toegang) to M.C. Escher's two lectures at the Mathematisch Centrum, Amsterdam - Tuesday evenings 29 October and 5 November 1963, Geologisch Instituut, Nieuwe Prinsengracht 130. From Koos Verhoeff's archive (Map M 105).",
+    "alt": "Admission card (Bewijs van Toegang) to M.C. Escher's two lectures at the Mathematisch Centrum, Amsterdam - Tuesday evenings 29 October and 5 November 1963, Geologisch Instituut, Nieuwe Prinsengracht 130. From Koos Verhoeff's archive (Map M 105).",
+    "tags": [
+      "series:koos-escher",
+      "person:koos-verhoeff",
+      "person:m-c-escher",
+      "venue:mathematisch-centrum",
+      "location:amsterdam",
+      "year:1963",
+      "type:document",
+      "type:archive"
+    ]
+  },
+  {
+    "id": "m106",
+    "piece": "Koos & Escher - Escher's 1963 MC lectures (Koos's archive)",
+    "piece_slug": "koos-escher-lectures",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-escher-lectures/m106.jpg",
+    "caption": "Escher's foreword to his FIRST lecture at the Mathematisch Centrum, Amsterdam (29 October 1963). From Koos Verhoeff's archive (Map M 106).",
+    "alt": "Escher's foreword to his FIRST lecture at the Mathematisch Centrum, Amsterdam (29 October 1963). From Koos Verhoeff's archive (Map M 106).",
+    "tags": [
+      "series:koos-escher",
+      "person:koos-verhoeff",
+      "person:m-c-escher",
+      "venue:mathematisch-centrum",
+      "location:amsterdam",
+      "year:1963",
+      "type:document",
+      "type:archive"
+    ]
+  },
+  {
+    "id": "m107",
+    "piece": "Koos & Escher - Escher's 1963 MC lectures (Koos's archive)",
+    "piece_slug": "koos-escher-lectures",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-escher-lectures/m107.jpg",
+    "caption": "Escher's introduction to his SECOND lecture at the Mathematisch Centrum (5 November 1963), opening with the Grimm tale 'The Credulous King.' From Koos Verhoeff's archive (Map M 107).",
+    "alt": "Escher's introduction to his SECOND lecture at the Mathematisch Centrum (5 November 1963), opening with the Grimm tale 'The Credulous King.' From Koos Verhoeff's archive (Map M 107).",
+    "tags": [
+      "series:koos-escher",
+      "person:koos-verhoeff",
+      "person:m-c-escher",
+      "venue:mathematisch-centrum",
+      "location:amsterdam",
+      "year:1963",
+      "type:document",
+      "type:archive"
+    ]
+  },
+  {
+    "id": "m108a1",
+    "piece": "Koos & Escher - Escher's 1963 MC lectures (Koos's archive)",
+    "piece_slug": "koos-escher-lectures",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-escher-lectures/m108a1.jpg",
+    "caption": "Detailed agenda of Escher's first lecture, 'Regular Division of the Plane' (29 October 1963) - page 1 of 2. From Koos Verhoeff's archive (Map M 108a).",
+    "alt": "Detailed agenda of Escher's first lecture, 'Regular Division of the Plane' (29 October 1963) - page 1 of 2. From Koos Verhoeff's archive (Map M 108a).",
+    "tags": [
+      "series:koos-escher",
+      "person:koos-verhoeff",
+      "person:m-c-escher",
+      "venue:mathematisch-centrum",
+      "location:amsterdam",
+      "year:1963",
+      "type:document",
+      "type:archive"
+    ]
+  },
+  {
+    "id": "m108a2",
+    "piece": "Koos & Escher - Escher's 1963 MC lectures (Koos's archive)",
+    "piece_slug": "koos-escher-lectures",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-escher-lectures/m108a2.jpg",
+    "caption": "Detailed agenda of Escher's first lecture, 'Regular Division of the Plane' (29 October 1963) - page 2 of 2. From Koos Verhoeff's archive (Map M 108a).",
+    "alt": "Detailed agenda of Escher's first lecture, 'Regular Division of the Plane' (29 October 1963) - page 2 of 2. From Koos Verhoeff's archive (Map M 108a).",
+    "tags": [
+      "series:koos-escher",
+      "person:koos-verhoeff",
+      "person:m-c-escher",
+      "venue:mathematisch-centrum",
+      "location:amsterdam",
+      "year:1963",
+      "type:document",
+      "type:archive"
+    ]
+  },
+  {
+    "id": "m108b1",
+    "piece": "Koos & Escher - Escher's 1963 MC lectures (Koos's archive)",
+    "piece_slug": "koos-escher-lectures",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-escher-lectures/m108b1.jpg",
+    "caption": "Detailed agenda of Escher's second lecture, 'Possibilities, Realities' (5 November 1963) - page 1 of 2. From Koos Verhoeff's archive (Map M 108b).",
+    "alt": "Detailed agenda of Escher's second lecture, 'Possibilities, Realities' (5 November 1963) - page 1 of 2. From Koos Verhoeff's archive (Map M 108b).",
+    "tags": [
+      "series:koos-escher",
+      "person:koos-verhoeff",
+      "person:m-c-escher",
+      "venue:mathematisch-centrum",
+      "location:amsterdam",
+      "year:1963",
+      "type:document",
+      "type:archive"
+    ]
+  },
+  {
+    "id": "m108b2",
+    "piece": "Koos & Escher - Escher's 1963 MC lectures (Koos's archive)",
+    "piece_slug": "koos-escher-lectures",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-escher-lectures/m108b2.jpg",
+    "caption": "Detailed agenda of Escher's second lecture, 'Possibilities, Realities' (5 November 1963) - page 2 of 2. From Koos Verhoeff's archive (Map M 108b).",
+    "alt": "Detailed agenda of Escher's second lecture, 'Possibilities, Realities' (5 November 1963) - page 2 of 2. From Koos Verhoeff's archive (Map M 108b).",
+    "tags": [
+      "series:koos-escher",
+      "person:koos-verhoeff",
+      "person:m-c-escher",
+      "venue:mathematisch-centrum",
+      "location:amsterdam",
+      "year:1963",
+      "type:document",
+      "type:archive"
+    ]
+  },
+  {
+    "id": "vlieger-koos-portrait",
+    "piece": "Portraits by Peta Vlieger",
+    "piece_slug": "vlieger-portraits",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/vlieger-portraits/vlieger-koos-portrait.jpg",
+    "caption": "Portrait of Koos Verhoeff - oil on canvas by Peta Vlieger (Anton's late aunt), 2019, signed 'Peta'. An original painting, not a reproduction.",
+    "alt": "Portrait of Koos Verhoeff - oil on canvas by Peta Vlieger (Anton's late aunt), 2019, signed 'Peta'. An original painting, not a reproduction.",
+    "tags": [
+      "series:koos-escher",
+      "person:koos-verhoeff",
+      "artist:peta-vlieger",
+      "material:oil-on-canvas",
+      "type:painting",
+      "type:portrait",
+      "year:2019"
+    ]
+  },
+  {
+    "id": "vlieger-escher-portrait",
+    "piece": "Portraits by Peta Vlieger",
+    "piece_slug": "vlieger-portraits",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/vlieger-portraits/vlieger-escher-portrait.jpg",
+    "caption": "Portrait of M.C. Escher late in life - oil on canvas by Peta Vlieger, 2020, signed 'Peta'. The two protagonists of the Koos-Escher story, by the same family hand.",
+    "alt": "Portrait of M.C. Escher late in life - oil on canvas by Peta Vlieger, 2020, signed 'Peta'. The two protagonists of the Koos-Escher story, by the same family hand.",
+    "tags": [
+      "series:koos-escher",
+      "person:m-c-escher",
+      "artist:peta-vlieger",
+      "material:oil-on-canvas",
+      "type:painting",
+      "type:portrait",
+      "year:2020"
+    ]
   }
 ]

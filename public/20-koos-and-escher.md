@@ -46,6 +46,7 @@ sources are different ones: Koos taught Anton chess, and Koos later **succeeded 
 world champion) at Erasmus. So the Escher connection rests on the Mathematical Centre years, the
 article-gathering, the 1963 lectures, and the inscribed *Fish* print — not on chess.
 
-*Archival lecture documents from Koos's papers (Escher's lecture forewords and agendas, "Map M 106 /
-M 107 / M 108") are held in the media library; because they reproduce Escher's own copyrighted texts,
-they are kept restricted unless cleared for public use.*
+*Archival items from Koos's papers are held in the media library and may appear alongside answers:
+the 1963 admission card and Escher's lecture forewords and agendas (Map M 105–M 108), Koos's
+University of Amsterdam (1952–53) and ASVA (1956–57) cards, the 1954 ICM Proceedings page that names
+him, and Péta Vlieger's painted portraits of Koos and of Escher.*
