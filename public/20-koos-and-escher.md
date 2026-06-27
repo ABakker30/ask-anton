@@ -19,7 +19,8 @@ The detail below keeps these strands from being conflated.
 ## The Mathematical Centre years
 Koos was at the **Mathematisch Centrum (Mathematical Centre) in Amsterdam from 1951 to 1957**, where,
 minding the MC library, he **gathered articles of interest for Escher**. The relationship continued
-for years afterward. At the **1954 International Congress of Mathematicians** in Amsterdam — the
+for years afterward; in all, the **documented contact spans more than a decade**, from the early
+1950s through Escher's 1963 lectures. At the **1954 International Congress of Mathematicians** in Amsterdam — the
 congress (chaired by J.A. Schouten, the MC's founder-director) where **Coxeter and Penrose first
 encountered Escher's work**, leading to the *Circle Limit* series and to *Waterfall* / *Ascending
 and Descending* — there was an Escher exhibition at the Stedelijk Museum. **Koos was part of
@@ -64,6 +65,12 @@ There is **no document corroborating that Koos played chess with Escher.** The c
 sources are different ones: Koos taught Anton chess, and Koos later **succeeded Max Euwe** (the former
 world champion) at Erasmus. So the Escher connection rests on the Mathematical Centre years, the
 article-gathering, the 1963 lectures, and the inscribed *Fish* print — not on chess.
+
+## What is documented, and what may not be
+Koos was modest about all of this, so what survives is mostly Anton's firsthand account rather than
+Koos's own telling. **Anton suspects Koos's influence on Escher went further than can be proven
+today**, and that a good deal went unrecorded precisely because Koos never made anything of it. Anton
+plans to go through the **Escher archives** to see whether more evidence can be uncovered.
 
 ## Doris Schattschneider
 Doris Schattschneider (b. 1939) is a mathematician and Professor Emerita of Mathematics at Moravian
