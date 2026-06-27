@@ -14,17 +14,22 @@ and Descending* — there was an Escher exhibition at the Stedelijk Museum, and 
 printed Proceedings as a Mathematical Centre contributor**.
 
 ## Three distinct strands (not to be conflated)
-1. **The "two points at infinity" advice.** Escher once asked Koos for ideas about a design with two
-   points at infinity; Koos suggested placing a light source in the second point. (Family
-   recollection via Tom Verhoeff; no specific print or date attached — and *not* the reason for the
-   inscribed print below.)
+1. **Advice on the center of *Print Gallery*.** Koos told Anton directly (and told his son Ben
+   Verhoeff the same story) that he advised Escher on the famous problem of the **center of *Print
+   Gallery*** (*Prentententoonstelling*, 1956). Escher's image is a cyclic, exponential grid
+   expansion that converges to a singularity at the middle, which Escher left as a blank circular void
+   with his signature, unable to resolve it. Koos's suggestion concerned the design's two points at
+   infinity: place a light source in the second point. This is **Anton's firsthand recollection of
+   what Koos told him, corroborated by Ben** — oral history, not yet documented in print. (The blank
+   center later became famous through Bart de Smit and Hendrik Lenstra's 2003 mathematical
+   reconstruction at Leiden, "Escher and the Droste effect.")
 2. **The 1963 lectures and the inscribed *Fish* print.** In autumn 1963 Escher gave a two-lecture
    series at the Mathematisch Centrum. Koos attended, met Escher between the talks, and **helped
    reshape the introduction, format, and agenda of the second lecture**. The day after that lecture,
    Escher gave Koos the woodcut **"Fish,"** inscribed *"voor drs. J. Verhoeff, met dank van M.C.
    Escher — 6-XI-'63"* ("for drs. J. Verhoeff, with thanks from M.C. Escher — 6 November 1963").
-   **The print was a thank-you for Koos's help refining the lecture** — not for the two-points advice,
-   and not related to *Print Gallery*.
+   **The print was a thank-you for Koos's help refining the lecture** — a separate matter from the
+   earlier *Print Gallery* advice in strand 1.
 3. **The institutional MC print (separate).** After the 1954 congress, Escher sent the Mathematical
    Centre *as an institution* a print (to Prof. J.A. Schouten), thanking it for organizing his
    breakthrough exhibition — a different gift from Koos's personal *Fish* print.
