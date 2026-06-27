@@ -2330,5 +2330,23 @@
       "type:portrait",
       "year:2020"
     ]
+  },
+  {
+    "id": "fish-print",
+    "piece": "Escher's 'Fish' woodcut, inscribed to Koos Verhoeff (1963)",
+    "piece_slug": "koos-escher-fish-print",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-escher-fish-print/fish-print.jpg",
+    "caption": "M.C. Escher's woodcut 'Fish,' the impression Escher gave Koos Verhoeff, inscribed \"voor drs. J. Verhoeff, met dank van M.C. Escher - 6-XI-'63\" (\"for drs. J. Verhoeff, with thanks from M.C. Escher - 6 November 1963\"), with the MCE monogram lower-left. Escher's thank-you for Koos's help reshaping his second 1963 Mathematisch Centrum lecture.",
+    "alt": "M.C. Escher's woodcut 'Fish,' the impression Escher gave Koos Verhoeff, inscribed \"voor drs. J. Verhoeff, met dank van M.C. Escher - 6-XI-'63\" (\"for drs. J. Verhoeff, with thanks from M.C. Escher - 6 November 1963\"), with the MCE monogram lower-left. Escher's thank-you for Koos's help reshaping his second 1963 Mathematisch Centrum lecture.",
+    "tags": [
+      "series:koos-escher",
+      "person:m-c-escher",
+      "person:koos-verhoeff",
+      "artist:m-c-escher",
+      "type:woodcut",
+      "type:print",
+      "year:1963"
+    ]
   }
 ]
