@@ -22,6 +22,7 @@
   table { width:100%; border-collapse:collapse; font-size:14px; }
   td { padding:6px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
   td.n { text-align:right; color:var(--accent); width:64px; white-space:nowrap; }
+  td.date { color:var(--muted); white-space:nowrap; width:150px; vertical-align:top; }
   .bar { background:var(--panel); border-radius:4px; height:8px; margin-top:4px; }
   .bar > i { display:block; height:8px; background:var(--accent); border-radius:4px; }
   .cols { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
@@ -95,6 +96,26 @@
     const day = d.by_day || [];
     const s1 = el("section"); s1.appendChild(el("h2",null,"Usage by day"));
     s1.appendChild(table(day, "day", "asks", maxOf(day,"asks"))); m.appendChild(s1);
+
+    const srq = el("section"); srq.appendChild(el("h2",null,"Recent questions (newest first)"));
+    if (!("recent_questions" in d)) {
+      srq.appendChild(el("p",{class:"muted"},"Run the updated ask_stats function to enable this view."));
+    } else {
+      const rq = d.recent_questions || [];
+      const tq = el("table");
+      tq.appendChild(el("tr", null, "<th>When</th><th>Question</th><th>Via</th>"));
+      rq.forEach(r => {
+        const tr = el("tr");
+        let w = ""; try { w = new Date(r.created_at).toLocaleString(); } catch(e) {}
+        tr.appendChild(el("td", {class:"date"}, esc(w)));
+        tr.appendChild(el("td", null, esc(r.question)));
+        tr.appendChild(el("td", {class:"muted"}, esc((r.source||"") + (r.country ? " / "+r.country : ""))));
+        tq.appendChild(tr);
+      });
+      if (!rq.length) tq.appendChild(el("tr", null, '<td colspan="3" class="muted">No questions recorded yet.</td>'));
+      srq.appendChild(tq);
+    }
+    m.appendChild(srq);
 
     const cols = el("div", {class:"cols"});
     const sq = el("section"); sq.appendChild(el("h2",null,"Top questions"));
