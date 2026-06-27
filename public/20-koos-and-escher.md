@@ -60,11 +60,11 @@ Centre."
   recognizable reality, and builds deliberately to the "impossible objects" climax. Anton and Tom
   Verhoeff read **Koos's structural hand** in that reshaping — the reason Escher's thank-you followed.
 
-## A note on the chess question
-There is **no document corroborating that Koos played chess with Escher.** The chess threads in the
-sources are different ones: Koos taught Anton chess, and Koos later **succeeded Max Euwe** (the former
-world champion) at Erasmus. So the Escher connection rests on the Mathematical Centre years, the
-article-gathering, the 1963 lectures, and the inscribed *Fish* print — not on chess.
+## Chess with Escher
+**Koos told Anton that he played a few games of chess with Escher.** This is Anton's firsthand
+recollection of what Koos said, an oral account rather than a written record (as with the *Print
+Gallery* advice). Two other chess threads are separate and should not be confused with it: Koos
+taught Anton chess, and Koos later **succeeded Max Euwe** (the former world champion) at Erasmus.
 
 ## What is documented, and what may not be
 Koos was modest about all of this, so what survives is mostly Anton's firsthand account rather than
