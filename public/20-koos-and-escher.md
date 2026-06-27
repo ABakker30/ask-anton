@@ -1,8 +1,20 @@
 # Koos Verhoeff and M.C. Escher
 
 Anton's mentor **Koos Verhoeff** (Jacobus "Koos" Verhoeff, 1927–2018) knew **M.C. Escher**, and the
-connection is part of Anton's lineage. The account below is the corrected record (it answers
-questions scholars have asked, and keeps three separate strands from being conflated).
+connection is part of Anton's lineage. Koos was a **very humble man** who never made anything of his
+work with Escher, so much of this survives as Anton's firsthand account rather than as Koos's own
+telling.
+
+**The essential facts:**
+1. At the Mathematical Centre, from his desk in the library, Koos **selected and gathered material
+   for Escher**.
+2. He **advised Escher on *Print Gallery*** — specifically the problem of its center.
+3. He **helped reshape Escher's second 1963 lecture**, and Escher thanked him with the inscribed
+   woodcut *Fish*. The print was for the **lecture help, not for the *Print Gallery* advice** — those
+   are two different things.
+4. He was **part of organizing the 1954 congress** that brought Escher to wide mathematical attention.
+
+The detail below keeps these strands from being conflated.
 
 ## The Mathematical Centre years
 Koos was at the **Mathematisch Centrum (Mathematical Centre) in Amsterdam from 1951 to 1957**, where,
@@ -10,8 +22,10 @@ minding the MC library, he **gathered articles of interest for Escher**. The rel
 for years afterward. At the **1954 International Congress of Mathematicians** in Amsterdam — the
 congress (chaired by J.A. Schouten, the MC's founder-director) where **Coxeter and Penrose first
 encountered Escher's work**, leading to the *Circle Limit* series and to *Waterfall* / *Ascending
-and Descending* — there was an Escher exhibition at the Stedelijk Museum, and **Koos is named in the
-printed Proceedings as a Mathematical Centre contributor**.
+and Descending* — there was an Escher exhibition at the Stedelijk Museum. **Koos was part of
+organizing the congress through the Mathematical Centre**: the printed Proceedings single him out,
+recording the Organizing Committee as "especially indebted to Mr J. Verhoeff of the Mathematical
+Centre."
 
 ## Three distinct strands (not to be conflated)
 1. **Advice on the center of *Print Gallery*.** Koos told Anton directly (and told his son Ben
