@@ -46,6 +46,15 @@ sources are different ones: Koos taught Anton chess, and Koos later **succeeded 
 world champion) at Erasmus. So the Escher connection rests on the Mathematical Centre years, the
 article-gathering, the 1963 lectures, and the inscribed *Fish* print — not on chess.
 
+## Doris Schattschneider
+Doris Schattschneider (b. 1939) is a mathematician and Professor Emerita of Mathematics at Moravian
+College, and one of the foremost scholars of M.C. Escher's work. Her 1990 book *Visions of Symmetry*
+is the definitive study of Escher's regular division of the plane. She earned her Ph.D. in mathematics
+at Yale, was the first woman editor of *Mathematics Magazine*, and received the Mathematical
+Association of America's Award for Distinguished Teaching. She has been in touch with Anton about a
+catalog essay on the mathematicians who interacted with Escher (Koos Verhoeff among them), which
+prompted assembling the record above.
+
 *Archival items from Koos's papers are held in the media library and may appear alongside answers:
 the 1963 admission card and Escher's lecture forewords and agendas (Map M 105–M 108), Koos's
 University of Amsterdam (1952–53) and ASVA (1956–57) cards, the 1954 ICM Proceedings page that names
