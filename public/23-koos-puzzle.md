@@ -7,10 +7,12 @@ named A through Y**, and each piece is a cluster of **four connected spheres** i
 adjacency. One full set is 100 spheres, and the challenge is to assemble them into a target
 shape: a stacked 5×5×4 arrangement, a pyramid, or any of countless other forms.
 
-The numbers get out of hand almost immediately. Once the orientations and placements of all
-25 pieces are counted, the combinatorial space **exceeds 10⁸⁰ — more combinations than there
-are atoms in the observable universe**. It was Anton's first encounter with a lifelong theme:
-finding beauty inside vast mathematical spaces.
+The numbers get out of hand almost immediately. The 25 pieces have **475 distinct
+orientations** between them — from 2 for the most symmetric piece to 48. Computed exactly
+from the piece data, the classic 100-sphere shape admits **nearly 10⁹³ ways to attempt an
+assembly — over a trillion times the number of atoms in the observable universe** (~10⁸⁰),
+and the largest shapes push past 10¹⁰⁰. It was Anton's first encounter with a lifelong
+theme: finding beauty inside vast mathematical spaces.
 
 Anton named the puzzle for his mentor, **Koos Verhoeff**. Today it lives on as a free web
 app at **koospuzzle.com**.
