@@ -23,9 +23,7 @@ Project — the computer-controlled tilting maze they built together in the late
 two began the **Ball Puzzle Project** in the early 1980s: many balls forming shapes, pieces
 defined as 4-sphere clusters in FCC packing, and the central problem of counting each
 piece's valid orientations within the lattice. Computing was severe in those days —
-assembly-language era, hand-built machines — which forced careful representation and taught
-a practical lesson Anton still quotes: sometimes clever heuristics lose to brute force, and
-in a space that large, **where you start searching matters. Luck is part of the method.**
+assembly-language era, hand-built machines — which forced careful representation.
 
 ## The Hollow Pyramid
 The most legendary target shape was the **Hollow Pyramid**. For many years nobody knew
