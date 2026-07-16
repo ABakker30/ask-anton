@@ -204,6 +204,27 @@
   const input = document.getElementById("q");
   const sendBtn = document.getElementById("send");
   const suggestions = document.getElementById("suggestions");
+
+  // Visitors arriving from the Koos Puzzle app (its Ask Anton overlay passes
+  // ?campaign=koospuzzle) get puzzle-first starter questions. Runs before the
+  // pill click-binding at the bottom of this script, so the swapped buttons
+  // get handlers like the defaults.
+  if (new URLSearchParams(location.search).get("campaign") === "koospuzzle") {
+    suggestions.innerHTML = "";
+    [
+      "What is the Koos puzzle?",
+      "Who was Koos Verhoeff?",
+      "How many ways can the pieces combine?",
+      "What is the Hollow Pyramid story?",
+      "How does the puzzle connect to your sculpture?",
+      "What is your work about?",
+    ].forEach((q) => {
+      const b = document.createElement("button");
+      b.textContent = q;
+      suggestions.appendChild(b);
+    });
+  }
+
   const history = [];
   let lastPiece = "";     // most recent piece shown, used to pre-scope an inquiry
   let answerCount = 0;    // gentle email card appears after a couple of answers
