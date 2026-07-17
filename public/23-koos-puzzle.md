@@ -53,7 +53,7 @@ Anton has also built **working physical prototypes** of the puzzle — glossy re
 white, and brushed stainless-steel piece sets, with a dimpled play tray that registers the
 bottom layer of spheres and doubles as the lid of the prototype storage case for the pieces. It is a **prototype he is
 considering manufacturing if there is enough interest**: anyone who would want one can say
-so through the *Join the list* or *Inquire* options here, and interest is exactly what will
+so through the *Join the list* or *Inquire* options here, or directly in the app at **koospuzzle.com/prototype** (photos of the prototypes and build updates live there too), and interest is exactly what will
 decide whether it goes into production.
 
 ## How it connects to the artwork
