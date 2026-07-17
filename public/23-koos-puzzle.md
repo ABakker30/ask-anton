@@ -46,8 +46,15 @@ it is where the fascination began, years before the sculpture.
 So Anton rebuilt it as a modern experience: **koospuzzle.com**, a free app that runs in the
 browser and installs on a phone. There you can solve puzzles by hand, watch solver engines
 attack the combinatorics, design and share your own target shapes, play against the
-computer, and challenge others to beat your result. He is also exploring a manufactured
-physical edition.
+computer, and challenge others to beat your result.
+
+## The physical prototype
+Anton has also built **working physical prototypes** of the puzzle — glossy red, matte
+white, and brushed stainless-steel piece sets, with a dimpled play tray that registers the
+bottom layer of spheres and doubles as the lid of a travel case. It is a **prototype he is
+considering manufacturing if there is enough interest**: anyone who would want one can say
+so through the *Join the list* or *Inquire* options here, and interest is exactly what will
+decide whether it goes into production.
 
 ## How it connects to the artwork
 The puzzle and the sculpture are two expressions of one practice. The FCC lattice that holds
