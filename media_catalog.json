@@ -2348,5 +2348,332 @@
       "type:print",
       "year:1963"
     ]
+  },
+  {
+    "id": "koos-red-build-on-tray",
+    "piece": "The Koos Puzzle",
+    "piece_slug": "koos-puzzle",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-puzzle/red-build-on-tray.jpg",
+    "caption": "A shape mid-build in the red physical edition of the Koos puzzle, on the dimpled KOOS PUZZLE tray that registers the bottom layer of spheres.",
+    "alt": "A shape mid-build in the red physical edition of the Koos puzzle, on the dimpled KOOS PUZZLE tray that registers the bottom layer of spheres.",
+    "tags": [
+      "type:physical-edition",
+      "color:red",
+      "subject:tray",
+      "year:2025"
+    ]
+  },
+  {
+    "id": "koos-red-tall-shape-tray",
+    "piece": "The Koos Puzzle",
+    "piece_slug": "koos-puzzle",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-puzzle/red-tall-shape-tray.jpg",
+    "caption": "A tall ridge shape built from the red physical edition of the Koos puzzle, standing on the play tray.",
+    "alt": "A tall ridge shape built from the red physical edition of the Koos puzzle, standing on the play tray.",
+    "tags": [
+      "type:physical-edition",
+      "color:red",
+      "subject:completed-shape",
+      "year:2025"
+    ]
+  },
+  {
+    "id": "koos-render-25-pieces",
+    "piece": "The Koos Puzzle",
+    "piece_slug": "koos-puzzle",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-puzzle/render-25-pieces.jpg",
+    "caption": "All 25 Koos puzzle pieces — every distinct way to join four spheres in the FCC lattice — laid out in a design render.",
+    "alt": "All 25 Koos puzzle pieces — every distinct way to join four spheres in the FCC lattice — laid out in a design render.",
+    "tags": [
+      "type:design-render",
+      "subject:pieces",
+      "topic:fcc-lattice"
+    ]
+  },
+  {
+    "id": "koos-render-travel-case",
+    "piece": "The Koos Puzzle",
+    "piece_slug": "koos-puzzle",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-puzzle/render-travel-case.jpg",
+    "caption": "Design render of the Koos puzzle travel case: the dimpled play tray doubles as the lid, closed with a red KOOS PUZZLE band.",
+    "alt": "Design render of the Koos puzzle travel case: the dimpled play tray doubles as the lid, closed with a red KOOS PUZZLE band.",
+    "tags": [
+      "type:design-render",
+      "subject:case"
+    ]
+  },
+  {
+    "id": "koos-white-prototype-pieces",
+    "piece": "The Koos Puzzle",
+    "piece_slug": "koos-puzzle",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-puzzle/white-prototype-pieces.jpg",
+    "caption": "Early prototype pieces of the physical Koos puzzle, printed in matte white and laid out for inspection.",
+    "alt": "Early prototype pieces of the physical Koos puzzle, printed in matte white and laid out for inspection.",
+    "tags": [
+      "type:physical-edition",
+      "type:prototype",
+      "color:white",
+      "subject:pieces"
+    ]
+  },
+  {
+    "id": "koos-red-set-laid-out",
+    "piece": "The Koos Puzzle",
+    "piece_slug": "koos-puzzle",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-puzzle/red-set-laid-out.jpg",
+    "caption": "A full 25-piece set of the red physical edition laid out on the table before a solve.",
+    "alt": "A full 25-piece set of the red physical edition laid out on the table before a solve.",
+    "tags": [
+      "type:physical-edition",
+      "color:red",
+      "subject:pieces",
+      "year:2026"
+    ]
+  },
+  {
+    "id": "koos-red-roof-shape",
+    "piece": "The Koos Puzzle",
+    "piece_slug": "koos-puzzle",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-puzzle/red-roof-shape.jpg",
+    "caption": "A completed 100-sphere roof shape in the glossy red edition — all 25 pieces used exactly once.",
+    "alt": "A completed 100-sphere roof shape in the glossy red edition — all 25 pieces used exactly once.",
+    "tags": [
+      "type:physical-edition",
+      "color:red",
+      "subject:completed-shape",
+      "year:2025"
+    ]
+  },
+  {
+    "id": "koos-red-prism-angle",
+    "piece": "The Koos Puzzle",
+    "piece_slug": "koos-puzzle",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-puzzle/red-prism-angle.jpg",
+    "caption": "The red 100-sphere roof shape seen from the ridge end, showing the stacked FCC layers.",
+    "alt": "The red 100-sphere roof shape seen from the ridge end, showing the stacked FCC layers.",
+    "tags": [
+      "type:physical-edition",
+      "color:red",
+      "subject:completed-shape",
+      "year:2025"
+    ]
+  },
+  {
+    "id": "koos-red-roof-closeup",
+    "piece": "The Koos Puzzle",
+    "piece_slug": "koos-puzzle",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-puzzle/red-roof-closeup.jpg",
+    "caption": "Close-up of the completed red roof shape: five FCC layers of spheres locking into one form.",
+    "alt": "Close-up of the completed red roof shape: five FCC layers of spheres locking into one form.",
+    "tags": [
+      "type:physical-edition",
+      "color:red",
+      "subject:completed-shape",
+      "year:2025"
+    ]
+  },
+  {
+    "id": "koos-red-half-pyramid-tray",
+    "piece": "The Koos Puzzle",
+    "piece_slug": "koos-puzzle",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-puzzle/red-half-pyramid-tray.jpg",
+    "caption": "A completed build in the red edition on the Koos puzzle tray at home.",
+    "alt": "A completed build in the red edition on the Koos puzzle tray at home.",
+    "tags": [
+      "type:physical-edition",
+      "color:red",
+      "subject:completed-shape",
+      "year:2026"
+    ]
+  },
+  {
+    "id": "koos-red-shape-tray-angle",
+    "piece": "The Koos Puzzle",
+    "piece_slug": "koos-puzzle",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-puzzle/red-shape-tray-angle.jpg",
+    "caption": "The red edition assembled on the play tray — the tray dimples hold the bottom layer in the FCC grid.",
+    "alt": "The red edition assembled on the play tray — the tray dimples hold the bottom layer in the FCC grid.",
+    "tags": [
+      "type:physical-edition",
+      "color:red",
+      "subject:tray",
+      "year:2026"
+    ]
+  },
+  {
+    "id": "koos-white-dome-tray",
+    "piece": "The Koos Puzzle",
+    "piece_slug": "koos-puzzle",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-puzzle/white-dome-tray.jpg",
+    "caption": "A dome-like target shape completed in the matte white edition on the tray.",
+    "alt": "A dome-like target shape completed in the matte white edition on the tray.",
+    "tags": [
+      "type:physical-edition",
+      "color:white",
+      "subject:completed-shape",
+      "year:2026"
+    ]
+  },
+  {
+    "id": "koos-red-pyramid-tray",
+    "piece": "The Koos Puzzle",
+    "piece_slug": "koos-puzzle",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-puzzle/red-pyramid-tray.jpg",
+    "caption": "A completed red pyramid on the KOOS PUZZLE tray — the classic target form of the puzzle.",
+    "alt": "A completed red pyramid on the KOOS PUZZLE tray — the classic target form of the puzzle.",
+    "tags": [
+      "type:physical-edition",
+      "color:red",
+      "subject:pyramid",
+      "year:2026"
+    ]
+  },
+  {
+    "id": "koos-white-roof-tray",
+    "piece": "The Koos Puzzle",
+    "piece_slug": "koos-puzzle",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-puzzle/white-roof-tray.jpg",
+    "caption": "The roof shape completed in the white edition on the play tray.",
+    "alt": "The roof shape completed in the white edition on the play tray.",
+    "tags": [
+      "type:physical-edition",
+      "color:white",
+      "subject:completed-shape",
+      "year:2026"
+    ]
+  },
+  {
+    "id": "koos-red-mid-solve",
+    "piece": "The Koos Puzzle",
+    "piece_slug": "koos-puzzle",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-puzzle/red-mid-solve.jpg",
+    "caption": "Mid-solve: red pieces interlocking upward before the final shape resolves.",
+    "alt": "Mid-solve: red pieces interlocking upward before the final shape resolves.",
+    "tags": [
+      "type:physical-edition",
+      "color:red",
+      "subject:solving",
+      "year:2026"
+    ]
+  },
+  {
+    "id": "koos-steel-pyramid",
+    "piece": "The Koos Puzzle",
+    "piece_slug": "koos-puzzle",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-puzzle/steel-pyramid.jpg",
+    "caption": "A pyramid built in brushed stainless steel — the metal edition of the Koos puzzle.",
+    "alt": "A pyramid built in brushed stainless steel — the metal edition of the Koos puzzle.",
+    "tags": [
+      "type:physical-edition",
+      "color:steel",
+      "subject:pyramid",
+      "material:stainless-steel"
+    ]
+  },
+  {
+    "id": "koos-vintage-koos-at-work",
+    "piece": "Ball Puzzle Project (origins)",
+    "piece_slug": "koos-puzzle",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-puzzle/vintage-koos-at-work.jpg",
+    "caption": "Koos Verhoeff at work on the original ball puzzle in the early 1980s, placing pieces on a styrofoam tray (family archive).",
+    "alt": "Koos Verhoeff at work on the original ball puzzle in the early 1980s, placing pieces on a styrofoam tray (family archive).",
+    "tags": [
+      "type:archive",
+      "person:koos-verhoeff",
+      "era:1980s",
+      "provenance:family-archive"
+    ]
+  },
+  {
+    "id": "koos-vintage-pyramid",
+    "piece": "Ball Puzzle Project (origins)",
+    "piece_slug": "koos-puzzle",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-puzzle/vintage-pyramid.jpg",
+    "caption": "An original ball-puzzle pyramid photographed during the Ball Puzzle Project, early 1980s (family archive).",
+    "alt": "An original ball-puzzle pyramid photographed during the Ball Puzzle Project, early 1980s (family archive).",
+    "tags": [
+      "type:archive",
+      "subject:pyramid",
+      "era:1980s",
+      "provenance:family-archive"
+    ]
+  },
+  {
+    "id": "koos-vintage-still-life",
+    "piece": "Ball Puzzle Project (origins)",
+    "piece_slug": "koos-puzzle",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-puzzle/vintage-still-life.jpg",
+    "caption": "A 1980s still life from the Ball Puzzle Project: an abacus, a woven knot ball, and two completed ball-puzzle shapes (family archive).",
+    "alt": "A 1980s still life from the Ball Puzzle Project: an abacus, a woven knot ball, and two completed ball-puzzle shapes (family archive).",
+    "tags": [
+      "type:archive",
+      "era:1980s",
+      "subject:still-life",
+      "provenance:family-archive"
+    ]
+  },
+  {
+    "id": "koos-vintage-knot-pyramid",
+    "piece": "Ball Puzzle Project (origins)",
+    "piece_slug": "koos-puzzle",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-puzzle/vintage-knot-pyramid.jpg",
+    "caption": "The woven knot ball beside a completed ball-puzzle pyramid, photographed in the early 1980s (family archive).",
+    "alt": "The woven knot ball beside a completed ball-puzzle pyramid, photographed in the early 1980s (family archive).",
+    "tags": [
+      "type:archive",
+      "era:1980s",
+      "subject:pyramid",
+      "provenance:family-archive"
+    ]
+  },
+  {
+    "id": "koos-anton-with-pyramid",
+    "piece": "The Koos Puzzle",
+    "piece_slug": "koos-puzzle",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-puzzle/anton-with-pyramid.jpg",
+    "caption": "Anton with a completed red pyramid on the Koos puzzle tray, 2026.",
+    "alt": "Anton with a completed red pyramid on the Koos puzzle tray, 2026.",
+    "tags": [
+      "type:physical-edition",
+      "person:anton-bakker",
+      "subject:pyramid",
+      "year:2026"
+    ]
+  },
+  {
+    "id": "koos-anton-solving",
+    "piece": "The Koos Puzzle",
+    "piece_slug": "koos-puzzle",
+    "kind": "image",
+    "url": "https://qvzqdjxdfxlciieboguq.supabase.co/storage/v1/object/public/media/koos-puzzle/anton-solving.jpg",
+    "caption": "Anton solving the physical Koos puzzle in red and white pieces, 2026.",
+    "alt": "Anton solving the physical Koos puzzle in red and white pieces, 2026.",
+    "tags": [
+      "type:physical-edition",
+      "person:anton-bakker",
+      "subject:solving",
+      "year:2026"
+    ]
   }
 ]
