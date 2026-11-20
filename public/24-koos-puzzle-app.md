@@ -1,7 +1,7 @@
 # The Koos Puzzle App (koospuzzle.com)
 
 ## What it is
-**koospuzzle.com** is the free web app where Anton's ball puzzle lives today. It runs in any
+**koospuzzle.com** is the free web app where Koos Verhoeff's ball puzzle lives today, rebuilt by Anton. It runs in any
 browser, installs on a phone like a native app, needs no account to play, and speaks twelve
 languages. Everything in it grows from one object: the 25 four-sphere pieces in the FCC
 lattice.

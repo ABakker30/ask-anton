@@ -7,7 +7,7 @@ figure and mentor. Their collaboration began in 1979 and lasted decades.
 
 ## The formative projects
 Anton's apprenticeship ran through hands-on projects — among them a computer-controlled tilting
-ball maze and a sphere-packing puzzle built on the FCC lattice, with a combinatorial space larger
+ball maze and Koos's sphere-packing puzzle built on the FCC lattice, with a combinatorial space larger
 than the number of atoms in the universe. These taught him separation of concerns, clean
 interfaces, simulating to tame chaos, and the courage to start over. They also seeded a lifelong
 fascination: finding beauty inside vast mathematical spaces.

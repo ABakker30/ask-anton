@@ -14,13 +14,14 @@ assembly — over a trillion times the number of atoms in the observable univers
 and the largest shapes push past 10¹⁰⁰. It was Anton's first encounter with a lifelong
 theme: finding beauty inside vast mathematical spaces.
 
-Anton named the puzzle for his mentor, **Koos Verhoeff**. Today it lives on as a free web
-app at **koospuzzle.com**.
+The puzzle is **Koos Verhoeff's invention**, and it carries his name. Anton, who worked on it
+with him as a young collaborator, has brought it back to life as a free web app at
+**koospuzzle.com**.
 
 ## Origin: the Ball Puzzle Project (early 1980s)
-The puzzle grew directly out of Anton's apprenticeship with Koos. After the Ball Maze
-Project — the computer-controlled tilting maze they built together in the late 1970s — the
-two began the **Ball Puzzle Project** in the early 1980s: many balls forming shapes, pieces
+**Koos invented the puzzle** in the early 1980s, after the Ball Maze Project — the
+computer-controlled tilting maze he and Anton built together in the late 1970s. The young
+Anton worked on it alongside him in what they called the **Ball Puzzle Project**: many balls forming shapes, pieces
 defined as 4-sphere clusters in FCC packing, and the central problem of counting each
 piece's valid orientations within the lattice. Computing was severe in those days —
 assembly-language era, hand-built machines — which forced careful representation.
