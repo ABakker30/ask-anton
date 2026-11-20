@@ -2675,5 +2675,252 @@
       "subject:solving",
       "year:2026"
     ]
+  },
+  {
+    "id": "pp-kk-marble-1",
+    "piece": "Koos Knoopje (marble)",
+    "piece_slug": "koos-knoopje-marble",
+    "kind": "image",
+    "url": "https://abakker30.github.io/antonbakker-works/media/koos-knoopje/01.jpg",
+    "caption": "Koos Knoopje, the flowing figure-eight knot after Koos Verhoeff's design, here in white Carrara marble, 50 cm.",
+    "alt": "Koos Knoopje, the flowing figure-eight knot after Koos Verhoeff's design, here in white Carrara marble, 50 cm.",
+    "tags": [
+      "series:piece-pages",
+      "year:2026",
+      "series:koos-knoopje",
+      "material:carrara-marble"
+    ]
+  },
+  {
+    "id": "pp-kk-marble-2",
+    "piece": "Koos Knoopje (marble)",
+    "piece_slug": "koos-knoopje-marble",
+    "kind": "image",
+    "url": "https://abakker30.github.io/antonbakker-works/media/koos-knoopje/02.jpg",
+    "caption": "The marble Koos Knoopje from one side: the knot upright, its petal-like loops opening upward.",
+    "alt": "The marble Koos Knoopje from one side: the knot upright, its petal-like loops opening upward.",
+    "tags": [
+      "series:piece-pages",
+      "year:2026",
+      "series:koos-knoopje",
+      "material:carrara-marble",
+      "subject:perspective"
+    ]
+  },
+  {
+    "id": "pp-kk-marble-3",
+    "piece": "Koos Knoopje (marble)",
+    "piece_slug": "koos-knoopje-marble",
+    "kind": "image",
+    "url": "https://abakker30.github.io/antonbakker-works/media/koos-knoopje/03.jpg",
+    "caption": "The same marble Koos Knoopje a quarter turn around: the knot now appears upside down.",
+    "alt": "The same marble Koos Knoopje a quarter turn around: the knot now appears upside down.",
+    "tags": [
+      "series:piece-pages",
+      "year:2026",
+      "series:koos-knoopje",
+      "material:carrara-marble",
+      "subject:perspective"
+    ]
+  },
+  {
+    "id": "pp-kk-marble-film",
+    "piece": "Koos Knoopje (marble)",
+    "piece_slug": "koos-knoopje-marble",
+    "kind": "video",
+    "url": "https://abakker30.github.io/antonbakker-works/media/koos-knoopje/film.mp4",
+    "caption": "Walking around the marble Koos Knoopje: watch the knot turn over as the viewpoint changes.",
+    "alt": "Walking around the marble Koos Knoopje: watch the knot turn over as the viewpoint changes.",
+    "tags": [
+      "series:piece-pages",
+      "year:2026",
+      "series:koos-knoopje",
+      "material:carrara-marble",
+      "subject:perspective"
+    ]
+  },
+  {
+    "id": "pp-clara-1m",
+    "piece": "Clara (1 m)",
+    "piece_slug": "clara-1m",
+    "kind": "image",
+    "url": "https://abakker30.github.io/antonbakker-works/media/clara-1m/01.jpg",
+    "caption": "Clara, two joined spirals in Carrara marble, one metre tall.",
+    "alt": "Clara, two joined spirals in Carrara marble, one metre tall.",
+    "tags": [
+      "series:piece-pages",
+      "year:2026",
+      "series:clara",
+      "material:carrara-marble"
+    ]
+  },
+  {
+    "id": "pp-clara-50-1",
+    "piece": "Clara (50 cm)",
+    "piece_slug": "clara-50cm",
+    "kind": "image",
+    "url": "https://abakker30.github.io/antonbakker-works/media/clara-50cm/01.jpg",
+    "caption": "The small Clara: the same two-spiral design in Carrara marble at 50 cm.",
+    "alt": "The small Clara: the same two-spiral design in Carrara marble at 50 cm.",
+    "tags": [
+      "series:piece-pages",
+      "year:2026",
+      "series:clara",
+      "material:carrara-marble"
+    ]
+  },
+  {
+    "id": "pp-clara-50-2",
+    "piece": "Clara (50 cm)",
+    "piece_slug": "clara-50cm",
+    "kind": "image",
+    "url": "https://abakker30.github.io/antonbakker-works/media/clara-50cm/03.jpg",
+    "caption": "The small Clara in Carrara marble from another side: the two spirals read differently as you move.",
+    "alt": "The small Clara in Carrara marble from another side: the two spirals read differently as you move.",
+    "tags": [
+      "series:piece-pages",
+      "year:2026",
+      "series:clara",
+      "material:carrara-marble",
+      "subject:perspective"
+    ]
+  },
+  {
+    "id": "pp-clara-50-film",
+    "piece": "Clara (50 cm)",
+    "piece_slug": "clara-50cm",
+    "kind": "video",
+    "url": "https://abakker30.github.io/antonbakker-works/media/clara-50cm/film.mp4",
+    "caption": "Walking around the small Clara in Carrara marble.",
+    "alt": "Walking around the small Clara in Carrara marble.",
+    "tags": [
+      "series:piece-pages",
+      "year:2026",
+      "series:clara",
+      "material:carrara-marble"
+    ]
+  },
+  {
+    "id": "pp-infinity-1",
+    "piece": "Infinity (pink marble)",
+    "piece_slug": "pink-infinity",
+    "kind": "image",
+    "url": "https://abakker30.github.io/antonbakker-works/media/pink-infinity/05.jpg",
+    "caption": "Infinity in pink Portuguese marble, 50 cm, seen from the angle where it reads as an infinity sign. Studio photograph.",
+    "alt": "Infinity in pink Portuguese marble, 50 cm, seen from the angle where it reads as an infinity sign. Studio photograph.",
+    "tags": [
+      "series:piece-pages",
+      "year:2026",
+      "material:pink-portuguese-marble",
+      "subject:optical-illusion"
+    ]
+  },
+  {
+    "id": "pp-infinity-2",
+    "piece": "Infinity (pink marble)",
+    "piece_slug": "pink-infinity",
+    "kind": "image",
+    "url": "https://abakker30.github.io/antonbakker-works/media/pink-infinity/03.jpg",
+    "caption": "Infinity in pink Portuguese marble from another angle, where it becomes a different form entirely. Studio photograph.",
+    "alt": "Infinity in pink Portuguese marble from another angle, where it becomes a different form entirely. Studio photograph.",
+    "tags": [
+      "series:piece-pages",
+      "year:2026",
+      "material:pink-portuguese-marble",
+      "subject:optical-illusion",
+      "subject:perspective"
+    ]
+  },
+  {
+    "id": "pp-infinity-film",
+    "piece": "Infinity (pink marble)",
+    "piece_slug": "pink-infinity",
+    "kind": "video",
+    "url": "https://abakker30.github.io/antonbakker-works/media/pink-infinity/film.mp4",
+    "caption": "Walking around Infinity in pink Portuguese marble: the infinity sign appears, and dissolves.",
+    "alt": "Walking around Infinity in pink Portuguese marble: the infinity sign appears, and dissolves.",
+    "tags": [
+      "series:piece-pages",
+      "year:2026",
+      "material:pink-portuguese-marble",
+      "subject:optical-illusion",
+      "subject:perspective"
+    ]
+  },
+  {
+    "id": "pp-quartangle-1",
+    "piece": "Quartangle",
+    "piece_slug": "quartangle",
+    "kind": "image",
+    "url": "https://abakker30.github.io/antonbakker-works/media/quartangle/01.jpg",
+    "caption": "The Quartangle in mirror-polished stainless steel: four linked triangles, none touching another.",
+    "alt": "The Quartangle in mirror-polished stainless steel: four linked triangles, none touching another.",
+    "tags": [
+      "series:piece-pages",
+      "year:2026",
+      "series:links",
+      "material:stainless-steel"
+    ]
+  },
+  {
+    "id": "pp-quartangle-2",
+    "piece": "Quartangle",
+    "piece_slug": "quartangle",
+    "kind": "image",
+    "url": "https://abakker30.github.io/antonbakker-works/media/quartangle/05.jpg",
+    "caption": "The Quartangle from another angle, the four triangles tangling into a new form.",
+    "alt": "The Quartangle from another angle, the four triangles tangling into a new form.",
+    "tags": [
+      "series:piece-pages",
+      "year:2026",
+      "series:links",
+      "material:stainless-steel",
+      "subject:perspective"
+    ]
+  },
+  {
+    "id": "pp-fractal-steel-1",
+    "piece": "Fractal tree (stainless)",
+    "piece_slug": "fractal-tree-stainless",
+    "kind": "image",
+    "url": "https://abakker30.github.io/antonbakker-works/media/fractal-tree/01.jpg",
+    "caption": "Koos Verhoeff's fractal tree in mirror-polished stainless steel: one trunk dividing into two, four, eight, sixteen branches.",
+    "alt": "Koos Verhoeff's fractal tree in mirror-polished stainless steel: one trunk dividing into two, four, eight, sixteen branches.",
+    "tags": [
+      "series:piece-pages",
+      "year:2026",
+      "series:fractal-tree",
+      "material:stainless-steel"
+    ]
+  },
+  {
+    "id": "pp-fractal-steel-2",
+    "piece": "Fractal tree (stainless)",
+    "piece_slug": "fractal-tree-stainless",
+    "kind": "image",
+    "url": "https://abakker30.github.io/antonbakker-works/media/fractal-tree/05.jpg",
+    "caption": "Close among the branches of the mirror-polished stainless fractal tree, each pointing its own way.",
+    "alt": "Close among the branches of the mirror-polished stainless fractal tree, each pointing its own way.",
+    "tags": [
+      "series:piece-pages",
+      "year:2026",
+      "series:fractal-tree",
+      "material:stainless-steel"
+    ]
+  },
+  {
+    "id": "pp-fractal-steel-film",
+    "piece": "Fractal tree (stainless)",
+    "piece_slug": "fractal-tree-stainless",
+    "kind": "video",
+    "url": "https://abakker30.github.io/antonbakker-works/media/fractal-tree/film.mp4",
+    "caption": "Walking up to and around the mirror-polished stainless fractal tree.",
+    "alt": "Walking up to and around the mirror-polished stainless fractal tree.",
+    "tags": [
+      "series:piece-pages",
+      "year:2026",
+      "series:fractal-tree",
+      "material:stainless-steel"
+    ]
   }
 ]
