@@ -10,7 +10,7 @@ of the object in front of you. His sculptures fix points in space that, as the e
 into three-dimensional paths. Across the exhibit those paths take many forms: lines, curves, knots,
 spirals, Mobius strips, optical illusions, and fractals, executed in steel, bronze, and as digital
 interactives. Several pieces sit on slowly rotating bases under directed light, so each casts shifting
-shadows on the walls around it, a small staging of the lesson Awakening makes: what you see depends on
+shadows on the walls around it, a small staging of the lesson the Ode to M.C. Escher makes: what you see depends on
 where you stand.
 
 The works were grouped into themed collections, among them Stars and Optical Illusions, each paired with

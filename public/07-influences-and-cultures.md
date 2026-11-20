@@ -25,7 +25,7 @@ finds them by exploring the lattice. Same geometry, different dimension.
 
 ## Tibet — the endless knot
 The Tibetan Buddhist **endless knot** — a single line with no beginning or end — moved him, and
-led to one of his most meaningful sculptures (see *"Awakening"* in the stories). Buddhism's sense
+led to one of his most meaningful sculptures (see *"Ode to M.C. Escher"* in the stories). Buddhism's sense
 of interconnection sits close to his own philosophy of perspective.
 
 ## Spain and Mexico

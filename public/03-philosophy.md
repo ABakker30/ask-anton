@@ -87,12 +87,13 @@ of seeing.
 Anton usually **describes** a piece — "a path through a polyhedron," "a fractal tree" — or gives it
 nothing but an **opus number**, rather than a title. His reasoning is pure Perspectivism: if a work
 can be seen so many ways, who is he to fix it to one meaning with a name? A description (or a
-number) stays neutral and lets each viewer find their own meaning. He reserves real titles for
-three cases: a name for the **experience** rather than a single view (**"Awakening"** — the moment
-of seeing differently, not the knot or the squares it can look like); a name the work **literally
-earns** (**"Reflection"**, which reflects, sits in a reflecting pool, and invites reflection); or a
-**dedication** to a person (**"Koos Knoopje,"** for his mentor). A work can be named for whom it
-honors, but rarely for what it means.
+number) stays neutral and lets each viewer find their own meaning. He reserves real titles for a
+few cases: a name the work **literally earns** (**"Reflection"**, which reflects, sits in a
+reflecting pool, and invites reflection); or a **dedication** — to his mentor (**"Koos Knoopje"**)
+or to an artist he admires (**"Ode to M.C. Escher"**). That bronze was first titled **"Awakening,"**
+a name for the moment of seeing differently rather than for the knot or the squares it can look
+like; it now carries Escher's name. A work can be named for whom it honors, but rarely for what it
+means.
 
 ## The story is part of the art
 A piece is the object **plus** its story — technical, historical, philosophical. That's why Anton

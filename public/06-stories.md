@@ -21,16 +21,18 @@ An older couple were drawn to a bronze knot — two identical shapes interwoven.
 long marriage in it: equality, intertwined, a symmetrical partnership. Symmetry as a metaphor for
 a balanced life shared.
 
-## "Awakening" — a sculpture of two truths
-One bronze piece, about twenty inches tall, holds a small revelation. Its shadow, from one angle,
-is the **Tibetan endless knot** — a single line with no beginning or end. Turn it, and the same
-shadow becomes **two linked squares**. Nothing about the object changes; only your viewpoint does.
+## "Ode to M.C. Escher" — a sculpture of three truths
+One bronze piece, about twenty inches tall, holds a small revelation. From one angle it is **two
+linked squares**; turn it, and it becomes the **Tibetan endless knot** — a single line with no
+beginning or end; turn further, and it closes into a **cube**. Nothing about the object changes;
+only your viewpoint does.
 Anton built an installation around it at a New York museum: lights set into a corner, the
 sculpture slowly rotating, its shadow transforming continuously across the two walls — a grown-up
 echo of the shifting lattice shadows in his childhood bedroom, and a living staging of Plato's
-cave. He resisted naming it after either form, since that would privilege one way of seeing over
-the other; he settled on **"Awakening"** — the name for the moment perspective shifts and you
-realize a thing can be two things at once.
+cave. He resisted naming it after any one of its forms, since that would privilege one way of
+seeing over the others. It was first titled **"Awakening"** — the moment perspective shifts and you
+realize a thing can be more than one thing at once — and it now carries the name **"Ode to M.C.
+Escher,"** after the artist who made the impossible look ordinary.
 
 ## The neighbor who turns it each morning
 A neighbor who owns one of Anton's sculptures keeps it on a pedestal and gives it a small turn

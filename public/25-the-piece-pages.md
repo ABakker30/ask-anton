@@ -55,6 +55,5 @@ Mathematics (MoMath)** in New York it turned slowly in a corner between two ligh
 different shadows on two walls at once: a nod to **M.C. Escher**, who made the impossible look
 ordinary, and to **Plato's cave**, where we take a shadow for the whole truth.
 
-**Name:** this is the **same sculpture** that was earlier presented as **"Awakening."** Anton now
-calls it **"Ode to M.C. Escher"** (Opus 548001); use that name, and mention "Awakening" only as its
-earlier title.
+**Name:** first titled **"Awakening"**; now **"Ode to M.C. Escher"** (Opus 548001). Its story is
+told in full under "Ode to M.C. Escher" in the stories.
