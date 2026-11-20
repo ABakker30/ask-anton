@@ -4,15 +4,44 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Ask Anton</title>
+<meta name="description" content="Ask about Anton Bakker's sculpture: the stories behind the works, the ideas of symmetry and perspective, and how they are made." />
+<meta property="og:title" content="Ask Anton" />
+<meta property="og:description" content="Ask about Anton Bakker's sculpture: the stories behind the works, the ideas of symmetry and perspective, and how they are made." />
+<meta property="og:type" content="website" />
+<meta name="color-scheme" content="light dark" />
+<script>
+  // Theme: light by default (matching the piece pages), dark when the phone is set to dark.
+  // The Koos Puzzle app embeds this page in its own dark UI, so it keeps the dark look there.
+  (function () {
+    var p = new URLSearchParams(location.search);
+    if (p.get("campaign") === "koospuzzle") document.documentElement.classList.add("dark");
+  })();
+</script>
 <style>
   :root {
-    --bg: #0e0f12;
-    --panel: #16181d;
-    --line: #262a31;
-    --ink: #e8e9ec;
-    --muted: #9aa0aa;
-    --accent: #c8a96a;
+    --bg: #f4f1ec;
+    --panel: #ebe6de;
+    --line: #d8d1c5;
+    --ink: #1b1a18;
+    --muted: #6f6a62;
+    --accent: #8a6a3f;
+    --accent-ink: #ffffff;
   }
+  @media (prefers-color-scheme: dark) {
+    :root:not(.light) {
+      --bg: #0e0f12; --panel: #16181d; --line: #262a31; --ink: #e8e9ec;
+      --muted: #9aa0aa; --accent: #c8a96a; --accent-ink: #1a1408;
+    }
+  }
+  :root.dark {
+    --bg: #0e0f12; --panel: #16181d; --line: #262a31; --ink: #e8e9ec;
+    --muted: #9aa0aa; --accent: #c8a96a; --accent-ink: #1a1408;
+  }
+  .back {
+    display: inline-block; margin: 0 0 14px; color: var(--accent); text-decoration: none;
+    font: 600 14px/1.3 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .back:hover { text-decoration: underline; }
   * { box-sizing: border-box; }
   body {
     margin: 0;
@@ -118,7 +147,7 @@
   }
   button.send {
     background: var(--accent);
-    color: #1a1408;
+    color: var(--accent-ink);
     border: 0;
     border-radius: 8px;
     padding: 10px 18px;
@@ -150,7 +179,7 @@
   .modal-card textarea { min-height: 92px; resize: vertical; }
   .modal-row { display: flex; gap: 10px; justify-content: flex-end; align-items: center; margin-top: 18px; }
   .modal-row .status { margin-right: auto; font-size: 13px; color: var(--muted); }
-  .modal-btn { background: var(--accent); color: #1a1408; border: 0; border-radius: 8px; padding: 9px 16px; cursor: pointer; font: inherit; }
+  .modal-btn { background: var(--accent); color: var(--accent-ink); border: 0; border-radius: 8px; padding: 9px 16px; cursor: pointer; font: inherit; }
   .modal-btn.secondary { background: transparent; border: 1px solid var(--line); color: var(--muted); }
   .hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; overflow: hidden; }
   .join-card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin: 4px 0 22px; }
@@ -158,15 +187,16 @@
   .join-card .jc-sub { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
   .join-card .jc-row { display: flex; gap: 8px; }
   .join-card input { flex: 1; padding: 9px 12px; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; color: var(--ink); font: inherit; }
-  .join-card button.join { background: var(--accent); color: #1a1408; border: 0; border-radius: 8px; padding: 9px 14px; cursor: pointer; font: inherit; }
+  .join-card button.join { background: var(--accent); color: var(--accent-ink); border: 0; border-radius: 8px; padding: 9px 14px; cursor: pointer; font: inherit; }
   .join-card .jc-dismiss { background: none; border: 0; color: var(--muted); font-size: 12px; cursor: pointer; margin-top: 10px; padding: 0; }
   .join-card .jc-status { color: var(--muted); font-size: 13px; margin-top: 8px; }
 </style>
 </head>
 <body>
   <header>
+    <a class="back" id="backLink" href="#" hidden></a>
     <h1>Ask Anton</h1>
-    <p>Questions about Anton Bakker and his lattice-path sculpture</p>
+    <p>Questions about Anton Bakker's sculpture: the stories, the ideas, the making</p>
     <div class="header-actions">
       <button type="button" class="link-btn" id="joinLink">Join the list</button>
       <span class="dot">·</span>
@@ -204,6 +234,46 @@
   const input = document.getElementById("q");
   const sendBtn = document.getElementById("send");
   const suggestions = document.getElementById("suggestions");
+
+  // Visitors arriving from a sculpture's own page (antonbakker piece pages) get a way back
+  // (?back=<page url>&backTitle=<name>) and starter questions about that piece (?piece=<name>).
+  // Only the piece pages' own hosts are accepted as a back target, so this can't be used to
+  // send people elsewhere. Kept for the session, so it survives asking and reloading.
+  const BACK_HOSTS = ["abakker30.github.io", "works.antonbakker.com", "antonbakker.com", "www.antonbakker.com"];
+  (function () {
+    const p = new URLSearchParams(location.search);
+    let back = null;
+    try {
+      const u = new URL(p.get("back") || "");
+      if (u.protocol === "https:" && BACK_HOSTS.includes(u.hostname)) {
+        back = { url: u.href, title: (p.get("backTitle") || "the work").slice(0, 60) };
+        sessionStorage.setItem("aa_back", JSON.stringify(back));
+      }
+    } catch (e) {}
+    if (!back) { try { back = JSON.parse(sessionStorage.getItem("aa_back") || "null"); } catch (e) {} }
+    if (back) {
+      const a = document.getElementById("backLink");
+      a.href = back.url;
+      a.textContent = "← Back to " + back.title;
+      a.hidden = false;
+    }
+    const piece = (p.get("piece") || "").trim().slice(0, 60);
+    if (piece) {
+      const box = document.getElementById("suggestions");
+      box.innerHTML = "";
+      [
+        "Tell me about " + piece,
+        "Why is it called " + piece + "?",
+        "What should I look for?",
+        "Who was Koos Verhoeff?",
+        "What is your work about?",
+      ].forEach((q) => {
+        const b = document.createElement("button");
+        b.textContent = q;
+        box.appendChild(b);
+      });
+    }
+  })();
 
   // Visitors arriving from the Koos Puzzle app (its Ask Anton overlay passes
   // ?campaign=koospuzzle) get puzzle-first starter questions. Runs before the
@@ -551,7 +621,7 @@
 
   async function ask(question, source) {
     if (turnstileEnabled && !turnstileToken) {
-      addMsg("anton", "Anton", "One moment — please complete the verification below, then ask again.", "thinking");
+      addMsg("anton", "Ask Anton", "One moment — please complete the verification below, then ask again.", "thinking");
       return;
     }
     if (suggestions) suggestions.remove();
@@ -560,7 +630,7 @@
     addMsg("user", "You", question);
     input.value = "";
     sendBtn.disabled = true;
-    const bubble = addMsg("anton", "Anton", "thinking...", "thinking");
+    const bubble = addMsg("anton", "Ask Anton", "thinking...", "thinking");
     try {
       const handled = await streamAsk(question, source, bubble);
       if (!handled) await nonStreamAsk(question, source, bubble);
