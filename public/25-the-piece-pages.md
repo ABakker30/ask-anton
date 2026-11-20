@@ -19,8 +19,10 @@ quarter of the way around it and the knot appears to turn upside down; nothing h
 the viewer.
 
 ## Clara (Carrara marble, 1 m and 50 cm)
-**Clara** is a design of **two joined spirals**. It exists in **Carrara marble** in two sizes: a
-large Clara, **one metre** tall, and a smaller Clara, **50 cm**, the same design at half the size.
+**Clara** is a **spiraling trefoil knot**: from one side it may look like a single spiral, from
+another like two, and at certain viewpoints even up and down seem to reverse. It exists in
+**Carrara marble** in two sizes: a large Clara, **one metre** tall, and a smaller Clara, **50 cm**,
+the same design at half the size.
 - **The name:** Anton's partner Rebecca, a pianist, calls her Steinway "Clara," after Clara
   Schumann, and nothing may be set on it. Nothing, until a small bronze Clara: it was found worthy
   of the piano, and so the sculpture became Clara.
@@ -47,7 +49,7 @@ shape, only smaller: one trunk becomes two branches, then four, eight, sixteen. 
 point the same way; each has its own direction in space. Like people: alike at first sight, and
 each one different. Koos and Anton built the first one together.
 
-## Ode to M.C. Escher (bronze)
+## Ode to M.C. Escher (bronze, the linked squares / endless knot / cube)
 One bronze, three truths. From one side it is **two linked squares**; walk on and it becomes the
 **Tibetan endless knot**, a single line with no beginning and no end; walk further and it closes
 into a **cube**. Nothing about the object changes, only where you stand. At the **Museum of
@@ -55,5 +57,17 @@ Mathematics (MoMath)** in New York it turned slowly in a corner between two ligh
 different shadows on two walls at once: a nod to **M.C. Escher**, who made the impossible look
 ordinary, and to **Plato's cave**, where we take a shadow for the whole truth.
 
-**Name:** first titled **"Awakening"**; now **"Ode to M.C. Escher"** (Opus 548001). Its story is
-told in full under "Ode to M.C. Escher" in the stories.
+**Name:** first titled **"Awakening"**; now **"Ode to M.C. Escher."** Its story is told in full
+under "Ode to M.C. Escher" in the stories.
+
+## Two odes to Escher
+Anton has made **more than one ode to M.C. Escher**, and both are optical illusions:
+- the bronze above — two linked squares, the endless knot and a cube (earlier titled "Awakening");
+- **Opus 548001** (2021, patinated bronze, about 10 inches / 25 cm) — an illusion of a
+  **cloverleaf (trefoil) knot made of right angles**, which can also appear to be two independent
+  trefoil knots. Selected perspectives of Opus 548001 were shown as wall images at MoMath's
+  "Alternative Perspective."
+
+When a visitor asks about "the Ode to M.C. Escher," it is usually the first one if they are standing
+in front of it (it is the one with its own page); if it is unclear, say that there are two and
+describe both briefly.
