@@ -2922,5 +2922,85 @@
       "series:fractal-tree",
       "material:stainless-steel"
     ]
+  },
+  {
+    "id": "pp-escher-1",
+    "piece": "Ode to M.C. Escher",
+    "piece_slug": "ode-to-escher",
+    "kind": "image",
+    "url": "https://abakker30.github.io/antonbakker-works/media/ode-to-escher/01.jpg",
+    "caption": "Ode to M.C. Escher in bronze, seen from the side where it reads as two linked squares.",
+    "alt": "Ode to M.C. Escher in bronze, seen from the side where it reads as two linked squares.",
+    "tags": [
+      "series:piece-pages",
+      "year:2026",
+      "material:bronze",
+      "subject:optical-illusion",
+      "subject:perspective"
+    ]
+  },
+  {
+    "id": "pp-escher-2",
+    "piece": "Ode to M.C. Escher",
+    "piece_slug": "ode-to-escher",
+    "kind": "image",
+    "url": "https://abakker30.github.io/antonbakker-works/media/ode-to-escher/02.jpg",
+    "caption": "The same bronze from another side: now the Tibetan endless knot, one line with no beginning and no end.",
+    "alt": "The same bronze from another side: now the Tibetan endless knot, one line with no beginning and no end.",
+    "tags": [
+      "series:piece-pages",
+      "year:2026",
+      "material:bronze",
+      "subject:optical-illusion",
+      "subject:perspective"
+    ]
+  },
+  {
+    "id": "pp-escher-3",
+    "piece": "Ode to M.C. Escher",
+    "piece_slug": "ode-to-escher",
+    "kind": "image",
+    "url": "https://abakker30.github.io/antonbakker-works/media/ode-to-escher/03.jpg",
+    "caption": "Ode to M.C. Escher from a third side, where the bronze closes into a cube.",
+    "alt": "Ode to M.C. Escher from a third side, where the bronze closes into a cube.",
+    "tags": [
+      "series:piece-pages",
+      "year:2026",
+      "material:bronze",
+      "subject:optical-illusion",
+      "subject:perspective"
+    ]
+  },
+  {
+    "id": "pp-escher-4",
+    "piece": "Ode to M.C. Escher",
+    "piece_slug": "ode-to-escher",
+    "kind": "image",
+    "url": "https://abakker30.github.io/antonbakker-works/media/ode-to-escher/04.jpg",
+    "caption": "Ode to M.C. Escher on a turning base between two lights, casting two different shadows on two walls.",
+    "alt": "Ode to M.C. Escher on a turning base between two lights, casting two different shadows on two walls.",
+    "tags": [
+      "series:piece-pages",
+      "year:2026",
+      "material:bronze",
+      "subject:optical-illusion",
+      "subject:perspective"
+    ]
+  },
+  {
+    "id": "pp-escher-film",
+    "piece": "Ode to M.C. Escher",
+    "piece_slug": "ode-to-escher",
+    "kind": "video",
+    "url": "https://abakker30.github.io/antonbakker-works/media/ode-to-escher/film.mp4",
+    "caption": "Ode to M.C. Escher turning slowly between two lights: its shadows change from one form to another on the walls.",
+    "alt": "Ode to M.C. Escher turning slowly between two lights: its shadows change from one form to another on the walls.",
+    "tags": [
+      "series:piece-pages",
+      "year:2026",
+      "material:bronze",
+      "subject:optical-illusion",
+      "subject:perspective"
+    ]
   }
 ]

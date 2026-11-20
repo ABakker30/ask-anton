@@ -47,6 +47,14 @@ shape, only smaller: one trunk becomes two branches, then four, eight, sixteen. 
 point the same way; each has its own direction in space. Like people: alike at first sight, and
 each one different. Koos and Anton built the first one together.
 
-## Ode to M.C. Escher
-One work, three perspectives — a nod to Escher, who made the impossible look ordinary. Its full
-story is still to come.
+## Ode to M.C. Escher (bronze)
+One bronze, three truths. From one side it is **two linked squares**; walk on and it becomes the
+**Tibetan endless knot**, a single line with no beginning and no end; walk further and it closes
+into a **cube**. Nothing about the object changes, only where you stand. At the **Museum of
+Mathematics (MoMath)** in New York it turned slowly in a corner between two lights, casting two
+different shadows on two walls at once: a nod to **M.C. Escher**, who made the impossible look
+ordinary, and to **Plato's cave**, where we take a shadow for the whole truth.
+
+**Name:** this is the **same sculpture** that was earlier presented as **"Awakening."** Anton now
+calls it **"Ode to M.C. Escher"** (Opus 548001); use that name, and mention "Awakening" only as its
+earlier title.
