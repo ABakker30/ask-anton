@@ -3002,5 +3002,53 @@
       "subject:optical-illusion",
       "subject:perspective"
     ]
+  },
+  {
+    "id": "pp-fence-col-1",
+    "piece": "Fence Around Nothing (column)",
+    "piece_slug": "fence-around-nothing-column",
+    "kind": "image",
+    "url": "https://abakker30.github.io/antonbakker-works/media/fence-around-nothing/01.jpg",
+    "caption": "Fence Around Nothing, a 5.5 metre mirror-polished stainless steel zigzag column, standing in the workshop before it travels.",
+    "alt": "Fence Around Nothing, a 5.5 metre mirror-polished stainless steel zigzag column, standing in the workshop before it travels.",
+    "tags": [
+      "series:piece-pages",
+      "series:fence-around-nothing",
+      "year:2026",
+      "material:stainless-steel",
+      "status:coming-soon"
+    ]
+  },
+  {
+    "id": "pp-fence-col-2",
+    "piece": "Fence Around Nothing (column)",
+    "piece_slug": "fence-around-nothing-column",
+    "kind": "image",
+    "url": "https://abakker30.github.io/antonbakker-works/media/fence-around-nothing/03.jpg",
+    "caption": "The 5.5 metre Fence Around Nothing column from another side, in the workshop.",
+    "alt": "The 5.5 metre Fence Around Nothing column from another side, in the workshop.",
+    "tags": [
+      "series:piece-pages",
+      "series:fence-around-nothing",
+      "year:2026",
+      "material:stainless-steel",
+      "status:coming-soon"
+    ]
+  },
+  {
+    "id": "pp-fence-col-film",
+    "piece": "Fence Around Nothing (column)",
+    "piece_slug": "fence-around-nothing-column",
+    "kind": "video",
+    "url": "https://abakker30.github.io/antonbakker-works/media/fence-around-nothing/film.mp4",
+    "caption": "Walking around the 5.5 metre Fence Around Nothing column in the workshop.",
+    "alt": "Walking around the 5.5 metre Fence Around Nothing column in the workshop.",
+    "tags": [
+      "series:piece-pages",
+      "series:fence-around-nothing",
+      "year:2026",
+      "material:stainless-steel",
+      "status:coming-soon"
+    ]
   }
 ]

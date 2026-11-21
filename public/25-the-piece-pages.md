@@ -49,6 +49,13 @@ shape, only smaller: one trunk becomes two branches, then four, eight, sixteen. 
 point the same way; each has its own direction in space. Like people: alike at first sight, and
 each one different. Koos and Anton built the first one together.
 
+## Fence Around Nothing (mirror-polished stainless steel column, 5.5 m) — coming soon
+A zigzag of mirror-polished steel that rises **five and a half metres** and encloses nothing at all.
+The name is **Koos Verhoeff's**: *a fence around nothing*. Ask what people build fences around and,
+often enough, there is nothing inside — only the fence itself. Another fence around nothing,
+**Red Zig Zag**, stands fourteen feet tall in red steel in Norfolk, Virginia. This column has been
+made and is on its way; once installed, it will be seen from several floors, beside a stairway.
+
 ## Ode to M.C. Escher (bronze, the linked squares / endless knot / cube)
 One bronze, three truths. From one side it is **two linked squares**; walk on and it becomes the
 **Tibetan endless knot**, a single line with no beginning and no end; walk further and it closes
