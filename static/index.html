@@ -197,11 +197,6 @@
     <a class="back" id="backLink" href="#" hidden></a>
     <h1>Ask Anton</h1>
     <p>Questions about Anton Bakker's sculpture: the stories, the ideas, the making</p>
-    <div class="header-actions">
-      <button type="button" class="link-btn" id="joinLink">Join the list</button>
-      <span class="dot">·</span>
-      <button type="button" class="link-btn" id="inquireLink">Inquire</button>
-    </div>
   </header>
 
   <div id="chat">
@@ -815,8 +810,11 @@
   }
 
   // After a couple of answers, gently offer the list (unless already joined/dismissed).
+  // Switched off with the header buttons (2026-11-21); set to true to offer the list card again.
+  const SHOW_JOIN_CARD = false;
   function maybeShowJoinCard() {
     answerCount++;
+    if (!SHOW_JOIN_CARD) return;
     if (answerCount < 2 || joinSuppressed() || document.getElementById("joinCard")) return;
     const card = document.createElement("div");
     card.className = "join-card"; card.id = "joinCard";
@@ -842,8 +840,10 @@
     };
   }
 
-  document.getElementById("joinLink").addEventListener("click", () => openSubscribeModal("header"));
-  document.getElementById("inquireLink").addEventListener("click", () => openInquireModal(lastPiece));
+  // The "Join the list" / "Inquire" header buttons were removed (2026-11-21). The handlers stay so they
+  // can come back by restoring the buttons in the header.
+  document.getElementById("joinLink")?.addEventListener("click", () => openSubscribeModal("header"));
+  document.getElementById("inquireLink")?.addEventListener("click", () => openInquireModal(lastPiece));
 
   initConfig().then(maybeAutoAsk);
   loadCatalog();
