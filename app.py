@@ -38,7 +38,9 @@ import pathlib
 import anthropic
 from fastapi import FastAPI, Request, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse, StreamingResponse
+from fastapi.responses import FileResponse, StreamingResponse, Response
+import secrets
+from collections import OrderedDict
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
@@ -364,6 +366,40 @@ class AskResponse(BaseModel):
     cached_tokens: int
     media: list[dict] = []
     followups: list[str] = []
+    answer_id: str | None = None   # for /speak/{answer_id} when spoken answers are on
+
+
+# ── Spoken answers (ElevenLabs) ────────────────────────────────────────────────
+# Off unless ELEVENLABS_API_KEY is set (Machine scope on the server; start-service.ps1 loads it).
+# Only answers this server generated can be spoken (looked up by id), so /speak can't be used
+# as a free text-to-speech service. Per-IP rate limit (shared with /ask) + a daily character cap.
+ELEVEN_KEY = os.environ.get("ELEVENLABS_API_KEY", "")
+TTS_VOICE_ID = _env("TTS_VOICE_ID", "cjVigY5qzO86Huf0OWal")      # "Eric", same voice as the piece pages
+TTS_MODEL = _env("TTS_MODEL", "eleven_multilingual_v2")           # natural, and quick enough for answers
+TTS_DAILY_CHARS = int(_env("ASK_TTS_DAILY_CHARS", "30000"))
+TTS_MAX_CHARS = 2500
+_ANSWERS: "OrderedDict[str, str]" = OrderedDict()
+_AUDIO: "OrderedDict[str, bytes]" = OrderedDict()
+_tts_lock = threading.Lock()
+_tts_day = {"date": "", "chars": 0}
+
+
+def _remember_answer(text: str):
+    if not ELEVEN_KEY or not text.strip():
+        return None
+    aid = secrets.token_urlsafe(9)
+    with _tts_lock:
+        _ANSWERS[aid] = text
+        while len(_ANSWERS) > 500:
+            _ANSWERS.popitem(last=False)
+    return aid
+
+
+def _speakable(text: str) -> str:
+    t = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)      # [label](url) -> label
+    t = re.sub(r"[*_#`>]+", "", t)                          # markdown emphasis / headings
+    t = re.sub(r"^\s*[-•]\s+", "", t, flags=re.M)           # bullets
+    return re.sub(r"[ \t]+", " ", t).strip()[:TTS_MAX_CHARS]
 
 
 # Detects where the model's trailing control lines (MEDIA:/SUGGEST:) begin.
@@ -433,6 +469,7 @@ def ask(req: AskRequest, request: Request) -> AskResponse:
         cached_tokens=response.usage.cache_read_input_tokens or 0,
         media=media,
         followups=followups,
+        answer_id=_remember_answer(answer),
     )
 
 
@@ -468,7 +505,7 @@ def ask_stream(req: AskRequest, request: Request):
             answer = (full[:cut] if cut is not None else full).strip()
             _, media = _extract_media(full)
             _, followups = _extract_suggest(full)
-            yield _sse("done", {"media": media, "followups": followups})
+            yield _sse("done", {"media": media, "followups": followups, "answer_id": _remember_answer(answer)})
             _log_ask(req, request, question, answer, media, t0)
         except Exception:
             yield _sse("error", {"detail": "The server hit a snag. Please try again."})
@@ -560,12 +597,65 @@ def config() -> dict:
         "turnstile_sitekey": TURNSTILE_SITEKEY or None,
         "retrieval": RETRIEVER.status(),
         "media_items": len(MEDIA),
+        "tts": bool(ELEVEN_KEY),
         "telemetry": telemetry.enabled(),
         "env": {
             "supabase_url": bool(os.environ.get("SUPABASE_URL")),
             "supabase_anon_key": bool(os.environ.get("SUPABASE_ANON_KEY")),
         },
     }
+
+
+@app.get("/speak/{answer_id}")
+def speak(answer_id: str, request: Request):
+    """The answer with this id, read aloud in the Eric voice (audio/mpeg, streamed)."""
+    if not ELEVEN_KEY:
+        raise HTTPException(status_code=404, detail="Spoken answers are not enabled.")
+    with _tts_lock:
+        text = _ANSWERS.get(answer_id)
+        cached = _AUDIO.get(answer_id)
+    if text is None:
+        raise HTTPException(status_code=404, detail="That answer is no longer available.")
+    if cached:
+        return Response(cached, media_type="audio/mpeg", headers={"Cache-Control": "private, max-age=3600"})
+    _check_rate(_client_ip(request))
+    spoken = _speakable(text)
+    today = datetime.date.today().isoformat()
+    with _tts_lock:
+        if _tts_day["date"] != today:
+            _tts_day.update(date=today, chars=0)
+        if _tts_day["chars"] + len(spoken) > TTS_DAILY_CHARS:
+            raise HTTPException(status_code=429, detail="Spoken answers are resting for today.")
+        _tts_day["chars"] += len(spoken)
+    req = urllib.request.Request(
+        f"https://api.elevenlabs.io/v1/text-to-speech/{TTS_VOICE_ID}/stream?output_format=mp3_44100_64",
+        data=json.dumps({"text": spoken, "model_id": TTS_MODEL}).encode("utf-8"),
+        headers={"xi-api-key": ELEVEN_KEY, "Content-Type": "application/json", "Accept": "audio/mpeg"},
+        method="POST",
+    )
+    try:
+        upstream = urllib.request.urlopen(req, timeout=30)
+    except Exception as e:
+        print(f"[speak] ElevenLabs error: {e!r}")
+        raise HTTPException(status_code=502, detail="The voice is unavailable right now.")
+
+    def gen():
+        parts = []
+        try:
+            while True:
+                chunk = upstream.read(8192)
+                if not chunk:
+                    break
+                parts.append(chunk)
+                yield chunk
+            with _tts_lock:                      # cache a complete reading for replays
+                _AUDIO[answer_id] = b"".join(parts)
+                while len(_AUDIO) > 60:
+                    _AUDIO.popitem(last=False)
+        finally:
+            upstream.close()
+
+    return StreamingResponse(gen(), media_type="audio/mpeg", headers={"Cache-Control": "no-store"})
 
 
 @app.get("/media-catalog")

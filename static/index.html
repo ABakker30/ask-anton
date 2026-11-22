@@ -110,6 +110,7 @@
   .feedback button:hover { border-color: var(--accent); }
   .feedback .rate { display: flex; align-items: center; gap: 8px; }
   .feedback .share { margin-left: auto; }
+  .feedback button.listen { border-color: var(--accent); color: var(--accent); font: 600 13px/1.2 system-ui, -apple-system, "Segoe UI", sans-serif; padding: 4px 10px; border-radius: 999px; }
   .media figure img { cursor: zoom-in; }
   .see-more { background: transparent; border: 1px solid var(--line); color: var(--muted); border-radius: 8px; padding: 6px 12px; cursor: pointer; font: inherit; font-size: 13px; margin: 4px 0 8px; }
   .see-more:hover { border-color: var(--accent); color: var(--ink); }
@@ -324,12 +325,36 @@
 
   // ── Optional Cloudflare Turnstile ──────────────────────────────────────────
   let turnstileEnabled = false;
+  // Spoken answers: on when the server has a voice key (cfg.tts). One shared player, "unlocked"
+  // during a tap (mic or Listen) so phones let it start later, once the answer is ready.
+  let ttsEnabled = false;
+  const narrator = new Audio();
+  const SILENT = "data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjYyLjEyLjEwMQAAAAAAAAAAAAAA//NAxAAAAANIAAAAAExBTUUzLjEwMFVVVVVVVVVVVVVMQU1FMy4xMDBVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVX/80LEWwAAA0gAAAAAVVVVVVVVVVVVVVVVVVVVVVVVVVVMQU1FMy4xMDBVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVX/80DEpAAAA0gAAAAAVVVVVVVVVVVVVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQsSjAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQMSkAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMuMTAwVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//NCxKMAAANIAAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMuMTAwVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//NAxKQAAANIAAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVX/80LEowAAA0gAAAAAVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVU=";
+  let narratorBtn = null;
+  function unlockNarrator() {
+    if (narrator.dataset.unlocked) return;
+    try { narrator.src = SILENT; narrator.play().then(() => { narrator.pause(); narrator.dataset.unlocked = "1"; }).catch(() => {}); } catch (e) {}
+  }
+  function setNarratorBtn(btn, playing) {
+    if (narratorBtn && narratorBtn !== btn) narratorBtn.textContent = "\u25B6 Listen";
+    narratorBtn = btn;
+    if (btn) btn.textContent = playing ? "\u275A\u275A Pause" : "\u25B6 Listen";
+  }
+  narrator.addEventListener("pause", () => { if (narratorBtn) setNarratorBtn(narratorBtn, false); });
+  narrator.addEventListener("ended", () => { if (narratorBtn) setNarratorBtn(narratorBtn, false); });
+  function speakAnswer(answerId, btn) {
+    if (narrator.dataset.answer === answerId && !narrator.paused) { narrator.pause(); return; }
+    if (narrator.dataset.answer !== answerId) { narrator.src = API_BASE + "/speak/" + encodeURIComponent(answerId); narrator.dataset.answer = answerId; }
+    setNarratorBtn(btn, true);
+    narrator.play().catch(() => setNarratorBtn(btn, false));
+  }
   let turnstileToken = null;
   let turnstileWidgetId = null;
 
   async function initConfig() {
     try {
       const cfg = await (await fetch(API_BASE + "/config")).json();
+      ttsEnabled = !!cfg.tts;
       if (cfg.turnstile && cfg.turnstile_sitekey) {
         turnstileEnabled = true;
         window.__onTurnstile = (t) => { turnstileToken = t; maybeAutoAsk(); };
@@ -479,9 +504,18 @@
     window.scrollTo(0, document.body.scrollHeight);
   }
 
-  function renderFeedback(question) {
+  function renderFeedback(question, answerId, autoplay) {
     const wrap = document.createElement("div");
     wrap.className = "feedback";
+    if (ttsEnabled && answerId) {
+      const listen = document.createElement("button");
+      listen.className = "listen";
+      listen.textContent = "\u25B6 Listen";
+      listen.setAttribute("aria-label", "Listen to this answer");
+      listen.addEventListener("click", () => { unlockNarrator(); speakAnswer(answerId, listen); });
+      wrap.appendChild(listen);
+      if (autoplay) setTimeout(() => speakAnswer(answerId, listen), 50);
+    }
 
     const rate = document.createElement("span");
     rate.className = "rate";
@@ -557,7 +591,7 @@
       return false; // transient -> fall back
     }
     const reader = res.body.getReader(), dec = new TextDecoder();
-    let buf = "", answer = "", started = false, media = [], followups = [];
+    let buf = "", answer = "", started = false, media = [], followups = [], answerId = null;
     while (true) {
       let chunk;
       try { chunk = await reader.read(); } catch (e) { break; }
@@ -574,7 +608,7 @@
           bubble.textContent = answer;
           window.scrollTo(0, document.body.scrollHeight);
         } else if (ev.event === "done") {
-          media = ev.data.media || []; followups = ev.data.followups || [];
+          media = ev.data.media || []; followups = ev.data.followups || []; answerId = ev.data.answer_id || null;
         } else if (ev.event === "error" && !started) {
           return false; // nothing shown yet -> fall back
         }
@@ -584,7 +618,7 @@
     appendMedia(bubble, media);
     history.push({ role: "user", content: question });
     history.push({ role: "assistant", content: answer });
-    renderFeedback(question);
+    renderFeedback(question, answerId, source === "voice");
     renderFollowups(followups);
     return true;
   }
@@ -610,7 +644,7 @@
     appendMedia(bubble, data.media);
     history.push({ role: "user", content: question });
     history.push({ role: "assistant", content: data.answer });
-    renderFeedback(question);
+    renderFeedback(question, data.answer_id, source === "voice");
     renderFollowups(data.followups);
   }
 
@@ -622,6 +656,7 @@
     if (suggestions) suggestions.remove();
     const staleF = document.getElementById("followups");
     if (staleF) staleF.remove();
+    if (!narrator.paused) narrator.pause();
     addMsg("user", "You", question);
     input.value = "";
     sendBtn.disabled = true;
@@ -665,6 +700,7 @@
     }
 
     micBtn.addEventListener("click", () => {
+      if (ttsEnabled) unlockNarrator(); // a spoken question gets a spoken answer
       if (listening) { stopListening(true); return; } // tap again = cancel, keep text for editing
       recog = new SR();
       recog.lang = navigator.language || "en-US";
