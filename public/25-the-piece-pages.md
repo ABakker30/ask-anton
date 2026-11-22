@@ -37,11 +37,12 @@ strikingly, puzzlingly different, and it is hard to believe it is the same stone
 true; neither is the whole story. (Its working title is "Infinity.")
 
 ## Quartangle (stainless steel)
-Four triangles, linked so that none can be pulled free, yet none touches another. Anton found it
-while searching for **links** — separate paths that are entangled yet fit snugly together. His
-first search tool was a hand-tuned sketch; Tom Verhoeff turned it into rigorous mathematics. The
-Quartangle was one of the finds, and in 2025 it became the **logo of the Bridges conference** on
-mathematics and art. This one is realized in mirror-polished stainless steel.
+Four identical equilateral triangles, linked in two pairs so that the whole is completely rigid,
+yet no triangle touches another. Made for **Bridges 2025** at TU Eindhoven, where it became the
+**conference logo** (square-on to the long side of the base, it looks like a bridge). Its structure
+was **co-discovered by Anton Bakker and Tom Verhoeff**: Anton's Grasshopper link-finder, rewritten
+by Tom as Python. Mirror-polished stainless steel, 1.5 m. The full story is under "Quartangle — the
+full story".
 
 ## Fractal Tree (mirror-polished stainless steel)
 Koos Verhoeff's **fractal tree** in mirror-polished stainless steel. Every branch is the same
