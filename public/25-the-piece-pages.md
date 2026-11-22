@@ -38,7 +38,7 @@ true; neither is the whole story. (Its working title is "Infinity.")
 
 ## Quartangle (stainless steel)
 Four identical equilateral triangles, linked in two pairs so that the whole is completely rigid,
-yet no triangle touches another. Made for **Bridges 2025** at TU Eindhoven, where it became the
+yet no triangle touches another. Made for **Bridges 2025** at Eindhoven University of Technology, where it became the
 **conference logo** (square-on to the long side of the base, it looks like a bridge). Its structure
 was **co-discovered by Anton Bakker and Tom Verhoeff**: Anton's Grasshopper link-finder, rewritten
 by Tom as Python. Mirror-polished stainless steel, 1.5 m. The full story is under "Quartangle — the

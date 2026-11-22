@@ -71,7 +71,8 @@ ask about the piece from here.
   complete story.
 
 ## History
-- Made as the **iconic sculpture for Bridges 2025 at TU Eindhoven**, hosted by Tom Verhoeff. It
+- Made as the **iconic sculpture for Bridges 2025 at Eindhoven University of Technology** (the
+  university's preferred name; not "Technical University"), hosted by Tom Verhoeff. It
   became the **conference logo**: seen square-on to the long side of the base, it looks like a
   **bridge**.
 - Anton built his own **heuristic method for finding links in Grasshopper**. **Tom**, who chaired the
@@ -86,3 +87,12 @@ ask about the piece from here.
   atoms in the visible universe**. Quartangle is one extraordinary configuration among them.
 - Anton's analogy: **compute and algorithms are like ever-better telescopes, but humans still need
   to point them.** It still takes a human to ask the question.
+
+## Rotoreflection symmetry (from Tom Verhoeff)
+- Turn Quartangle physically **upside down and rotate it 90 degrees**: it looks very similar, but it
+  is actually its **mirror image**. It has **rotoreflection symmetry**.
+- It has **no ordinary mirror symmetry**: there is no plane that cuts it into two halves that are
+  mirror images of each other. Yet it can be reflected by rotating it and turning it upside down.
+- Contrast with shoes: a **left shoe cannot be turned upside down and rotated to become a right
+  shoe**.
+- Most people will not know this symmetry type, and it is harder to see on the sculpture itself.
