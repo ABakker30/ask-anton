@@ -6,8 +6,9 @@ across from the Chrysler Museum of Art and the Perry Glass Studio. Most of Anton
 Dubai, so bringing a major piece home, to such a prominent corner, is a milestone for him.
 
 It belongs to a form Anton calls a "fence around nothing": a sculpture that looks like a fence but
-encloses no space. The name and the original form come from his late mentor, Koos Verhoeff, who coined
-the phrase for one of his own designs; Anton enhanced the design and kept Koos's name for it. The piece
+encloses no space. The name and the starting point come from his late mentor, Koos Verhoeff, who made an open zigzag
+design and called it a fence around nothing. Anton continued from that design, exploring the lattice
+for an in-lattice version that forms a closed path, and kept Koos's name for it to honour its start. The piece
 is also inspired by Brancusi's Endless Column, the famous tower that feels infinite while being finite.
 
 The color is a vivid "Calder red," named for the sculptor Alexander Calder, chosen to honor Joe Waldo's

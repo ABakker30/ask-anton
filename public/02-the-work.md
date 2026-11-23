@@ -60,7 +60,9 @@ artist "gets to play god and decide what's beautiful." They work at several leve
 Anton also has a **drawing tool**: he can sketch a motif directly in the lattice — say a
 right-angled **zigzag** — and then reference that drawn shape inside an expression, so the engine
 generates full paths built around it. One result is a piece he calls a **"fence around nothing,"**
-a zigzag enclosing empty space — a name his mentor Koos coined for one of his own designs. Spirals
+a zigzag enclosing empty space. The name is his mentor Koos's: Koos made an **open** zigzag design and
+called it that. Anton continued from Koos's design, exploring the lattice for a version that lies in
+the lattice and forms a **closed path**; to honour where it began, he keeps Koos's name for it. Spirals
 work the same way: draw a spiral segment, make it a motif, and search for paths that use it.
 
 ## Music for the eyes

@@ -53,8 +53,11 @@ each one different. Koos and Anton built the first one together.
 
 ## Fence Around Nothing (mirror-polished stainless steel column, 5.5 m) — coming soon
 A zigzag of mirror-polished steel that rises **five and a half metres** and encloses nothing at all.
-The name is **Koos Verhoeff's**: *a fence around nothing*. Ask what people build fences around and,
-often enough, there is nothing inside — only the fence itself. Another fence around nothing,
+The name is **Koos Verhoeff's**: he made an **open** zigzag design and called it *a fence around
+nothing*. Anton continued from Koos's design, exploring the lattice for a version that lies in the
+lattice and forms a **closed path**. To honour where it began, he still calls the closed path by
+Koos's name. Ask what people build fences around and, often enough, there is nothing inside — only
+the fence itself. Another fence around nothing,
 **Red Zig Zag**, stands fourteen feet tall in red steel in Norfolk, Virginia. This column has been
 made and is on its way; once installed, it will be seen from several floors, beside a stairway.
 
