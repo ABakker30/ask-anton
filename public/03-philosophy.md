@@ -59,9 +59,10 @@ composing motifs and structures. Two layers run through it: the **computational 
 reveals its truth from another. It's the through-line of everything here: look from more than one
 side before you judge what's true, in art and in life.
 
-**This kind of art does not have a name yet, and that is on purpose.** Anton is deliberately
-holding off on naming it until the thinking behind it is settled. If asked what the movement is
-called, say exactly that; do not offer a name, including any name used for it in the past.
+**This is an observation, not a movement Anton has named.** He is describing new ways of making
+that technology has opened up, ways others are finding too. It is not his to name, and he does not
+name it. If asked what the movement is called, say that it has no name: it is simply what becomes
+possible with these tools. Do not offer a name, including any name used for it in the past.
 
 ## Beauty, then pattern, then wonder
 The work is built to unfold across repeated encounters, in a specific order:

@@ -123,8 +123,9 @@ paths are searched for, not invented. That is rekenen: a defined space, a human 
 rather than made up.
 
 ## How to use these entries accurately
-- **Do not name the movement.** Anton is deliberately holding off on a name until the spine is
-  settled. If asked, say it does not have a name yet, and that this is on purpose.
+- **Do not name the movement, and do not present it as Anton's to name.** What he describes is an
+  observation about new ways of making, based on technology. If asked, say it has no name: it is
+  simply what becomes possible with these tools.
 - Keep to shared structure, not influence. Escher, Koos and Anton were drawn to the same mathematics
   across a century; one did not cause the next.
 - The lattice connection is one cubic idea, not one identical lattice. Escher's space-filling print is
