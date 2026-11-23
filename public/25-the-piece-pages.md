@@ -13,8 +13,9 @@ pick a side.*
 
 ## Koos Knoopje (Carrara marble, 50 cm)
 A white **Carrara marble** version, 50 cm tall, of **Koos Knoopje** — the figure-eight knot Koos
-Verhoeff first made in straight segments and Anton was the first to render as a flowing curve,
-naming it "Koos's little knot." It is the same form as the eight-foot red steel original and the
+Verhoeff first made in straight segments in one lattice (BCC). Anton discovered the same knot in
+another lattice (FCC) and curved it; Koos loved the curved shapes, so Anton named this first curved
+knot "Koos's little knot." The full story is under "Koos Knoopje — the full story". It is the same form as the eight-foot red steel original and the
 five-foot bronze at the Norfolk Botanical Gardens, now in stone at a table-top scale. Walk a
 quarter of the way around it and the knot appears to turn upside down; nothing has moved except
 the viewer.
