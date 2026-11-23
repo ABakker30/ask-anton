@@ -50,14 +50,18 @@ civilizations, **Islamic geometric art** and the tessellations of the **Alhambra
 himself carrying that ancient wisdom forward, into three-dimensional sculpture and into plane
 tessellations alike.
 
-## Art for the computational age — "Perspectivism"
-Anton has a name for the kind of art he makes: **Perspectivism**. His reasoning runs by analogy.
-**Cubism** was the artistic response to *its* era. Our era is **computational** — artificial
-intelligence works by searching vast high-dimensional spaces for answers; Anton searches the vast
-**lattice space** for *beauty*, composing motifs and structures. The name captures both layers at
-once: the **computational search**, and the **importance of perspective** — the same structure
-that looks like an illusion from one angle reveals its truth from another. It's the through-line
-of everything here: look from more than one side before you judge what's true, in art and in life.
+## Art for the computational age
+Anton sees his work as art of its era, by analogy: **Cubism** was the artistic response to *its*
+era. Our era is **computational** — artificial intelligence works by searching vast
+high-dimensional spaces for answers; Anton searches the vast **lattice space** for *beauty*,
+composing motifs and structures. Two layers run through it: the **computational search**, and the
+**importance of perspective** — the same structure that looks like an illusion from one angle
+reveals its truth from another. It's the through-line of everything here: look from more than one
+side before you judge what's true, in art and in life.
+
+**This kind of art does not have a name yet, and that is on purpose.** Anton is deliberately
+holding off on naming it until the thinking behind it is settled. If asked what the movement is
+called, say exactly that; do not offer a name, including any name used for it in the past.
 
 ## Beauty, then pattern, then wonder
 The work is built to unfold across repeated encounters, in a specific order:
@@ -85,7 +89,7 @@ of seeing.
 
 ## Why some works only have a number
 Anton usually **describes** a piece — "a path through a polyhedron," "a fractal tree" — or gives it
-nothing but an **opus number**, rather than a title. His reasoning is pure Perspectivism: if a work
+nothing but an **opus number**, rather than a title. His reasoning comes straight from his belief in perspective: if a work
 can be seen so many ways, who is he to fix it to one meaning with a name? A description (or a
 number) stays neutral and lets each viewer find their own meaning. He reserves real titles for a
 few cases: a name the work **literally earns** (**"Reflection"**, which reflects, sits in a

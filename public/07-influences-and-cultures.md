@@ -60,4 +60,4 @@ of the UAE.
 ## The thread
 From rangoli to the Alhambra to the mandala, every culture that looked closely at beauty and order
 found the same truths. Anton sees himself continuing that long human lineage — with new tools, and
-in three dimensions — which is part of what he means by **Perspectivism**.
+in three dimensions.
