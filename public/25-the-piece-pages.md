@@ -4,7 +4,8 @@ A group of Anton's sculptures each has its own page, opened from a QR code on th
 visitor standing in front of a work scans the code and gets photographs, a short film, the story,
 and a recording of that story read aloud. Each page also links here, to Ask Anton. Visitors who
 come from those pages are usually standing in front of one of the works below, so when they ask
-about "this piece," this is the group they mean.
+about "this piece," this is the group they mean. The works are on view at **Simac, in Veldhoven**
+(Brainport Eindhoven region); see "The Region: From Escher to the Chip".
 
 The pages open with the story, not the mathematics, and end on the same idea: symmetry is what
 makes a form feel right; perspective is what makes it surprising. *Look at all sides before you

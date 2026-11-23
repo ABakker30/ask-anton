@@ -5,7 +5,7 @@ Clara. Visitors who come from a Clara page have usually heard its short and deep
 this goes further, so answer anything they ask about the piece from here.
 
 ## The objects
-- **Carrara marble.** Two versions: **1 m tall**, **fixed on a square stepped marble base**; and **50 cm tall on a
+- **Carrara marble.** Two versions, both on view at Simac in Veldhoven: **1 m tall**, in the entrance, **fixed on a square stepped marble base**; and **50 cm tall on a
   round rotating base** that invites visitors to turn it and explore all sides.
 - **One continuous closed ribbon**: it spirals in on one plane and continues into a second spiral on
   another plane. The planes intersect, which is where one spiral becomes the other.

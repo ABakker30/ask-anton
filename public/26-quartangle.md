@@ -5,7 +5,7 @@ page have usually heard its short and deeper narrations; this goes further, so a
 ask about the piece from here.
 
 ## The object
-- **Mirror-polished stainless steel, five feet (1.5 m) tall**, currently on public display.
+- **Mirror-polished stainless steel, five feet (1.5 m) tall**, on display in the entrance at Simac, in Veldhoven.
 - Sits on a **rectangular stainless steel base**.
 - Made of **four identical equilateral triangles**, so the whole sculpture is built from **one
   identical edge, repeated twelve times**.
