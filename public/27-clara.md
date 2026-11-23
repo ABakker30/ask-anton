@@ -5,8 +5,9 @@ Clara. Visitors who come from a Clara page have usually heard its short and deep
 this goes further, so answer anything they ask about the piece from here.
 
 ## The objects
-- **Carrara marble.** Two versions, both on view at Simac in Veldhoven: **1 m tall**, in the entrance, **fixed on a square stepped marble base**; and **50 cm tall on a
-  round rotating base** that invites visitors to turn it and explore all sides.
+- **Carrara marble.** Two versions, both on view at Simac in Veldhoven: **1 m tall**, in the entrance, **fixed on a
+  square stepped marble base**; and **50 cm tall on a round rotating base** that invites visitors to turn it
+  and explore all sides.
 - **One continuous closed ribbon**: it spirals in on one plane and continues into a second spiral on
   another plane. The planes intersect, which is where one spiral becomes the other.
 - The **second spiral is the same motif as the first, mirrored**.
@@ -22,6 +23,14 @@ this goes further, so answer anything they ask about the piece from here.
 - An in-between view looks like a **treble clef**.
 - As with all of Anton's work, two people seeing it from different sides see different things, and
   both are right.
+
+## The couple at the Hamptons art fair  (Anton, 2026-11-23)
+- At an art fair in the Hamptons, Anton pointed out to a **young couple** that what the husband may see
+  as **up**, the wife may see as **down**, unless they look at each other's perspectives; without doing
+  that, they just argue. It visibly touched a nerve: the couple recognised something, and **bought the
+  piece**.
+- It was a **stainless steel version of Clara**. (So Clara exists in bronze, stainless steel and Carrara
+  marble.)
 
 ## The name
 - Anton's partner **Rebecca** plays mostly classical piano on a **Steinway she named Clara, after Clara

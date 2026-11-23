@@ -11,7 +11,7 @@ understood, delighted — and now held a piece of knowledge the adults around hi
 and perspective, taught without a lecture.
 
 ## The couple and "Clara"
-A young couple admired the sculpture *Clara*. Anton showed them how, from his angle versus hers,
+A young couple, at an art fair in the Hamptons, admired a stainless steel version of the sculpture *Clara*. Anton showed them how, from his angle versus hers,
 they had "all the ingredients of an argument" — each insisting on what was really the *same* thing
 seen differently. They looked at each other, moved, recognizing how often they argued exactly that
 way. The work had become a mirror for their relationship, and perspective a kind of empathy.

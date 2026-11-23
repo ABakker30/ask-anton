@@ -27,7 +27,7 @@ the same design at half the size.
 - **The name:** Anton's partner Rebecca, a pianist, calls her Steinway "Clara," after Clara
   Schumann, and nothing may be set on it. Nothing, until a small bronze Clara: it was found worthy
   of the piano, and so the sculpture became Clara.
-- **The couple:** at an art fair in the Hamptons, a young couple stood on either side of a Clara.
+- **The couple:** at an art fair in the Hamptons, a young couple stood on either side of a stainless steel Clara.
   From his side and from hers they had "all the ingredients of an argument" — each seeing
   something different, both right. They recognized themselves, and took the sculpture home.
 
