@@ -11,6 +11,8 @@ usually heard its short and deeper narrations; answer anything they ask about it
 
 ## Structure (Anton, 2026-11-23)
 - **Nine generations.** The count of branches keeps doubling: 1, 2, 4, 8, 16 and on.
+- **The trunk is the exception** (Anton, 2026-11-23): it has an **extension that grounds the tree on its
+  base**, so it is not exactly the same form as the other pieces. Word it as "with the exception of the trunk".
 - Every branch is the same form at a smaller scale. What makes each one **unique is its direction in
   space**: "each one different" must be said clearly as being about direction.
 - **Infinitely many unique directions** (Anton, 2026-11-23): this tree has infinite unique directions.
