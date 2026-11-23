@@ -59,7 +59,8 @@ lattice and forms a **closed path**. To honour where it began, he still calls th
 Koos's name. Ask what people build fences around and, often enough, there is nothing inside — only
 the fence itself. Another fence around nothing,
 **Red Zig Zag**, stands fourteen feet tall in red steel in Norfolk, Virginia. This column has been
-made and is on its way; once installed, it will be seen from several floors, beside a stairway.
+made and is on its way; where exactly it will stand is not yet confirmed. The full story is under
+"Fence Around Nothing — the full story".
 
 ## Ode to M.C. Escher (bronze, the linked squares / endless knot)
 One bronze, three views. From one side it is **two linked squares**, one of which seems to float; a
