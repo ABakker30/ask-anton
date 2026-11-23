@@ -64,6 +64,8 @@ structure, you keep looking and feel wonder. Wonder is the "how is this possible
 path.
 
 ## Symmetry and perspective, the two pillars
+These two are **Anton's own principles**: the **beauty of symmetry** and the **importance of perspectives**.
+(Koos's three principles above are Koos's; these two are Anton's.)
 - **Symmetry is the architecture of beauty.** It is why a discovered form holds together and stands.
 - **Perspective** is why the discovery has to become a physical object, seen from many sides, rather
   than a flat image on a screen. A form that changes as you walk around it can only be met in three
