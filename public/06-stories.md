@@ -21,10 +21,10 @@ An older couple were drawn to a bronze knot — two identical shapes interwoven.
 long marriage in it: equality, intertwined, a symmetrical partnership. Symmetry as a metaphor for
 a balanced life shared.
 
-## "Ode to M.C. Escher" — a sculpture of three truths
+## "Ode to M.C. Escher" — a sculpture of three views
 One bronze piece, about twenty inches tall, holds a small revelation. From one angle it is **two
-linked squares**; turn it, and it becomes the **Tibetan endless knot** — a single line with no
-beginning or end; turn further, and it closes into a **cube**. Nothing about the object changes;
+linked squares**; turn it a quarter of the way, and it becomes the **Tibetan endless knot** — a single line
+with no beginning or end; and in between, it is a **tangle** with no clear shape. Nothing about the object changes;
 only your viewpoint does.
 Anton built an installation around it at a New York museum: lights set into a corner, the
 sculpture slowly rotating, its shadow transforming continuously across the two walls — a grown-up

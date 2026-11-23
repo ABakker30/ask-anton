@@ -61,10 +61,12 @@ the fence itself. Another fence around nothing,
 **Red Zig Zag**, stands fourteen feet tall in red steel in Norfolk, Virginia. This column has been
 made and is on its way; once installed, it will be seen from several floors, beside a stairway.
 
-## Ode to M.C. Escher (bronze, the linked squares / endless knot / cube)
-One bronze, three truths. From one side it is **two linked squares**; walk on and it becomes the
-**Tibetan endless knot**, a single line with no beginning and no end; walk further and it closes
-into a **cube**. Nothing about the object changes, only where you stand. At the **Museum of
+## Ode to M.C. Escher (bronze, the linked squares / endless knot)
+One bronze, three views. From one side it is **two linked squares**, one of which seems to float; a
+quarter of the way around it becomes the **Tibetan endless knot**, a single line with no beginning
+and no end; and in between, for most of the way, it is a **tangle** with no clear shape. The one on
+view at Simac is about 10 inches tall, in a large meeting room. The full story is under "Ode to M.C.
+Escher — the full story". Nothing about the object changes, only where you stand. At the **Museum of
 Mathematics (MoMath)** in New York it turned slowly in a corner between two lights, casting two
 different shadows on two walls at once: a nod to **M.C. Escher**, who made the impossible look
 ordinary, and to **Plato's cave**, where we take a shadow for the whole truth.
@@ -74,7 +76,7 @@ under "Ode to M.C. Escher" in the stories.
 
 ## Two odes to Escher
 Anton has made **more than one ode to M.C. Escher**, and both are optical illusions:
-- the bronze above — two linked squares, the endless knot and a cube (earlier titled "Awakening");
+- the bronze above — two linked squares, a tangle and the endless knot (earlier titled "Awakening");
 - **Opus 548001** (2021, patinated bronze, about 10 inches / 25 cm) — an illusion of a
   **cloverleaf (trefoil) knot made of right angles**, which can also appear to be two independent
   trefoil knots. Selected perspectives of Opus 548001 were shown as wall images at MoMath's
