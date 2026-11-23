@@ -33,10 +33,10 @@ the same design at half the size.
   something different, both right. They recognized themselves, and took the sculpture home.
 
 ## Infinity (pink Portuguese marble, 50 cm)
-A sculpture in **pink Portuguese marble**, 50 cm tall. From one angle it is a perfect **infinity
-sign**: one unbroken loop folding back on itself. From almost any other angle it becomes something
-strikingly, puzzlingly different, and it is hard to believe it is the same stone. Both views are
-true; neither is the whole story. (Its working title is "Infinity.")
+A sculpture in **pink Portuguese marble**, 50 cm tall: Anton's simplest curve in stone, a closed path
+through just **six lattice points**. From two places it is a perfect **infinity sign**; from everywhere
+else it is something else, with no name. It does not turn, and should be touched only with the eyes.
+The full story is under "Infinity — the full story".
 
 ## Quartangle (stainless steel)
 Four identical equilateral triangles, linked in two pairs so that the whole is completely rigid,
