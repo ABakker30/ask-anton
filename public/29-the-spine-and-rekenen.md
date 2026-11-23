@@ -52,7 +52,7 @@ itself. It is not a style the art has to wear. This is not "lattice art."
   and recognize it when it appears. What stays irreducibly human is the pointing.
 
 ## Koos's three principles, as a loop
-Credited to **Koos Verhoeff and his son Tom Verhoeff**. A work should: first, **solve a problem**;
+These are **Koos Verhoeff's** principles, his alone. A work should: first, **solve a problem**;
 second, **be beautiful**; third, **raise a question** in the viewer, the feeling of "how is this
 possible?" The three form a loop rather than a list. A question is posed as a problem, the work
 answers it by finding the form, and the finished form throws a new question back at the viewer. That
