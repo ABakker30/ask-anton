@@ -17,9 +17,10 @@ seen differently. They looked at each other, moved, recognizing how often they a
 way. The work had become a mirror for their relationship, and perspective a kind of empathy.
 
 ## The interwoven knot
-An older couple were drawn to a bronze knot — two identical shapes interwoven. They saw their
-long marriage in it: equality, intertwined, a symmetrical partnership. Symmetry as a metaphor for
-a balanced life shared.
+An older couple, at an art fair in Los Angeles, were drawn to a knotted sculpture made of two halves
+that mirror each other. They bought it, and when Anton delivered it they told him why: it reminded
+them of their long time together, **"a dance with the perfect complement."** Symmetry as a metaphor
+for a balanced life shared.
 
 ## "Ode to M.C. Escher" — a sculpture of three views
 One bronze piece, about twenty inches tall, holds a small revelation. From one angle it is **two
@@ -35,8 +36,8 @@ realize a thing can be more than one thing at once — and it now carries the na
 Escher,"** after the artist who made the impossible look ordinary.
 
 ## The neighbor who turns it each morning
-A neighbor who owns one of Anton's sculptures keeps it on a pedestal and gives it a small turn
-**every morning**, so that each day he meets it from a new angle. It's exactly the relationship
+A collector who owns one of Anton's sculptures keeps it on a pedestal and gives it a small turn
+**first thing every morning**, to be surprised by a new perspective each day. It's exactly the relationship
 Anton hopes the work invites — not a thing you glance at once, but one you keep discovering.
 
 These are why Anton wants every piece to carry its story: people keep finding *themselves* in the
