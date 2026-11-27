@@ -1,77 +1,56 @@
 # Escher's 1963 lectures: texts, agendas, and a comparison
 
-This covers the two lectures M.C. Escher gave at the **Mathematisch Centrum (Mathematical Centre),
-Amsterdam**, in 1963: the two short **introduction texts** (Map M 106, M 107) translated in full, the
-two detailed **agendas** (Map M 108a, M 108b) rendered as outlines, and a **comparison** of how the
-two evenings are built. The Dutch originals are in **Koos Verhoeff's archive** and are held as scans
-in the media library. The introductions are Escher's own words, translated for research; the agendas
-are renderings of his dense handwritten outlines (a few entries are abbreviated or uncertain in the
-original). The material remains under the copyright of the M.C. Escher estate.
+This covers the two lectures M.C. Escher gave for the **Mathematisch Centrum (Mathematical Centre),
+Amsterdam**, in 1963: a **summary** of the two short introduction texts (Map M 106, M 107), the two
+detailed **agendas** (Map M 108a, M 108b) rendered as outlines, and a **comparison** of how the two
+evenings are built. The Dutch originals are in the **M.C. Escher archive**, where they were consulted
+for research. Escher's writings remain under the copyright of the M.C. Escher Company, so the
+introductions are summarized here in Anton's words, with only a few short phrases quoted; the full
+texts are not reproduced. The agendas are renderings of his dense handwritten outlines (a few entries
+are abbreviated or uncertain in the original).
 
 For why these matter to Koos's story (he helped reshape the second lecture, and Escher thanked him
 with the inscribed *Fish* print the day after), see "Koos Verhoeff and M.C. Escher."
 
 ---
 
-## Foreword, first lecture (29 October 1963) — Map M 106
+## Foreword, first lecture (29 October 1963) — Map M 106 (summary)
 
-Chairman, ladies and gentlemen,
+Escher opens by thanking the Mathematical Centre for the honour of inviting him to give two lectures
+about his work. He says he knows almost nothing of theoretical mathematics, but that his contacts with
+mathematicians, and especially with crystallographers, have grown steadily in recent years.
 
-It is a great pleasure for me, and I consider it an honour, that the Mathematical Centre has invited
-me to give two lectures about my work.
+He then describes where he stands: in a borderland, "a no-man's-land," with the visual arts he came
+from on one side and mathematics on the other, one foot still in art and the other set, hesitantly,
+in mathematics.
 
-I myself know almost nothing of theoretical mathematics, but it is a fact that my contacts with
-mathematicians, and especially with crystallographers, have steadily grown in recent years.
-
-I seem to find myself in a borderland, a no-man's-land. On one side lies the domain my work formerly
-belonged to, the one I emerged from: the visual arts; on the other side lies mathematics. With one
-foot I perhaps still stand in the territory of art, while I have set my other foot, hesitantly, in the
-field of mathematics.
-
-This first evening I should like to devote wholly and exclusively to my applications of the regular
-division of the plane, leaning now and then heavily on the crystallographers, at least those who
-concern themselves with symmetries in the plane.
-
-The following week I hope to give an overview of the rest of my hobbies, in which spherical forms,
-regular polyhedra, relativities, inversions, and more such playful notions will come up.
-
-But for this evening, then, only the regular division of the plane. It has in any case been by far
-the richest source of inspiration I have ever tapped, and I can easily fill a whole evening with it.
-
-What I understand by the regular division of the plane, or regular filling of the plane, I can best
-illustrate directly with slides.
+The rest is a plain announcement of the programme. The first evening will be given wholly to his
+applications of the regular division of the plane, where he leans on the crystallographers who study
+symmetries in the plane. The following week will survey his other interests: spherical forms, regular
+polyhedra, relativities, inversions and similar playful notions. He calls the regular division of the
+plane by far the richest source of inspiration he ever tapped, and goes straight to the slides to show
+what he means by it.
 
 ---
 
-## Introduction, second lecture (5 November 1963, after the break) — Map M 107
+## Introduction, second lecture (5 November 1963, after the break) — Map M 107 (summary)
 
-I do not know whether you, as a child, were as fond as I was of the fairy tales of Grimm.
+Escher begins with a childhood memory: the Grimm fairy tales, and one he reread again and again as a
+boy of about ten, which he recalls as "The Credulous King." A king promises his daughter to whichever
+suitor tells him a story so unbelievable that he cries out that it cannot be. Prince after prince
+fails, because the king always answers that it is possible. A farm boy finally wins by telling a tale
+about a villainous trick played by the king's own grandfather, which wounds the king's family pride
+and forces the outcry.
 
-Among them was one that intrigued me intensely as a boy of about ten, and that I reread again and
-again. It was called, if I remember rightly, "The Credulous King."
+Escher says that ending never satisfied him. It was too "psychological," and the impossibility was
+not real enough. From this he draws his thesis: an impossible situation only truly catches the eye
+when the impossibility does not show itself at first glance. To draw attention to something
+impossible you must first fool yourself, and then your audience, by veiling it so that a superficial
+listener does not even notice; it needs an enigmatic quality.
 
-It was about a king who had a beautiful daughter. Every suitor who came to court to vie for the
-princess's hand first had to tell the king a story, and he promised that he would marry his daughter
-to whoever told him a story so unbelievable that he would cry out, "No, that can't be!!"
-
-You can well imagine how it went: a whole row of princes told the most fantastic stories, but when
-they had finished the king always said, "It is possible." Until at last a farm boy came, clever
-enough to serve up a tale about the king's grandfather, who had once pulled off a giant villainous
-trick. The king was so wounded in his family pride that he cried out, "No, that can't be!!", and as a
-result he had to give his daughter to the clever Hans.
-
-That "punch line" never quite satisfied me. It was too "psychological" for me. The impossibility in
-question was not real enough for me. For I believe that an impossible situation only truly catches the
-eye when the impossibility does not reveal itself at first glance.
-
-If you want to draw attention to something impossible, you must try first to fool yourself, and then
-your audience, by serving up the story in such a way that the element of impossibility is veiled, so
-that a superficial listener does not even notice it. There must be a certain enigmatic quality that
-does not immediately leap to the eye.
-
-I have noticed that mathematicians have a playful fondness for such stories, and several of the
-"impossible objects" I am about to show you were influenced by them, came about through suggestions
-they gave me.
+He closes by noting that mathematicians have a playful fondness for such stories, and that several of
+the "impossible objects" he is about to show were influenced by them and arose from suggestions they
+gave him.
 
 ---
 
